@@ -21,6 +21,44 @@
         "lot": "2,000 m² Lot"
       }
     },
+    "specs": {
+      "title": "Property Specifications",
+      "description": "Explore the exceptional details of this magnificent residence",
+      "items": {
+        "bedrooms": {
+          "value": "5",
+          "label": "Bedrooms"
+        },
+        "bathrooms": {
+          "value": "6",
+          "label": "Bathrooms"
+        },
+        "area": {
+          "value": "750",
+          "label": "m² Living Space"
+        },
+        "lot": {
+          "value": "2,000",
+          "label": "m² Plot"
+        },
+        "floors": {
+          "value": "3",
+          "label": "Floors"
+        },
+        "parking": {
+          "value": "4",
+          "label": "Garage Spaces"
+        },
+        "pool": {
+          "value": "Infinity",
+          "label": "Pool"
+        },
+        "year": {
+          "value": "2024",
+          "label": "Built"
+        }
+      }
+    },
     "features": {
       "title": "Exceptional Features",
       "items": {
@@ -89,6 +127,54 @@
         }
       }
     },
+    "distances": {
+      "title": "Distance to Key Locations",
+      "description": "Everything you need is within easy reach",
+      "items": {
+        "airport": {
+          "icon": "✈️",
+          "name": "Punta del Este Airport",
+          "description": "Carrasco International Airport",
+          "distance": "15 km",
+          "time": "18 min drive"
+        },
+        "downtown": {
+          "icon": "🏙️",
+          "name": "Downtown Punta del Este",
+          "description": "Shopping, dining, entertainment",
+          "distance": "8 km",
+          "time": "12 min drive"
+        },
+        "beach": {
+          "icon": "🏖️",
+          "name": "Nearest Beach",
+          "description": "Playa Brava access",
+          "distance": "2 km",
+          "time": "5 min drive"
+        },
+        "marina": {
+          "icon": "⛵",
+          "name": "Yacht Marina",
+          "description": "Premium marina facilities",
+          "distance": "10 km",
+          "time": "15 min drive"
+        },
+        "golf": {
+          "icon": "⛳",
+          "name": "Golf Courses",
+          "description": "Multiple championship courses",
+          "distance": "5 km",
+          "time": "8 min drive"
+        },
+        "shopping": {
+          "icon": "🛍️",
+          "name": "Shopping Centers",
+          "description": "Luxury retail & boutiques",
+          "distance": "6 km",
+          "time": "10 min drive"
+        }
+      }
+    },
     "cta": {
       "title": "Live Where Life Unfolds",
       "description": "Discover the perfect location for your dream home",
@@ -103,26 +189,26 @@
     "intro": {
       "label": "The Community",
       "title": "A private oasis of luxury and tranquility",
-      "description": "La Cancillería represents the pinnacle of residential development in Punta del Este. This gated community offers residents an unparalleled lifestyle with world-class amenities, 24/7 security, and meticulously landscaped grounds that blend seamlessly with the natural environment."
+      "description": "La Cancillería represents the pinnacle of gated community living in Punta del Este. With 24/7 security, world-class amenities, and meticulously maintained grounds, residents enjoy an unparalleled lifestyle of comfort and exclusivity."
     },
     "amenities": {
       "title": "World-Class Amenities",
       "items": {
         "clubhouse": {
-          "title": "Private Clubhouse",
-          "description": "Elegant social spaces for gatherings and events"
+          "title": "Exclusive Clubhouse",
+          "description": "Modern social spaces for gatherings and events"
         },
         "fitness": {
-          "title": "Fitness Center & Spa",
-          "description": "State-of-the-art equipment and wellness facilities"
+          "title": "Fitness Center",
+          "description": "State-of-the-art equipment and personal training"
         },
         "tennis": {
           "title": "Tennis Courts",
-          "description": "Professional-grade courts with night lighting"
+          "description": "Professional clay and hard courts with lighting"
         },
         "pool": {
-          "title": "Resort-Style Pool",
-          "description": "Heated infinity pool with poolside service"
+          "title": "Resort Pool",
+          "description": "Olympic-size heated pool with spa facilities"
         },
         "security": {
           "title": "24/7 Security",
@@ -130,27 +216,81 @@
         },
         "concierge": {
           "title": "Concierge Service",
-          "description": "Dedicated staff to attend to your every need"
+          "description": "Dedicated staff for all resident needs"
+        }
+      }
+    },
+    "logistics": {
+      "title": "Estate Services & Access",
+      "description": "Everything designed for your comfort and convenience",
+      "services": {
+        "title": "Professional Services",
+        "items": {
+          "maintenance": {
+            "title": "Property Maintenance",
+            "description": "24/7 on-call maintenance team for all common areas and infrastructure"
+          },
+          "cleaning": {
+            "title": "Cleaning Services",
+            "description": "Optional housekeeping and exterior maintenance services available"
+          },
+          "concierge": {
+            "title": "Resident Concierge",
+            "description": "Restaurant reservations, event planning, and local recommendations"
+          },
+          "security": {
+            "title": "Security Protocols",
+            "description": "Advanced surveillance system and trained security personnel"
+          }
+        }
+      },
+      "access": {
+        "title": "Access & Facilities",
+        "items": {
+          "gate": {
+            "title": "Controlled Access",
+            "description": "Main gate with biometric and digital pass systems"
+          },
+          "parking": {
+            "title": "Guest Parking",
+            "description": "Dedicated visitor parking areas with easy access"
+          },
+          "reception": {
+            "title": "Reception Area",
+            "description": "Professional reception desk for package delivery and guest management"
+          },
+          "delivery": {
+            "title": "Delivery Services",
+            "description": "Secure package handling and courier coordination"
+          }
         }
       }
     },
     "gallery": {
-      "title": "Estate Gallery"
+      "title": "Community Spaces"
+    },
+    "contact": {
+      "title": "Estate Information",
+      "description": "Get in touch with our community management",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "hours": "Office Hours"
     },
     "cta": {
-      "title": "Join an Elite Community",
-      "description": "Experience the ultimate in coastal living",
-      "button": "Request Information"
+      "title": "Join an Exclusive Community",
+      "description": "Experience the La Cancillería lifestyle",
+      "button": "Contact Us"
     }
   },
   "contact": {
     "title": "Get in Touch",
-    "description": "Contact us to schedule a private viewing",
+    "description": "We would love to hear from you. Send us a message and we'll respond as soon as possible.",
     "form": {
       "name": "Full Name",
       "email": "Email Address",
-      "phone": "Phone Number",
-      "message": "Message",
+      "phone": "Phone Number (Optional)",
+      "message": "Your Message",
       "submit": "Send Message"
     }
   }

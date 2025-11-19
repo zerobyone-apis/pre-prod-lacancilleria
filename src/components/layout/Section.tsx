@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
-import { useInView } from 'react-intersection-observer';
+import { useGsapAnimation } from '@/hooks/useGsapAnimation';
 
 interface SectionProps {
   children: ReactNode;
@@ -10,17 +10,13 @@ interface SectionProps {
 }
 
 export const Section = ({ children, className, fullWidth = false, animate = true }: SectionProps) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
+  const animationRef = useGsapAnimation();
 
   return (
     <section
-      ref={ref}
+      ref={animate ? animationRef : null}
       className={cn(
         'py-16 md:py-24 lg:py-32',
-        animate && inView && 'animate-fade-in',
         className
       )}
     >

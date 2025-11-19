@@ -5,6 +5,7 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { LocationIntroSection } from '@/components/sections/LocationIntroSection';
 import { LocationMapSection } from '@/components/sections/LocationMapSection';
 import { LocationNearbySpotsSection } from '@/components/sections/LocationNearbySpotsSection';
+import { LocationDistancesSection } from '@/components/sections/LocationDistancesSection';
 import { CTASection } from '@/components/sections/CTASection';
 import { FooterMinimal } from '@/components/layout/FooterMinimal';
 
@@ -22,6 +23,7 @@ const Location = () => {
       <LocationIntroSection />
       <LocationMapSection />
       <LocationNearbySpotsSection />
+      <LocationDistancesSection />
       <CTASection 
         titleKey="location.cta.title"
         descriptionKey="location.cta.description"
