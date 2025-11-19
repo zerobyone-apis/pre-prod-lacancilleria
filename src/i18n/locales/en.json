@@ -333,7 +333,32 @@
       "button": "Contact Us"
     }
   },
+  "cta": {
+    "title": "Immerse yourself in a paradise where nature and luxury meet in perfect harmony",
+    "button": "Contact"
+  },
+  "divider": {
+    "experience": "Lifestyle, Experience and Home Image/Video"
+  },
   "contact": {
+    "header": {
+      "title": "Ready to experience a paradise where nature and luxury unite?",
+      "subtitle": "Get in touch with us to learn more about La Cancillería"
+    },
+    "info": {
+      "phone": {
+        "label": "PHONE",
+        "value": "+1 23 456 789"
+      },
+      "email": {
+        "label": "EMAIL",
+        "value": "lacancilleria@email.com"
+      },
+      "address": {
+        "label": "ADDRESS",
+        "value": "La Barra, José Ignacio"
+      }
+    },
     "title": "Get in Touch",
     "description": "We would love to hear from you. Send us a message and we'll respond as soon as possible.",
     "form": {
@@ -343,5 +368,8 @@
       "message": "Your Message",
       "submit": "Send Message"
     }
+  },
+  "footer": {
+    "rights": "All rights reserved"
   }
 }
