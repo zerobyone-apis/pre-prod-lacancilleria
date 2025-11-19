@@ -134,7 +134,7 @@ export const QuickFactsSection = () => {
           <div className="text-center space-y-10 px-8">
             <h3 className="text-3xl md:text-4xl font-serif leading-tight">{t('home.quickFacts.cta.title')}</h3>
             <NavLink to="/estate">
-              <Button size="lg" className="group mt-10 bg-primary text-primary-foreground hover:bg-primary/80 shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
+              <Button size="lg" className="group mt-5 bg-primary text-primary-foreground hover:bg-primary/80 shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
                 {t('home.quickFacts.cta.button')}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>
