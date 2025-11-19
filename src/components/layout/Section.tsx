@@ -7,13 +7,15 @@ interface SectionProps {
   className?: string;
   fullWidth?: boolean;
   animate?: boolean;
+  id?: string;
 }
 
-export const Section = ({ children, className, fullWidth = false, animate = true }: SectionProps) => {
+export const Section = ({ children, className, fullWidth = false, animate = true, id }: SectionProps) => {
   const animationRef = useGsapAnimation();
 
   return (
     <section
+      id={id}
       ref={animate ? animationRef : null}
       className={cn(
         'py-16 md:py-24 lg:py-32',

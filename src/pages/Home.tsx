@@ -5,6 +5,9 @@ import { HomeIntroSection } from '@/components/sections/HomeIntroSection';
 import { QuickFactsSection } from '@/components/sections/QuickFactsSection';
 import { LifestyleImageSection } from '@/components/sections/LifestyleImageSection';
 import { TimelineSection } from '@/components/sections/TimelineSection';
+import { HomeCTASection } from '@/components/sections/HomeCTASection';
+import { ExperienceDividerSection } from '@/components/sections/ExperienceDividerSection';
+import { ContactSection } from '@/components/sections/ContactSection';
 import { FooterMinimal } from '@/components/layout/FooterMinimal';
 
 const Home = () => {
@@ -20,6 +23,9 @@ const Home = () => {
       <QuickFactsSection />
       <LifestyleImageSection />
       <TimelineSection />
+      <HomeCTASection />
+      <ExperienceDividerSection />
+      <ContactSection />
       <FooterMinimal />
     </PageContainer>
   );

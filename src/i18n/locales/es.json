@@ -333,7 +333,32 @@
       "button": "Contáctanos"
     }
   },
+  "cta": {
+    "title": "Sumérgete en un paraíso donde la naturaleza y el lujo se encuentran en perfecta armonía",
+    "button": "Contacto"
+  },
+  "divider": {
+    "experience": "Estilo de Vida, Experiencia e Imagen/Video del Hogar"
+  },
   "contact": {
+    "header": {
+      "title": "¿Listo para experimentar un paraíso donde la naturaleza y el lujo se unen?",
+      "subtitle": "Ponte en contacto con nosotros para conocer más sobre La Cancillería"
+    },
+    "info": {
+      "phone": {
+        "label": "TELÉFONO",
+        "value": "+1 23 456 789"
+      },
+      "email": {
+        "label": "EMAIL",
+        "value": "lacancilleria@email.com"
+      },
+      "address": {
+        "label": "DIRECCIÓN",
+        "value": "La Barra, José Ignacio"
+      }
+    },
     "title": "Contáctenos",
     "description": "Nos encantaría saber de usted. Envíenos un mensaje y le responderemos lo antes posible.",
     "form": {
@@ -343,5 +368,8 @@
       "message": "Su Mensaje",
       "submit": "Enviar Mensaje"
     }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados"
   }
 }

@@ -21,16 +21,14 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="bg-card rounded-sm p-8 md:p-12 shadow-lg">
-      <h3 className="text-3xl font-serif mb-6">{t('contact.title')}</h3>
-      <p className="text-muted-foreground mb-8">{t('contact.description')}</p>
-      
+    <div className="bg-card rounded-sm p-8 md:p-12 shadow-lg border border-border">
       <form onSubmit={handleSubmit} className="space-y-6">
         <Input
           placeholder={t('contact.form.name')}
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
+          className="bg-background"
         />
         <Input
           type="email"
@@ -38,12 +36,14 @@ export const ContactForm = () => {
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           required
+          className="bg-background"
         />
         <Input
           type="tel"
           placeholder={t('contact.form.phone')}
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+          className="bg-background"
         />
         <Textarea
           placeholder={t('contact.form.message')}
@@ -51,6 +51,7 @@ export const ContactForm = () => {
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           rows={5}
           required
+          className="bg-background"
         />
         <Button type="submit" className="w-full" size="lg">
           {t('contact.form.submit')}
