@@ -12,7 +12,7 @@ export const HomeCTASection = () => {
   };
 
   return (
-    <section className="relative py-32 md:py-48 flex items-center justify-center bg-background">
+    <section className="relative h-screen flex items-center justify-center bg-background">
       <div className="container mx-auto px-6 md:px-8 text-center max-w-4xl space-y-8">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">
           {t('cta.title')}
