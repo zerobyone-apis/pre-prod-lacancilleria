@@ -46,6 +46,14 @@
       }
     }
   },
+  "timeline": {
+    "title": "Vive la experiencia de Punta del Este",
+    "oceanBreezes": "Despierta con la brisa del océano",
+    "alfrescoLunches": "Disfruta almuerzos al aire libre junto a la piscina",
+    "vibrantScene": "Descubre la vibrante escena de La Barra y Punta del Este, que están a solo unos minutos",
+    "laBarraJoseIgnacio": "Descubre la vibrante escena de La Barra y José Ignacio a solo minutos",
+    "exploreLocation": "Explorar ubicación"
+  },
   "house": {
     "hero": {
       "title": "Una Obra Maestra Arquitectónica en Punta del Este",
