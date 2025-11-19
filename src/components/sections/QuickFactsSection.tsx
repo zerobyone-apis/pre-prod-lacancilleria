@@ -34,7 +34,7 @@ export const QuickFactsSection = () => {
 
     // Fade in cards on scroll
     const cards = scrollContent.querySelectorAll('.quick-fact-card');
-    cards.forEach((card, index) => {
+    cards.forEach((card) => {
       gsap.fromTo(card,
         { opacity: 0, y: 50 },
         {
@@ -49,6 +49,22 @@ export const QuickFactsSection = () => {
           }
         }
       );
+
+      // Parallax effect on images
+      const image = card.querySelector('.quick-fact-image');
+      if (image) {
+        gsap.to(image, {
+          y: -50,
+          ease: "none",
+          scrollTrigger: {
+            trigger: card,
+            containerAnimation: scrollTween,
+            start: "left right",
+            end: "right left",
+            scrub: true,
+          }
+        });
+      }
     });
 
     return () => {
@@ -57,12 +73,12 @@ export const QuickFactsSection = () => {
   }, []);
 
   const quickFacts = [
-    { key: 'guests', icon: '🛏️' },
-    { key: 'bedrooms', icon: '🚿' },
-    { key: 'pool', icon: '🏊' },
-    { key: 'views', icon: '🌊' },
-    { key: 'concierge', icon: '🤵' },
-    { key: 'outdoor', icon: '🍖' },
+    { key: 'guests', image: '/images/house-gallery-1.jpg' },
+    { key: 'bedrooms', image: '/images/house-gallery-2.jpg' },
+    { key: 'pool', image: '/images/house-gallery-3.jpg' },
+    { key: 'views', image: '/images/house-hero.jpg' },
+    { key: 'concierge', image: '/images/estate-entrance.jpg' },
+    { key: 'outdoor', image: '/images/house-gallery-4.jpg' },
   ];
 
   return (
@@ -77,17 +93,33 @@ export const QuickFactsSection = () => {
       </div>
 
       <div ref={scrollRef} className="flex items-center h-full gap-8 pl-[10vw]" style={{ width: 'max-content' }}>
-        {quickFacts.map((fact, index) => (
+        {quickFacts.map((fact) => (
           <div
             key={fact.key}
-            className="quick-fact-card flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] bg-card rounded-lg overflow-hidden shadow-lg"
+            className="quick-fact-card group flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] bg-card rounded-lg overflow-hidden shadow-lg"
           >
             <div className="relative h-full flex flex-col">
-              <div className="flex-1 flex items-center justify-center bg-muted text-8xl">
-                {fact.icon}
+              <div className="relative flex-1 overflow-hidden">
+                <img
+                  src={fact.image}
+                  alt={t(`home.quickFacts.items.${fact.key}.title`)}
+                  className="quick-fact-image w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                
+                {/* Hover overlay with CTA */}
+                <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                  <NavLink to="/estate">
+                    <Button size="lg" variant="secondary" className="group/btn">
+                      {t('home.quickFacts.cta.button')}
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </NavLink>
+                </div>
               </div>
-              <div className="p-8 bg-card">
-                <h3 className="text-2xl font-serif mb-2">
+              
+              <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
+                <h3 className="text-2xl font-serif mb-2 text-foreground">
                   {t(`home.quickFacts.items.${fact.key}.title`)}
                 </h3>
                 <p className="text-muted-foreground">
