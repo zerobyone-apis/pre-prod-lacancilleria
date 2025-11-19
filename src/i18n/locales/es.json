@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "house": "La Casa",
+    "location": "Ubicación",
+    "estate": "El Complejo"
+  },
+  "house": {
+    "hero": {
+      "title": "Una Obra Maestra Arquitectónica en Punta del Este",
+      "subtitle": "Donde el lujo se encuentra con el horizonte atlántico",
+      "cta": "Agendar Visita"
+    },
+    "intro": {
+      "label": "La Residencia",
+      "title": "Un santuario de elegancia contemporánea",
+      "description": "Ubicada en el barrio más exclusivo de Punta del Este, esta joya arquitectónica redefine la vida costera de lujo. Cada detalle ha sido meticulosamente diseñado para crear una mezcla armoniosa de diseño sofisticado y belleza natural.",
+      "specs": {
+        "bedrooms": "5 Dormitorios",
+        "bathrooms": "6 Baños",
+        "area": "750 m²",
+        "lot": "Terreno 2,000 m²"
+      }
+    },
+    "features": {
+      "title": "Características Excepcionales",
+      "items": {
+        "design": {
+          "title": "Diseño Contemporáneo",
+          "description": "Líneas limpias y ventanas de piso a techo enmarcan impresionantes vistas al océano"
+        },
+        "materials": {
+          "title": "Materiales Premium",
+          "description": "Mármol importado, pisos de madera y accesorios de última generación"
+        },
+        "outdoor": {
+          "title": "Amplios Espacios Exteriores",
+          "description": "Piscina infinita, cocina al aire libre y terrazas diseñadas para el entretenimiento"
+        },
+        "smart": {
+          "title": "Tecnología Smart Home",
+          "description": "Automatización integrada para iluminación, clima y seguridad"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Explora el Interior"
+    },
+    "cta": {
+      "title": "Experimenta un Lujo Sin Igual",
+      "description": "Descubre la casa de tus sueños en Punta del Este",
+      "button": "Contactar"
+    }
+  },
+  "location": {
+    "hero": {
+      "title": "El Corazón de Punta del Este",
+      "subtitle": "Donde la exclusividad se encuentra con la conveniencia"
+    },
+    "intro": {
+      "label": "Ubicación Premium",
+      "title": "Perfectamente posicionada en el destino más prestigioso de Uruguay",
+      "description": "Ubicada en el codiciado distrito de La Barra, esta propiedad ofrece el equilibrio perfecto entre privacidad y accesibilidad. A minutos de playas vírgenes, restaurantes de clase mundial y atracciones culturales, manteniendo la tranquilidad de una comunidad privada."
+    },
+    "map": {
+      "title": "Tu Nuevo Vecindario"
+    },
+    "nearby": {
+      "title": "Atracciones Cercanas",
+      "items": {
+        "beach": {
+          "title": "Playa José Ignacio",
+          "distance": "15 min en auto",
+          "description": "Playas de arena blanca y aguas cristalinas"
+        },
+        "marina": {
+          "title": "Puerto de Punta del Este",
+          "distance": "20 min en auto",
+          "description": "Marina de clase mundial con yates de lujo y gastronomía"
+        },
+        "golf": {
+          "title": "Club de Golf La Barra",
+          "distance": "10 min en auto",
+          "description": "Campo de golf diseñado por arquitectos de renombre"
+        },
+        "restaurants": {
+          "title": "Restaurantes Gourmet",
+          "distance": "5 min en auto",
+          "description": "Experiencias gastronómicas de chefs internacionales"
+        }
+      }
+    },
+    "cta": {
+      "title": "Vive Donde La Vida Se Despliega",
+      "description": "Descubre la ubicación perfecta para la casa de tus sueños",
+      "button": "Saber Más"
+    }
+  },
+  "estate": {
+    "hero": {
+      "title": "Complejo La Cancillería",
+      "subtitle": "Un santuario residencial exclusivo"
+    },
+    "intro": {
+      "label": "La Comunidad",
+      "title": "Un oasis privado de lujo y tranquilidad",
+      "description": "La Cancillería representa el pináculo del desarrollo residencial en Punta del Este. Esta comunidad privada ofrece a sus residentes un estilo de vida incomparable con amenidades de clase mundial, seguridad 24/7 y jardines meticulosamente diseñados que se integran perfectamente con el entorno natural."
+    },
+    "amenities": {
+      "title": "Amenidades de Clase Mundial",
+      "items": {
+        "clubhouse": {
+          "title": "Club House Privado",
+          "description": "Espacios sociales elegantes para reuniones y eventos"
+        },
+        "fitness": {
+          "title": "Gimnasio & Spa",
+          "description": "Equipamiento de última generación e instalaciones de bienestar"
+        },
+        "tennis": {
+          "title": "Canchas de Tenis",
+          "description": "Canchas profesionales con iluminación nocturna"
+        },
+        "pool": {
+          "title": "Piscina Estilo Resort",
+          "description": "Piscina infinita climatizada con servicio poolside"
+        },
+        "security": {
+          "title": "Seguridad 24/7",
+          "description": "Entrada con portón y equipo de seguridad profesional"
+        },
+        "concierge": {
+          "title": "Servicio de Concierge",
+          "description": "Personal dedicado para atender todas tus necesidades"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Galería del Complejo"
+    },
+    "cta": {
+      "title": "Únete a una Comunidad Élite",
+      "description": "Experimenta lo máximo en vida costera",
+      "button": "Solicitar Información"
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "Contáctanos para agendar una visita privada",
+    "form": {
+      "name": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje"
+    }
+  }
+}
