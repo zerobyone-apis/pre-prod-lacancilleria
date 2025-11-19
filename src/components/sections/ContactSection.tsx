@@ -21,7 +21,7 @@ export const ContactSection = () => {
 
         {/* Two columns: info left, form right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          <div className="space-y-8 flex flex-col pl3-0 items-start justify-center lg:pr-12 lg:border-r border-border">
+          <div className="space-y-8 flex flex-col pl-30 items-start justify-center lg:pr-12 lg:border-r border-border">
             <div className="flex items-start gap-4 max-w-xs">
               <Phone className="w-6 h-6 text-primary mt-1" />
               <div>
