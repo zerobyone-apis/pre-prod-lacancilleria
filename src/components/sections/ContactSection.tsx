@@ -20,10 +20,10 @@ export const ContactSection = () => {
         </div>
 
         {/* Two columns: info left, form right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <Phone className="w-6 h-6 text-primary mt-1" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="space-y-8 flex flex-col items-center lg:items-center justify-center lg:pr-12 lg:border-r border-border">
+            <div className="flex flex-col items-center text-center gap-4 max-w-xs">
+              <Phone className="w-6 h-6 text-primary" />
               <div>
                 <h3 className="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-2">
                   {t('contact.info.phone.label')}
@@ -32,8 +32,8 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <Mail className="w-6 h-6 text-primary mt-1" />
+            <div className="flex flex-col items-center text-center gap-4 max-w-xs">
+              <Mail className="w-6 h-6 text-primary" />
               <div>
                 <h3 className="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-2">
                   {t('contact.info.email.label')}
@@ -42,8 +42,8 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <MapPin className="w-6 h-6 text-primary mt-1" />
+            <div className="flex flex-col items-center text-center gap-4 max-w-xs">
+              <MapPin className="w-6 h-6 text-primary" />
               <div>
                 <h3 className="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-2">
                   {t('contact.info.address.label')}
