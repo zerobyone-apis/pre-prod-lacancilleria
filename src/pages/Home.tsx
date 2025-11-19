@@ -3,6 +3,7 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { HomeIntroSection } from '@/components/sections/HomeIntroSection';
 import { QuickFactsSection } from '@/components/sections/QuickFactsSection';
+import { LifestyleImageSection } from '@/components/sections/LifestyleImageSection';
 import { FooterMinimal } from '@/components/layout/FooterMinimal';
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       />
       <HomeIntroSection />
       <QuickFactsSection />
+      <LifestyleImageSection />
       <FooterMinimal />
     </PageContainer>
   );
