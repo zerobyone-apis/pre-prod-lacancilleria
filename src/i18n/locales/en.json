@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "house": "The House",
+    "location": "Location",
+    "estate": "The Estate"
+  },
+  "house": {
+    "hero": {
+      "title": "An Architectural Masterpiece in Punta del Este",
+      "subtitle": "Where luxury meets the Atlantic horizon",
+      "cta": "Schedule a Visit"
+    },
+    "intro": {
+      "label": "The Residence",
+      "title": "A sanctuary of contemporary elegance",
+      "description": "Nestled in the most exclusive neighborhood of Punta del Este, this architectural gem redefines coastal luxury living. Every detail has been meticulously crafted to create a harmonious blend of sophisticated design and natural beauty.",
+      "specs": {
+        "bedrooms": "5 Bedrooms",
+        "bathrooms": "6 Bathrooms",
+        "area": "750 m²",
+        "lot": "2,000 m² Lot"
+      }
+    },
+    "features": {
+      "title": "Exceptional Features",
+      "items": {
+        "design": {
+          "title": "Contemporary Design",
+          "description": "Clean lines and floor-to-ceiling windows frame breathtaking ocean views"
+        },
+        "materials": {
+          "title": "Premium Materials",
+          "description": "Imported marble, hardwood floors, and state-of-the-art fixtures throughout"
+        },
+        "outdoor": {
+          "title": "Expansive Outdoor Living",
+          "description": "Infinity pool, outdoor kitchen, and terraces designed for entertainment"
+        },
+        "smart": {
+          "title": "Smart Home Technology",
+          "description": "Fully integrated automation for lighting, climate, and security"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Explore the Interior"
+    },
+    "cta": {
+      "title": "Experience Unparalleled Luxury",
+      "description": "Discover your dream home in Punta del Este",
+      "button": "Get in Touch"
+    }
+  },
+  "location": {
+    "hero": {
+      "title": "The Heart of Punta del Este",
+      "subtitle": "Where exclusivity meets convenience"
+    },
+    "intro": {
+      "label": "Prime Location",
+      "title": "Perfectly positioned in Uruguay's most prestigious destination",
+      "description": "Located in the sought-after La Barra district, this property offers the perfect balance of privacy and accessibility. Just minutes from pristine beaches, world-class dining, and cultural attractions, while maintaining the tranquility of a gated community."
+    },
+    "map": {
+      "title": "Your New Neighborhood"
+    },
+    "nearby": {
+      "title": "Nearby Attractions",
+      "items": {
+        "beach": {
+          "title": "José Ignacio Beach",
+          "distance": "15 min drive",
+          "description": "Pristine white sand beaches and crystal-clear waters"
+        },
+        "marina": {
+          "title": "Punta del Este Marina",
+          "distance": "20 min drive",
+          "description": "World-class marina with luxury yachts and waterfront dining"
+        },
+        "golf": {
+          "title": "La Barra Golf Club",
+          "distance": "10 min drive",
+          "description": "Championship golf course designed by renowned architects"
+        },
+        "restaurants": {
+          "title": "Gourmet Restaurants",
+          "distance": "5 min drive",
+          "description": "Fine dining experiences from international celebrity chefs"
+        }
+      }
+    },
+    "cta": {
+      "title": "Live Where Life Unfolds",
+      "description": "Discover the perfect location for your dream home",
+      "button": "Learn More"
+    }
+  },
+  "estate": {
+    "hero": {
+      "title": "La Cancillería Estate",
+      "subtitle": "An exclusive residential sanctuary"
+    },
+    "intro": {
+      "label": "The Community",
+      "title": "A private oasis of luxury and tranquility",
+      "description": "La Cancillería represents the pinnacle of residential development in Punta del Este. This gated community offers residents an unparalleled lifestyle with world-class amenities, 24/7 security, and meticulously landscaped grounds that blend seamlessly with the natural environment."
+    },
+    "amenities": {
+      "title": "World-Class Amenities",
+      "items": {
+        "clubhouse": {
+          "title": "Private Clubhouse",
+          "description": "Elegant social spaces for gatherings and events"
+        },
+        "fitness": {
+          "title": "Fitness Center & Spa",
+          "description": "State-of-the-art equipment and wellness facilities"
+        },
+        "tennis": {
+          "title": "Tennis Courts",
+          "description": "Professional-grade courts with night lighting"
+        },
+        "pool": {
+          "title": "Resort-Style Pool",
+          "description": "Heated infinity pool with poolside service"
+        },
+        "security": {
+          "title": "24/7 Security",
+          "description": "Gated entrance with professional security team"
+        },
+        "concierge": {
+          "title": "Concierge Service",
+          "description": "Dedicated staff to attend to your every need"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Estate Gallery"
+    },
+    "cta": {
+      "title": "Join an Elite Community",
+      "description": "Experience the ultimate in coastal living",
+      "button": "Request Information"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Contact us to schedule a private viewing",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  }
+}
