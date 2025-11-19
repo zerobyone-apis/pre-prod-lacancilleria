@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import { PageContainer } from '@/components/layout/PageContainer';
 import { Navigation } from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { NavLink } from '@/components/NavLink';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -23,7 +23,7 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
-            <Link to="/house">
+            <NavLink to="/house">
               <Button 
                 variant="outline" 
                 size="lg" 
@@ -32,9 +32,9 @@ const Home = () => {
                 <span className="font-serif text-2xl">{t('nav.house')}</span>
                 <ArrowRight className="w-5 h-5" />
               </Button>
-            </Link>
+            </NavLink>
             
-            <Link to="/location">
+            <NavLink to="/location">
               <Button 
                 variant="outline" 
                 size="lg" 
@@ -43,9 +43,9 @@ const Home = () => {
                 <span className="font-serif text-2xl">{t('nav.location')}</span>
                 <ArrowRight className="w-5 h-5" />
               </Button>
-            </Link>
+            </NavLink>
             
-            <Link to="/estate">
+            <NavLink to="/estate">
               <Button 
                 variant="outline" 
                 size="lg" 
@@ -54,7 +54,7 @@ const Home = () => {
                 <span className="font-serif text-2xl">{t('nav.estate')}</span>
                 <ArrowRight className="w-5 h-5" />
               </Button>
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
