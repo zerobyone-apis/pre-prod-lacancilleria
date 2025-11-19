@@ -131,12 +131,12 @@ export const QuickFactsSection = () => {
         ))}
         
         <div className="flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] flex items-center justify-center pr-[10vw]">
-          <div className="text-center space-y-8 px-8">
-            <h3 className="text-4xl md:text-5xl font-serif leading-tight">{t('home.quickFacts.cta.title')}</h3>
+          <div className="text-center space-y-10 px-8">
+            <h3 className="text-3xl md:text-4xl font-serif leading-tight">{t('home.quickFacts.cta.title')}</h3>
             <NavLink to="/estate">
-              <Button size="lg" className="group px-10 py-6 text-lg bg-primary hover:bg-primary/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <Button size="lg" className="group bg-primary text-primary-foreground hover:bg-primary/80 shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
                 {t('home.quickFacts.cta.button')}
-                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>
             </NavLink>
           </div>
