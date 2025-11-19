@@ -106,37 +106,37 @@ export const QuickFactsSection = () => {
                   className="quick-fact-image w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-                
-                {/* Hover overlay with CTA */}
-                <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                  <NavLink to="/estate">
-                    <Button size="lg" variant="secondary" className="group/btn">
-                      {t('home.quickFacts.cta.button')}
-                      <ArrowRight className="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
-                  </NavLink>
-                </div>
               </div>
               
               <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
-                <h3 className="text-2xl font-serif mb-2 text-foreground">
+                <h3 className="text-2xl font-serif mb-3 text-foreground">
                   {t(`home.quickFacts.items.${fact.key}.title`)}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground mb-4">
                   {t(`home.quickFacts.items.${fact.key}.description`)}
                 </p>
+                
+                {/* Button that slides up from bottom */}
+                <div className="translate-y-16 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <NavLink to="/estate">
+                    <Button size="lg" className="w-full bg-primary/90 hover:bg-primary text-primary-foreground backdrop-blur-sm shadow-lg">
+                      {t('home.quickFacts.cta.button')}
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                  </NavLink>
+                </div>
               </div>
             </div>
           </div>
         ))}
         
         <div className="flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] flex items-center justify-center pr-[10vw]">
-          <div className="text-center space-y-6">
-            <h3 className="text-3xl font-serif">{t('home.quickFacts.cta.title')}</h3>
+          <div className="text-center space-y-8 px-8">
+            <h3 className="text-4xl md:text-5xl font-serif leading-tight">{t('home.quickFacts.cta.title')}</h3>
             <NavLink to="/estate">
-              <Button size="lg" className="group">
+              <Button size="lg" className="group px-10 py-6 text-lg bg-primary hover:bg-primary/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 {t('home.quickFacts.cta.button')}
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>
             </NavLink>
           </div>
