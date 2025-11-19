@@ -8,17 +8,19 @@ export const ContactSection = () => {
 
   return (
     <Section id="contact-section" className="bg-background">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-        <div className="space-y-12">
-          <div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6">
-              {t('contact.header.title')}
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              {t('contact.header.subtitle')}
-            </p>
-          </div>
+      <div className="space-y-16">
+        {/* Title centered */}
+        <div className="text-center max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6">
+            {t('contact.header.title')}
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground">
+            {t('contact.header.subtitle')}
+          </p>
+        </div>
 
+        {/* Two columns: info left, form right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           <div className="space-y-8">
             <div className="flex items-start gap-4">
               <Phone className="w-6 h-6 text-primary mt-1" />
@@ -50,9 +52,9 @@ export const ContactSection = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        <ContactForm />
+          <ContactForm />
+        </div>
       </div>
     </Section>
   );
