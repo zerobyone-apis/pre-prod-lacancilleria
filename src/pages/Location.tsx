@@ -2,9 +2,8 @@ import { useTranslation } from 'react-i18next';
 import { PageContainer } from '@/components/layout/PageContainer';
 import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
-import { LocationIntroSection } from '@/components/sections/LocationIntroSection';
 import { LocationMapSection } from '@/components/sections/LocationMapSection';
-import { LocationNearbySpotsSection } from '@/components/sections/LocationNearbySpotsSection';
+import { LifestyleImageSection } from '@/components/sections/LifestyleImageSection';
 import { LocationDistancesSection } from '@/components/sections/LocationDistancesSection';
 import { CTASection } from '@/components/sections/CTASection';
 import { FooterMinimal } from '@/components/layout/FooterMinimal';
@@ -20,9 +19,8 @@ const Location = () => {
         subtitle={t('location.hero.subtitle')}
         backgroundImage="/images/location-hero.jpg"
       />
-      <LocationIntroSection />
       <LocationMapSection />
-      <LocationNearbySpotsSection />
+      <LifestyleImageSection />
       <LocationDistancesSection />
       <CTASection 
         titleKey="location.cta.title"
