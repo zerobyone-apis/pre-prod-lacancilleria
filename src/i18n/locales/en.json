@@ -46,6 +46,14 @@
       }
     }
   },
+  "timeline": {
+    "title": "Live the Punta del Este experience",
+    "oceanBreezes": "Wake up to ocean breezes",
+    "alfrescoLunches": "Enjoy alfresco lunches by the pool",
+    "vibrantScene": "Discover the vibrant scene of La Barra and Punta del Este, which are just a few minutes away",
+    "laBarraJoseIgnacio": "Discover the vibrant scene of La Barra and José Ignacio just minutes away",
+    "exploreLocation": "Explore location"
+  },
   "house": {
     "hero": {
       "title": "An Architectural Masterpiece in Punta del Este",
