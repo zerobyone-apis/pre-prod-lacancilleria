@@ -4,7 +4,9 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { EstateIntroSection } from '@/components/sections/EstateIntroSection';
 import { EstateAmenitiesSection } from '@/components/sections/EstateAmenitiesSection';
+import { EstateLogisticsSection } from '@/components/sections/EstateLogisticsSection';
 import { EstateGallerySection } from '@/components/sections/EstateGallerySection';
+import { EstateContactSection } from '@/components/sections/EstateContactSection';
 import { CTASection } from '@/components/sections/CTASection';
 import { FooterMinimal } from '@/components/layout/FooterMinimal';
 
@@ -21,7 +23,9 @@ const Estate = () => {
       />
       <EstateIntroSection />
       <EstateAmenitiesSection />
+      <EstateLogisticsSection />
       <EstateGallerySection />
+      <EstateContactSection />
       <CTASection 
         titleKey="estate.cta.title"
         descriptionKey="estate.cta.description"

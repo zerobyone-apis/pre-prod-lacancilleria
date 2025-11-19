@@ -4,6 +4,7 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { HouseIntroSection } from '@/components/sections/HouseIntroSection';
 import { HouseFeaturesSection } from '@/components/sections/HouseFeaturesSection';
+import { HouseSpecsSection } from '@/components/sections/HouseSpecsSection';
 import { HouseGallerySection } from '@/components/sections/HouseGallerySection';
 import { CTASection } from '@/components/sections/CTASection';
 import { FooterMinimal } from '@/components/layout/FooterMinimal';
@@ -21,6 +22,7 @@ const House = () => {
         backgroundImage="/images/house-hero.jpg"
       />
       <HouseIntroSection />
+      <HouseSpecsSection />
       <HouseFeaturesSection />
       <HouseGallerySection />
       <CTASection 

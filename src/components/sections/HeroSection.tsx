@@ -1,5 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 interface HeroSectionProps {
   title: string;
@@ -9,20 +11,48 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ title, subtitle, cta, backgroundImage }: HeroSectionProps) => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!contentRef.current || !bgRef.current) return;
+
+    // Animate content entrance
+    gsap.fromTo(
+      contentRef.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out', delay: 0.3 }
+    );
+
+    // Parallax effect on scroll
+    gsap.to(bgRef.current, {
+      y: 200,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: heroRef.current,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+      },
+    });
+  }, []);
+
   const scrollToContent = () => {
     window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
   };
 
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        ref={bgRef}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/20 to-background" />
       </div>
       
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto animate-fade-in">
+      <div ref={contentRef} className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif leading-tight mb-6 text-primary-foreground drop-shadow-lg">
           {title}
         </h1>
