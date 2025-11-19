@@ -6,7 +6,7 @@ export const ExperienceDividerSection = () => {
   const parallaxRef = useGsapParallax(0.3);
 
   return (
-    <section className="relative h-[50vh] md:h-[60vh] w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden">
       <div 
         ref={parallaxRef}
         className="absolute inset-0 w-full h-[120%]"
