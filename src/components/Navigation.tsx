@@ -16,11 +16,11 @@ export const Navigation = () => {
           <div className="flex items-center gap-8">
             <div className="hidden md:flex items-center gap-8">
               <NavLink 
-                to="/house" 
+                to="/" 
                 className="text-sm font-medium tracking-wider hover:text-accent transition-colors"
                 activeClassName="text-accent"
               >
-                {t('nav.house')}
+                {t('nav.home')}
               </NavLink>
               <NavLink 
                 to="/location" 

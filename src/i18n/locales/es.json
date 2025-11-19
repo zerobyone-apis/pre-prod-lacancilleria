@@ -1,8 +1,50 @@
 {
   "nav": {
+    "home": "Inicio",
     "house": "La Casa",
     "location": "Ubicación",
     "estate": "El Barrio"
+  },
+  "home": {
+    "intro": {
+      "label": "¿Qué es La Cancillería?",
+      "title": "Ubicada entre jardines exuberantes y vistas panorámicas al océano",
+      "description": "La Cancillería ofrece la privacidad de una residencia cerrada con la comodidad y calidez de un hogar privado"
+    },
+    "quickFacts": {
+      "label": "Datos Rápidos",
+      "title": "Experimenta la Vida de Lujo",
+      "items": {
+        "guests": {
+          "title": "Aloja hasta 10 huéspedes",
+          "description": "Amplias instalaciones para todo tu grupo"
+        },
+        "bedrooms": {
+          "title": "5 Dormitorios + 6 Baños",
+          "description": "Privacidad y comodidad para todos"
+        },
+        "pool": {
+          "title": "Piscina Climatizada Exterior",
+          "description": "Disfruta de la natación todo el año"
+        },
+        "views": {
+          "title": "Vistas al Océano",
+          "description": "Impresionantes panoramas del Atlántico"
+        },
+        "concierge": {
+          "title": "Conserje y Personal Completo Disponible",
+          "description": "Servicio personalizado a tu alcance"
+        },
+        "outdoor": {
+          "title": "Parrilla y Área de Comedor Exterior",
+          "description": "Perfecto para entretenimiento al aire libre"
+        }
+      },
+      "cta": {
+        "title": "¿Listo para Explorar?",
+        "button": "Explorar el Barrio"
+      }
+    }
   },
   "house": {
     "hero": {

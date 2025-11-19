@@ -1,8 +1,50 @@
 {
   "nav": {
+    "home": "Home",
     "house": "The House",
     "location": "Location",
     "estate": "The Estate"
+  },
+  "home": {
+    "intro": {
+      "label": "What is La Cancillería?",
+      "title": "Nestled among lush gardens and sweeping ocean views",
+      "description": "La Cancillería offers the privacy of a gated residence with the comfort and warmth of a private home"
+    },
+    "quickFacts": {
+      "label": "Quick Facts",
+      "title": "Experience Luxury Living",
+      "items": {
+        "guests": {
+          "title": "Sleeps up to 10 guests",
+          "description": "Spacious accommodations for your entire group"
+        },
+        "bedrooms": {
+          "title": "5 Bedrooms + 6 Bathrooms",
+          "description": "Privacy and comfort for everyone"
+        },
+        "pool": {
+          "title": "Heated Outdoor Pool",
+          "description": "Year-round swimming enjoyment"
+        },
+        "views": {
+          "title": "Ocean Views",
+          "description": "Breathtaking Atlantic panoramas"
+        },
+        "concierge": {
+          "title": "Concierge & Full Staff Available",
+          "description": "Personalized service at your fingertips"
+        },
+        "outdoor": {
+          "title": "Outdoor Grill & Dining Area",
+          "description": "Perfect for al fresco entertaining"
+        }
+      },
+      "cta": {
+        "title": "Ready to Explore?",
+        "button": "Explore the Estate"
+      }
+    }
   },
   "house": {
     "hero": {
