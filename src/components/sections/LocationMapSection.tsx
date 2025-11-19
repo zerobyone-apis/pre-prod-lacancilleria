@@ -57,6 +57,19 @@ export const LocationMapSection = () => {
       pitch: 45,
     });
 
+    // Disable scroll zoom by default, only allow with Ctrl/Cmd key
+    map.current.scrollZoom.disable();
+    
+    // Enable scroll zoom only when Ctrl/Cmd is pressed
+    mapContainer.current.addEventListener('wheel', (e) => {
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        map.current?.scrollZoom.enable();
+      } else {
+        map.current?.scrollZoom.disable();
+      }
+    });
+
     map.current.addControl(
       new mapboxgl.NavigationControl({
         visualizePitch: true,
