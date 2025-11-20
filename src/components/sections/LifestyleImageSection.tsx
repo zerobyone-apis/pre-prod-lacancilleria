@@ -10,7 +10,7 @@ export const LifestyleImageSection = () => {
         className="absolute inset-0 w-full h-[120%]"
       >
         <img
-          src="/images/nearby-marina.jpg"
+          src="/images/lifestyle-experience.jpg"
           alt="La Barra, Punta del Este, and José Ignacio area"
           className="w-full h-full object-cover"
         />
