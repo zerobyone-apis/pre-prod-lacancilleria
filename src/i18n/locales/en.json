@@ -11,6 +11,16 @@
       "title": "Nestled among lush gardens and sweeping ocean views",
       "description": "La Cancillería offers the privacy of a gated residence with the comfort and warmth of a private home"
     },
+    "properties": {
+      "cancilleria": {
+        "name": "La Cancillería",
+        "description": "The main residence offering luxury, privacy and comfort in the heart of La Barra. A perfect blend of sophisticated design and natural beauty."
+      },
+      "griega": {
+        "name": "La Griega",
+        "description": "Staff and service house ensuring seamless operations and exceptional hospitality throughout your stay."
+      }
+    },
     "quickFacts": {
       "label": "Discover",
       "title": "Exclusive Amenities and Facilities",

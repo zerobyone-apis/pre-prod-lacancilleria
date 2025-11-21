@@ -11,6 +11,16 @@
       "title": "Ubicada entre jardines exuberantes y vistas panorámicas al océano",
       "description": "La Cancillería ofrece la privacidad de una residencia cerrada con la comodidad y calidez de un hogar privado"
     },
+    "properties": {
+      "cancilleria": {
+        "name": "La Cancillería",
+        "description": "La residencia principal que ofrece lujo, privacidad y confort en el corazón de La Barra. Una perfecta combinación de diseño sofisticado y belleza natural."
+      },
+      "griega": {
+        "name": "La Griega",
+        "description": "Casa de staff y servicio que garantiza operaciones impecables y una hospitalidad excepcional durante toda su estadía."
+      }
+    },
     "quickFacts": {
       "label": "Descubre",
       "title": "Amenidades y Servicios Exclusivos",
