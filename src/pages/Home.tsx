@@ -2,6 +2,7 @@ import { PageContainer } from '@/components/layout/PageContainer';
 import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { HomeIntroSection } from '@/components/sections/HomeIntroSection';
+import { PropertiesSliderSection } from '@/components/sections/PropertiesSliderSection';
 import { QuickFactsSection } from '@/components/sections/QuickFactsSection';
 import { LifestyleImageSection } from '@/components/sections/LifestyleImageSection';
 import { TimelineSection } from '@/components/sections/TimelineSection';
@@ -20,6 +21,7 @@ const Home = () => {
         backgroundImage="/images/house-hero.jpg"
       />
       <HomeIntroSection />
+      <PropertiesSliderSection />
       <QuickFactsSection />
       <LifestyleImageSection />
       <TimelineSection />
