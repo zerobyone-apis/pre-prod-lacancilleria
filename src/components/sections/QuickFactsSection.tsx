@@ -5,18 +5,20 @@ import { ArrowRight } from 'lucide-react';
 import { NavLink } from '@/components/NavLink';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger);
+
 export const QuickFactsSection = () => {
-  const {
-    t
-  } = useTranslation();
+  const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (!containerRef.current || !scrollRef.current) return;
+
     const container = containerRef.current;
     const scrollContent = scrollRef.current;
-
+    
     // Horizontal scroll animation
     const scrollTween = gsap.to(scrollContent, {
       x: () => -(scrollContent.scrollWidth - container.offsetWidth),
@@ -26,27 +28,27 @@ export const QuickFactsSection = () => {
         pin: true,
         scrub: 1,
         end: () => `+=${scrollContent.scrollWidth - container.offsetWidth}`,
-        invalidateOnRefresh: true
+        invalidateOnRefresh: true,
       }
     });
 
     // Fade in cards on scroll
     const cards = scrollContent.querySelectorAll('.quick-fact-card');
-    cards.forEach(card => {
-      gsap.fromTo(card, {
-        opacity: 0,
-        y: 50
-      }, {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: card,
-          containerAnimation: scrollTween,
-          start: "left 80%",
-          end: "left 50%",
-          scrub: true
+    cards.forEach((card) => {
+      gsap.fromTo(card,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: card,
+            containerAnimation: scrollTween,
+            start: "left 80%",
+            end: "left 50%",
+            scrub: true,
+          }
         }
-      });
+      );
 
       // Parallax effect on images
       const image = card.querySelector('.quick-fact-image');
@@ -59,44 +61,50 @@ export const QuickFactsSection = () => {
             containerAnimation: scrollTween,
             start: "left right",
             end: "right left",
-            scrub: true
+            scrub: true,
           }
         });
       }
     });
+
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
-  const quickFacts = [{
-    key: 'guests',
-    image: '/images/house-gallery-1.jpg'
-  }, {
-    key: 'bedrooms',
-    image: '/images/house-gallery-2.jpg'
-  }, {
-    key: 'pool',
-    image: '/images/house-gallery-3.jpg'
-  }, {
-    key: 'views',
-    image: '/images/house-hero.jpg'
-  }, {
-    key: 'concierge',
-    image: '/images/estate-entrance.jpg'
-  }, {
-    key: 'outdoor',
-    image: '/images/house-gallery-4.jpg'
-  }];
-  return <section ref={containerRef} className="relative h-screen overflow-hidden bg-background">
-      
 
-      <div ref={scrollRef} className="flex items-center h-full gap-8 pl-[10vw]" style={{
-      width: 'max-content'
-    }}>
-        {quickFacts.map(fact => <div key={fact.key} className="quick-fact-card group flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] bg-card rounded-lg overflow-hidden shadow-lg">
+  const quickFacts = [
+    { key: 'guests', image: '/images/house-gallery-1.jpg' },
+    { key: 'bedrooms', image: '/images/house-gallery-2.jpg' },
+    { key: 'pool', image: '/images/house-gallery-3.jpg' },
+    { key: 'views', image: '/images/house-hero.jpg' },
+    { key: 'concierge', image: '/images/estate-entrance.jpg' },
+    { key: 'outdoor', image: '/images/house-gallery-4.jpg' },
+  ];
+
+  return (
+    <section ref={containerRef} className="relative h-screen overflow-hidden bg-background">
+      <div className="absolute top-0 left-0 right-0 z-10 p-8 md:p-12 text-center">
+        <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2">
+          {t('home.quickFacts.label')}
+        </p>
+        <h2 className="text-4xl md:text-5xl font-serif mb-4">
+          {t('home.quickFacts.title')}
+        </h2>
+      </div>
+
+      <div ref={scrollRef} className="flex items-center h-full gap-8 pl-[10vw]" style={{ width: 'max-content' }}>
+        {quickFacts.map((fact) => (
+          <div
+            key={fact.key}
+            className="quick-fact-card group flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] bg-card rounded-lg overflow-hidden shadow-lg"
+          >
             <div className="relative h-full flex flex-col">
               <div className="relative flex-1 overflow-hidden">
-                <img src={fact.image} alt={t(`home.quickFacts.items.${fact.key}.title`)} className="quick-fact-image w-full h-full object-cover" />
+                <img
+                  src={fact.image}
+                  alt={t(`home.quickFacts.items.${fact.key}.title`)}
+                  className="quick-fact-image w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
               </div>
               
@@ -119,7 +127,8 @@ export const QuickFactsSection = () => {
                 </div>
               </div>
             </div>
-          </div>)}
+          </div>
+        ))}
         
         <div className="flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] flex items-center justify-center pr-[10vw]">
           <div className="text-center space-y-10 px-8">
@@ -133,5 +142,6 @@ export const QuickFactsSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
