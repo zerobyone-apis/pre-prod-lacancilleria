@@ -47,7 +47,7 @@ export const PropertiesSliderSection = () => {
                       <img
                         src={image}
                         alt={`${t(`home.properties.${property.key}.name`)} - ${index + 1}`}
-                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       />
                     </div>
                   ))}
