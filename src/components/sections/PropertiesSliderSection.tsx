@@ -32,7 +32,13 @@ export const PropertiesSliderSection = () => {
 
   return (
     <Section className="py-24">
-      <Carousel className="w-full max-w-6xl mx-auto">
+      <Carousel 
+        className="w-full max-w-6xl mx-auto"
+        opts={{
+          duration: 20,
+          loop: true,
+        }}
+      >
         <CarouselContent>
           {properties.map((property) => (
             <CarouselItem key={property.key}>
