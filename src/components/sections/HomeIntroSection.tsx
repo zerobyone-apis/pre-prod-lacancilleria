@@ -7,35 +7,18 @@ export const HomeIntroSection = () => {
   } = useTranslation();
   const sectionRef = useGsapStagger('.intro-block');
   return <Section className="py-24 md:py-32">
-      <div ref={sectionRef} className="max-w-3xl mx-auto space-y-24">
-        {/* First Block */}
+      <div ref={sectionRef} className="max-w-4xl mx-auto space-y-16">
         <div className="intro-block text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight">
-            Nestled among lush gardens and sweeping ocean views
-          </h2>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            La Cancillería offers the privacy of a gated estate while being perfectly positioned near the vibrant energy of La Barra and the refined charm of José Ignacio
-          </p>
-        </div>
-
-        {/* Divider */}
-        <div className="intro-block w-px h-24 mx-auto bg-border" />
-
-        {/* Second Block */}
-        <div className="intro-block text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">
             A Luxury Gated Estate in the Heart of La Barra
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             The property combines first-class general outdoor areas: relaxation, living and activity zones with absolute privacy and the best conditions for enjoying an unforgettable holiday
           </p>
         </div>
 
         {/* Divider */}
-        
-
-        {/* Third Block */}
-        
+        <div className="intro-block w-px h-24 mx-auto bg-border" />
       </div>
     </Section>;
 };
