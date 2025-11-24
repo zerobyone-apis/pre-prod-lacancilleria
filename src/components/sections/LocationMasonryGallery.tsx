@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 
 interface GalleryImage {
@@ -26,10 +25,12 @@ export const LocationMasonryGallery = () => {
 
   const openLightbox = (index: number) => {
     setSelectedIndex(index);
+    document.body.style.overflow = 'hidden';
   };
 
   const closeLightbox = () => {
     setSelectedIndex(null);
+    document.body.style.overflow = 'unset';
   };
 
   const goToNext = () => {
@@ -76,8 +77,11 @@ export const LocationMasonryGallery = () => {
         </div>
       </section>
 
-      <Dialog open={selectedIndex !== null} onOpenChange={(open) => !open && closeLightbox()}>
-        <DialogContent className="max-w-7xl w-full h-[90vh] p-0 bg-background/95 backdrop-blur">
+      {selectedIndex !== null && (
+        <div 
+          className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm flex items-center justify-center"
+          onClick={closeLightbox}
+        >
           <button
             onClick={closeLightbox}
             className="absolute top-4 right-4 z-50 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
@@ -85,39 +89,37 @@ export const LocationMasonryGallery = () => {
             <X className="w-6 h-6" />
           </button>
 
-          {selectedIndex !== null && (
-            <div className="relative w-full h-full flex items-center justify-center p-8">
-              <img
-                src={images[selectedIndex].src}
-                alt={images[selectedIndex].alt}
-                className="max-w-full max-h-full object-contain"
-              />
+          <div className="relative w-full h-full flex items-center justify-center p-8" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={images[selectedIndex].src}
+              alt={images[selectedIndex].alt}
+              className="max-w-full max-h-full object-contain"
+            />
 
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={goToPrevious}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-background/80 hover:bg-background"
-              >
-                <ChevronLeft className="w-8 h-8" />
-              </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={goToPrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-background/80 hover:bg-background"
+            >
+              <ChevronLeft className="w-8 h-8" />
+            </Button>
 
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={goToNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-background/80 hover:bg-background"
-              >
-                <ChevronRight className="w-8 h-8" />
-              </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={goToNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-background/80 hover:bg-background"
+            >
+              <ChevronRight className="w-8 h-8" />
+            </Button>
 
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-muted-foreground bg-background/80 px-4 py-2 rounded-full">
-                {selectedIndex + 1} / {images.length}
-              </div>
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-muted-foreground bg-background/80 px-4 py-2 rounded-full">
+              {selectedIndex + 1} / {images.length}
             </div>
-          )}
-        </DialogContent>
-      </Dialog>
+          </div>
+        </div>
+      )}
     </>
   );
 };
