@@ -28,20 +28,20 @@ export const PropertiesSliderSection = () => {
         <CarouselContent>
           {properties.map((property) => (
             <CarouselItem key={property.key}>
+              {/* Property Info */}
+              <div className="text-center space-y-6 px-4">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif">
+                  {t(`home.properties.${property.key}.name`)}
+                </h2>
+                <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                  {t(`home.properties.${property.key}.description`)}
+                </p>
+              </div>
               <div className="space-y-12">
                 {/* Images Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {property.images.map((image, index) => (
                     <div key={index} className="relative aspect-square overflow-hidden rounded-sm">
-                      {/* Property Info */}
-                      <div className="text-center space-y-6 px-4">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif">
-                          {t(`home.properties.${property.key}.name`)}
-                        </h2>
-                        <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                          {t(`home.properties.${property.key}.description`)}
-                        </p>
-                      </div>
                       <img
                         src={image}
                         alt={`${t(`home.properties.${property.key}.name`)} - ${index + 1}`}
