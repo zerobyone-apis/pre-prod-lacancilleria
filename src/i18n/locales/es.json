@@ -162,6 +162,9 @@
     "map": {
       "title": "Tu Nuevo Vecindario"
     },
+    "gallery": {
+      "title": "Explorá la Zona"
+    },
     "nearby": {
       "title": "Atracciones Cercanas",
       "items": {
