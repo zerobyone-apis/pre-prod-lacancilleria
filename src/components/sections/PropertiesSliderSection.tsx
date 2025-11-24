@@ -62,8 +62,8 @@ export const PropertiesSliderSection = () => {
                           </CarouselItem>
                         ))}
                       </CarouselContent>
-                      <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2" />
-                      <CarouselNext className="right-4 top-1/2 -translate-y-1/2" />
+                      <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-background" />
+                      <CarouselNext className="right-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-background" />
                     </Carousel>
                   </div>
                 ) : (
