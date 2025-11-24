@@ -1,7 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
-export const LanguageSwitcher = () => {
+interface LanguageSwitcherProps {
+  isScrolled?: boolean;
+}
+
+export const LanguageSwitcher = ({ isScrolled = false }: LanguageSwitcherProps) => {
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -14,7 +19,10 @@ export const LanguageSwitcher = () => {
       variant="ghost"
       size="sm"
       onClick={toggleLanguage}
-      className="text-sm font-medium uppercase tracking-wider"
+      className={cn(
+        "text-sm font-medium uppercase tracking-wider transition-colors",
+        isScrolled ? "text-foreground hover:text-accent" : "text-white hover:text-white/80"
+      )}
     >
       {i18n.language === 'en' ? 'ES' : 'EN'}
     </Button>

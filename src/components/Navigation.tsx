@@ -26,7 +26,13 @@ export const Navigation = () => {
     )}>
       <div className="container mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between h-20">
-          <NavLink to="/" className="text-2xl font-serif">
+          <NavLink 
+            to="/" 
+            className={cn(
+              "text-2xl font-serif transition-colors",
+              isScrolled ? "text-foreground" : "text-white"
+            )}
+          >
             La Cancillería
           </NavLink>
           
@@ -34,27 +40,36 @@ export const Navigation = () => {
             <div className="hidden md:flex items-center gap-8">
               <NavLink 
                 to="/" 
-                className="text-sm font-medium tracking-wider hover:text-accent transition-colors"
+                className={cn(
+                  "text-sm font-medium tracking-wider hover:text-accent transition-colors",
+                  isScrolled ? "text-foreground" : "text-white"
+                )}
                 activeClassName="text-accent"
               >
                 {t('nav.home')}
               </NavLink>
               <NavLink 
                 to="/location" 
-                className="text-sm font-medium tracking-wider hover:text-accent transition-colors"
+                className={cn(
+                  "text-sm font-medium tracking-wider hover:text-accent transition-colors",
+                  isScrolled ? "text-foreground" : "text-white"
+                )}
                 activeClassName="text-accent"
               >
                 {t('nav.location')}
               </NavLink>
               <NavLink 
                 to="/estate" 
-                className="text-sm font-medium tracking-wider hover:text-accent transition-colors"
+                className={cn(
+                  "text-sm font-medium tracking-wider hover:text-accent transition-colors",
+                  isScrolled ? "text-foreground" : "text-white"
+                )}
                 activeClassName="text-accent"
               >
                 {t('nav.estate')}
               </NavLink>
             </div>
-            <LanguageSwitcher />
+            <LanguageSwitcher isScrolled={isScrolled} />
           </div>
         </div>
       </div>
