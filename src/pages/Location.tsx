@@ -4,6 +4,7 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { LocationMapSection } from '@/components/sections/LocationMapSection';
 import { LifestyleImageSection } from '@/components/sections/LifestyleImageSection';
+import { LocationMasonryGallery } from '@/components/sections/LocationMasonryGallery';
 import { LocationDistancesSection } from '@/components/sections/LocationDistancesSection';
 import { CTASection } from '@/components/sections/CTASection';
 import { FooterMinimal } from '@/components/layout/FooterMinimal';
@@ -21,6 +22,7 @@ const Location = () => {
       />
       <LocationMapSection />
       <LifestyleImageSection />
+      <LocationMasonryGallery />
       <LocationDistancesSection />
       <CTASection 
         titleKey="location.cta.title"

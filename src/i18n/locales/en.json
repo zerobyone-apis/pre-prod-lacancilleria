@@ -162,6 +162,9 @@
     "map": {
       "title": "Your New Neighborhood"
     },
+    "gallery": {
+      "title": "Explore the Area"
+    },
     "nearby": {
       "title": "Nearby Attractions",
       "items": {
