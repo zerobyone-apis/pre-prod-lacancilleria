@@ -82,9 +82,6 @@ export const PropertiesSliderSection = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-
-        <CarouselPrevious className="left-0 -translate-x-12" />
-        <CarouselNext className="right-0 translate-x-12" />
       </Carousel>
     </Section>
   );
