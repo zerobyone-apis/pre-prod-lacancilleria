@@ -8,11 +8,13 @@ export const PropertiesSliderSection = () => {
   const properties = [
     {
       key: "cancilleria",
+      type: "images" as const,
       images: ["/images/house-hero.jpg", "/images/house-gallery-1.jpg", "/images/house-gallery-2.jpg"],
     },
     {
       key: "griega",
-      images: ["/images/house-gallery-3.jpg", "/images/house-gallery-4.jpg", "/images/house-gallery-5.jpg"],
+      type: "video" as const,
+      videoUrl: "/videos/sample-video.mp4", // Replace with your video URL
     },
   ];
 
@@ -37,18 +39,45 @@ export const PropertiesSliderSection = () => {
                   </p>
                 </div>
                 
-                {/* Images Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {property.images.map((image, index) => (
-                    <div key={index} className="relative aspect-square overflow-hidden rounded-sm">
-                      <img
-                        src={image}
-                        alt={`${t(`home.properties.${property.key}.name`)} - ${index + 1}`}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                    </div>
-                  ))}
-                </div>
+                {/* Media Content */}
+                {property.type === "images" ? (
+                  <div className="relative">
+                    <Carousel
+                      className="w-full"
+                      opts={{
+                        duration: 20,
+                        loop: true,
+                      }}
+                    >
+                      <CarouselContent>
+                        {property.images?.map((image, index) => (
+                          <CarouselItem key={index}>
+                            <div className="relative aspect-video overflow-hidden rounded-sm">
+                              <img
+                                src={image}
+                                alt={`${t(`home.properties.${property.key}.name`)} - ${index + 1}`}
+                                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2" />
+                      <CarouselNext className="right-4 top-1/2 -translate-y-1/2" />
+                    </Carousel>
+                  </div>
+                ) : (
+                  <div className="relative aspect-video overflow-hidden rounded-sm">
+                    <video
+                      src={property.videoUrl}
+                      controls
+                      className="w-full h-full object-cover"
+                      preload="metadata"
+                    >
+                      Tu navegador no soporta el elemento de video.
+                    </video>
+                  </div>
+                )}
               </div>
             </CarouselItem>
           ))}
