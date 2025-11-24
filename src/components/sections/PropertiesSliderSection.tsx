@@ -18,13 +18,6 @@ export const PropertiesSliderSection = () => {
 
   return (
     <Section className="py-24">
-      {/* Property Info */}
-      <div className="text-center space-y-6 px-4">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif">{t(`home.properties.${property.key}.name`)}</h2>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-          {t(`home.properties.${property.key}.description`)}
-        </p>
-      </div>
       <Carousel
         className="w-full max-w-6xl mx-auto"
         opts={{
@@ -36,6 +29,14 @@ export const PropertiesSliderSection = () => {
           {properties.map((property) => (
             <CarouselItem key={property.key}>
               <div className="space-y-12">
+                {/* Property Info */}
+                <div className="text-center space-y-6 px-4">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif">{t(`home.properties.${property.key}.name`)}</h2>
+                  <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                    {t(`home.properties.${property.key}.description`)}
+                  </p>
+                </div>
+                
                 {/* Images Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {property.images.map((image, index) => (
