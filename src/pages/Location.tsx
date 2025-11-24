@@ -6,6 +6,7 @@ import { LocationMapSection } from "@/components/sections/LocationMapSection";
 import { LifestyleImageSection } from "@/components/sections/LifestyleImageSection";
 import { LocationMasonryGallery } from "@/components/sections/LocationMasonryGallery";
 import { LocationDistancesSection } from "@/components/sections/LocationDistancesSection";
+import { LaBarraDividerSection } from "@/components/sections/LaBarraDividerSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { FooterMinimal } from "@/components/layout/FooterMinimal";
 
@@ -24,6 +25,7 @@ const Location = () => {
       <LifestyleImageSection />
       <LocationDistancesSection />
       <LocationMasonryGallery />
+      <LaBarraDividerSection />
       <CTASection titleKey="location.cta.title" descriptionKey="location.cta.description" />
       <FooterMinimal />
     </PageContainer>
