@@ -382,6 +382,48 @@
       "submit": "Send Message"
     }
   },
+  "estate": {
+    "hero": {
+      "title": "The Estate",
+      "subtitle": "Exclusive coastal living in La Barra"
+    },
+    "services": {
+      "title": "Professional Services",
+      "housekeeping": "Housekeeping/Cleaning",
+      "laundry": "Laundry/Wardrobe",
+      "garden": "Garden/Exterior Maintenance",
+      "pool": "Pool Maintenance/Technician",
+      "maintenance": "Property/Estate Maintenance"
+    },
+    "amenities": {
+      "label": "Amenities",
+      "title": "Exclusives",
+      "items": {
+        "clubhouse": {
+          "title": "Heated outdoor pool"
+        },
+        "fitness": {
+          "title": "An outdoor living area with a pergola"
+        },
+        "tennis": {
+          "title": "An Outdoor Dining with Argentinian grill with a pergola"
+        },
+        "pool": {
+          "title": "Air conditioning in all rooms"
+        },
+        "security": {
+          "title": "Wifi & TVs in living room & master suite"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Explore from Inside"
+    },
+    "cta": {
+      "title": "Ready to Experience La Cancillería?",
+      "description": "Contact us to schedule a visit or learn more about this exceptional property"
+    }
+  },
   "footer": {
     "rights": "All rights reserved"
   }
