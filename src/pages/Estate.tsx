@@ -3,11 +3,12 @@ import { PageContainer } from "@/components/layout/PageContainer";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { EstateIntroSection } from "@/components/sections/EstateIntroSection";
-import { ServicesOption3Alternated } from "@/components/sections/ServicesOption3Alternated";
+import { EstateDividerSection } from "@/components/sections/EstateDividerSection";
 import { EstateServicesSection } from "@/components/sections/EstateServicesSection";
-import { EstateGallerySection } from "@/components/sections/EstateGallerySection";
+import { EstateLogisticsSection } from "@/components/sections/EstateLogisticsSection";
+import { EstateAmenitiesSection } from "@/components/sections/EstateAmenitiesSection";
+import { EstateGalleryMasonry } from "@/components/sections/EstateGalleryMasonry";
 import { CTASection } from "@/components/sections/CTASection";
-import { ExperienceDividerSection } from "@/components/sections/ExperienceDividerSection";
 import { FooterMinimal } from "@/components/layout/FooterMinimal";
 
 const Estate = () => {
@@ -22,10 +23,11 @@ const Estate = () => {
         backgroundImage="/images/estate-hero.jpg"
       />
       <EstateIntroSection />
+      <EstateDividerSection />
       <EstateServicesSection />
-      <ServicesOption3Alternated />
-      <EstateGallerySection />
-      <ExperienceDividerSection />
+      <EstateLogisticsSection />
+      <EstateAmenitiesSection />
+      <EstateGalleryMasonry />
       <CTASection titleKey={t("estate.cta.title")} descriptionKey={t("estate.cta.description")} />
       <FooterMinimal />
     </PageContainer>
