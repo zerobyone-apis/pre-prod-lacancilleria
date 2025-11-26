@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { EstateIntroSection } from "@/components/sections/EstateIntroSection";
-import { EstateDividerSection } from "@/components/sections/EstateDividerSection";
+import { PropertiesSliderSection } from "@/components/sections/PropertiesSliderSection";
 import { EstateServicesSection } from "@/components/sections/EstateServicesSection";
+import { EstateDividerSection } from "@/components/sections/EstateDividerSection";
 import { EstateLogisticsSection } from "@/components/sections/EstateLogisticsSection";
 import { EstateAmenitiesSection } from "@/components/sections/EstateAmenitiesSection";
 import { EstateGalleryMasonry } from "@/components/sections/EstateGalleryMasonry";
@@ -22,9 +22,9 @@ const Estate = () => {
         subtitle={t("estate.hero.subtitle")}
         backgroundImage="/images/estate-hero.jpg"
       />
-      <EstateIntroSection />
-      <EstateDividerSection />
+      <PropertiesSliderSection />
       <EstateServicesSection />
+      <EstateDividerSection />
       <EstateLogisticsSection />
       <EstateAmenitiesSection />
       <EstateGalleryMasonry />
