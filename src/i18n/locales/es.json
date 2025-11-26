@@ -382,6 +382,48 @@
       "submit": "Enviar Mensaje"
     }
   },
+  "estate": {
+    "hero": {
+      "title": "El Barrio",
+      "subtitle": "Vida costera exclusiva en La Barra"
+    },
+    "services": {
+      "title": "Servicios Profesionales",
+      "housekeeping": "Limpieza/Mucama",
+      "laundry": "Lavandería/Guardarropas",
+      "garden": "Jardín/Mantenimiento Exterior",
+      "pool": "Mantenimiento Piscina/Técnico",
+      "maintenance": "Mantenimiento Propiedad/Barrio"
+    },
+    "amenities": {
+      "label": "Amenidades",
+      "title": "Exclusivos",
+      "items": {
+        "clubhouse": {
+          "title": "Piscina climatizada exterior"
+        },
+        "fitness": {
+          "title": "Área de estar exterior con pérgola"
+        },
+        "tennis": {
+          "title": "Comedor exterior con parrilla argentina con pérgola"
+        },
+        "pool": {
+          "title": "Aire acondicionado en todas las habitaciones"
+        },
+        "security": {
+          "title": "Wifi y TVs en sala de estar y suite principal"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Explora desde Adentro"
+    },
+    "cta": {
+      "title": "¿Listo para Experimentar La Cancillería?",
+      "description": "Contáctanos para agendar una visita o conocer más sobre esta propiedad excepcional"
+    }
+  },
   "footer": {
     "rights": "Todos los derechos reservados"
   }
