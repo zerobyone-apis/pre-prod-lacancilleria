@@ -24,9 +24,9 @@ const Estate = () => {
       />
       <PropertiesSliderSection />
       <EstateServicesSection />
-      <EstateDividerSection />
       <EstateLogisticsSection />
       <EstateAmenitiesSection />
+      <EstateDividerSection />
       <EstateGalleryMasonry />
       <CTASection titleKey={t("estate.cta.title")} descriptionKey={t("estate.cta.description")} />
       <FooterMinimal />
