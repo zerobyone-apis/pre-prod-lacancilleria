@@ -6,46 +6,68 @@ export const EstateAmenitiesSection = () => {
   const { t } = useTranslation();
   
   const amenities = [
-    { id: 'clubhouse', image: '/images/estate-gallery-1.jpg' },
-    { id: 'fitness', image: '/images/estate-gallery-4.jpg' },
-    { id: 'tennis', image: '/images/estate-gallery-3.jpg' },
-    { id: 'pool', image: '/images/estate-gallery-2.jpg' },
-    { id: 'security', image: '/images/estate-gallery-6.jpg' },
-    { id: 'concierge', image: '/images/estate-gallery-5.jpg' }
+    { id: 'clubhouse', image: '/images/estate-gallery-1.jpg', size: 'large' },
+    { id: 'fitness', image: '/images/estate-gallery-4.jpg', size: 'small' },
+    { id: 'tennis', image: '/images/estate-gallery-3.jpg', size: 'medium' },
+    { id: 'pool', image: '/images/estate-gallery-2.jpg', size: 'small' },
+    { id: 'security', image: '/images/estate-gallery-6.jpg', size: 'large' }
   ];
 
   return (
     <Section>
       <SectionHeader
+        label={t('estate.amenities.label')}
         title={t('estate.amenities.title')}
         align="center"
-        className="mb-16"
+        className="mb-20"
       />
-      <div className="space-y-24">
-        {amenities.map((amenity, index) => (
-          <div
-            key={amenity.id}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
-              index % 2 === 0 ? '' : 'lg:grid-flow-dense'
-            }`}
-          >
-            <div className={index % 2 === 0 ? '' : 'lg:col-start-2'}>
-              <img
-                src={amenity.image}
-                alt={t(`estate.amenities.items.${amenity.id}.title`)}
-                className="w-full h-[400px] object-cover rounded-sm"
-              />
-            </div>
-            <div className={index % 2 === 0 ? '' : 'lg:col-start-1 lg:row-start-1'}>
-              <h3 className="text-3xl md:text-4xl font-serif mb-4">
-                {t(`estate.amenities.items.${amenity.id}.title`)}
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {t(`estate.amenities.items.${amenity.id}.description`)}
-              </p>
-            </div>
-          </div>
-        ))}
+      
+      {/* Timeline Container */}
+      <div className="relative max-w-6xl mx-auto">
+        {/* Center Line */}
+        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border hidden lg:block" />
+        
+        {/* Timeline Items */}
+        <div className="space-y-16 lg:space-y-24">
+          {amenities.map((amenity, index) => {
+            const isLeft = index % 2 === 0;
+            const sizeClasses = {
+              small: 'w-32 h-32',
+              medium: 'w-40 h-40',
+              large: 'w-48 h-48'
+            };
+            
+            return (
+              <div
+                key={amenity.id}
+                className={`relative flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${
+                  isLeft ? 'lg:flex-row-reverse' : ''
+                }`}
+              >
+                {/* Content Side */}
+                <div className={`flex-1 ${isLeft ? 'lg:text-right' : 'lg:text-left'} text-center`}>
+                  <h3 className="text-2xl md:text-3xl font-serif mb-3">
+                    {t(`estate.amenities.items.${amenity.id}.title`)}
+                  </h3>
+                </div>
+                
+                {/* Center Dot */}
+                <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary border-4 border-background" />
+                
+                {/* Image Side */}
+                <div className="flex-1 flex justify-center">
+                  <div className={`relative overflow-hidden rounded-sm group ${sizeClasses[amenity.size as keyof typeof sizeClasses]}`}>
+                    <img
+                      src={amenity.image}
+                      alt={t(`estate.amenities.items.${amenity.id}.title`)}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </Section>
   );

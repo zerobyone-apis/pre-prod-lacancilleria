@@ -16,12 +16,12 @@ export const EstateGalleryMasonry = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const images: GalleryImage[] = [
-    { src: '/images/estate-gallery-1.jpg', alt: 'Clubhouse', span: 'md:col-span-1 md:row-span-2' },
-    { src: '/images/estate-gallery-2.jpg', alt: 'Pool area', span: 'md:col-span-1' },
-    { src: '/images/estate-gallery-3.jpg', alt: 'Tennis courts', span: 'md:col-span-1' },
-    { src: '/images/estate-gallery-4.jpg', alt: 'Fitness center', span: 'md:col-span-2 md:row-span-1' },
-    { src: '/images/estate-gallery-5.jpg', alt: 'Gardens', span: 'md:col-span-1' },
-    { src: '/images/estate-gallery-6.jpg', alt: 'Common areas', span: 'md:col-span-1' }
+    { src: '/images/estate-gallery-1.jpg', alt: 'Estate view 1', span: 'md:col-span-1 md:row-span-2' },
+    { src: '/images/estate-gallery-2.jpg', alt: 'Estate view 2', span: 'md:col-span-1 md:row-span-1' },
+    { src: '/images/estate-gallery-3.jpg', alt: 'Estate view 3', span: 'md:col-span-1 md:row-span-2' },
+    { src: '/images/estate-gallery-4.jpg', alt: 'Estate view 4', span: 'md:col-span-2 md:row-span-1' },
+    { src: '/images/estate-gallery-5.jpg', alt: 'Estate view 5', span: 'md:col-span-1 md:row-span-1' },
+    { src: '/images/estate-gallery-6.jpg', alt: 'Estate view 6', span: 'md:col-span-1 md:row-span-1' }
   ];
 
   const openLightbox = (index: number) => setSelectedIndex(index);
