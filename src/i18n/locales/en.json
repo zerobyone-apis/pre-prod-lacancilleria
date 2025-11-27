@@ -419,6 +419,17 @@
     "gallery": {
       "title": "Explore from Inside"
     },
+    "staff": {
+      "label": "Upon Request",
+      "title": "Staff Available",
+      "services": {
+        "chef": "Chef",
+        "nanny": "Nanny / Babysitter",
+        "driver": "Driver / Transportation",
+        "yoga": "Yoga Coach / Wellness Instruction",
+        "massage": "Massage Therapist"
+      }
+    },
     "cta": {
       "title": "Ready to Experience La Cancillería?",
       "description": "Contact us to schedule a visit or learn more about this exceptional property"

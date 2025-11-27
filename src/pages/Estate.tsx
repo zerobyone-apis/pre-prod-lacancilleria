@@ -7,6 +7,7 @@ import { EstateServicesSection } from "@/components/sections/EstateServicesSecti
 import { EstateDividerSection } from "@/components/sections/EstateDividerSection";
 import { EstateLogisticsSection } from "@/components/sections/EstateLogisticsSection";
 import { EstateAmenitiesSection } from "@/components/sections/EstateAmenitiesSection";
+import { EstateStaffSection } from "@/components/sections/EstateStaffSection";
 import { EstateGalleryMasonry } from "@/components/sections/EstateGalleryMasonry";
 import { CTASection } from "@/components/sections/CTASection";
 import { FooterMinimal } from "@/components/layout/FooterMinimal";
@@ -28,12 +29,9 @@ const Estate = () => {
 
       <EstateGalleryMasonry />
       <EstateDividerSection />
-      <PropertiesSliderSection />
-      <EstateServicesSection />
-      <EstateAmenitiesSection />
-
+      <PropertiesSliderSection propertyFilter="griega" />
+      <EstateStaffSection />
       <EstateGalleryMasonry />
-      <EstateDividerSection />
       <CTASection titleKey={t("estate.cta.title")} descriptionKey={t("estate.cta.description")} />
       <FooterMinimal />
     </PageContainer>

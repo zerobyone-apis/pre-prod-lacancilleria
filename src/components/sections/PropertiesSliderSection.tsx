@@ -2,10 +2,14 @@ import { useTranslation } from "react-i18next";
 import { Section } from "@/components/layout/Section";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-export const PropertiesSliderSection = () => {
+interface PropertiesSliderSectionProps {
+  propertyFilter?: "cancilleria" | "griega";
+}
+
+export const PropertiesSliderSection = ({ propertyFilter }: PropertiesSliderSectionProps = {}) => {
   const { t } = useTranslation();
 
-  const properties = [
+  const allProperties = [
     {
       key: "cancilleria",
       type: "images" as const,
@@ -13,10 +17,14 @@ export const PropertiesSliderSection = () => {
     },
     {
       key: "griega",
-      type: "video" as const,
-      videoUrl: "/videos/sample-video.mp4", // Replace with your video URL
+      type: "images" as const,
+      images: ["/images/estate-gallery-1.jpg", "/images/estate-gallery-2.jpg", "/images/estate-gallery-3.jpg"],
     },
   ];
+
+  const properties = propertyFilter 
+    ? allProperties.filter(p => p.key === propertyFilter)
+    : allProperties;
 
   return (
     <Section className="py-24">
@@ -40,44 +48,31 @@ export const PropertiesSliderSection = () => {
                 </div>
                 
                 {/* Media Content */}
-                {property.type === "images" ? (
-                  <div className="relative">
-                    <Carousel
-                      className="w-full"
-                      opts={{
-                        duration: 20,
-                        loop: true,
-                      }}
-                    >
-                      <CarouselContent>
-                        {property.images?.map((image, index) => (
-                          <CarouselItem key={index}>
-                            <div className="relative aspect-video overflow-hidden rounded-sm">
-                              <img
-                                src={image}
-                                alt={`${t(`home.properties.${property.key}.name`)} - ${index + 1}`}
-                                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                              />
-                            </div>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-background" />
-                      <CarouselNext className="right-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-background" />
-                    </Carousel>
-                  </div>
-                ) : (
-                  <div className="relative aspect-video overflow-hidden rounded-sm">
-                    <video
-                      src={property.videoUrl}
-                      controls
-                      className="w-full h-full object-cover"
-                      preload="metadata"
-                    >
-                      Tu navegador no soporta el elemento de video.
-                    </video>
-                  </div>
-                )}
+                <div className="relative">
+                  <Carousel
+                    className="w-full"
+                    opts={{
+                      duration: 20,
+                      loop: true,
+                    }}
+                  >
+                    <CarouselContent>
+                      {property.images?.map((image, index) => (
+                        <CarouselItem key={index}>
+                          <div className="relative aspect-video overflow-hidden rounded-sm">
+                            <img
+                              src={image}
+                              alt={`${t(`home.properties.${property.key}.name`)} - ${index + 1}`}
+                              className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                            />
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-background" />
+                    <CarouselNext className="right-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-background" />
+                  </Carousel>
+                </div>
               </div>
             </CarouselItem>
           ))}
