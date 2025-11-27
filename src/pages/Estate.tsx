@@ -9,6 +9,7 @@ import { EstateLogisticsSection } from "@/components/sections/EstateLogisticsSec
 import { EstateAmenitiesSection } from "@/components/sections/EstateAmenitiesSection";
 import { EstateStaffSection } from "@/components/sections/EstateStaffSection";
 import { EstateGalleryMasonry } from "@/components/sections/EstateGalleryMasonry";
+import { EstateExploreSection } from "@/components/sections/EstateExploreSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { FooterMinimal } from "@/components/layout/FooterMinimal";
 
@@ -31,7 +32,7 @@ const Estate = () => {
       <EstateDividerSection />
       <PropertiesSliderSection propertyFilter="griega" />
       <EstateStaffSection />
-      <EstateGalleryMasonry />
+      <EstateExploreSection />
       <CTASection titleKey={t("estate.cta.title")} descriptionKey={t("estate.cta.description")} />
       <FooterMinimal />
     </PageContainer>
