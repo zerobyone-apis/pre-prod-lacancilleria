@@ -419,6 +419,17 @@
     "gallery": {
       "title": "Explora desde Adentro"
     },
+    "staff": {
+      "label": "Bajo Pedido",
+      "title": "Personal Disponible",
+      "services": {
+        "chef": "Chef",
+        "nanny": "Niñera / Cuidadora",
+        "driver": "Conductor / Transporte",
+        "yoga": "Instructor de Yoga / Bienestar",
+        "massage": "Terapeuta de Masajes"
+      }
+    },
     "cta": {
       "title": "¿Listo para Experimentar La Cancillería?",
       "description": "Contáctanos para agendar una visita o conocer más sobre esta propiedad excepcional"
