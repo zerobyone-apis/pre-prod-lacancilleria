@@ -417,6 +417,9 @@
       }
     },
     "gallery": {
+      "title": "Community Spaces"
+    },
+    "explore": {
       "title": "Explore from Inside"
     },
     "staff": {
