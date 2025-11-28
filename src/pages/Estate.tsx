@@ -33,6 +33,7 @@ const Estate = () => {
       <PropertiesSliderSection propertyFilter="griega" />
       <EstateStaffSection />
       <EstateExploreSection />
+      <EstateDividerSection />
       <CTASection titleKey={t("estate.cta.title")} descriptionKey={t("estate.cta.description")} />
       <FooterMinimal />
     </PageContainer>

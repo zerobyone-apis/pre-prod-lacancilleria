@@ -4,10 +4,10 @@ export const LaBarraDividerSection = () => {
   const parallaxRef = useGsapParallax(0.3);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[50vh] w-full overflow-hidden">
       <div 
         ref={parallaxRef}
-        className="absolute inset-0 w-full h-[120%]"
+        className="absolute inset-0 w-full h-[130%]"
       >
         <img
           src="/images/la-barra-landscape.jpg"
