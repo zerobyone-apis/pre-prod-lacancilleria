@@ -1,7 +1,7 @@
 import { useGsapParallax } from '@/hooks/useGsapAnimation';
 
 export const EstateDividerSection = () => {
-  const parallaxRef = useGsapParallax(0.3);
+  const parallaxRef = useGsapParallax(0.5);
 
   return (
     <section className="relative h-[50vh] w-full overflow-hidden">
