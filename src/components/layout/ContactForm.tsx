@@ -33,31 +33,31 @@ export const ContactForm = () => {
   `;
 
   const labelClasses = (field: string) => `
-    absolute left-0 transition-all duration-300 pointer-events-none
+    absolute left-7 transition-all duration-300 pointer-events-none
     ${focusedField === field || formData[field as keyof typeof formData] 
-      ? '-top-5 text-xs text-accent' 
-      : 'top-3 text-sm text-muted-foreground/70'}
+      ? 'top-0 text-xs text-accent' 
+      : 'top-9 text-sm text-muted-foreground/70'}
   `;
 
   return (
     <div className="relative">
       {/* Elegant container with soft glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/5 rounded-3xl blur-xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/5 rounded-3xl blur-xl pointer-events-none" />
       
       <div className="relative bg-card/30 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-border/30 shadow-2xl shadow-black/5">
         {/* Decorative corner accents */}
-        <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-accent/20 rounded-tl-3xl" />
-        <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-accent/20 rounded-br-3xl" />
+        <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-accent/20 rounded-tl-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-accent/20 rounded-br-3xl pointer-events-none" />
         
         <form onSubmit={handleSubmit} className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Name Field */}
-            <div className="relative group">
+            <div className="relative pt-6">
               <label className={labelClasses('name')}>
                 {t('contact.form.name')}
               </label>
               <div className="flex items-center gap-3">
-                <User className={`w-4 h-4 transition-colors duration-300 ${focusedField === 'name' ? 'text-accent' : 'text-muted-foreground/40'}`} />
+                <User className={`w-4 h-4 flex-shrink-0 transition-colors duration-300 ${focusedField === 'name' ? 'text-accent' : 'text-muted-foreground/40'}`} />
                 <input
                   type="text"
                   value={formData.name}
@@ -72,12 +72,12 @@ export const ContactForm = () => {
             </div>
 
             {/* Email Field */}
-            <div className="relative group">
+            <div className="relative pt-6">
               <label className={labelClasses('email')}>
                 {t('contact.form.email')}
               </label>
               <div className="flex items-center gap-3">
-                <Mail className={`w-4 h-4 transition-colors duration-300 ${focusedField === 'email' ? 'text-accent' : 'text-muted-foreground/40'}`} />
+                <Mail className={`w-4 h-4 flex-shrink-0 transition-colors duration-300 ${focusedField === 'email' ? 'text-accent' : 'text-muted-foreground/40'}`} />
                 <input
                   type="email"
                   value={formData.email}
@@ -93,7 +93,7 @@ export const ContactForm = () => {
           </div>
 
           {/* Phone Field */}
-          <div className="relative group">
+          <div className="relative pt-6">
             <label className={labelClasses('phone')}>
               {t('contact.form.phone')}
               <span className="text-muted-foreground/40 ml-1">
@@ -101,7 +101,7 @@ export const ContactForm = () => {
               </span>
             </label>
             <div className="flex items-center gap-3">
-              <Phone className={`w-4 h-4 transition-colors duration-300 ${focusedField === 'phone' ? 'text-accent' : 'text-muted-foreground/40'}`} />
+              <Phone className={`w-4 h-4 flex-shrink-0 transition-colors duration-300 ${focusedField === 'phone' ? 'text-accent' : 'text-muted-foreground/40'}`} />
               <input
                 type="tel"
                 value={formData.phone}
@@ -115,12 +115,12 @@ export const ContactForm = () => {
           </div>
 
           {/* Message Field */}
-          <div className="relative group">
+          <div className="relative pt-6">
             <label className={labelClasses('message')}>
               {t('contact.form.message')}
             </label>
             <div className="flex gap-3">
-              <MessageSquare className={`w-4 h-4 mt-3 transition-colors duration-300 ${focusedField === 'message' ? 'text-accent' : 'text-muted-foreground/40'}`} />
+              <MessageSquare className={`w-4 h-4 flex-shrink-0 mt-3 transition-colors duration-300 ${focusedField === 'message' ? 'text-accent' : 'text-muted-foreground/40'}`} />
               <textarea
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
