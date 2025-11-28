@@ -10,8 +10,8 @@ export const HomeDividerSection = () => {
         className="absolute inset-0 w-full h-[130%]"
       >
         <img
-          src="/images/lifestyle-experience.jpg"
-          alt="La Cancillería Lifestyle"
+          src="/images/home-divider.jpg"
+          alt="Punta del Este aerial view at sunset"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/40" />
