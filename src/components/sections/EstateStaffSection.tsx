@@ -44,13 +44,7 @@ export const EstateStaffSection = () => {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 {/* Text row */}
-                <div className={`py-6 md:py-8 cursor-pointer transition-all duration-500 ease-out ${
-                  isHovered 
-                    ? isEven 
-                      ? 'translate-x-[-15%] md:translate-x-[-25%]' 
-                      : 'translate-x-[15%] md:translate-x-[25%]'
-                    : 'translate-x-0'
-                }`}>
+                <div className="py-6 md:py-8 cursor-pointer">
                   <h3 className={`text-xl md:text-2xl lg:text-3xl font-serif text-center transition-colors duration-300 ${
                     isHovered ? 'text-foreground' : 'text-foreground/60'
                   }`}>
