@@ -6,10 +6,14 @@
     "estate": "The Estate"
   },
   "home": {
+    "hero": {
+      "title": "La Cancillería",
+      "subtitle": "Punta del Este, Uruguay"
+    },
     "intro": {
       "label": "What is La Cancillería?",
-      "title": "Nestled among lush gardens and sweeping ocean views",
-      "description": "La Cancillería offers the privacy of a gated residence with the comfort and warmth of a private home"
+      "title": "A Luxury Gated Estate in the Heart of La Barra",
+      "description": "The property combines first-class outdoor areas: relaxation, living and activity zones with absolute privacy and the best conditions for enjoying an unforgettable holiday"
     },
     "properties": {
       "cancilleria": {
@@ -160,7 +164,11 @@
       "description": "Located in the sought-after La Barra district, this property offers the perfect balance of privacy and accessibility. Just minutes from pristine beaches, world-class dining, and cultural attractions, while maintaining the tranquility of a gated community."
     },
     "map": {
-      "title": "Your New Neighborhood"
+      "title": "Your New Neighborhood",
+      "description": "Explore the main points of interest near La Cancillería",
+      "tokenRequired": "MapBox Token Required",
+      "tokenDescription": "Please enter your MapBox public token to display the interactive map. Get your token at",
+      "loadMap": "Load Map"
     },
     "gallery": {
       "title": "Explore the Area"
@@ -191,51 +199,13 @@
       }
     },
     "distances": {
-      "title": "Distance to Key Locations",
-      "description": "Everything you need is within easy reach",
+      "title": "Easily accessible. Perfectly secluded",
       "items": {
-        "airport": {
-          "icon": "✈️",
-          "name": "Punta del Este Airport",
-          "description": "Carrasco International Airport",
-          "distance": "15 km",
-          "time": "18 min drive"
-        },
-        "downtown": {
-          "icon": "🏙️",
-          "name": "Downtown Punta del Este",
-          "description": "Shopping, dining, entertainment",
-          "distance": "8 km",
-          "time": "12 min drive"
-        },
-        "beach": {
-          "icon": "🏖️",
-          "name": "Nearest Beach",
-          "description": "Playa Brava access",
-          "distance": "2 km",
-          "time": "5 min drive"
-        },
-        "marina": {
-          "icon": "⛵",
-          "name": "Yacht Marina",
-          "description": "Premium marina facilities",
-          "distance": "10 km",
-          "time": "15 min drive"
-        },
-        "golf": {
-          "icon": "⛳",
-          "name": "Golf Courses",
-          "description": "Multiple championship courses",
-          "distance": "5 km",
-          "time": "8 min drive"
-        },
-        "shopping": {
-          "icon": "🛍️",
-          "name": "Shopping Centers",
-          "description": "Luxury retail & boutiques",
-          "distance": "6 km",
-          "time": "10 min drive"
-        }
+        "pde-airport": "16 miles from Punta del Este Airport",
+        "carrasco": "70 miles from Carrasco Airport",
+        "montoya": "5-minute walk to Playa Montoya",
+        "bikini": "7 minutes to Playa Bikini",
+        "labarra": "3 minutes to La Barra restaurants and nightlife"
       }
     },
     "cta": {
@@ -358,6 +328,7 @@
       "title": "Ready to experience a paradise where nature and luxury unite?",
       "subtitle": "Get in touch with us to learn more about La Cancillería"
     },
+    "emailAlternative": "Or reach us at",
     "info": {
       "phone": {
         "label": "PHONE",
@@ -377,9 +348,11 @@
     "form": {
       "name": "Full Name",
       "email": "Email Address",
-      "phone": "Phone Number (Optional)",
+      "phone": "Phone Number",
       "message": "Your Message",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "success": "Message sent successfully",
+      "optional": "optional"
     }
   },
   "estate": {

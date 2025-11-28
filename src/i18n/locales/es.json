@@ -6,10 +6,14 @@
     "estate": "El Barrio"
   },
   "home": {
+    "hero": {
+      "title": "La Cancillería",
+      "subtitle": "Punta del Este, Uruguay"
+    },
     "intro": {
       "label": "¿Qué es La Cancillería?",
-      "title": "Ubicada entre jardines exuberantes y vistas panorámicas al océano",
-      "description": "La Cancillería ofrece la privacidad de una residencia cerrada con la comodidad y calidez de un hogar privado"
+      "title": "Un Exclusivo Barrio Privado en el Corazón de La Barra",
+      "description": "La propiedad combina áreas exteriores de primera clase: zonas de relajación, vida y actividades con absoluta privacidad y las mejores condiciones para disfrutar de unas vacaciones inolvidables"
     },
     "properties": {
       "cancilleria": {
@@ -160,7 +164,11 @@
       "description": "Ubicada en el codiciado distrito de La Barra, esta propiedad ofrece el equilibrio perfecto entre privacidad y accesibilidad. A solo minutos de playas prístinas, gastronomía de clase mundial y atracciones culturales, manteniendo la tranquilidad de una comunidad privada."
     },
     "map": {
-      "title": "Tu Nuevo Vecindario"
+      "title": "Tu Nuevo Vecindario",
+      "description": "Explora los principales puntos de interés cerca de La Cancillería",
+      "tokenRequired": "Token de MapBox Requerido",
+      "tokenDescription": "Por favor ingresa tu token público de MapBox para mostrar el mapa interactivo. Obtén tu token en",
+      "loadMap": "Cargar Mapa"
     },
     "gallery": {
       "title": "Explorá la Zona"
@@ -191,51 +199,13 @@
       }
     },
     "distances": {
-      "title": "Distancia a Puntos Clave",
-      "description": "Todo lo que necesitas está al alcance",
+      "title": "Fácil acceso. Privacidad perfecta",
       "items": {
-        "airport": {
-          "icon": "✈️",
-          "name": "Aeropuerto Punta del Este",
-          "description": "Aeropuerto Internacional de Carrasco",
-          "distance": "15 km",
-          "time": "18 min en auto"
-        },
-        "downtown": {
-          "icon": "🏙️",
-          "name": "Centro de Punta del Este",
-          "description": "Compras, gastronomía, entretenimiento",
-          "distance": "8 km",
-          "time": "12 min en auto"
-        },
-        "beach": {
-          "icon": "🏖️",
-          "name": "Playa Más Cercana",
-          "description": "Acceso a Playa Brava",
-          "distance": "2 km",
-          "time": "5 min en auto"
-        },
-        "marina": {
-          "icon": "⛵",
-          "name": "Puerto Náutico",
-          "description": "Instalaciones premium de marina",
-          "distance": "10 km",
-          "time": "15 min en auto"
-        },
-        "golf": {
-          "icon": "⛳",
-          "name": "Canchas de Golf",
-          "description": "Múltiples canchas de campeonato",
-          "distance": "5 km",
-          "time": "8 min en auto"
-        },
-        "shopping": {
-          "icon": "🛍️",
-          "name": "Centros Comerciales",
-          "description": "Retail de lujo y boutiques",
-          "distance": "6 km",
-          "time": "10 min en auto"
-        }
+        "pde-airport": "26 km del Aeropuerto de Punta del Este",
+        "carrasco": "113 km del Aeropuerto de Carrasco",
+        "montoya": "5 minutos caminando a Playa Montoya",
+        "bikini": "7 minutos a Playa Bikini",
+        "labarra": "3 minutos a restaurantes y vida nocturna de La Barra"
       }
     },
     "cta": {
@@ -358,6 +328,7 @@
       "title": "¿Listo para experimentar un paraíso donde la naturaleza y el lujo se unen?",
       "subtitle": "Ponte en contacto con nosotros para conocer más sobre La Cancillería"
     },
+    "emailAlternative": "O escríbenos a",
     "info": {
       "phone": {
         "label": "TELÉFONO",
@@ -377,9 +348,11 @@
     "form": {
       "name": "Nombre Completo",
       "email": "Correo Electrónico",
-      "phone": "Teléfono (Opcional)",
+      "phone": "Teléfono",
       "message": "Su Mensaje",
-      "submit": "Enviar Mensaje"
+      "submit": "Enviar Mensaje",
+      "success": "Mensaje enviado exitosamente",
+      "optional": "opcional"
     }
   },
   "estate": {
