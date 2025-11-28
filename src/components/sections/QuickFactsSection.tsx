@@ -96,7 +96,7 @@ export const QuickFactsSection = () => {
         {quickFacts.map((fact) => (
           <div
             key={fact.key}
-            className="quick-fact-card group flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[70vh] rounded-2xl overflow-hidden shadow-2xl relative cursor-pointer transition-all duration-500 hover:shadow-3xl hover:scale-[1.02]"
+            className="quick-fact-card group flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] rounded-2xl overflow-hidden shadow-2xl relative cursor-pointer transition-all duration-500 hover:shadow-3xl hover:scale-[1.02]"
           >
             {/* Full-bleed image */}
             <img
@@ -109,18 +109,18 @@ export const QuickFactsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             
             {/* Content positioned at bottom */}
-            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10">
+            <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
               <div className="transform transition-all duration-500 group-hover:-translate-y-2">
-                <h3 className="text-3xl md:text-4xl font-serif mb-3 text-white drop-shadow-lg">
+                <h3 className="text-2xl md:text-3xl font-serif mb-2 text-white drop-shadow-lg">
                   {t(`home.quickFacts.items.${fact.key}.title`)}
                 </h3>
-                <p className="text-white/80 text-lg leading-relaxed max-w-md">
+                <p className="text-white/80 text-base leading-relaxed max-w-md">
                   {t(`home.quickFacts.items.${fact.key}.description`)}
                 </p>
               </div>
               
               {/* Button that slides up on hover */}
-              <div className="mt-6 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+              <div className="mt-4 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
                 <NavLink to="/estate">
                   <Button size="lg" className="bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-md shadow-lg transition-all duration-300 hover:border-white/50">
                     {t('home.quickFacts.cta.button')}
