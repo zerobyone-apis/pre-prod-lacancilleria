@@ -14,7 +14,7 @@ export const ContactSection = () => {
             {t('contact.header.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground">
-            {t('contact.info.email.value')}
+            {t('contact.header.subtitle')}
           </p>
         </div>
 
