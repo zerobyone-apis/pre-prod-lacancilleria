@@ -23,7 +23,7 @@ export const EstateStaffSection = () => {
 
   return (
     <Section className="py-24 md:py-32">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <SectionHeader
           label={t("estate.staff.label")}
           title={t("estate.staff.title")}
@@ -31,7 +31,7 @@ export const EstateStaffSection = () => {
           className="mb-16"
         />
         
-        <div className="space-y-8 md:space-y-12">
+        <div className="space-y-2">
           {STAFF_SERVICES.map((service, index) => {
             const isEven = index % 2 === 0;
             const isHovered = hoveredIndex === index;
@@ -39,54 +39,60 @@ export const EstateStaffSection = () => {
             return (
               <div
                 key={service.id}
-                className="relative"
+                className="relative overflow-hidden"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <div className={`grid grid-cols-1 md:grid-cols-12 gap-6 items-center ${
-                  isEven ? '' : 'md:flex-row-reverse'
+                <div className={`flex items-center gap-8 py-5 px-4 cursor-pointer transition-all duration-500 ease-out ${
+                  isHovered 
+                    ? isEven 
+                      ? 'translate-x-[-20%] md:translate-x-[-30%]' 
+                      : 'translate-x-[20%] md:translate-x-[30%]'
+                    : 'translate-x-0'
                 }`}>
-                  {/* Text Side */}
-                  <div className={`md:col-span-5 ${isEven ? 'md:col-start-1' : 'md:col-start-8'}`}>
-                    <div className="relative py-6 cursor-pointer group">
-                      <h3 className={`text-2xl md:text-3xl lg:text-4xl font-serif transition-colors duration-300 ${
-                        isHovered ? 'text-foreground' : 'text-foreground/70'
-                      }`}>
-                        {t(`estate.staff.services.${service.id}`)}
-                      </h3>
-                      
-                      {/* Animated underline */}
-                      <div className={`absolute left-0 bottom-0 h-[2px] bg-accent transition-all duration-500 ${
-                        isHovered ? 'w-full' : 'w-0'
-                      }`}>
-                        <div className={`absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-accent transition-opacity duration-300 ${
-                          isHovered ? 'opacity-100' : 'opacity-0'
-                        }`} />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Image Side - Alternating position */}
-                  <div className={`md:col-span-5 ${isEven ? 'md:col-start-8' : 'md:col-start-1'} ${
-                    isEven ? '' : 'md:row-start-1'
-                  }`}>
-                    <div className={`relative aspect-[4/3] rounded-lg overflow-hidden bg-secondary/20 transition-all duration-500 ${
-                      isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                  {/* Text content */}
+                  <div className={`flex-1 ${isEven ? 'text-left' : 'text-right'}`}>
+                    <h3 className={`text-xl md:text-2xl lg:text-3xl font-serif transition-colors duration-300 ${
+                      isHovered ? 'text-foreground' : 'text-foreground/70'
                     }`}>
-                      <img
-                        src={service.image}
-                        alt={t(`estate.staff.services.${service.id}`)}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
-                    </div>
+                      {t(`estate.staff.services.${service.id}`)}
+                    </h3>
                   </div>
                 </div>
 
-                {/* Decorative separator */}
-                {index < STAFF_SERVICES.length - 1 && (
-                  <div className="absolute -bottom-4 md:-bottom-6 left-1/2 -translate-x-1/2 w-px h-8 md:h-12 bg-gradient-to-b from-border to-transparent" />
-                )}
+                {/* Animated underline */}
+                <div className={`absolute bottom-0 h-[1px] bg-border/50 transition-all duration-300 ${
+                  isHovered ? 'left-0 right-0' : 'left-[10%] right-[10%]'
+                }`} />
+
+                {/* Image appearing on hover - positioned on opposite side */}
+                <div className={`absolute top-1/2 -translate-y-1/2 w-[45%] md:w-[40%] aspect-[4/3] rounded-lg overflow-hidden transition-all duration-500 ease-out ${
+                  isEven 
+                    ? 'right-0 translate-x-full' 
+                    : 'left-0 -translate-x-full'
+                } ${
+                  isHovered 
+                    ? isEven 
+                      ? '!translate-x-[15%]' 
+                      : '!-translate-x-[15%]'
+                    : ''
+                }`}>
+                  <img
+                    src={service.image}
+                    alt={t(`estate.staff.services.${service.id}`)}
+                    className={`w-full h-full object-cover transition-all duration-500 ${
+                      isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                    }`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
+                </div>
+
+                {/* Accent dot */}
+                <div className={`absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-accent transition-all duration-300 ${
+                  isEven ? 'left-4' : 'right-4'
+                } ${
+                  isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+                }`} />
               </div>
             );
           })}
