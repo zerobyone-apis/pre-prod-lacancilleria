@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { PageContainer } from '@/components/layout/PageContainer';
 import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
@@ -13,12 +14,14 @@ import { ContactSection } from '@/components/sections/ContactSection';
 import { FooterMinimal } from '@/components/layout/FooterMinimal';
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <PageContainer>
       <Navigation />
       <HeroSection
-        title="La Cancillería"
-        subtitle="Punta del Este, Uruguay"
+        title={t('home.hero.title')}
+        subtitle={t('home.hero.subtitle')}
         backgroundImage="/images/house-hero.jpg"
       />
       <HomeIntroSection />

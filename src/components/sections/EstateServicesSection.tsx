@@ -2,33 +2,15 @@ import { useTranslation } from 'react-i18next';
 import { Section } from '@/components/layout/Section';
 import { useState } from 'react';
 
-const SERVICES = [
-  {
-    id: 'housekeeping',
-    title: 'Housekeeping / Cleaning',
-    image: '/images/service-housekeeping.jpg'
-  },
-  {
-    id: 'laundry',
-    title: 'Laundry / Wardrobe',
-    image: '/images/service-laundry.jpg'
-  },
-  {
-    id: 'garden',
-    title: 'Garden / Exterior Maintenance',
-    image: '/images/service-garden.jpg'
-  },
-  {
-    id: 'pool',
-    title: 'Pool Maintenance / Technician',
-    image: '/images/service-pool.jpg'
-  },
-  {
-    id: 'property',
-    title: 'Property / Estate Maintenance',
-    image: '/images/service-maintenance.jpg'
-  }
-];
+const SERVICE_KEYS = ['housekeeping', 'laundry', 'garden', 'pool', 'maintenance'] as const;
+
+const SERVICE_IMAGES: Record<string, string> = {
+  housekeeping: '/images/service-housekeeping.jpg',
+  laundry: '/images/service-laundry.jpg',
+  garden: '/images/service-garden.jpg',
+  pool: '/images/service-pool.jpg',
+  maintenance: '/images/service-maintenance.jpg'
+};
 
 export const EstateServicesSection = () => {
   const { t } = useTranslation();
@@ -45,22 +27,22 @@ export const EstateServicesSection = () => {
           </div>
           
           <div className="space-y-1">
-            {SERVICES.map((service) => (
+            {SERVICE_KEYS.map((serviceKey) => (
               <div
-                key={service.id}
+                key={serviceKey}
                 className="relative group"
-                onMouseEnter={() => setHoveredId(service.id)}
+                onMouseEnter={() => setHoveredId(serviceKey)}
                 onMouseLeave={() => setHoveredId(null)}
               >
                 <div className="relative py-4 cursor-pointer">
                   <p className="text-lg text-foreground/80 group-hover:text-foreground transition-colors">
-                    {service.title}
+                    {t(`estate.services.${serviceKey}`)}
                   </p>
                   <div className={`absolute left-0 bottom-0 h-[1px] bg-accent transition-all duration-500 ${
-                    hoveredId === service.id ? 'w-full' : 'w-0'
+                    hoveredId === serviceKey ? 'w-full' : 'w-0'
                   }`}>
                     <div className={`absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-accent transition-opacity duration-300 ${
-                      hoveredId === service.id ? 'opacity-100' : 'opacity-0'
+                      hoveredId === serviceKey ? 'opacity-100' : 'opacity-0'
                     }`} />
                   </div>
                 </div>
@@ -70,13 +52,13 @@ export const EstateServicesSection = () => {
         </div>
 
         <div className="relative aspect-[4/3] rounded-sm overflow-hidden bg-secondary/30">
-          {SERVICES.map((service) => (
+          {SERVICE_KEYS.map((serviceKey) => (
             <img
-              key={service.id}
-              src={service.image}
-              alt={service.title}
+              key={serviceKey}
+              src={SERVICE_IMAGES[serviceKey]}
+              alt={t(`estate.services.${serviceKey}`)}
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-                hoveredId === service.id ? 'opacity-100' : 'opacity-0'
+                hoveredId === serviceKey ? 'opacity-100' : 'opacity-0'
               }`}
             />
           ))}

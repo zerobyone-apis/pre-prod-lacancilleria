@@ -132,11 +132,11 @@ export const LocationMapSection = () => {
         <Card className="p-8 max-w-md space-y-4">
           <div className="flex items-center gap-3 mb-4">
             <MapPin className="w-6 h-6 text-accent" />
-            <h3 className="text-xl font-serif">MapBox Token Required</h3>
+            <h3 className="text-xl font-serif">{t('location.map.tokenRequired')}</h3>
           </div>
           <p className="text-sm text-muted-foreground mb-4">
-            Please enter your MapBox public token to display the interactive map. 
-            Get your token at <a href="https://mapbox.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">mapbox.com</a>
+            {t('location.map.tokenDescription')}{' '}
+            <a href="https://mapbox.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">mapbox.com</a>
           </p>
           <Input
             type="text"
@@ -150,7 +150,7 @@ export const LocationMapSection = () => {
             disabled={!mapboxToken}
             className="w-full px-4 py-2 bg-accent text-accent-foreground rounded-sm hover:bg-accent/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
-            Load Map
+            {t('location.map.loadMap')}
           </button>
         </Card>
       </section>
@@ -163,7 +163,7 @@ export const LocationMapSection = () => {
       <div className="absolute top-8 left-8 bg-background/95 backdrop-blur-sm p-6 rounded-sm shadow-lg max-w-sm">
         <h2 className="text-2xl font-serif mb-2">{t('location.map.title')}</h2>
         <p className="text-sm text-muted-foreground">
-          Explora los principales puntos de interés cerca de La Cancillería
+          {t('location.map.description')}
         </p>
       </div>
     </section>
