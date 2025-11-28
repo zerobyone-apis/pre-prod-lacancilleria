@@ -83,30 +83,30 @@ export const QuickFactsSection = () => {
 
   return (
     <section ref={containerRef} className="relative h-screen overflow-hidden bg-background">
-      <div className="absolute top-0 left-0 right-0 z-10 p-8 md:p-12 text-center">
+      <div className="absolute top-0 left-0 right-0 z-10 pt-6 pb-4 md:pt-8 md:pb-6 text-center">
         <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2">
           {t('home.quickFacts.label')}
         </p>
-        <h2 className="text-4xl md:text-5xl font-serif mb-4">
+        <h2 className="text-4xl md:text-5xl font-serif">
           {t('home.quickFacts.title')}
         </h2>
       </div>
 
-      <div ref={scrollRef} className="flex items-center h-full gap-8 pl-[10vw]" style={{ width: 'max-content' }}>
+      <div ref={scrollRef} className="flex items-end h-full gap-8 pl-[10vw] pb-12" style={{ width: 'max-content' }}>
         {quickFacts.map((fact) => (
           <div
             key={fact.key}
-            className="quick-fact-card group flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] rounded-2xl overflow-hidden shadow-2xl relative cursor-pointer transition-all duration-500 hover:shadow-3xl hover:scale-[1.02]"
+            className="quick-fact-card group flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[55vh] rounded-2xl overflow-hidden shadow-xl relative cursor-pointer transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]"
           >
             {/* Full-bleed image */}
             <img
               src={fact.image}
               alt={t(`home.quickFacts.items.${fact.key}.title`)}
-              className="quick-fact-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="quick-fact-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             
-            {/* Elegant gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            {/* Subtle gradient overlay - only at bottom for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
             
             {/* Content positioned at bottom */}
             <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
