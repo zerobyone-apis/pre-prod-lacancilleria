@@ -1,27 +1,40 @@
 import { useTranslation } from 'react-i18next';
 import { Section } from '@/components/layout/Section';
 import { ContactForm } from '@/components/layout/ContactForm';
+import { SectionHeader } from '@/components/ui/SectionHeader';
+import { Mail } from 'lucide-react';
 
 export const ContactSection = () => {
   const { t } = useTranslation();
 
   return (
     <Section id="contact-section" className="bg-background">
-      <div className="space-y-16">
-        {/* Title centered */}
-        <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6">
-            {t('contact.header.title')}
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground">
-            {t('contact.header.subtitle')}
-          </p>
+      <div className="max-w-3xl mx-auto">
+        {/* Header centered at top */}
+        <div className="text-center mb-12">
+          <SectionHeader
+            title={t('contact.header.title')}
+            description={t('contact.header.subtitle')}
+            align="center"
+          />
+          
+          {/* Email contact option */}
+          <div className="mt-6 flex items-center justify-center gap-2 text-muted-foreground">
+            <Mail className="w-4 h-4" />
+            <span className="text-sm">
+              {t('contact.emailAlternative', { defaultValue: 'Or reach us at' })}
+            </span>
+            <a 
+              href="mailto:lacancilleria@email.com" 
+              className="text-sm text-foreground hover:text-accent transition-colors underline-offset-4 hover:underline"
+            >
+              lacancilleria@email.com
+            </a>
+          </div>
         </div>
 
-        {/* Form centered */}
-        <div className="max-w-2xl mx-auto">
-          <ContactForm />
-        </div>
+        {/* Contact form below */}
+        <ContactForm />
       </div>
     </Section>
   );
