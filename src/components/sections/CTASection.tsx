@@ -13,7 +13,7 @@ export const CTASection = ({ titleKey, descriptionKey }: CTASectionProps) => {
   const { t } = useTranslation();
 
   return (
-    <Section className="bg-secondary/20">
+    <Section id="contact-section" className="bg-secondary/20">
       <div className="max-w-3xl mx-auto">
         {/* Header centered at top */}
         <div className="text-center mb-12">
