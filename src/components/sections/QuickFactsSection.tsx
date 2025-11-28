@@ -96,35 +96,37 @@ export const QuickFactsSection = () => {
         {quickFacts.map((fact) => (
           <div
             key={fact.key}
-            className="quick-fact-card group flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[60vh] bg-card rounded-lg overflow-hidden shadow-lg"
+            className="quick-fact-card group flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[40vw] h-[70vh] rounded-2xl overflow-hidden shadow-2xl relative cursor-pointer transition-all duration-500 hover:shadow-3xl hover:scale-[1.02]"
           >
-            <div className="relative h-full flex flex-col">
-              <div className="relative flex-1 overflow-hidden">
-                <img
-                  src={fact.image}
-                  alt={t(`home.quickFacts.items.${fact.key}.title`)}
-                  className="quick-fact-image w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-              </div>
-              
-              <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
-                <h3 className="text-2xl font-serif mb-3 text-foreground">
+            {/* Full-bleed image */}
+            <img
+              src={fact.image}
+              alt={t(`home.quickFacts.items.${fact.key}.title`)}
+              className="quick-fact-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            
+            {/* Elegant gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            
+            {/* Content positioned at bottom */}
+            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10">
+              <div className="transform transition-all duration-500 group-hover:-translate-y-2">
+                <h3 className="text-3xl md:text-4xl font-serif mb-3 text-white drop-shadow-lg">
                   {t(`home.quickFacts.items.${fact.key}.title`)}
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-white/80 text-lg leading-relaxed max-w-md">
                   {t(`home.quickFacts.items.${fact.key}.description`)}
                 </p>
-                
-                {/* Button that slides up from bottom */}
-                <div className="translate-y-16 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <NavLink to="/estate">
-                    <Button size="lg" className="w-full bg-primary/90 hover:bg-primary text-primary-foreground backdrop-blur-sm shadow-lg">
-                      {t('home.quickFacts.cta.button')}
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </NavLink>
-                </div>
+              </div>
+              
+              {/* Button that slides up on hover */}
+              <div className="mt-6 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                <NavLink to="/estate">
+                  <Button size="lg" className="bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-md shadow-lg transition-all duration-300 hover:border-white/50">
+                    {t('home.quickFacts.cta.button')}
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </NavLink>
               </div>
             </div>
           </div>
