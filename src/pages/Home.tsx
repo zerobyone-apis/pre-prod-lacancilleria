@@ -12,6 +12,7 @@ import { HomeCTASection } from '@/components/sections/HomeCTASection';
 import { ExperienceDividerSection } from '@/components/sections/ExperienceDividerSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { FooterMinimal } from '@/components/layout/FooterMinimal';
+import { FloatingContactButton } from '@/components/ui/FloatingContactButton';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -34,6 +35,7 @@ const Home = () => {
       <ExperienceDividerSection />
       <ContactSection />
       <FooterMinimal />
+      <FloatingContactButton />
     </PageContainer>
   );
 };
