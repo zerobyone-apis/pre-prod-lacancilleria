@@ -28,8 +28,8 @@ export const ContactForm = () => {
   const inputClasses = (field: string) => `
     w-full bg-transparent border-0 border-b border-border/40 
     px-0 py-3 text-foreground placeholder:text-muted-foreground/50
-    focus:outline-none focus:ring-0 transition-all duration-500
-    ${focusedField === field ? 'border-accent' : 'hover:border-muted-foreground/50'}
+    focus:outline-none focus:ring-0 focus:border-border/40 transition-all duration-500
+    hover:border-muted-foreground/50
   `;
 
   const labelClasses = (field: string) => `
