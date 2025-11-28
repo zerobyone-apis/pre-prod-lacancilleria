@@ -12,6 +12,7 @@ import { EstateGalleryMasonry } from "@/components/sections/EstateGalleryMasonry
 import { EstateExploreSection } from "@/components/sections/EstateExploreSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { FooterMinimal } from "@/components/layout/FooterMinimal";
+import { FloatingContactButton } from "@/components/ui/FloatingContactButton";
 
 const Estate = () => {
   const { t } = useTranslation();
@@ -36,6 +37,7 @@ const Estate = () => {
       <EstateDividerSection />
       <CTASection titleKey={t("estate.cta.title")} descriptionKey={t("estate.cta.description")} />
       <FooterMinimal />
+      <FloatingContactButton />
     </PageContainer>
   );
 };

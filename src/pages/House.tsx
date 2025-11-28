@@ -8,6 +8,7 @@ import { HouseSpecsSection } from '@/components/sections/HouseSpecsSection';
 import { HouseGallerySection } from '@/components/sections/HouseGallerySection';
 import { CTASection } from '@/components/sections/CTASection';
 import { FooterMinimal } from '@/components/layout/FooterMinimal';
+import { FloatingContactButton } from '@/components/ui/FloatingContactButton';
 
 const House = () => {
   const { t } = useTranslation();
@@ -30,6 +31,7 @@ const House = () => {
         descriptionKey="house.cta.description"
       />
       <FooterMinimal />
+      <FloatingContactButton />
     </PageContainer>
   );
 };

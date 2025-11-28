@@ -9,6 +9,7 @@ import { LocationDistancesSection } from "@/components/sections/LocationDistance
 import { LaBarraDividerSection } from "@/components/sections/LaBarraDividerSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { FooterMinimal } from "@/components/layout/FooterMinimal";
+import { FloatingContactButton } from "@/components/ui/FloatingContactButton";
 
 const Location = () => {
   const { t } = useTranslation();
@@ -28,6 +29,7 @@ const Location = () => {
       <LaBarraDividerSection />
       <CTASection titleKey="location.cta.title" descriptionKey="location.cta.description" />
       <FooterMinimal />
+      <FloatingContactButton />
     </PageContainer>
   );
 };
