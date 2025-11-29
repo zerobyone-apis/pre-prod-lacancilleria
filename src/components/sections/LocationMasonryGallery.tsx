@@ -53,13 +53,16 @@ const VideoItem = ({ item, index, isExpanded, onClick, onClose }: ItemProps) => 
   return (
     <div
       className={cn(
-        'relative overflow-hidden rounded-sm cursor-pointer group transition-all duration-500 ease-out',
-        item.span,
-        isExpanded && 'col-span-2 row-span-2 z-20'
+        'relative overflow-hidden rounded-sm cursor-pointer group',
+        'transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]',
+        isExpanded ? 'col-span-2 row-span-2 z-20 scale-100' : item.span
       )}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      style={{ 
+        transformOrigin: 'center center',
+      }}
     >
       <video
         ref={videoRef}
@@ -69,26 +72,30 @@ const VideoItem = ({ item, index, isExpanded, onClick, onClose }: ItemProps) => 
         loop
         playsInline
         controls={isExpanded}
-        className="w-full h-full object-cover transition-transform duration-500"
+        className="w-full h-full object-cover transition-all duration-700"
       />
       {/* Play icon - bottom right on hover */}
       <div className={cn(
-        "absolute bottom-3 right-3 z-10 p-2 rounded-full bg-background/70 backdrop-blur-sm transition-opacity duration-300",
-        isExpanded ? "opacity-0" : "opacity-0 group-hover:opacity-100"
+        "absolute bottom-3 right-3 z-10 p-2 rounded-full bg-background/70 backdrop-blur-sm",
+        "transition-all duration-300 ease-out",
+        isExpanded ? "opacity-0 scale-0" : "opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100"
       )}>
         <Play className="w-4 h-4 fill-current" />
       </div>
       {/* Close button when expanded */}
-      {isExpanded && (
+      <div className={cn(
+        "absolute top-3 right-3 z-30 transition-all duration-500",
+        isExpanded ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none"
+      )}>
         <button
           onClick={(e) => { e.stopPropagation(); onClose(); }}
-          className="absolute top-3 right-3 z-30 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
+          className="p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
-      )}
+      </div>
       <div className={cn(
-        "absolute inset-0 transition-colors duration-300",
+        "absolute inset-0 transition-all duration-500",
         isExpanded ? "bg-transparent" : "bg-background/10 group-hover:bg-transparent"
       )} />
     </div>
@@ -108,38 +115,45 @@ const ImageItem = ({ item, index, isExpanded, onClick, onClose }: ItemProps) => 
   return (
     <div
       className={cn(
-        'relative overflow-hidden rounded-sm cursor-pointer group transition-all duration-500 ease-out',
-        item.span,
-        isExpanded && 'col-span-2 row-span-2 z-20'
+        'relative overflow-hidden rounded-sm cursor-pointer group',
+        'transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]',
+        isExpanded ? 'col-span-2 row-span-2 z-20 scale-100' : item.span
       )}
       onClick={handleClick}
+      style={{ 
+        transformOrigin: 'center center',
+      }}
     >
       <img
         src={item.src}
         alt={item.alt}
         className={cn(
-          "w-full h-full object-cover transition-transform duration-500",
+          "w-full h-full object-cover transition-all duration-700",
           !isExpanded && "group-hover:scale-110"
         )}
       />
       {/* Image icon - bottom right on hover */}
       <div className={cn(
-        "absolute bottom-3 right-3 z-10 p-2 rounded-full bg-background/70 backdrop-blur-sm transition-opacity duration-300",
-        isExpanded ? "opacity-0" : "opacity-0 group-hover:opacity-100"
+        "absolute bottom-3 right-3 z-10 p-2 rounded-full bg-background/70 backdrop-blur-sm",
+        "transition-all duration-300 ease-out",
+        isExpanded ? "opacity-0 scale-0" : "opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100"
       )}>
         <ImageIcon className="w-4 h-4" />
       </div>
       {/* Close button when expanded */}
-      {isExpanded && (
+      <div className={cn(
+        "absolute top-3 right-3 z-30 transition-all duration-500",
+        isExpanded ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none"
+      )}>
         <button
           onClick={(e) => { e.stopPropagation(); onClose(); }}
-          className="absolute top-3 right-3 z-30 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
+          className="p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
-      )}
+      </div>
       <div className={cn(
-        "absolute inset-0 transition-colors duration-300",
+        "absolute inset-0 transition-all duration-500",
         isExpanded ? "bg-transparent" : "bg-background/10 group-hover:bg-transparent"
       )} />
     </div>
@@ -150,31 +164,22 @@ export const LocationMasonryGallery = () => {
   const { t } = useTranslation();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-  // Mix of vertical (row-span-2), horizontal (col-span-2), and square items
+  // Optimized grid layout: 4 columns, no gaps
+  // Row calculation: each row-span-2 takes 2 rows, col-span-2 takes 2 cols
   const items: GalleryItem[] = [
-    // Vertical tall image
+    // Row 1-2
     { src: '/images/location-aerial.jpg', alt: 'Vista aérea', type: 'image', span: 'row-span-2' },
-    // Horizontal wide
     { src: '/images/nearby-beach.jpg', alt: 'Playa', type: 'image', span: 'col-span-2' },
-    // Square
     { src: '/images/nearby-marina.jpg', alt: 'Marina', type: 'video', poster: '/images/nearby-marina.jpg' },
-    // Vertical tall video
-    { src: '/images/nearby-golf.jpg', alt: 'Golf', type: 'video', poster: '/images/nearby-golf.jpg', span: 'row-span-2' },
-    // Square
-    { src: '/images/nearby-restaurants.jpg', alt: 'Restaurantes', type: 'image' },
-    // Square
+    { src: '/images/nearby-golf.jpg', alt: 'Golf', type: 'image' },
+    { src: '/images/nearby-restaurants.jpg', alt: 'Restaurantes', type: 'video', poster: '/images/nearby-restaurants.jpg' },
     { src: '/images/location-hero.jpg', alt: 'Ubicación', type: 'image' },
-    // Horizontal wide video
+    // Row 3-4
     { src: '/images/estate-gallery-1.jpg', alt: 'Estate vista', type: 'video', poster: '/images/estate-gallery-1.jpg', span: 'col-span-2' },
-    // Vertical tall
     { src: '/images/estate-gallery-2.jpg', alt: 'Estate jardín', type: 'image', span: 'row-span-2' },
-    // Square
     { src: '/images/estate-gallery-3.jpg', alt: 'Estate piscina', type: 'image' },
-    // Horizontal wide
     { src: '/images/house-hero.jpg', alt: 'Casa principal', type: 'image', span: 'col-span-2' },
-    // Square video
     { src: '/images/house-gallery-1.jpg', alt: 'Interior', type: 'video', poster: '/images/house-gallery-1.jpg' },
-    // Square
     { src: '/images/house-gallery-2.jpg', alt: 'Terraza', type: 'image' },
   ];
 
@@ -195,7 +200,7 @@ export const LocationMasonryGallery = () => {
       </div>
       
       <div className="w-full px-4 md:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[100px] md:auto-rows-[180px] gap-2 md:gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-dense auto-rows-[100px] md:auto-rows-[180px] gap-2 md:gap-3">
           {items.map((item, index) => (
             item.type === 'video' ? (
               <VideoItem
