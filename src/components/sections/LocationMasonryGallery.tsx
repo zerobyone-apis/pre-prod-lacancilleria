@@ -9,7 +9,7 @@ interface GalleryItem {
   alt: string;
   type: 'image' | 'video';
   poster?: string;
-  span?: 'row-span-2' | 'col-span-2' | 'row-span-2 col-span-2';
+  span?: string;
 }
 
 const VideoItem = ({ item, onClick }: { item: GalleryItem; onClick: () => void }) => {
@@ -47,11 +47,11 @@ const VideoItem = ({ item, onClick }: { item: GalleryItem; onClick: () => void }
         playsInline
         className="w-full h-full object-cover"
       />
-      {/* Play icon indicator */}
-      <div className="absolute top-3 left-3 z-10 p-2 rounded-full bg-background/70 backdrop-blur-sm">
+      {/* Play icon - only on hover */}
+      <div className="absolute top-3 left-3 z-10 p-2 rounded-full bg-background/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <Play className="w-4 h-4 fill-current" />
       </div>
-      <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-300" />
+      <div className="absolute inset-0 bg-background/10 group-hover:bg-transparent transition-colors duration-300" />
     </div>
   );
 };
@@ -70,11 +70,11 @@ const ImageItem = ({ item, onClick }: { item: GalleryItem; onClick: () => void }
         alt={item.alt}
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
-      {/* Image icon indicator */}
-      <div className="absolute top-3 left-3 z-10 p-2 rounded-full bg-background/70 backdrop-blur-sm">
+      {/* Image icon - only on hover */}
+      <div className="absolute top-3 left-3 z-10 p-2 rounded-full bg-background/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <ImageIcon className="w-4 h-4" />
       </div>
-      <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-300" />
+      <div className="absolute inset-0 bg-background/10 group-hover:bg-transparent transition-colors duration-300" />
     </div>
   );
 };
@@ -84,13 +84,25 @@ export const LocationMasonryGallery = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const lightboxVideoRef = useRef<HTMLVideoElement>(null);
 
+  // Grid layout: 4 columns, items positioned to fill all gaps
   const items: GalleryItem[] = [
-    { src: '/images/location-aerial.jpg', alt: 'Vista aérea', type: 'image', span: 'row-span-2 col-span-2' },
+    // Row 1-2: Large image spanning 2x2
+    { src: '/images/location-aerial.jpg', alt: 'Vista aérea', type: 'image', span: 'col-span-2 row-span-2' },
+    // Row 1: Two single items
     { src: '/images/nearby-beach.jpg', alt: 'Playa', type: 'image' },
-    { src: '/images/nearby-marina.jpg', alt: 'Marina', type: 'image' },
-    { src: '/images/nearby-golf.jpg', alt: 'Golf', type: 'image', span: 'row-span-2' },
+    { src: '/images/nearby-marina.jpg', alt: 'Marina', type: 'video', poster: '/images/nearby-marina.jpg' },
+    // Row 2: Two single items (fills beside the 2x2)
+    { src: '/images/nearby-golf.jpg', alt: 'Golf', type: 'video', poster: '/images/nearby-golf.jpg' },
     { src: '/images/nearby-restaurants.jpg', alt: 'Restaurantes', type: 'image' },
-    { src: '/images/location-hero.jpg', alt: 'Ubicación', type: 'image', span: 'col-span-2' },
+    // Row 3: Four single items
+    { src: '/images/location-hero.jpg', alt: 'Ubicación', type: 'image' },
+    { src: '/images/estate-gallery-1.jpg', alt: 'Estate vista', type: 'video', poster: '/images/estate-gallery-1.jpg' },
+    { src: '/images/estate-gallery-2.jpg', alt: 'Estate jardín', type: 'image' },
+    { src: '/images/estate-gallery-3.jpg', alt: 'Estate piscina', type: 'image' },
+    // Row 4: Wide image + two singles
+    { src: '/images/house-hero.jpg', alt: 'Casa principal', type: 'image', span: 'col-span-2' },
+    { src: '/images/house-gallery-1.jpg', alt: 'Interior', type: 'video', poster: '/images/house-gallery-1.jpg' },
+    { src: '/images/house-gallery-2.jpg', alt: 'Terraza', type: 'image' },
   ];
 
   const openLightbox = (index: number) => {
@@ -127,7 +139,7 @@ export const LocationMasonryGallery = () => {
         </div>
         
         <div className="w-full px-4 md:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[150px] md:auto-rows-[250px] gap-2 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[120px] md:auto-rows-[200px] gap-2 md:gap-3">
             {items.map((item, index) => (
               item.type === 'video' ? (
                 <VideoItem
