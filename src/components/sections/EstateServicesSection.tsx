@@ -18,8 +18,9 @@ export const EstateServicesSection = () => {
 
   return (
     <Section className="bg-background">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div className="space-y-8">
+      <div className="relative flex justify-center">
+        {/* Text content - more centered */}
+        <div className="w-full max-w-xl space-y-8">
           <div className="space-y-2">
             <h2 className="text-4xl md:text-5xl font-serif">
               {t('estate.services.title')}
@@ -51,13 +52,18 @@ export const EstateServicesSection = () => {
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] rounded-sm overflow-hidden bg-secondary/30">
+        {/* Image - appears on hover, slides from the right */}
+        <div 
+          className={`absolute right-0 top-1/2 -translate-y-1/2 w-48 md:w-64 aspect-[3/4] rounded-sm overflow-hidden transition-all duration-500 ease-out pointer-events-none ${
+            hoveredId ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+          }`}
+        >
           {SERVICE_KEYS.map((serviceKey) => (
             <img
               key={serviceKey}
               src={SERVICE_IMAGES[serviceKey]}
               alt={t(`estate.services.${serviceKey}`)}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
                 hoveredId === serviceKey ? 'opacity-100' : 'opacity-0'
               }`}
             />
