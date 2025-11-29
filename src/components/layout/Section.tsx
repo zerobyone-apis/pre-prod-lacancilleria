@@ -18,11 +18,11 @@ export const Section = ({ children, className, fullWidth = false, animate = true
       id={id}
       ref={animate ? animationRef : null}
       className={cn(
-        'py-16 md:py-24 lg:py-32',
+        'py-12 md:py-24 lg:py-32',
         className
       )}
     >
-      <div className={fullWidth ? 'w-full' : 'container mx-auto px-6 md:px-8'}>
+      <div className={fullWidth ? 'w-full' : 'container mx-auto px-4 md:px-6 lg:px-8'}>
         {children}
       </div>
     </section>

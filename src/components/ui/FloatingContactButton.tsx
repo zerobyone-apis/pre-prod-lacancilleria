@@ -30,7 +30,7 @@ export const FloatingContactButton = () => {
     <button
       onClick={scrollToContact}
       className={cn(
-        'fixed bottom-6 right-6 z-50 p-4 rounded-full',
+        'fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 p-3 md:p-4 rounded-full',
         'bg-primary text-primary-foreground shadow-lg',
         'hover:bg-primary/90 hover:scale-105',
         'transition-all duration-300 ease-out',
@@ -41,7 +41,7 @@ export const FloatingContactButton = () => {
       )}
       aria-label="Contact us"
     >
-      <Mail className="w-5 h-5" />
+      <Mail className="w-4 h-4 md:w-5 md:h-5" />
     </button>
   );
 };

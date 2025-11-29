@@ -52,15 +52,15 @@ export const HeroSection = ({ title, subtitle, cta, backgroundImage }: HeroSecti
         <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/20 to-background" />
       </div>
       
-      <div ref={contentRef} className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif leading-tight mb-6 text-primary-foreground drop-shadow-lg">
+      <div ref={contentRef} className="relative z-10 text-center px-4 md:px-6 max-w-5xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif leading-tight mb-4 md:mb-6 text-primary-foreground drop-shadow-lg">
           {title}
         </h1>
-        <p className="text-xl md:text-2xl lg:text-3xl mb-12 text-primary-foreground/90 font-light tracking-wide drop-shadow">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 md:mb-12 text-primary-foreground/90 font-light tracking-wide drop-shadow px-2">
           {subtitle}
         </p>
         {cta && (
-          <Button size="lg" className="text-lg px-8 py-6">
+          <Button size="lg" className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6">
             {cta}
           </Button>
         )}
@@ -68,10 +68,10 @@ export const HeroSection = ({ title, subtitle, cta, backgroundImage }: HeroSecti
 
       <button
         onClick={scrollToContent}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 text-primary-foreground/80 hover:text-primary-foreground transition-colors animate-bounce"
+        className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 text-primary-foreground/80 hover:text-primary-foreground transition-colors animate-bounce"
         aria-label="Scroll to content"
       >
-        <ArrowDown className="w-8 h-8" />
+        <ArrowDown className="w-6 h-6 md:w-8 md:h-8" />
       </button>
     </div>
   );
