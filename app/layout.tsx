@@ -16,6 +16,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "@/app/i18n/config";
 
 import { PostHogProvider } from "@/app/components/PostHogProvider";
+import { usePathname } from 'next/navigation';
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,17 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  const pathname = typeof window !== "undefined" ? window.location.pathname : undefined;
+  // Soporte Next SSR/CSR: usar hook en uso client y fallback al render
+  // Si estamos en /wip, sólo renderizar children plano
+  if (pathname === '/wip') {
+    return (
+      <html lang="en" suppressHydrationWarning>
+        <body>{children}</body>
+      </html>
+    );
+  }
+  
   return (
     <html lang="en" suppressHydrationWarning>
       <body>

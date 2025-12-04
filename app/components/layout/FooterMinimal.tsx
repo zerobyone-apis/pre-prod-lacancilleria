@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { Instagram, Facebook } from "lucide-react";
+import Image from "next/image";
 
 export const FooterMinimal = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ export const FooterMinimal = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
           {/* Logo and copyright - Left */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl md:text-2xl font-serif mb-1">La Cancillería</h3>
+            <Image src="/logos/dark_logo.png" alt="La Cancillería logo" width={120} height={36} priority className="mx-auto md:mx-0" />
             <p className="text-xs md:text-sm text-muted-foreground">© 2025 La Cancillería. {t('footer.rights')}</p>
           </div>
           

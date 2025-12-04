@@ -1,2 +1,364 @@
-{"nav":{"home":"Inicio","house":"La Casa","location":"Ubicación","estate":"El Barrio"},"home":{"hero":{"title":"La Cancillería","subtitle":"Punta del Este, Uruguay"},"intro":{"label":"¿Qué es La Cancillería?","title":"Un Exclusivo Barrio Privado en el Corazón de La Barra","description":"La propiedad combina áreas exteriores de primera clase: zonas de relajación, vida y actividades con absoluta privacidad y las mejores condiciones para disfrutar de unas vacaciones inolvidables"},"properties":{"cancilleria":{"name":"La Cancillería","description":"La residencia principal que ofrece lujo, privacidad y confort en el corazón de La Barra. Una perfecta combinación de diseño sofisticado y belleza natural."},"griega":{"name":"La Griega","description":"Casa de staff y servicio que garantiza operaciones impecables y una hospitalidad excepcional durante toda su estadía."}},"quickFacts":{"label":"Descubre","title":"Amenidades y Servicios Exclusivos","items":{"guests":{"title":"Aloja hasta 10 huéspedes","description":"Amplias instalaciones para todo tu grupo"},"bedrooms":{"title":"5 Dormitorios + 6 Baños","description":"Privacidad y comodidad para todos"},"pool":{"title":"Piscina Climatizada Exterior","description":"Disfruta de la natación todo el año"},"views":{"title":"Vistas al Océano","description":"Impresionantes panoramas del Atlántico"},"concierge":{"title":"Conserje y Personal Completo Disponible","description":"Servicio personalizado a tu alcance"},"outdoor":{"title":"Parrilla y Área de Comedor Exterior","description":"Perfecto para entretenimiento al aire libre"}},"cta":{"title":"¿Listo para Explorar?","button":"Explorar el Barrio"}}},"timeline":{"title":"Vive la experiencia de Punta del Este","oceanBreezes":"Despierta con la brisa del océano","alfrescoLunches":"Disfruta almuerzos al aire libre junto a la piscina","vibrantScene":"Descubre la vibrante escena de La Barra y Punta del Este, que están a solo unos minutos","laBarraJoseIgnacio":"Descubre la vibrante escena de La Barra y José Ignacio a solo minutos","exploreLocation":"Explorar ubicación"},"house":{"hero":{"title":"Una Obra Maestra Arquitectónica en Punta del Este","subtitle":"Donde el lujo encuentra el horizonte atlántico","cta":"Agendar una Visita"},"intro":{"label":"La Residencia","title":"Un santuario de elegancia contemporánea","description":"Ubicada en el barrio más exclusivo de Punta del Este, esta joya arquitectónica redefine la vida de lujo costera. Cada detalle ha sido meticulosamente diseñado para crear una armoniosa combinación de diseño sofisticado y belleza natural.","specs":{"bedrooms":"5 Dormitorios","bathrooms":"6 Baños","area":"750 m²","lot":"2,000 m² de Terreno"}},"specs":{"title":"Especificaciones de la Propiedad","description":"Explore los detalles excepcionales de esta magnífica residencia","items":{"bedrooms":{"value":"5","label":"Dormitorios"},"bathrooms":{"value":"6","label":"Baños"},"area":{"value":"750","label":"m² Construidos"},"lot":{"value":"2,000","label":"m² de Terreno"},"floors":{"value":"3","label":"Pisos"},"parking":{"value":"4","label":"Cocheras"},"pool":{"value":"Infinita","label":"Piscina"},"year":{"value":"2024","label":"Año"}}},"features":{"title":"Características Excepcionales","items":{"design":{"title":"Diseño Contemporáneo","description":"Líneas puras y ventanales de piso a techo enmarcan vistas impresionantes al océano"},"materials":{"title":"Materiales Premium","description":"Mármol importado, pisos de madera noble y accesorios de última generación"},"outdoor":{"title":"Amplios Espacios al Aire Libre","description":"Piscina infinita, cocina exterior y terrazas diseñadas para el entretenimiento"},"smart":{"title":"Tecnología Domótica","description":"Automatización totalmente integrada para iluminación, clima y seguridad"}}},"gallery":{"title":"Explore el Interior"},"cta":{"title":"Experimente el Lujo Sin Igual","description":"Descubra la casa de sus sueños en Punta del Este","button":"Contáctenos"}},"location":{"hero":{"title":"El Corazón de Punta del Este","subtitle":"Donde la exclusividad encuentra la conveniencia"},"intro":{"label":"Ubicación Privilegiada","title":"Perfectamente posicionada en el destino más prestigioso de Uruguay","description":"Ubicada en el codiciado distrito de La Barra, esta propiedad ofrece el equilibrio perfecto entre privacidad y accesibilidad. A solo minutos de playas prístinas, gastronomía de clase mundial y atracciones culturales, manteniendo la tranquilidad de una comunidad privada."},"map":{"title":"Tu Nuevo Vecindario","description":"Explora los principales puntos de interés cerca de La Cancillería","tokenRequired":"Token de MapBox Requerido","tokenDescription":"Por favor ingresa tu token público de MapBox para mostrar el mapa interactivo. Obtén tu token en","loadMap":"Cargar Mapa"},"gallery":{"title":"Explorá la Zona"},"nearby":{"title":"Atracciones Cercanas","items":{"beach":{"title":"Playa José Ignacio","distance":"15 min en auto","description":"Playas de arena blanca prístina y aguas cristalinas"},"marina":{"title":"Puerto de Punta del Este","distance":"20 min en auto","description":"Marina de clase mundial con yates de lujo y restaurantes frente al mar"},"golf":{"title":"La Barra Golf Club","distance":"10 min en auto","description":"Campo de golf de campeonato diseñado por arquitectos reconocidos"},"restaurants":{"title":"Restaurantes Gourmet","distance":"5 min en auto","description":"Experiencias gastronómicas de chefs internacionales"}}},"distances":{"title":"Fácil acceso. Privacidad perfecta","items":{"pde-airport":"26 km del Aeropuerto de Punta del Este","carrasco":"113 km del Aeropuerto de Carrasco","montoya":"5 minutos caminando a Playa Montoya","bikini":"7 minutos a Playa Bikini","labarra":"3 minutos a restaurantes y vida nocturna de La Barra"}},"cta":{"title":"Vive Donde la Vida se Despliega","description":"Descubre la ubicación perfecta para la casa de tus sueños","button":"Conocer Más"}},"estate":{"hero":{"title":"Barrio La Cancillería","subtitle":"Un santuario residencial exclusivo"},"intro":{"label":"La Comunidad","title":"Un oasis privado de lujo y tranquilidad","description":"La Cancillería representa el pináculo de la vida en comunidad privada en Punta del Este. Con seguridad 24/7, amenities de clase mundial y terrenos meticulosamente mantenidos, los residentes disfrutan de un estilo de vida sin igual de confort y exclusividad."},"amenities":{"title":"Amenities de Clase Mundial","items":{"clubhouse":{"title":"Clubhouse Exclusivo","description":"Espacios sociales modernos para reuniones y eventos"},"fitness":{"title":"Centro de Fitness","description":"Equipamiento de última generación y entrenamiento personal"},"tennis":{"title":"Canchas de Tenis","description":"Canchas profesionales de arcilla y cemento con iluminación"},"pool":{"title":"Piscina Resort","description":"Piscina olímpica climatizada con instalaciones de spa"},"security":{"title":"Seguridad 24/7","description":"Entrada controlada con equipo de seguridad profesional"},"concierge":{"title":"Servicio de Concierge","description":"Personal dedicado para todas las necesidades de los residentes"}}},"logistics":{"title":"Servicios y Acceso del Barrio","description":"Todo diseñado para tu comodidad y conveniencia","services":{"title":"Servicios Profesionales","items":{"maintenance":{"title":"Mantenimiento","description":"Equipo de mantenimiento 24/7 para todas las áreas comunes e infraestructura"},"cleaning":{"title":"Servicios de Limpieza","description":"Servicios opcionales de limpieza y mantenimiento exterior disponibles"},"concierge":{"title":"Concierge de Residentes","description":"Reservas de restaurantes, planificación de eventos y recomendaciones locales"},"security":{"title":"Protocolos de Seguridad","description":"Sistema avanzado de vigilancia y personal de seguridad capacitado"}}},"access":{"title":"Acceso e Instalaciones","items":{"gate":{"title":"Acceso Controlado","description":"Portón principal con sistemas biométricos y pases digitales"},"parking":{"title":"Estacionamiento para Invitados","description":"Áreas dedicadas de estacionamiento para visitantes con fácil acceso"},"reception":{"title":"Área de Recepción","description":"Recepción profesional para entrega de paquetes y gestión de invitados"},"delivery":{"title":"Servicios de Entrega","description":"Manejo seguro de paquetes y coordinación de mensajería"}}}},"gallery":{"title":"Espacios Comunes"},"contact":{"title":"Información del Barrio","description":"Póngase en contacto con la administración de la comunidad","email":"Email","phone":"Teléfono","address":"Dirección","hours":"Horario de Oficina"},"cta":{"title":"Únete a una Comunidad Exclusiva","description":"Experimenta el estilo de vida La Cancillería","button":"Contáctanos"}},"cta":{"title":"Sumérgete en un paraíso donde la naturaleza y el lujo se encuentran en perfecta armonía","button":"Contacto"},"divider":{"experience":"Estilo de Vida, Experiencia e Imagen/Video del Hogar"},"contact":{"header":{"title":"¿Listo para experimentar un paraíso donde la naturaleza y el lujo se unen?","subtitle":"Ponte en contacto con nosotros para conocer más sobre La Cancillería"},"emailAlternative":"O escríbenos a","info":{"phone":{"label":"TELÉFONO","value":"+1 23 456 789"},"email":{"label":"EMAIL","value":"lacancilleria@email.com"},"address":{"label":"DIRECCIÓN","value":"La Barra, José Ignacio"}},"title":"Contáctenos","description":"Nos encantaría saber de usted. Envíenos un mensaje y le responderemos lo antes posible.","form":{"name":"Nombre Completo","email":"Correo Electrónico","phone":"Teléfono","message":"Su Mensaje","submit":"Enviar Mensaje","success":"Mensaje enviado exitosamente","optional":"opcional"}},"estate":{"hero":{"title":"El Barrio","subtitle":"Vida costera exclusiva en La Barra"},"services":{"title":"Servicios Profesionales","housekeeping":"Limpieza/Mucama","laundry":"Lavandería/Guardarropas","garden":"Jardín/Mantenimiento Exterior","pool":"Mantenimiento Piscina/Técnico","maintenance":"Mantenimiento Propiedad/Barrio"},"amenities":{"label":"Amenidades","title":"Exclusivos","items":{"clubhouse":{"title":"Piscina climatizada exterior"},"fitness":{"title":"Área de estar exterior con pérgola"},"tennis":{"title":"Comedor exterior con parrilla argentina con pérgola"},"pool":{"title":"Aire acondicionado en todas las habitaciones"},"security":{"title":"Wifi & TVs en sala de estar y suite principal"}}},"gallery":{"title":"Espacios Comunes"},"explore":{"title":"Explora desde Adentro"},"staff":{"label":"Bajo Pedido","title":"Personal Disponible","services":{"chef":"Chef","nanny":"Niñera / Cuidadora","driver":"Conductor / Transporte","yoga":"Instructor de Yoga / Bienestar","massage":"Terapeuta de Masajes"}},"cta":{"title":"¿Listo para Experimentar La Cancillería?","description":"Contáctanos para agendar una visita o conocer más sobre esta propiedad excepcional"}},"footer":{"rights":"Todos los derechos reservados"}}
-
+{
+  "nav": {
+    "home": "Inicio",
+    "house": "La Casa",
+    "location": "Ubicación",
+    "estate": "El Barrio"
+  },
+  "home": {
+    "hero": {
+      "title": "La Cancillería",
+      "subtitle": "Punta del Este, Uruguay"
+    },
+    "intro": {
+      "label": "¿Qué es La Cancillería?",
+      "title": "Un Exclusivo Barrio Privado en el Corazón de La Barra",
+      "description": "La propiedad combina áreas exteriores de primera clase: zonas de relajación, vida y actividades con absoluta privacidad y las mejores condiciones para disfrutar de unas vacaciones inolvidables"
+    },
+    "properties": {
+      "cancilleria": {
+        "name": "La Cancillería",
+        "description": "La residencia principal que ofrece lujo, privacidad y confort en el corazón de La Barra. Una perfecta combinación de diseño sofisticado y belleza natural."
+      },
+      "griega": {
+        "name": "La Griega",
+        "description": "Casa de staff y servicio que garantiza operaciones impecables y una hospitalidad excepcional durante toda su estadía."
+      }
+    },
+    "quickFacts": {
+      "label": "Descubre",
+      "title": "Amenidades y Servicios Exclusivos",
+      "items": {
+        "guests": {
+          "title": "Aloja hasta 10 huéspedes",
+          "description": "Amplias instalaciones para todo tu grupo"
+        },
+        "bedrooms": {
+          "title": "5 Dormitorios + 6 Baños",
+          "description": "Privacidad y comodidad para todos"
+        },
+        "pool": {
+          "title": "Piscina Climatizada Exterior",
+          "description": "Disfruta de la natación todo el año"
+        },
+        "views": {
+          "title": "Vistas al Océano",
+          "description": "Impresionantes panoramas del Atlántico"
+        },
+        "concierge": {
+          "title": "Conserje y Personal Completo Disponible",
+          "description": "Servicio personalizado a tu alcance"
+        },
+        "outdoor": {
+          "title": "Parrilla y Área de Comedor Exterior",
+          "description": "Perfecto para entretenimiento al aire libre"
+        }
+      },
+      "cta": {
+        "title": "¿Listo para Explorar?",
+        "button": "Explorar el Barrio"
+      }
+    }
+  },
+  "timeline": {
+    "title": "Vive la experiencia de Punta del Este",
+    "oceanBreezes": "Despierta con la brisa del océano",
+    "alfrescoLunches": "Disfruta almuerzos al aire libre junto a la piscina",
+    "vibrantScene": "Descubre la vibrante escena de La Barra y Punta del Este, que están a solo unos minutos",
+    "laBarraJoseIgnacio": "Descubre la vibrante escena de La Barra y José Ignacio a solo minutos",
+    "exploreLocation": "Explorar ubicación"
+  },
+  "house": {
+    "hero": {
+      "title": "Una Obra Maestra Arquitectónica en Punta del Este",
+      "subtitle": "Donde el lujo encuentra el horizonte atlántico",
+      "cta": "Agendar una Visita"
+    },
+    "intro": {
+      "label": "La Residencia",
+      "title": "Un santuario de elegancia contemporánea",
+      "description": "Ubicada en el barrio más exclusivo de Punta del Este, esta joya arquitectónica redefine la vida de lujo costera. Cada detalle ha sido meticulosamente diseñado para crear una armoniosa combinación de diseño sofisticado y belleza natural.",
+      "specs": {
+        "bedrooms": "5 Dormitorios",
+        "bathrooms": "6 Baños",
+        "area": "750 m²",
+        "lot": "2,000 m² de Terreno"
+      }
+    },
+    "specs": {
+      "title": "Especificaciones de la Propiedad",
+      "description": "Explore los detalles excepcionales de esta magnífica residencia",
+      "items": {
+        "bedrooms": { "value": "5", "label": "Dormitorios" },
+        "bathrooms": { "value": "6", "label": "Baños" },
+        "area": { "value": "750", "label": "m² Construidos" },
+        "lot": { "value": "2,000", "label": "m² de Terreno" },
+        "floors": { "value": "3", "label": "Pisos" },
+        "parking": { "value": "4", "label": "Cocheras" },
+        "pool": { "value": "Infinita", "label": "Piscina" },
+        "year": { "value": "2024", "label": "Año" }
+      }
+    },
+    "features": {
+      "title": "Características Excepcionales",
+      "items": {
+        "design": {
+          "title": "Diseño Contemporáneo",
+          "description": "Líneas puras y ventanales de piso a techo enmarcan vistas impresionantes al océano"
+        },
+        "materials": {
+          "title": "Materiales Premium",
+          "description": "Mármol importado, pisos de madera noble y accesorios de última generación"
+        },
+        "outdoor": {
+          "title": "Amplios Espacios al Aire Libre",
+          "description": "Piscina infinita, cocina exterior y terrazas diseñadas para el entretenimiento"
+        },
+        "smart": {
+          "title": "Tecnología Domótica",
+          "description": "Automatización totalmente integrada para iluminación, clima y seguridad"
+        }
+      }
+    },
+    "gallery": { "title": "Explore el Interior" },
+    "cta": {
+      "title": "Experimente el Lujo Sin Igual",
+      "description": "Descubra la casa de sus sueños en Punta del Este",
+      "button": "Contáctenos"
+    }
+  },
+  "location": {
+    "hero": {
+      "title": "El Corazón de Punta del Este",
+      "subtitle": "Donde la exclusividad encuentra la conveniencia"
+    },
+    "intro": {
+      "label": "Ubicación Privilegiada",
+      "title": "Perfectamente posicionada en el destino más prestigioso de Uruguay",
+      "description": "Ubicada en el codiciado distrito de La Barra, esta propiedad ofrece el equilibrio perfecto entre privacidad y accesibilidad. A solo minutos de playas prístinas, gastronomía de clase mundial y atracciones culturales, manteniendo la tranquilidad de una comunidad privada."
+    },
+    "map": {
+      "title": "Tu Nuevo Vecindario",
+      "description": "Explora los principales puntos de interés cerca de La Cancillería",
+      "tokenRequired": "Token de MapBox Requerido",
+      "tokenDescription": "Por favor ingresa tu token público de MapBox para mostrar el mapa interactivo. Obtén tu token en",
+      "loadMap": "Cargar Mapa"
+    },
+    "gallery": { "title": "Explorá la Zona" },
+    "nearby": {
+      "title": "Atracciones Cercanas",
+      "items": {
+        "beach": {
+          "title": "Playa José Ignacio",
+          "distance": "15 min en auto",
+          "description": "Playas de arena blanca prístina y aguas cristalinas"
+        },
+        "marina": {
+          "title": "Puerto de Punta del Este",
+          "distance": "20 min en auto",
+          "description": "Marina de clase mundial con yates de lujo y restaurantes frente al mar"
+        },
+        "golf": {
+          "title": "La Barra Golf Club",
+          "distance": "10 min en auto",
+          "description": "Campo de golf de campeonato diseñado por arquitectos reconocidos"
+        },
+        "restaurants": {
+          "title": "Restaurantes Gourmet",
+          "distance": "5 min en auto",
+          "description": "Experiencias gastronómicas de chefs internacionales"
+        }
+      }
+    },
+    "distances": {
+      "title": "Fácil acceso. Privacidad perfecta",
+      "items": {
+        "pde-airport": "26 km del Aeropuerto de Punta del Este",
+        "carrasco": "113 km del Aeropuerto de Carrasco",
+        "montoya": "5 minutos caminando a Playa Montoya",
+        "bikini": "7 minutos a Playa Bikini",
+        "labarra": "3 minutos a restaurantes y vida nocturna de La Barra"
+      }
+    },
+    "cta": {
+      "title": "Vive Donde la Vida se Despliega",
+      "description": "Descubre la ubicación perfecta para la casa de tus sueños",
+      "button": "Conocer Más"
+    }
+  },
+  "estate": {
+    "hero": {
+      "title": "Barrio La Cancillería",
+      "subtitle": "Un santuario residencial exclusivo"
+    },
+    "intro": {
+      "label": "La Comunidad",
+      "title": "Un oasis privado de lujo y tranquilidad",
+      "description": "La Cancillería representa el pináculo de la vida en comunidad privada en Punta del Este. Con seguridad 24/7, amenities de clase mundial y terrenos meticulosamente mantenidos, los residentes disfrutan de un estilo de vida sin igual de confort y exclusividad."
+    },
+    "amenities": {
+      "title": "Amenities de Clase Mundial",
+      "items": {
+        "clubhouse": {
+          "title": "Clubhouse Exclusivo",
+          "description": "Espacios sociales modernos para reuniones y eventos"
+        },
+        "fitness": {
+          "title": "Centro de Fitness",
+          "description": "Equipamiento de última generación y entrenamiento personal"
+        },
+        "tennis": {
+          "title": "Canchas de Tenis",
+          "description": "Canchas profesionales de arcilla y cemento con iluminación"
+        },
+        "pool": {
+          "title": "Piscina Resort",
+          "description": "Piscina olímpica climatizada con instalaciones de spa"
+        },
+        "security": {
+          "title": "Seguridad 24/7",
+          "description": "Entrada controlada con equipo de seguridad profesional"
+        },
+        "concierge": {
+          "title": "Servicio de Concierge",
+          "description": "Personal dedicado para todas las necesidades de los residentes"
+        }
+      }
+    },
+    "logistics": {
+      "title": "Servicios y Acceso del Barrio",
+      "description": "Todo diseñado para tu comodidad y conveniencia",
+      "services": {
+        "title": "Servicios Profesionales",
+        "items": {
+          "maintenance": {
+            "title": "Mantenimiento",
+            "description": "Equipo de mantenimiento 24/7 para todas las áreas comunes e infraestructura"
+          },
+          "cleaning": {
+            "title": "Servicios de Limpieza",
+            "description": "Servicios opcionales de limpieza y mantenimiento exterior disponibles"
+          },
+          "concierge": {
+            "title": "Concierge de Residentes",
+            "description": "Reservas de restaurantes, planificación de eventos y recomendaciones locales"
+          },
+          "security": {
+            "title": "Protocolos de Seguridad",
+            "description": "Sistema avanzado de vigilancia y personal de seguridad capacitado"
+          }
+        }
+      },
+      "access": {
+        "title": "Acceso e Instalaciones",
+        "items": {
+          "gate": {
+            "title": "Acceso Controlado",
+            "description": "Portón principal con sistemas biométricos y pases digitales"
+          },
+          "parking": {
+            "title": "Estacionamiento para Invitados",
+            "description": "Áreas dedicadas de estacionamiento para visitantes con fácil acceso"
+          },
+          "reception": {
+            "title": "Área de Recepción",
+            "description": "Recepción profesional para entrega de paquetes y gestión de invitados"
+          },
+          "delivery": {
+            "title": "Servicios de Entrega",
+            "description": "Manejo seguro de paquetes y coordinación de mensajería"
+          }
+        }
+      }
+    },
+    "gallery": { "title": "Espacios Comunes" },
+    "contact": {
+      "title": "Información del Barrio",
+      "description": "Póngase en contacto con la administración de la comunidad",
+      "email": "Email",
+      "phone": "Teléfono",
+      "address": "Dirección",
+      "hours": "Horario de Oficina"
+    },
+    "cta": {
+      "title": "Únete a una Comunidad Exclusiva",
+      "description": "Experimenta el estilo de vida La Cancillería",
+      "button": "Contáctanos"
+    }
+  },
+  "cta": {
+    "title": "Sumérgete en un paraíso donde la naturaleza y el lujo se encuentran en perfecta armonía",
+    "button": "Contacto"
+  },
+  "divider": {
+    "experience": "Estilo de Vida, Experiencia e Imagen/Video del Hogar"
+  },
+  "contact": {
+    "header": {
+      "title": "¿Listo para experimentar un paraíso donde la naturaleza y el lujo se unen?",
+      "subtitle": "Ponte en contacto con nosotros para conocer más sobre La Cancillería"
+    },
+    "emailAlternative": "O escríbenos a",
+    "info": {
+      "phone": { "label": "TELÉFONO", "value": "+1 23 456 789" },
+      "email": { "label": "EMAIL", "value": "lacancilleria@email.com" },
+      "address": { "label": "DIRECCIÓN", "value": "La Barra, José Ignacio" }
+    },
+    "title": "Contáctenos",
+    "description": "Nos encantaría saber de usted. Envíenos un mensaje y le responderemos lo antes posible.",
+    "form": {
+      "name": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "message": "Su Mensaje",
+      "submit": "Enviar Mensaje",
+      "success": "Mensaje enviado exitosamente",
+      "optional": "opcional"
+    }
+  },
+  "estate": {
+    "hero": {
+      "title": "El Barrio",
+      "subtitle": "Vida costera exclusiva en La Barra"
+    },
+    "services": {
+      "title": "Servicios Profesionales",
+      "housekeeping": "Limpieza/Mucama",
+      "laundry": "Lavandería/Guardarropas",
+      "garden": "Jardín/Mantenimiento Exterior",
+      "pool": "Mantenimiento Piscina/Técnico",
+      "maintenance": "Mantenimiento Propiedad/Barrio"
+    },
+    "amenities": {
+      "label": "Amenidades",
+      "title": "Exclusivos",
+      "items": {
+        "clubhouse": { "title": "Piscina climatizada exterior" },
+        "fitness": { "title": "Área de estar exterior con pérgola" },
+        "tennis": {
+          "title": "Comedor exterior con parrilla argentina con pérgola"
+        },
+        "pool": { "title": "Aire acondicionado en todas las habitaciones" },
+        "security": { "title": "Wifi & TVs en sala de estar y suite principal" }
+      }
+    },
+    "gallery": { "title": "Espacios Comunes" },
+    "explore": { "title": "Explora desde Adentro" },
+    "staff": {
+      "label": "Bajo Pedido",
+      "title": "Personal Disponible",
+      "services": {
+        "chef": "Chef",
+        "nanny": "Niñera / Cuidadora",
+        "driver": "Conductor / Transporte",
+        "yoga": "Instructor de Yoga / Bienestar",
+        "massage": "Terapeuta de Masajes"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Experimentar La Cancillería?",
+      "description": "Contáctanos para agendar una visita o conocer más sobre esta propiedad excepcional"
+    }
+  },
+  "footer": { "rights": "Todos los derechos reservados" }
+}

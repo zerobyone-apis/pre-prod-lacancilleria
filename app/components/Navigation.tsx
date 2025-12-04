@@ -6,6 +6,7 @@ import { cn } from '@/app/lib/utils';
 import { Menu, X } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/app/components/ui/sheet';
 import { Button } from '@/app/components/ui/button';
+import Image from 'next/image';
 
 export const Navigation = () => {
   const { t } = useTranslation();
@@ -28,44 +29,55 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled 
-        ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" 
-        : "bg-transparent"
-    )}>
+    <nav
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        isScrolled
+          ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-sm'
+          : 'bg-transparent'
+      )}
+    >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <NavLink 
-            to="/" 
+          <NavLink
+            to="/"
             className={cn(
-              "text-xl md:text-2xl font-serif transition-colors",
-              isScrolled ? "text-foreground" : "text-white"
+              'transition-colors',
+              isScrolled ? 'text-foreground' : 'text-white'
             )}
           >
-            La Cancillería
+            <span className="sr-only">La Cancillería</span>
+            <Image
+              src={
+                isScrolled ? '/logos/dark_logo.png' : '/logos/light_logo.png'
+              }
+              alt="La Cancillería logo"
+              width={183}
+              height={48}
+              priority
+            />
           </NavLink>
-          
+
           <div className="flex items-center gap-2 md:gap-8">
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
-                <NavLink 
+                <NavLink
                   key={link.to}
-                  to={link.to} 
+                  to={link.to}
                   className={cn(
-                    "text-sm font-medium tracking-wider hover:text-accent transition-colors",
-                    isScrolled ? "text-foreground" : "text-white"
+                    'text-navbar_text font-medium tracking-wider hover:text-accent transition-colors',
+                    isScrolled ? 'text-foreground' : 'text-white'
                   )}
-                  activeClassName="text-accent"
+                  activeClassName="text-piel"
                 >
                   {link.label}
                 </NavLink>
               ))}
             </div>
-            
+
             <LanguageSwitcher isScrolled={isScrolled} />
-            
+
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="md:hidden">
@@ -73,27 +85,41 @@ export const Navigation = () => {
                   variant="ghost"
                   size="icon"
                   className={cn(
-                    "h-9 w-9 transition-colors",
-                    isScrolled ? "text-foreground hover:bg-muted" : "text-white hover:bg-white/10"
+                    'h-9 w-9 transition-colors',
+                    isScrolled
+                      ? 'text-foreground hover:bg-muted'
+                      : 'text-white hover:bg-white/10'
                   )}
                 >
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px] bg-background/95 backdrop-blur-md">
+              <SheetContent
+                side="right"
+                className="w-[280px] bg-background/95 backdrop-blur-md"
+              >
                 <div className="flex flex-col gap-8 mt-8">
-                  <div className="text-2xl font-serif text-foreground">
-                    La Cancillería
-                  </div>
+                  <NavLink
+                    to="/"
+                    className={cn('transition-colors text-foreground')}
+                  >
+                    <Image
+                      src="/logos/dark_logo.png"
+                      alt="La Cancillería logo"
+                      width={183}
+                      height={48}
+                      priority
+                    />
+                  </NavLink>
                   <nav className="flex flex-col gap-4">
                     {navLinks.map((link) => (
-                      <NavLink 
+                      <NavLink
                         key={link.to}
-                        to={link.to} 
+                        to={link.to}
                         onClick={() => setIsOpen(false)}
                         className="text-lg font-medium tracking-wider text-foreground hover:text-accent transition-colors py-2"
-                        activeClassName="text-accent"
+                        activeClassName="text-piel"
                       >
                         {link.label}
                       </NavLink>
