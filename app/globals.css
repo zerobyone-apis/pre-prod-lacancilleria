@@ -148,4 +148,21 @@
   color: hsl(var(--foreground)) !important;
 }
 
+/* .embla__slide {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.6s ease;
+}
+
+.embla__slide:not(.is-selected) {
+  opacity: 0.85;
+  transform: scale(0.97);
+}
+
+/* Evitar animación en slides clónicos (cuando Embla duplica) 
+.embla__slide[aria-hidden="true"] {
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transition: none !important;
+} */
 

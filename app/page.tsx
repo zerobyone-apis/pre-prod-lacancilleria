@@ -24,7 +24,7 @@ export default function HomePage() {
         backgroundImage="/images/home/hero.webp"
       />
       <HomeIntroSection />
-      <PropertiesSliderSection />
+      {/* {<PropertiesSliderSection />} */}
       <QuickFactsSection />
       <LifestyleImageSection />
       <TimelineSection />
