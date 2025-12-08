@@ -30,7 +30,7 @@ export const HomeIntroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden text-mar px-6 md:px-12 lg:px-24 py-32 md:py-48 bg-[#f3e7da]"
+      className="relative w-full overflow-hidden text-mar px-6 md:px-12 lg:px-24 py-32 md:pt-48 bg-[#f3e7da]"
     >
       {/* SHADOWS ABOVE GRADIENT */}
       <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[20]">
@@ -126,7 +126,7 @@ export const HomeIntroSection = () => {
           </p>
 
           {/* TITLE */}
-          <h2 className="text-h1 font-serif leading-[54px] mb-6">
+          <h2 className="text-h1 leading-[54px] mb-6">
             <Trans i18nKey={'home.intro.title'} />
           </h2>
 
@@ -142,7 +142,7 @@ export const HomeIntroSection = () => {
         {/* SECOND BLOCK */}
         <div className="max-w-6xl mx-auto text-center fade-block">
           {/* TITLE */}
-          <h2 className="text-h1  text-mar/80 font-serif leading-[54px] mb-6">
+          <h2 className="text-h1  text-mar/80 leading-[54px] mb-6">
             <Trans i18nKey={'home.introSecond.title'} />
           </h2>
 
@@ -155,9 +155,11 @@ export const HomeIntroSection = () => {
           <div className="relative w-full overflow-hidden fade-block shadow-lg">
             <IntroImageSlider
               images={[
-                '/images/home/slider/pool_1.jpg',
-                '/images/home/slider/estate-entrance.jpg',
-                '/images/home/slider/estate-gallery-1.jpg',
+                '/images/home/slider/pool.webp',
+                '/images/home/slider/suit-bed.webp',
+                '/images/home/slider/suit-gess-not-edited-ai.webp',
+                '/images/home/slider/sec-room.webp',
+                '/images/home/slider/coctails-in-pool.webp'
               ]}
             />
           </div>

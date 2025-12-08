@@ -29,29 +29,33 @@
       "label": "Descubre",
       "title": "Amenidades y Servicios Exclusivos",
       "items": {
-        "guests": {
-          "title": "Aloja hasta 10 huéspedes",
-          "description": "Amplias instalaciones para todo tu grupo"
-        },
-        "bedrooms": {
-          "title": "5 Dormitorios + 6 Baños",
-          "description": "Privacidad y comodidad para todos"
-        },
         "pool": {
-          "title": "Piscina Climatizada Exterior",
-          "description": "Disfruta de la natación todo el año"
+          "title": "Piscina climatizada al aire libre",
+          "description": "Disfruta de la piscina todo el año"
         },
-        "views": {
-          "title": "Vistas al Océano",
-          "description": "Impresionantes panoramas del Atlántico"
+        "garden": {
+          "title": "Jardines y paisajismo",
+          "description": "Jardines cuidados y árboles maduros que rodean la propiedad"
         },
-        "concierge": {
-          "title": "Conserje y Personal Completo Disponible",
-          "description": "Servicio personalizado a tu alcance"
+        "pergola": {
+          "title": "Área de pérgola exterior",
+          "description": "Pérgola sombreada ideal para comer al aire libre"
         },
-        "outdoor": {
-          "title": "Parrilla y Área de Comedor Exterior",
-          "description": "Perfecto para entretenimiento al aire libre"
+        "staff-house": {
+          "title": "Casa de personal <br />La Griega",
+          "description": "Casa de staff en el predio para un servicio impecable"
+        },
+        "parrillero": {
+          "title": "Comedor exterior <br />Parrillero",
+          "description": "Parrillero tradicional y comedor al aire libre para reuniones"
+        },
+        "services": {
+          "title": "Servicios opcionales <br />Chef, niñera, chofer, etc.",
+          "description": "Chef, niñera, chofer y más bajo solicitud"
+        },
+        "office": {
+          "title": "Oficina y espacio de trabajo",
+          "description": "Espacio tranquilo para trabajar a distancia"
         }
       },
       "cta": {

@@ -21,31 +21,35 @@
     },
     "quickFacts": {
       "label": "Discover",
-      "title": "Exclusive Amenities and Facilities",
+      "title": "EXCLUSIVE<br />AMENITIES AND FACILITIES",
       "items": {
-        "guests": {
-          "title": "Sleeps up to 10 guests",
-          "description": "Spacious accommodations for your entire group"
-        },
-        "bedrooms": {
-          "title": "5 Bedrooms + 6 Bathrooms",
-          "description": "Privacy and comfort for everyone"
-        },
         "pool": {
           "title": "Heated Outdoor Pool",
           "description": "Year-round swimming enjoyment"
         },
-        "views": {
-          "title": "Ocean Views",
-          "description": "Breathtaking Atlantic panoramas"
+        "garden": {
+          "title": "Gardens & Landscape",
+          "description": "Manicured gardens and mature trees surrounding the estate"
         },
-        "concierge": {
-          "title": "Concierge & Full Staff Available",
-          "description": "Personalized service at your fingertips"
+        "pergola": {
+          "title": "Outdoor Pergola Area",
+          "description": "Shaded pergola lounge perfect for alfresco dining"
         },
-        "outdoor": {
-          "title": "Outdoor Grill & Dining Area",
-          "description": "Perfect for al fresco entertaining"
+        "staff-house": {
+          "title": "Staff House <br />La Griega",
+          "description": "Dedicated on-site staff quarters for seamless service"
+        },
+        "parrillero": {
+          "title": "Outdoor Dining <br /> Parillero",
+          "description": "Traditional parrillero and outdoor dining for gatherings"
+        },
+        "services": {
+          "title": "Optional Services <br />Chef, Nanny, Driver, etc.",
+          "description": "On-demand chef, nanny, driver and more tailored to your stay"
+        },
+        "office": {
+          "title": "Office And Workspace",
+          "description": "Quiet office and workspace for working remotely"
         }
       },
       "cta": { "title": "Ready to Explore?", "button": "Explore the Estate" }
