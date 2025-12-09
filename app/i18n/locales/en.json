@@ -53,16 +53,37 @@
         }
       },
       "cta": { "title": "Ready to Explore?", "button": "Explore the Estate" }
+    },
+    "timeline": {
+      "title": "LIVE THE PUNTA DEL ESTE <br />EXPERIENCE",
+      "oceanBreezes": "Wake up to <br />ocean breezes",
+      "alfrescoLunches": "Enjoy alfresco lunches by <br />the pool",
+      "vibrantScene": "Discover the vibrant <br />scene of Punta del Este, <br />which are just a few <br />minutes away",
+      "laBarraJoseIgnacio": "Discover the vibrant <br />scene of La Barra and <br />José Ignacio just minutes <br />away",
+      "exploreLocation": "Explore location"
+    },
+    "cta": {
+      "title": "IMMERSE YOURSELF IN A PARADISE <br />WHERE NATURE AND LUXURY MEET <br />IN PERFECT HARMONY",
+      "button": "CONTACT"
+    },
+    "contact": {
+      "header": {
+        "title": "READY TO EXPERIENCE <br />LA CANCILLERÍA?",
+        "subtitle": "If you want more information send us an email to<br />",
+        "to": "contact@lacancilleriaestateuruguay.com"
+      },
+      "form": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "message": "Your Message",
+        "submit": "Send Message",
+        "success": "Message sent successfully",
+        "optional": "optional"
+      }
     }
   },
-  "timeline": {
-    "title": "Live the Punta del Este experience",
-    "oceanBreezes": "Wake up to ocean breezes",
-    "alfrescoLunches": "Enjoy alfresco lunches by the pool",
-    "vibrantScene": "Discover the vibrant scene of La Barra and Punta del Este, which are just a few minutes away",
-    "laBarraJoseIgnacio": "Discover the vibrant scene of La Barra and José Ignacio just minutes away",
-    "exploreLocation": "Explore location"
-  },
+
   "house": {
     "hero": {
       "title": "An Architectural Masterpiece in Punta del Este",
@@ -286,29 +307,7 @@
     "button": "Contact"
   },
   "divider": { "experience": "Lifestyle, Experience and Home Image/Video" },
-  "contact": {
-    "header": {
-      "title": "Ready to experience a paradise where nature and luxury unite?",
-      "subtitle": "Get in touch with us to learn more about La Cancillería"
-    },
-    "emailAlternative": "Or reach us at",
-    "info": {
-      "phone": { "label": "PHONE", "value": "+1 23 456 789" },
-      "email": { "label": "EMAIL", "value": "lacancilleria@email.com" },
-      "address": { "label": "ADDRESS", "value": "La Barra, José Ignacio" }
-    },
-    "title": "Get in Touch",
-    "description": "We would love to hear from you. Send us a message and we'll respond as soon as possible.",
-    "form": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "message": "Your Message",
-      "submit": "Send Message",
-      "success": "Message sent successfully",
-      "optional": "optional"
-    }
-  },
+
   "estate": {
     "hero": {
       "title": "The Estate",

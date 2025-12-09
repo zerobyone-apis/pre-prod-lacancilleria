@@ -28,6 +28,8 @@ export default {
         h2: ['24px', { lineHeight: '60px' }],
         navbar_text: ['18px', { lineHeight: '10px' }],
         body: ['18px', { lineHeight: '28px' }],
+        cta_text: ['50px', { lineHeight: '48px', letterSpacing: '3px' }],
+        cta_bottn: ['18px', { lineHeight: '10px', letterSpacing: '-0.5px' }],
       },
       colors: {
         piel: '#A67753',

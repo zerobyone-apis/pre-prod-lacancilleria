@@ -1,11 +1,17 @@
 import { useGsapParallax } from '@/hooks/useGsapAnimation';
-export const LifestyleImageSection = () => {
-  const parallaxRef = useGsapParallax(0.3);
+
+interface props {
+  imageSource: string;
+}
+
+export const ImageDeviderSection = (props: props) => {
+  const { imageSource } = props;
+  const parallaxRef = useGsapParallax(0.5);
   return (
     <section className="relative h-screen w-full overflow-hidden">
       <div ref={parallaxRef} className="absolute inset-0 w-full h-[120%]">
         <img
-          src="/images/home/deviders/montoya.webp"
+          src={imageSource}
           alt="La Barra, Punta del Este, and José Ignacio area"
           className="w-full h-full object-cover"
         />

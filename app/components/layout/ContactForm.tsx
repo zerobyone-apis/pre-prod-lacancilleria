@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { toast } from 'sonner';
@@ -5,60 +7,66 @@ import { Send, User, Mail, Phone, MessageSquare } from 'lucide-react';
 
 export const ContactForm = () => {
   const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     message: ''
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    await new Promise(resolve => setTimeout(resolve, 800));
-    
-    toast.success(t('contact.form.success', { defaultValue: 'Message sent successfully' }));
+
+    await new Promise((resolve) => setTimeout(resolve, 800));
+
+    toast.success(t('home.contact.form.success', { defaultValue: 'Message sent successfully' }));
     setFormData({ name: '', email: '', phone: '', message: '' });
     setIsSubmitting(false);
   };
 
-  const inputClasses = (field: string) => `
-    w-full bg-transparent border-0 border-b border-border/40 
-    px-0 py-3 text-foreground placeholder:text-muted-foreground/50
-    outline-none ring-0 focus:outline-none focus:ring-0 focus:border-border/40 
-    focus-visible:outline-none focus-visible:ring-0
-    transition-colors duration-500 hover:border-muted-foreground/50
+  const inputClasses = `
+    w-full bg-transparent border-0 border-b border-[#C8B8A5]/50 
+    px-0 py-3 text-mar placeholder:text-mar/40
+    outline-none focus:border-piel transition-all duration-500
   `;
 
   const labelClasses = (field: string) => `
     absolute left-7 transition-all duration-300 pointer-events-none
-    ${focusedField === field || formData[field as keyof typeof formData] 
-      ? 'top-0 text-xs text-accent' 
-      : 'top-9 text-sm text-muted-foreground/70'}
+    ${
+      focusedField === field || formData[field as keyof typeof formData]
+        ? 'top-0 text-xs text-piel'
+        : 'top-9 text-sm text-mar/60'
+    }
   `;
 
   return (
     <div className="relative">
-      {/* Elegant container with soft glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/5 rounded-3xl blur-xl pointer-events-none" />
-      
-      <div className="relative bg-card/30 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-border/30 shadow-2xl shadow-black/5">
-        {/* Decorative corner accents */}
-        <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-accent/20 rounded-tl-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-accent/20 rounded-br-3xl pointer-events-none" />
+      {/* Glow exterior suave */}
+      <div className="absolute inset-0 bg-gradient-to-br from-piel/10 via-transparent to-piel/10 rounded-3xl blur-2xl pointer-events-none" />
+
+      {/* Caja elegante del formulario */}
+      <div className="relative bg-white/60 backdrop-blur-xl rounded-[16px] p-10 md:p-14 border border-[#C8B8A5]/40 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.20)]">
         
-        <form onSubmit={handleSubmit} className="space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            {/* Name Field */}
+        {/* Accentos decorativos en las esquinas */}
+        <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-piel/30 rounded-tl-[16px] pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-piel/30 rounded-br-[16px] pointer-events-none" />
+
+        <form onSubmit={handleSubmit} className="space-y-10">
+          {/* GRID 2 COLS */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            {/* NAME */}
             <div className="relative pt-6">
               <label className={labelClasses('name')}>
-                {t('contact.form.name')}
+                {t('home.contact.form.name')}
               </label>
               <div className="flex items-center gap-3">
-                <User className={`w-4 h-4 flex-shrink-0 transition-colors duration-300 ${focusedField === 'name' ? 'text-accent' : 'text-muted-foreground/40'}`} />
+                <User className={`w-4 h-4 ${focusedField === 'name' ? 'text-piel' : 'text-mar/40'}`} />
                 <input
                   type="text"
                   value={formData.name}
@@ -66,19 +74,18 @@ export const ContactForm = () => {
                   onFocus={() => setFocusedField('name')}
                   onBlur={() => setFocusedField(null)}
                   required
-                  className={inputClasses('name')}
+                  className={inputClasses}
                 />
               </div>
-              <div className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-500 ${focusedField === 'name' ? 'w-full' : 'w-0'}`} />
             </div>
 
-            {/* Email Field */}
+            {/* EMAIL */}
             <div className="relative pt-6">
               <label className={labelClasses('email')}>
-                {t('contact.form.email')}
+                {t('home.contact.form.email')}
               </label>
               <div className="flex items-center gap-3">
-                <Mail className={`w-4 h-4 flex-shrink-0 transition-colors duration-300 ${focusedField === 'email' ? 'text-accent' : 'text-muted-foreground/40'}`} />
+                <Mail className={`w-4 h-4 ${focusedField === 'email' ? 'text-piel' : 'text-mar/40'}`} />
                 <input
                   type="email"
                   value={formData.email}
@@ -86,42 +93,38 @@ export const ContactForm = () => {
                   onFocus={() => setFocusedField('email')}
                   onBlur={() => setFocusedField(null)}
                   required
-                  className={inputClasses('email')}
+                  className={inputClasses}
                 />
               </div>
-              <div className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-500 ${focusedField === 'email' ? 'w-full' : 'w-0'}`} />
             </div>
           </div>
 
-          {/* Phone Field */}
+          {/* PHONE */}
           <div className="relative pt-6">
             <label className={labelClasses('phone')}>
-              {t('contact.form.phone')}
-              <span className="text-muted-foreground/40 ml-1">
-                ({t('contact.form.optional', { defaultValue: 'optional' })})
-              </span>
+              {t('home.contact.form.phone')}
+              <span className="text-mar/40 ml-1">({t('home.contact.form.optional')})</span>
             </label>
             <div className="flex items-center gap-3">
-              <Phone className={`w-4 h-4 flex-shrink-0 transition-colors duration-300 ${focusedField === 'phone' ? 'text-accent' : 'text-muted-foreground/40'}`} />
+              <Phone className={`w-4 h-4 ${focusedField === 'phone' ? 'text-piel' : 'text-mar/40'}`} />
               <input
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 onFocus={() => setFocusedField('phone')}
                 onBlur={() => setFocusedField(null)}
-                className={inputClasses('phone')}
+                className={inputClasses}
               />
             </div>
-            <div className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-500 ${focusedField === 'phone' ? 'w-full' : 'w-0'}`} />
           </div>
 
-          {/* Message Field */}
+          {/* MESSAGE */}
           <div className="relative pt-6">
             <label className={labelClasses('message')}>
-              {t('contact.form.message')}
+              {t('home.contact.form.message')}
             </label>
-            <div className="flex gap-3">
-              <MessageSquare className={`w-4 h-4 flex-shrink-0 mt-3 transition-colors duration-300 ${focusedField === 'message' ? 'text-accent' : 'text-muted-foreground/40'}`} />
+            <div className="flex items-start gap-3">
+              <MessageSquare className={`w-4 h-4 mt-3 ${focusedField === 'message' ? 'text-piel' : 'text-mar/40'}`} />
               <textarea
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -129,36 +132,30 @@ export const ContactForm = () => {
                 onBlur={() => setFocusedField(null)}
                 rows={4}
                 required
-                className={`${inputClasses('message')} resize-none`}
+                className={`${inputClasses} resize-none`}
               />
             </div>
-            <div className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-500 ${focusedField === 'message' ? 'w-full' : 'w-0'}`} />
           </div>
 
-          {/* Submit Button */}
-          <div className="pt-4">
+          {/* SUBMIT */}
+          <div className="pt-4 flex justify-center md:justify-center">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group relative w-full md:w-auto md:min-w-[200px] overflow-hidden rounded-full px-8 py-4 
-                bg-foreground/5 border border-border/50 
-                hover:border-accent/50 hover:bg-accent/5
-                transition-all duration-500 ease-out
-                disabled:opacity-50 disabled:cursor-not-allowed"
+              className="
+                group relative rounded-[8px] px-10 py-4 
+                bg-mar border border-[#C8B8A5]/50 text-nieve
+                hover:bg-piel/80 hover:shadow-xl hover:-translate-y-1
+                transition-all duration-500 shadow-md
+              "
             >
-              {/* Hover background effect */}
-              <span className="absolute inset-0 bg-gradient-to-r from-accent/10 via-accent/5 to-transparent 
-                translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-              
-              <span className="relative flex items-center justify-center gap-3 text-sm tracking-wide uppercase">
+              <span className="relative flex items-center gap-3 text-sm tracking-wide uppercase">
                 {isSubmitting ? (
-                  <div className="w-5 h-5 border-2 border-muted-foreground/30 border-t-foreground rounded-full animate-spin" />
+                  <div className="w-5 h-5 border-2 border-mar/30 border-t-mar rounded-full animate-spin" />
                 ) : (
                   <>
-                    <span className="text-foreground/80 group-hover:text-foreground transition-colors duration-300">
-                      {t('contact.form.submit', { defaultValue: 'Send Message' })}
-                    </span>
-                    <Send className="w-4 h-4 text-accent transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+                    {t('home.contact.form.submit')}
+                    <Send className="w-4 h-4 text-piel group-hover:translate-x-1 group-hover:text-mar/50 transition-all duration-300" />
                   </>
                 )}
               </span>

@@ -6,12 +6,12 @@ import { HeroSection } from "@/app/components/sections/HeroSection";
 import { HomeIntroSection } from "@/app/components/sections/HomeIntroSection";
 import { PropertiesSliderSection } from "@/app/components/sections/PropertiesSliderSection";
 import { QuickFactsSection } from "@/app/components/sections/QuickFactsSection";
-import { LifestyleImageSection } from "@/app/components/sections/LifestyleImageSection";
 import { TimelineSection } from "@/app/components/sections/TimelineSection";
 import { HomeDividerSection } from "@/app/components/sections/HomeDividerSection";
 import { HomeCTASection } from "@/app/components/sections/HomeCTASection";
 import { ExperienceDividerSection } from "@/app/components/sections/ExperienceDividerSection";
 import { ContactSection } from "@/app/components/sections/ContactSection";
+import { ImageDeviderSection } from "./components/sections/LifestyleImageSection";
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -26,11 +26,11 @@ export default function HomePage() {
       <HomeIntroSection />
       {/* {<PropertiesSliderSection />} */}
       <QuickFactsSection />
-      <LifestyleImageSection />
+      <ImageDeviderSection imageSource='/images/home/deviders/montoya.webp' />
       <TimelineSection />
-      <HomeDividerSection />
-      <HomeCTASection />
-      <ExperienceDividerSection />
+      {/* <HomeDividerSection /> */}
+      {/* <HomeCTASection /> */}
+      <ImageDeviderSection imageSource='/images/home/deviders/lacancilleria_panoramic.jpg' />
       <ContactSection />
     </>
   );

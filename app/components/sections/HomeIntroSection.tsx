@@ -93,6 +93,24 @@ export const HomeIntroSection = () => {
         />
       </div>
 
+      {/* FIX SHADOW CUT — Ajustado para borrar el borde de la sombra */}
+      <div
+        className="absolute inset-x-0 pointer-events-none z-[25]"
+        style={{
+          top: '660px',
+          height: '140px',
+          background: `
+      linear-gradient(
+        to botm,
+        rgba(247,245,241,0) 40%,
+        #f7f5f1 60%,
+        #f3e7da 80%,
+        #f3e7da 100%
+      )
+    `,
+          backdropFilter: 'blur(4px)', // <-- MUCHO MEJOR
+        }}
+      />
       {/* GRADIENT BELOW THE SHADOWS */}
       <div
         className="absolute inset-x-0 top-0 pointer-events-none z-[10]"
@@ -102,7 +120,7 @@ export const HomeIntroSection = () => {
             'linear-gradient(180deg, rgba(247,245,241,0) 0%, #f7f5f1 45%, #f3e7da 100%)',
         }}
       />
-      {/* FADE PARA BORRAR LA LÍNEA DEL CORTE DE LA SOMBRA */}
+      {/* FADE DOWN (de sombra → color suave) */}
       <div
         className="hidden md:block absolute inset-x-0 top-[730px] h-[80px] pointer-events-none z-[30]"
         style={{
@@ -110,12 +128,29 @@ export const HomeIntroSection = () => {
       linear-gradient(
         to bottom,
         rgba(243,231,218,0) 0%,
-        rgba(243,231,218,0.6) 40%,
-        rgba(243,231,218,1) 100%
+        rgba(243,231,218,0.45) 45%,
+        rgba(243,231,218,0.9) 100%
       )
     `,
         }}
-      ></div>
+      />
+
+      <div
+        className="absolute inset-x-0 bottom-0 pointer-events-none z-[40]"
+        style={{
+          height: '260px',
+          background: `
+      linear-gradient(
+        to bottom,
+        rgba(247,245,241,0) 0%,
+        rgba(247,245,241,0.25) 25%,
+        rgba(247,245,241,0.55) 55%,
+        rgba(247,245,241,0.85) 85%,
+        rgba(247,245,241,1) 100%
+      )
+    `,
+        }}
+      />
 
       <div className="relative z-10">
         {/* TOP BLOCK */}
@@ -159,29 +194,12 @@ export const HomeIntroSection = () => {
                 '/images/home/slider/suit-bed.webp',
                 '/images/home/slider/suit-gess-not-edited-ai.webp',
                 '/images/home/slider/sec-room.webp',
-                '/images/home/slider/coctails-in-pool.webp'
+                '/images/home/slider/coctails-in-pool.webp',
               ]}
             />
           </div>
         </div>
       </div>
-
-      {/* LOWER TRANSITION — DIFUMINA LA SOMBRA Y CONECTA LA SECCIÓN */}
-      <div
-        className="absolute inset-x-0 bottom-0 pointer-events-none z-[1] h-[1000px] md:h-[1480px]"
-        style={{
-          height: '1480px',
-          background: `
-      linear-gradient(
-            180deg,
-            rgba(243,231,218,0) 0%,
-            rgba(243,231,218,0.65) 25%,
-            rgba(247,245,241,1) 65%,
-            #F7F5F1 100%
-          )
-    `,
-        }}
-      ></div>
     </section>
   );
 };
