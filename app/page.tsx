@@ -26,7 +26,7 @@ export default function HomePage() {
       <HomeIntroSection />
       {/* {<PropertiesSliderSection />} */}
       <QuickFactsSection />
-      <ImageDeviderSection imageSource='/images/home/deviders/montoya.webp' />
+      <ImageDeviderSection imageSource='/images/home/deviders/Montoya.webp' />
       <TimelineSection />
       {/* <HomeDividerSection /> */}
       {/* <HomeCTASection /> */}
