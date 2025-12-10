@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { HeroSection } from "@/app/components/sections/HeroSection";
 import { LocationMapSection } from "@/app/components/sections/LocationMapSection";
-import { LifestyleImageSection } from "@/app/components/sections/LifestyleImageSection";
+import { ImageDeviderSection } from "@/app/components/sections/ImageDeviderSection";
 import { LocationMasonryGallery } from "@/app/components/sections/LocationMasonryGallery";
 import { LocationDistancesSection } from "@/app/components/sections/LocationDistancesSection";
 import { LaBarraDividerSection } from "@/app/components/sections/LaBarraDividerSection";
@@ -21,7 +21,7 @@ export default function LocationPage() {
         backgroundImage="/images/location-hero.jpg"
       />
       <LocationMapSection />
-      <LifestyleImageSection />
+      <ImageDeviderSection imageSource="" />
       <LocationDistancesSection />
       <LocationMasonryGallery />
       <LaBarraDividerSection />

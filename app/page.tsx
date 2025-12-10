@@ -11,7 +11,7 @@ import { HomeDividerSection } from "@/app/components/sections/HomeDividerSection
 import { HomeCTASection } from "@/app/components/sections/HomeCTASection";
 import { ExperienceDividerSection } from "@/app/components/sections/ExperienceDividerSection";
 import { ContactSection } from "@/app/components/sections/ContactSection";
-import { ImageDeviderSection } from "./components/sections/LifestyleImageSection";
+import { ImageDeviderSection } from "./components/sections/ImageDeviderSection";
 
 export default function HomePage() {
   const { t } = useTranslation();

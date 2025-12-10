@@ -3,6 +3,7 @@ import { Mail } from 'lucide-react';
 import { Trans } from 'react-i18next';
 
 interface SectionHeaderProps {
+  label?: string;
   to?: string;
   title: string;
   description?: string;
@@ -11,6 +12,7 @@ interface SectionHeaderProps {
 }
 
 export const SectionHeader = ({
+  label,
   to,
   title,
   description,
@@ -25,6 +27,9 @@ export const SectionHeader = ({
         className
       )}
     >
+      <p className="text-body md:text-body lg:text-body font-serif leading-tight">
+        <Trans i18nKey={label} />
+      </p>
       <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">
         <Trans i18nKey={title} />
       </h2>
