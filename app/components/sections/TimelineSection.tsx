@@ -39,7 +39,7 @@ export const TimelineSection = () => {
     },
     {
       text: t('home.timeline.laBarraJoseIgnacio'),
-      image: '/images/nearby-restaurants.jpg',
+      image: '/images/home/timeline/la_barra.webp',
       imagePosition: 'left',
     },
   ];
@@ -70,22 +70,21 @@ export const TimelineSection = () => {
   return (
     <section
       className="
-    relative overflow-hidden text-mar px-4 md:px-8 lg:px-12 pt-28 pb-12 md:pb-12 md:pt-60
+    relative overflow-hidden text-mar px-4 sm:px-6 md:px-8 lg:px-12 pt-20 sm:pt-28 md:pt-60 pb-12 sm:pb-14 md:pb-12
     bg-gradient-to-b 
     from-[#E6DCCF] 
     to-[#F7F5F1]
   "
     >
       {/* PALM SHADOWS — versión editable */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 w-full h-[500px] overflow-visible">
+      <div className="pointer-events-none absolute inset-x-0 top-0 w-full h-[320px] sm:h-[420px] md:h-[500px] overflow-visible">
         {/* Palma derecha */}
         <div
-          className="absolute"
+          className="absolute opacity-0 sm:opacity-80 md:opacity-90"
           style={{
-            top: '150px', // mueve arriba/abajo
-            left: '-60px', // mueve hacia la derecha
-            transform: 'scale(1.5)', // escala más grande
-            opacity: 0.9, // suavizado elegante
+            top: '120px',
+            left: '-60px',
+            transform: 'scale(1.35)',
           }}
         >
           <Image
@@ -100,12 +99,11 @@ export const TimelineSection = () => {
 
         {/* Palma Izquierda */}
         <div
-          className="absolute"
+          className="absolute opacity-0 sm:opacity-75 md:opacity-90"
           style={{
-            top: '140px',
-            right: '-0px',
-            transform: 'scale(1.5) scaleX(-1)', // espejado + escala
-            opacity: 0.9,
+            top: '110px',
+            right: '0px',
+            transform: 'scale(1.35) scaleX(-1)',
           }}
         >
           <Image
@@ -131,7 +129,7 @@ export const TimelineSection = () => {
       {/* CONTENT WRAPPER */}
       <div className="relative max-w-6xl mx-auto">
         {/* TITLE */}
-        <h2 className="text-h1 font-serif text-center mb-28 leading-[1.2]">
+        <h2 className="text-[32px] leading-[38px] sm:text-[36px] sm:leading-[42px] md:text-h1 font-serif text-center mb-16 sm:mb-20 md:mb-28 leading-[1.2]">
           <Trans i18nKey="home.timeline.title" />
         </h2>
 
@@ -150,7 +148,7 @@ export const TimelineSection = () => {
           />
 
           {/* ITEMS WRAPPER */}
-          <div ref={itemsRef} className="space-y-36 md:space-y-44">
+          <div ref={itemsRef} className="space-y-18 sm:space-y-28 md:space-y-44">
             {timelineItems.map((item, index) => (
               <div key={index} className="timeline-item relative">
                 {/* DOT */}
@@ -168,7 +166,7 @@ export const TimelineSection = () => {
                 {/* GRID */}
                 <div
                   className={`
-                    grid md:grid-cols-2 gap-14 md:gap-24 items-center
+                    grid md:grid-cols-2 gap-10 sm:gap-14 md:gap-24 items-center
                     ${
                       item.imagePosition === 'left' ? 'md:flex-row-reverse' : ''
                     }
@@ -177,14 +175,14 @@ export const TimelineSection = () => {
                   {/* TEXT */}
                   <div
                     className={`
-                      ${
+                      text-center ${
                         item.imagePosition === 'right'
                           ? 'md:text-center md:pr-14'
                           : 'md:pl-14 md:text-center md:order-2'
                       }
                     `}
                   >
-                    <p className="text-h2 text-mar/90 leading-[1.35] md:max-w-[380px]">
+                    <p className="text-[18px] leading-[1.45] sm:text-[20px] sm:leading-[1.45] md:text-h2 text-mar/90 md:max-w-[420px]">
                       <Trans i18nKey={item.text} />
                     </p>
                   </div>
@@ -197,7 +195,8 @@ export const TimelineSection = () => {
                   >
                     <div
                       className="
-                        relative w-[220px] h-[220px]
+                        relative w-[200px] h-[200px]
+                        sm:w-[220px] sm:h-[220px]
                         md:w-[280px] md:h-[280px]
                         lg:w-[320px] lg:h-[320px]
                         mx-auto rounded-[8px]

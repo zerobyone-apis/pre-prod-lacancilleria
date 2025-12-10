@@ -30,40 +30,11 @@ export const HomeIntroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden text-mar px-6 md:px-12 lg:px-24 py-32 md:pt-48 bg-[#f3e7da]"
+      className="relative w-full overflow-hidden text-mar px-4 sm:px-6 md:px-12 lg:px-24 py-20 sm:py-28 md:pt-48 bg-[#f3e7da]"
     >
       {/* SHADOWS ABOVE GRADIENT */}
       <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[20]">
-        {/* MOBILE — más pequeño, más centrado */}
-        <Image
-          src="/images/home/shadows/Recursos/Re_3.png"
-          alt=""
-          width={600}
-          height={400}
-          className="absolute opacity-60 md:hidden"
-          style={{
-            top: '50px',
-            left: '10px',
-            transform: 'scale(1.4)',
-            objectFit: 'contain',
-          }}
-        />
-
-        <Image
-          src="/images/home/shadows/Recursos/Re_4.png"
-          alt=""
-          width={600}
-          height={400}
-          className="absolute opacity-90 md:hidden"
-          style={{
-            top: '400px',
-            right: '30px',
-            transform: 'scale(1.4)',
-            objectFit: 'contain',
-          }}
-        />
-
-        {/* DESKTOP — tus valores actuales */}
+        {/* DESKTOP */}
         <Image
           src="/images/home/shadows/Recursos/Re_3.png"
           alt=""
@@ -95,20 +66,20 @@ export const HomeIntroSection = () => {
 
       {/* FIX SHADOW CUT — Ajustado para borrar el borde de la sombra */}
       <div
-        className="absolute inset-x-0 pointer-events-none z-[25]"
+        className="hidden md:block absolute inset-x-0 pointer-events-none z-[25]"
         style={{
           top: '660px',
           height: '140px',
           background: `
       linear-gradient(
-        to botm,
+        to bottom,
         rgba(247,245,241,0) 40%,
         #f7f5f1 60%,
         #f3e7da 80%,
         #f3e7da 100%
       )
     `,
-          backdropFilter: 'blur(4px)', // <-- MUCHO MEJOR
+          backdropFilter: 'blur(4px)',
         }}
       />
       {/* GRADIENT BELOW THE SHADOWS */}
@@ -136,7 +107,7 @@ export const HomeIntroSection = () => {
       />
 
       <div
-        className="absolute inset-x-0 bottom-0 pointer-events-none z-[40]"
+        className="md:block absolute inset-x-0 bottom-0 pointer-events-none z-[0]"
         style={{
           height: '260px',
           background: `
@@ -156,33 +127,33 @@ export const HomeIntroSection = () => {
         {/* TOP BLOCK */}
         <div className="max-w-4xl mx-auto text-center fade-block">
           {/* LABEL */}
-          <p className="uppercase tracking-[3px] text-[14px] text-piel/70 mb-4">
+          <p className="uppercase tracking-[3px] text-[12px] sm:text-[13px] md:text-[14px] text-piel/70 mb-3 sm:mb-4">
             <Trans i18nKey={'home.intro.label'} />
           </p>
 
           {/* TITLE */}
-          <h2 className="text-h1 leading-[54px] mb-6">
+          <h2 className="text-[32px] leading-[38px] sm:text-[36px] sm:leading-[42px] md:text-h1 md:leading-[54px] mb-5 sm:mb-6">
             <Trans i18nKey={'home.intro.title'} />
           </h2>
 
           {/* DESCRIPTION */}
-          <p className="text-body text-mar/80 leading-[30px] max-w-2xl mx-auto">
+          <p className="text-[16px] leading-[26px] sm:text-body sm:leading-[28px] md:leading-[30px] text-mar/80 max-w-2xl mx-auto">
             <Trans i18nKey={'home.intro.description'} />
           </p>
 
           {/* DIVIDER */}
-          <div className="w-[1px] h-36 bg-piel/20 mx-auto mt-16 mb-32"></div>
+          <div className="w-[1px] h-28 sm:h-32 md:h-36 bg-piel/20 mx-auto mt-12 sm:mt-14 md:mt-16 mb-20 sm:mb-24 md:mb-32"></div>
         </div>
 
         {/* SECOND BLOCK */}
         <div className="max-w-6xl mx-auto text-center fade-block">
           {/* TITLE */}
-          <h2 className="text-h1  text-mar/80 leading-[54px] mb-6">
+          <h2 className="text-[30px] leading-[36px] sm:text-[34px] sm:leading-[40px] md:text-h1 md:leading-[54px] text-mar/80 mb-5 sm:mb-6">
             <Trans i18nKey={'home.introSecond.title'} />
           </h2>
 
           {/* DESCRIPTION */}
-          <p className="text-body text-mar/80 leading-[30px] max-w-4xl mx-auto mb-16">
+          <p className="text-[16px] leading-[26px] sm:text-body sm:leading-[28px] md:leading-[30px] text-mar/80 max-w-4xl mx-auto mb-12 sm:mb-14 md:mb-16">
             <Trans i18nKey="home.introSecond.description" />
           </p>
 

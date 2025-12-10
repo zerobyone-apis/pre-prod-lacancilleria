@@ -74,10 +74,10 @@ export const HeroSection = ({
         ref={contentRef}
         className="relative z-10 text-center px-4 md:px-6 max-w-5xl mx-auto"
       >
-        <h1 className="text-h1 font-serif leading-tight mb-4 text-primary-foreground drop-shadow-lg">
+        <h1 className="text-h1-sm md:text-h1-md lg:text-h1-lg font-serif leading-tight mb-4 text-primary-foreground drop-shadow-lg">
         <Trans i18nKey={title} />
         </h1>
-        <h2 className="text-h2 sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl mb-8 md:mb-12 text-primary-foreground/90 font-light tracking-wide drop-shadow px-2">
+        <h2 className="text-body sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl mb-8 md:mb-12 text-primary-foreground/90 font-light tracking-wide drop-shadow px-2">
           {subtitle}
         </h2>
         {cta && (

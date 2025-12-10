@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
@@ -34,10 +36,7 @@ export const QuickFactsSection = () => {
   ];
 
   useEffect(() => {
-    const container = containerRef.current;
-    const track = trackRef.current;
-    if (!container || !track) return;
-
+    const mm = gsap.matchMedia();
     const cards = gsap.utils.toArray<HTMLElement>('.qf-card');
 
     const updateScales = () => {
@@ -46,63 +45,122 @@ export const QuickFactsSection = () => {
       cards.forEach((card) => {
         const rect = card.getBoundingClientRect();
         const center = rect.left + rect.width / 2;
-
         const dist = Math.abs(center - mid);
         const maxDist = window.innerWidth * 0.55;
 
         const scale = gsap.utils.mapRange(0, maxDist, 1.15, 0.88)(dist);
 
-        gsap.to(card, {
-          scale,
-          duration: 0.3,
-          overwrite: true,
-        });
+        gsap.to(card, { scale, duration: 0.3, overwrite: true });
       });
     };
 
-    const tween = gsap.to(track, {
-      x: () => -(track.scrollWidth - window.innerWidth),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: container,
-        start: 'top+=40 top', // 👉 solo activa cuando el componente ya está bien abajo
-        end: () => '+=' + (track.scrollWidth - window.innerWidth),
-        pin: true,
-        scrub: 1,
-        onUpdate: updateScales,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      },
+    // 📱 MOBILE — efecto activado, sin PIN, sin margen extra
+    mm.add('(max-width: 767px)', () => {
+      const tween = gsap.to(trackRef.current, {
+        x: () => -(trackRef.current.scrollWidth - window.innerWidth * 0.75),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: () => '+=' + (trackRef.current.scrollWidth - window.innerWidth),
+          scrub: 1,
+          pin: true, // 🔥 NO PIN
+          pinSpacing: true, // 🔥 NO MARGEN EXTRA
+          onUpdate: updateScales,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      ScrollTrigger.addEventListener('refresh', updateScales);
+      updateScales();
+
+      return () => {
+        tween.scrollTrigger?.kill();
+        tween.kill();
+        ScrollTrigger.removeEventListener('refresh', updateScales);
+      };
     });
 
-    ScrollTrigger.addEventListener('refresh', updateScales);
-    updateScales();
+    // 📌 2) TABLET — pin + scroll suave
+    mm.add('(min-width: 768px) and (max-width: 1279px)', () => {
+      const tween = gsap.to(trackRef.current, {
+        x: () => -(trackRef.current.scrollWidth - window.innerWidth),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top+=80 top',
+          end: () => '+=' + (trackRef.current.scrollWidth - window.innerWidth),
+          pin: true,
+          scrub: 1,
+          onUpdate: updateScales,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
 
-    return () => {
-      tween.scrollTrigger?.kill();
-      tween.kill();
-      ScrollTrigger.removeEventListener('refresh', updateScales);
-    };
+      ScrollTrigger.addEventListener('refresh', updateScales);
+      updateScales();
+
+      return () => {
+        tween.scrollTrigger?.kill();
+        tween.kill();
+        ScrollTrigger.removeEventListener('refresh', updateScales);
+      };
+    });
+
+    // 📌 3) DESKTOP GRANDE — pin + scroll + escalado más intenso
+    mm.add('(min-width: 1280px)', () => {
+      const tween = gsap.to(trackRef.current, {
+        x: () => -(trackRef.current.scrollWidth - window.innerWidth),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top+=40 top',
+          end: () => '+=' + (trackRef.current.scrollWidth - window.innerWidth),
+          pin: true,
+          scrub: 1.2, // animación más lenta
+          onUpdate: updateScales,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      ScrollTrigger.addEventListener('refresh', updateScales);
+      updateScales();
+
+      return () => {
+        tween.scrollTrigger?.kill();
+        tween.kill();
+        ScrollTrigger.removeEventListener('refresh', updateScales);
+      };
+    });
+
+    return () => mm.revert(); // 🔥 Limpia TODO al desmontar
   }, []);
 
   return (
     <section
       ref={containerRef}
       className="
-    relative 
-    min-h-[120vh]     // 👉 permite aire arriba/abajo para que luzca como en Figma
-    w-full 
-    bg-nieve 
-    overflow-hidden 
-    pt-32 pb-32
-  "
+      relative 
+      min-h-[90vh]             /* Default mobile */
+      sm:min-h-[80vh]          
+      md:min-h-[115vh]
+      lg:min-h-[135vh]
+      w-full 
+      bg-nieve 
+      overflow-hidden 
+      pt-24 pb-16 
+      sm:pt-28 sm:pb-20 
+      md:pt-32 md:pb-28
+    "
     >
       {/* HEADER */}
-      <div className="max-w-5xl mx-auto text-center mb-17">
-        <p className="uppercase tracking-[3px] text-[13px] text-piel/70 mb-4">
+      <div className="max-w-5xl mx-auto text-center mb-12 sm:mb-14 md:mb-17">
+        <p className="uppercase tracking-[3px] text-[12px] sm:text-[13px] text-piel/70 mb-3 sm:mb-4">
           {t('home.quickFacts.label')}
         </p>
-        <h1 className="text-h1 text-mar leading-[54px]">
+        <h1 className="text-h1-sm leading-[38px] md:text-h1-md lg:text-h1-lg sm:leading-[42px] text-mar">
           <Trans i18nKey={'home.quickFacts.title'} />
         </h1>
       </div>
@@ -112,9 +170,9 @@ export const QuickFactsSection = () => {
         ref={trackRef}
         className="
       flex items-center 
-      gap-10 md:gap-14 lg:gap-20
-      px-[10vw]
-      pt-3
+      gap-6 sm:gap-8 md:gap-12 lg:gap-16
+      px-[6vw] sm:px-[8vw] md:px-[10vw]
+      mt-10 pb-0
     "
         style={{ width: 'max-content' }}
       >
@@ -124,7 +182,8 @@ export const QuickFactsSection = () => {
             className="
           qf-card
           relative 
-          w-[340px] h-[340px]
+          w-[280px] h-[280px]
+          sm:w-[320px] sm:h-[320px]
           md:w-[320px] md:h-[320px]
           lg:w-[350px] lg:h-[350px]
           rounded-[8px]
@@ -161,10 +220,10 @@ export const QuickFactsSection = () => {
             />
 
             <div className="absolute bottom-10 w-full text-center px-6">
-              <h3 className="text-white text-2xl md:text-3xl font-serif drop-shadow-lg">
+              <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-serif drop-shadow-lg">
                 <Trans i18nKey={`home.quickFacts.items.${fact.key}.title`} />
               </h3>
-              <p className="text-white/85 text-sm mt-2 drop-shadow">
+              <p className="text-white/85 text-xs sm:text-sm mt-2 drop-shadow">
                 <Trans
                   i18nKey={`home.quickFacts.items.${fact.key}.description`}
                 />
@@ -177,20 +236,21 @@ export const QuickFactsSection = () => {
         <div
           className="
         qf-card flex items-center justify-center
-        w-[340px] h-[340px]
-        md:w-[380px] md:h-[380px]
-        lg:w-[420px] lg:h-[420px]
-        rounded-[32px]
+        w-[280px] h-[280px]
+        sm:w-[320px] sm:h-[320px]
+        md:w-[360px] md:h-[360px]
+        lg:w-[400px] lg:h-[400px]
+        rounded-[8px]
         bg-none shadow-[0_20px_50px_-20px_rgba(0,0,0,0.25)]
         flex-shrink-0
       "
         >
           <div className="text-center space-y-6 px-6">
-            <h3 className="text-2xl md:text-3xl font-serif text-mar mb-3">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-serif text-mar mb-3">
               {t('home.quickFacts.cta.title')}
             </h3>
             <NavLink to="/estate">
-              <Button className="bg-piel text-white hover:bg-piel/90 px-8 py-4 rounded-4">
+              <Button className="bg-piel text-white hover:bg-piel/90 px-6 sm:px-7 md:px-8 py-3 sm:py-4 rounded-4 text-sm sm:text-base">
                 {t('home.quickFacts.cta.button')}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>

@@ -24,7 +24,9 @@ export default {
         serif: ['Danmark STD Light', 'Playfair Display', 'Georgia', 'serif'],
       },
       fontSize: {
-        h1: ['50px', { lineHeight: '48px', letterSpacing: '-0.5px' }],
+        'h1-sm': ['32px', { lineHeight: '38px', letterSpacing: '-0.2px' }],
+        'h1-md': ['48px', { lineHeight: '54px', letterSpacing: '-0.3px' }],
+        'h1-lg': ['64px', { lineHeight: '70px', letterSpacing: '-0.5px' }],
         h2: ['24px', { lineHeight: '60px' }],
         navbar_text: ['18px', { lineHeight: '10px' }],
         body: ['18px', { lineHeight: '28px' }],
