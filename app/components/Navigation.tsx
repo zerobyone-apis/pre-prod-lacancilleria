@@ -7,11 +7,15 @@ import { Menu, X } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/app/components/ui/sheet';
 import { Button } from '@/app/components/ui/button';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+
 
 export const Navigation = () => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,10 +70,15 @@ export const Navigation = () => {
                   key={link.to}
                   to={link.to}
                   className={cn(
-                    'text-navbar_text font-medium tracking-wider hover:text-accent transition-colors',
-                    isScrolled ? 'text-foreground' : 'text-white'
+                    'text-navbar_text font-medium tracking-wider transition-colors',
+                    // 🎨 Si el link está activo → siempre piel
+                    pathname === link.to && 'text-piel',
+                    // 🎨 Si NO está activo, aplicar estilos según scroll:
+                    pathname !== link.to &&
+                      (isScrolled ? 'text-foreground' : 'text-white'),
+                    // 🧈 Hover en cualquier estado
+                    'hover:text-piel'
                   )}
-                  activeClassName="text-piel"
                 >
                   {link.label}
                 </NavLink>

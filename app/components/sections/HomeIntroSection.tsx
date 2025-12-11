@@ -33,34 +33,38 @@ export const HomeIntroSection = () => {
       className="relative w-full overflow-hidden text-mar px-4 sm:px-6 md:px-12 lg:px-24 py-20 sm:py-28 md:pt-48 bg-[#f3e7da]"
     >
       {/* SHADOWS ABOVE GRADIENT */}
+      {/* SHADOWS ABOVE GRADIENT */}
       <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[20]">
-        {/* DESKTOP */}
+        {/* SHADOW LEFT */}
         <Image
           src="/images/home/shadows/Recursos/Re_3.png"
           alt=""
           width={900}
           height={600}
-          className="absolute opacity-[1] hidden md:block"
-          style={{
-            top: '40px',
-            left: '50px',
-            transform: 'scale(1.2)',
-            objectFit: 'contain',
-          }}
+          className={`
+              absolute opacity-90
+              hidden md:block
+              md:top-[-40px] md:left-[-130px] md:scale-[0.9]
+              lg:top-[40px] lg:left-[50px] lg:scale-[1.2]
+              xl:top-[50px] xl:left-[50px] xl:scale-[1.3]
+            `}
+          style={{ objectFit: 'contain' }}
         />
 
+        {/* SHADOW RIGHT */}
         <Image
           src="/images/home/shadows/Recursos/Re_4.png"
           alt=""
           width={900}
           height={600}
-          className="absolute opacity-[1] hidden md:block"
-          style={{
-            top: '100px',
-            right: '200px',
-            transform: 'scale(1.8)',
-            objectFit: 'contain',
-          }}
+          className={`
+            absolute opacity-90
+            hidden md:block
+            md:top-[220px] md:right-[-100px] md:scale-[0.9]
+            lg:top-[100px] lg:right-[200px] lg:scale-[1.6]
+            xl:top-[120px] xl:right-[260px] xl:scale-[1.8]
+          `}
+          style={{ objectFit: 'contain' }}
         />
       </div>
 
@@ -71,17 +75,12 @@ export const HomeIntroSection = () => {
           top: '660px',
           height: '140px',
           background: `
-      linear-gradient(
-        to bottom,
-        rgba(247,245,241,0) 40%,
-        #f7f5f1 60%,
-        #f3e7da 80%,
-        #f3e7da 100%
-      )
-    `,
+                bg-gradient-to-b from-[#f3e7da] to-[#f7f5f1]
+            `,
           backdropFilter: 'blur(4px)',
         }}
       />
+
       {/* GRADIENT BELOW THE SHADOWS */}
       <div
         className="absolute inset-x-0 top-0 pointer-events-none z-[10]"

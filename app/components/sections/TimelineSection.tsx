@@ -72,9 +72,12 @@ export const TimelineSection = () => {
       className="
     relative overflow-hidden text-mar px-4 sm:px-6 md:px-8 lg:px-12 pt-20 sm:pt-28 md:pt-60 pb-12 sm:pb-14 md:pb-12
     bg-gradient-to-b 
-    from-[#E6DCCF] 
+    from-[#E6DCCF]
     to-[#F7F5F1]
-  "
+    "
+    // from-[#E6DCCF] 70% 
+    // via-[#E6DCCF] 50%
+    // to-[#F7F5F1] 0%
     >
       {/* PALM SHADOWS — versión editable */}
       <div className="pointer-events-none absolute inset-x-0 top-0 w-full h-[320px] sm:h-[420px] md:h-[500px] overflow-visible">
@@ -83,7 +86,7 @@ export const TimelineSection = () => {
           className="absolute opacity-0 sm:opacity-80 md:opacity-90"
           style={{
             top: '120px',
-            left: '-60px',
+            left: '30px',
             transform: 'scale(1.35)',
           }}
         >
@@ -102,7 +105,7 @@ export const TimelineSection = () => {
           className="absolute opacity-0 sm:opacity-75 md:opacity-90"
           style={{
             top: '110px',
-            right: '0px',
+            right: '30px',
             transform: 'scale(1.35) scaleX(-1)',
           }}
         >
@@ -129,7 +132,7 @@ export const TimelineSection = () => {
       {/* CONTENT WRAPPER */}
       <div className="relative max-w-6xl mx-auto">
         {/* TITLE */}
-        <h2 className="text-[32px] leading-[38px] sm:text-[36px] sm:leading-[42px] md:text-h1 font-serif text-center mb-16 sm:mb-20 md:mb-28 leading-[1.2]">
+        <h2 className="text-[32px] leading-[38px] sm:text-[36px] sm:leading-[42px] md:text-h1 font-serif text-center mb-16 sm:mb-20 md:mb-28">
           <Trans i18nKey="home.timeline.title" />
         </h2>
 
@@ -182,7 +185,7 @@ export const TimelineSection = () => {
                       }
                     `}
                   >
-                    <p className="text-[18px] leading-[1.45] sm:text-[20px] sm:leading-[1.45] md:text-h2 text-mar/90 md:max-w-[420px]">
+                    <p className="text-[18px] leading-[1.45] sm:text-[20px] sm:leading-[1.45] md:text-h2-md text-mar/90 md:max-w-[420px]">
                       <Trans i18nKey={item.text} />
                     </p>
                   </div>
