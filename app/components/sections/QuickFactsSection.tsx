@@ -35,23 +35,58 @@ export const QuickFactsSection = () => {
     { key: 'office', image: '/images/home/quick-facts/office-workspace.webp' },
   ];
 
+  let activeIndex = -1;
   useEffect(() => {
     const mm = gsap.matchMedia();
     const cards = gsap.utils.toArray<HTMLElement>('.qf-card');
 
+    // Suavizado estable (sin crear 200 tweens por segundo)
+    const scaleSetters = cards.map((card) =>
+      gsap.quickTo(card, 'scale', {
+        duration: 0.35, // 👈 clave: más lento que antes
+        ease: 'power3.out', // 👈 elegante, sin rebote
+        overwrite: 'auto',
+      })
+    );
+
+    // Pre-optimización para evitar jitter
+    gsap.set(cards, {
+      transformOrigin: '50% 50%',
+      force3D: true,
+    });
+
+    let rafId: number | null = null;
+
     const updateScales = () => {
       const mid = window.innerWidth / 2;
 
-      cards.forEach((card) => {
+      let closestIndex = -1;
+      let closestDist = Infinity;
+
+      cards.forEach((card, i) => {
         const rect = card.getBoundingClientRect();
         const center = rect.left + rect.width / 2;
         const dist = Math.abs(center - mid);
-        const maxDist = window.innerWidth * 0.55;
 
-        const scale = gsap.utils.mapRange(0, maxDist, 1.15, 0.88)(dist);
-
-        gsap.to(card, { scale, duration: 0.3, overwrite: true });
+        if (dist < closestDist) {
+          closestDist = dist;
+          closestIndex = i;
+        }
       });
+
+      // 👉 solo animamos si cambia la card central
+      if (closestIndex !== activeIndex) {
+        activeIndex = closestIndex;
+
+        cards.forEach((card, i) => {
+          gsap.to(card, {
+            scale: i === activeIndex ? 1.12 : 0.94,
+            duration: 0.55,
+            ease: 'power3.out',
+            overwrite: 'auto',
+          });
+        });
+      }
     };
 
     // 📱 MOBILE — efecto activado, sin PIN, sin margen extra
@@ -75,6 +110,7 @@ export const QuickFactsSection = () => {
       updateScales();
 
       return () => {
+        if (rafId) cancelAnimationFrame(rafId);
         tween.scrollTrigger?.kill();
         tween.kill();
         ScrollTrigger.removeEventListener('refresh', updateScales);
@@ -110,13 +146,17 @@ export const QuickFactsSection = () => {
 
     // 📌 3) DESKTOP GRANDE — pin + scroll + escalado más intenso
     mm.add('(min-width: 1280px)', () => {
+      const EXTRA_SCROLL = window.innerWidth * 0.4; // 40% de viewport
+
       const tween = gsap.to(trackRef.current, {
         x: () => -(trackRef.current.scrollWidth - window.innerWidth),
         ease: 'none',
         scrollTrigger: {
           trigger: containerRef.current,
           start: 'top+=40 top',
-          end: () => '+=' + (trackRef.current.scrollWidth - window.innerWidth),
+          end: () =>
+            '+=' +
+            (trackRef.current.scrollWidth - window.innerWidth + EXTRA_SCROLL),
           pin: true,
           scrub: 1.2, // animación más lenta
           onUpdate: updateScales,
@@ -128,11 +168,7 @@ export const QuickFactsSection = () => {
       ScrollTrigger.addEventListener('refresh', updateScales);
       updateScales();
 
-      return () => {
-        tween.scrollTrigger?.kill();
-        tween.kill();
-        ScrollTrigger.removeEventListener('refresh', updateScales);
-      };
+      return () => mm.revert();
     });
 
     return () => mm.revert(); // 🔥 Limpia TODO al desmontar
@@ -190,6 +226,7 @@ export const QuickFactsSection = () => {
           bg-black
           flex-shrink-0
           transition-transform
+          will-change-transform
         "
           >
             <Image

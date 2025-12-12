@@ -9,8 +9,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HomeCTASection } from './HomeCTASection';
 
-
-
 export const DesktopTimeline = ({ timelineItems }: any) => {
   const { t } = useTranslation();
 
@@ -134,47 +132,44 @@ export const DesktopTimeline = ({ timelineItems }: any) => {
     from-[#E6DCCF]
     to-[#F7F5F1]
     "
-      // from-[#E6DCCF] 70%
-      // via-[#E6DCCF] 50%
-      // to-[#F7F5F1] 0%
     >
-      {/* PALM SHADOWS — versión editable */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 w-full h-[320px] sm:h-[420px] md:h-[500px] overflow-visible">
-        {/* Palma derecha */}
-        <div
-          className="absolute opacity-0 sm:opacity-80 md:opacity-90"
-          style={{
-            top: '120px',
-            left: '30px',
-            transform: 'scale(1.35)',
-          }}
-        >
+      {/* PALM SHADOWS — misma versión, refinada para XL */}
+      <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[20]">
+        {/* SHADOW LEFT */}
+        <div className="scale-x-[-1]">
           <Image
             src="/images/home/shadows/Recursos/Re_2.png"
             alt=""
             width={1200}
-            height={700}
-            className="object-contain"
-            priority
+            height={900}
+            className={`
+            absolute opacity-90
+            hidden md:block
+          
+            md:top-[220px] md:right-[-100px] md:scale-[0.9]
+            lg:top-[100px] lg:right-[100px] lg:scale-[1.6]
+            xl:top-[140px] xl:right-[300px] xl:scale-[1.5]
+          `}
+            style={{ objectFit: 'contain' }}
           />
         </div>
 
-        {/* Palma Izquierda */}
-        <div
-          className="absolute opacity-0 sm:opacity-75 md:opacity-90"
-          style={{
-            top: '110px',
-            right: '30px',
-            transform: 'scale(1.35) scaleX(-1)',
-          }}
-        >
+        {/* SHADOW RIGHT */}
+        <div className="scale-x-[1]">
           <Image
             src="/images/home/shadows/Recursos/Re_2.png"
             alt=""
             width={1200}
-            height={600}
-            className="object-contain"
-            priority
+            height={900}
+            className={`
+            absolute opacity-90
+            hidden md:block
+          
+            md:top-[220px] md:right-[-100px] md:scale-[0.9]
+            lg:top-[100px] lg:right-[100px] lg:scale-[1.6]
+            xl:top-[140px] xl:right-[300px] xl:scale-[1.5]
+          `}
+            style={{ objectFit: 'contain' }}
           />
         </div>
       </div>
@@ -191,7 +186,7 @@ export const DesktopTimeline = ({ timelineItems }: any) => {
       {/* CONTENT WRAPPER */}
       <div className="relative max-w-6xl mx-auto">
         {/* TITLE */}
-        <h2 className="text-[32px] leading-[38px] sm:text-[36px] sm:leading-[42px] md:text-h1 font-serif text-center mb-16 sm:mb-20 md:mb-28">
+        <h2 className="text-h1-sm leading-[38px] sm:text-h1-sm sm:leading-[42px] md:text-h1-md lg:text-h1-lg font-serif text-center mb-16 sm:mb-20 md:mb-28">
           <Trans i18nKey="home.timeline.title" />
         </h2>
 
@@ -287,11 +282,11 @@ export const DesktopTimeline = ({ timelineItems }: any) => {
 
         {/* BACKGROUND SHADOW DECORATION */}
         <div
-          className="absolute"
+          className="pointer-events-none absolute"
           style={{
-            top: '1900px',
-            right: '-420px',
-            transform: 'rotate(-270deg) scale(1.1) scaleX(-1)',
+            top: '2000px',
+            right: '-280px',
+            transform: 'rotate(-270deg) scale(1) scaleX(-1)',
             opacity: 0.8,
           }}
         >
@@ -300,12 +295,23 @@ export const DesktopTimeline = ({ timelineItems }: any) => {
             alt=""
             width={1200}
             height={600}
-            className="object-contain"
+            className="
+                      object-contain     
+                      scale-[1]
+                      translate-x-0
+                      translate-y-0
+
+                      /* antes lg: ...  ahora xl: ... */
+                      xl:scale-[1.3]
+                      xl:translate-x-[140px]
+                      xl:translate-y-[-110px]
+                    "
             priority
           />
         </div>
+
         {/* CTA BELOW LINE */}
-        <HomeCTASection textCta={t('home.cta.title')}/>
+        <HomeCTASection textCta={t('home.cta.title')} />
       </div>
     </section>
   );

@@ -44,7 +44,7 @@
           "description": "Traditional parrillero and outdoor dining for gatherings"
         },
         "services": {
-          "title": "Optional Services <br />Chef, Nanny, Driver, etc.",
+          "title": "Optional Services",
           "description": "On-demand chef, nanny, driver and more tailored to your stay"
         },
         "office": {
@@ -361,5 +361,12 @@
       "description": "Contact us to schedule a visit or learn more about this exceptional property"
     }
   },
-  "footer": { "rights": "All rights reserved" }
+  "footer": { 
+    "rights": "All rights reserved",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "creative": "Website by MAGNO S.T"
+    }
+  }
 }

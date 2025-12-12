@@ -1,52 +1,98 @@
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { Instagram, Facebook } from "lucide-react";
-import Image from "next/image";
+import { Facebook, Instagram } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../LanguageSwitcher';
 
 export const FooterMinimal = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="border-t border-border py-8 md:py-12">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
-          {/* Logo and copyright - Left */}
-          <div className="text-center md:text-left">
-            <Image src="/logos/dark_logo.png" alt="La Cancillería logo" width={120} height={36} priority className="mx-auto md:mx-0" />
-            <p className="text-xs md:text-sm text-muted-foreground">© 2025 La Cancillería. {t('footer.rights')}</p>
+    <footer className="border-t border-border bg-[#F7F5F1]">
+      <div className="max-w-[1400px] mx-auto px-6 py-12">
+        {/* ================= ROW 1 ================= */}
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-8">
+          {/* LEFT — Logo */}
+          <div className="flex justify-center md:justify-start">
+            <Image
+              src="/logos/dark_logo.png"
+              alt="La Cancillería logo"
+              width={200}
+              height={56}
+              priority
+            />
           </div>
-          
-          {/* Navigation - Center */}
-          <nav className="flex items-center gap-4 md:gap-8">
-            <Link href="/" className="text-xs md:text-sm hover:text-primary transition-colors">
+
+          {/* CENTER — Navigation */}
+          <nav className="flex justify-center gap-10 text-sm tracking-wide">
+            <Link href="/" className="hover:text-primary transition">
               {t('nav.home')}
             </Link>
-            <Link href="/location" className="text-xs md:text-sm hover:text-primary transition-colors">
+            <Link href="/location" className="hover:text-primary transition">
               {t('nav.location')}
             </Link>
-            <Link href="/estate" className="text-xs md:text-sm hover:text-primary transition-colors">
+            <Link href="/estate" className="hover:text-primary transition">
               {t('nav.estate')}
             </Link>
           </nav>
 
-          {/* Social icons - Right */}
-          <div className="flex items-center gap-3 md:gap-4">
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
+          {/* RIGHT — Language + Social */}
+          <div className="flex justify-center md:justify-end items-center gap-4">
+            <LanguageSwitcher />
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all"
+              className="
+                w-10 h-10 rounded-full
+                border border-border
+                flex items-center justify-center
+                hover:border-primary hover:text-primary
+                transition
+              "
             >
-              <Instagram className="w-4 h-4 md:w-5 md:h-5" />
+              <Instagram className="w-5 h-5" />
             </a>
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
+
+            <a
+              href="https://facebook.com"
+              target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all"
+              className="
+                w-10 h-10 rounded-full
+                border border-border
+                flex items-center justify-center
+                hover:border-primary hover:text-primary
+                transition
+              "
             >
-              <Facebook className="w-4 h-4 md:w-5 md:h-5" />
+              <Facebook className="w-5 h-5" />
             </a>
+          </div>
+        </div>
+
+        {/* ================= DIVIDER ================= */}
+        <div className="my-5 h-px bg-border" />
+
+        {/* ================= ROW 2 ================= */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[14px] text-mar/50">
+          <p>© 2025 La Cancillería. {t('footer.rights')}</p>
+
+          <div className="flex gap-8">
+            <Link href="/privacy" className="hover:text-primary transition">
+              {t('footer.links.privacy')}
+            </Link>
+            <Link href="/terms" className="hover:text-primary transition">
+              {t('footer.links.terms')}
+            </Link>
+            <Link
+              href="https://www.creativelabs.dev"
+              target="_blank"
+              className="hover:text-primary transition"
+            >
+              {t('footer.links.creative')}
+            </Link>
           </div>
         </div>
       </div>

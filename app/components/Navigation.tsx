@@ -85,7 +85,7 @@ export const Navigation = () => {
               ))}
             </div>
 
-            <LanguageSwitcher isScrolled={isScrolled} />
+            <LanguageSwitcher className={isScrolled ? 'text-mar':'text-nieve'} />
 
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>

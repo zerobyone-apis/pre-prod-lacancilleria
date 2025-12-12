@@ -32,7 +32,7 @@ export const HomeIntroSection = () => {
       ref={sectionRef}
       className="relative w-full overflow-hidden text-mar px-4 sm:px-6 md:px-12 lg:px-24 py-20 sm:py-28 md:pt-48 bg-[#f3e7da]"
     >
-      {/* SHADOWS ABOVE GRADIENT */}
+      
       {/* SHADOWS ABOVE GRADIENT */}
       <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[20]">
         {/* SHADOW LEFT */}
@@ -162,7 +162,7 @@ export const HomeIntroSection = () => {
               images={[
                 '/images/home/slider/pool.webp',
                 '/images/home/slider/suit-bed.webp',
-                '/images/home/slider/suit-gess-not-edited-ai.webp',
+                '/images/home/slider/suit-guess-edited-ai.jpg',
                 '/images/home/slider/sec-room.webp',
                 '/images/home/slider/coctails-in-pool.webp',
               ]}

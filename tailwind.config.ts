@@ -14,7 +14,13 @@ export default {
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1400px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+
+        xl: '1280px', // laptop normal
+        '2xl': '1440px', // desktop / macbook pro
+        '3xl': '1680px', // desktop grande / monitor externo
       },
     },
 

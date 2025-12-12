@@ -18,7 +18,7 @@ export default function HomePage() {
       <HeroSection
         title={t("home.hero.title")}
         subtitle={t("home.hero.subtitle")}
-        backgroundImage="/images/home/hero.webp"
+        backgroundVideo="../public/videos/home/hero-final-web_7mb.mp4"
       />
       <HomeIntroSection />
       {/* {<PropertiesSliderSection />} */}

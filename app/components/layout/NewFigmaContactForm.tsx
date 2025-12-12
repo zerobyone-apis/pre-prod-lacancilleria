@@ -36,7 +36,7 @@ export const NewFigmaContactForm = () => {
     'w-full bg-transparent border-0 border-b border-[#c9c4bd] text-mar placeholder:text-[#b8b2aa] py-3 text-[15px] outline-none focus:border-mar transition';
 
   return (
-    <div className="bg-none rounded-2xl p-8 md:p-12 ">
+    <div className="bg-none rounded-2xl p-6 md:p-10 lg:p-12">
       <form onSubmit={handleSubmit} className="space-y-10">
         {/* ---------------------- ROW 1 ---------------------- */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

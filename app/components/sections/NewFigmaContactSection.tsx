@@ -70,7 +70,7 @@ export const NewFigmaContactSection = () => {
         </div>
 
         {/* 🔶 FORM CONTAINER MEJORADO */}
-        <div className="bg-none">
+        <div className="bg-none  mx-auto max-w-[600px]" >
           <NewFigmaContactForm />
         </div>
       </div>

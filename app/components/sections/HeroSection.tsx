@@ -11,14 +11,14 @@ interface HeroSectionProps {
   title: string;
   subtitle: string;
   cta?: string;
-  backgroundImage: string; // ruta dentro de /public, ej: "/images/hero.webp"
+  backgroundVideo: string; // ruta dentro de /public, ej: "/images/hero.webp"
 }
 
 export const HeroSection = ({
   title,
   subtitle,
   cta,
-  backgroundImage,
+  backgroundVideo,
 }: HeroSectionProps) => {
   const heroRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -58,14 +58,17 @@ export const HeroSection = ({
     >
       {/* Fondo + imagen + gradiente */}
       <div ref={bgRef} className="absolute inset-0 overflow-hidden">
-        <Image
-          src={backgroundImage}
-          alt={title}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover scale-91"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/video/home/hero-final-web_7mb.mp4" type="video/mp4" />
+        </video>
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/10" />
       </div>
 
@@ -75,7 +78,7 @@ export const HeroSection = ({
         className="relative z-10 text-center px-4 md:px-6 max-w-5xl mx-auto"
       >
         <h1 className="text-h1-sm md:text-h1-md lg:text-h1-lg font-serif leading-tight mb-4 text-primary-foreground drop-shadow-lg">
-        <Trans i18nKey={title} />
+          <Trans i18nKey={title} />
         </h1>
         <h2 className="text-body sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl mb-8 md:mb-12 text-primary-foreground/90 font-light tracking-wide drop-shadow px-2">
           {subtitle}
