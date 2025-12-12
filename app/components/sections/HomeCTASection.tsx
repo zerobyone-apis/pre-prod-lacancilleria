@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Trans, useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 
-export const HomeCTASection = () => {
+export const HomeCTASection = ({textCta}: any) => {
   const { t } = useTranslation();
 
   return (
@@ -16,7 +17,7 @@ export const HomeCTASection = () => {
         mb-10
       "
       >
-        <Trans i18nKey="home.cta.title" />
+        <Trans i18nKey={textCta} />
       </h2>
 
       <Button

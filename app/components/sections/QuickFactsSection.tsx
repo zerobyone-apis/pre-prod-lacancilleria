@@ -63,9 +63,9 @@ export const QuickFactsSection = () => {
           trigger: containerRef.current,
           start: 'top top',
           end: () => '+=' + (trackRef.current.scrollWidth - window.innerWidth),
-          scrub: 1,
-          pin: true, // 🔥 NO PIN
-          pinSpacing: true, // 🔥 NO MARGEN EXTRA
+          scrub: 1.2,
+          pin: true,
+          pinSpacing: 'margin',
           onUpdate: updateScales,
           invalidateOnRefresh: true,
         },
@@ -91,7 +91,7 @@ export const QuickFactsSection = () => {
           start: 'top+=80 top',
           end: () => '+=' + (trackRef.current.scrollWidth - window.innerWidth),
           pin: true,
-          scrub: 1,
+          scrub: 1.2,
           onUpdate: updateScales,
           anticipatePin: 1,
           invalidateOnRefresh: true,
@@ -142,21 +142,19 @@ export const QuickFactsSection = () => {
     <section
       ref={containerRef}
       className="
-      relative 
-      min-h-[90vh]             /* Default mobile */
-      sm:min-h-[80vh]          
-      md:min-h-[115vh]
-      lg:min-h-[135vh]
-      w-full 
-      bg-nieve 
-      overflow-hidden 
-      pt-24 pb-16 
-      sm:pt-28 sm:pb-20 
-      md:pt-32 md:pb-28
+    relative
+    min-h-[70vh]
+    sm:min-h-[80vh]
+    md:min-h-[105vh]
+    lg:min-h-[120vh]
+    w-full
+    bg-nieve
+    overflow-hidden
+    pt-16 pb-12
     "
     >
       {/* HEADER */}
-      <div className="max-w-5xl mx-auto text-center mb-12 sm:mb-14 md:mb-17">
+      <div className="max-w-5xl mx-auto text-center mb-12 sm:mb-14 md:mb-17 mt-20">
         <p className="uppercase tracking-[3px] text-[12px] sm:text-[13px] text-piel/70 mb-3 sm:mb-4">
           {t('home.quickFacts.label')}
         </p>

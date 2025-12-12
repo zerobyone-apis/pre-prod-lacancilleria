@@ -7,6 +7,7 @@ import { HomeIntroSection } from "@/app/components/sections/HomeIntroSection";
 import { QuickFactsSection } from "@/app/components/sections/QuickFactsSection";
 import { TimelineSection } from "@/app/components/sections/TimelineSection";
 import { ContactSection } from "@/app/components/sections/ContactSection";
+import { NewFigmaContactSection } from "@/app/components/sections/NewFigmaContactSection";
 import { ImageDeviderSection } from "./components/sections/ImageDeviderSection";
 
 export default function HomePage() {
@@ -27,7 +28,8 @@ export default function HomePage() {
       {/* <HomeDividerSection /> */}
       {/* <HomeCTASection /> */}
       <ImageDeviderSection imageSource='/images/home/deviders/lacancilleria_panoramic.jpg' />
-      <ContactSection />
+      <NewFigmaContactSection />
+      {/* <ContactSection /> */}
     </>
   );
 }
