@@ -1,16 +1,25 @@
+'use client';
+
 import { Button } from '@/app/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import Image from 'next/image';
+import { Trans } from 'react-i18next';
 
 interface HeroSectionProps {
   title: string;
   subtitle: string;
   cta?: string;
-  backgroundImage: string;
+  backgroundVideo: string; // ruta dentro de /public, ej: "/images/hero.webp"
 }
 
-export const HeroSection = ({ title, subtitle, cta, backgroundImage }: HeroSectionProps) => {
+export const HeroSection = ({
+  title,
+  subtitle,
+  cta,
+  backgroundVideo,
+}: HeroSectionProps) => {
   const heroRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
@@ -18,14 +27,14 @@ export const HeroSection = ({ title, subtitle, cta, backgroundImage }: HeroSecti
   useEffect(() => {
     if (!contentRef.current || !bgRef.current) return;
 
-    // Animate content entrance
+    // Animación de entrada del contenido
     gsap.fromTo(
       contentRef.current,
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out', delay: 0.3 }
     );
 
-    // Parallax effect on scroll
+    // Parallax del fondo
     gsap.to(bgRef.current, {
       y: 200,
       ease: 'none',
@@ -43,24 +52,39 @@ export const HeroSection = ({ title, subtitle, cta, backgroundImage }: HeroSecti
   };
 
   return (
-    <div ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div 
-        ref={bgRef}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/20 to-background" />
+    <div
+      ref={heroRef}
+      className="relative h-screen flex items-center justify-center overflow-hidden"
+    >
+      {/* Fondo + imagen + gradiente */}
+      <div ref={bgRef} className="absolute inset-0 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/10" />
       </div>
-      
-      <div ref={contentRef} className="relative z-10 text-center px-4 md:px-6 max-w-5xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif leading-tight mb-4 md:mb-6 text-primary-foreground drop-shadow-lg">
-          {title}
+
+      {/* Contenido */}
+      <div
+        ref={contentRef}
+        className="relative z-10 text-center px-4 md:px-6 max-w-5xl mx-auto"
+      >
+        <h1 className="text-h1-sm md:text-h1-md lg:text-h1-lg font-serif leading-tight mb-4 text-primary-foreground drop-shadow-lg">
+          <Trans i18nKey={title} />
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 md:mb-12 text-primary-foreground/90 font-light tracking-wide drop-shadow px-2">
+        <h2 className="text-body sm:text-xl md:text-2xl lg:text-1xl xl:text-1xl mb-8 md:mb-12 text-primary-foreground/90 font-light tracking-wide drop-shadow px-2">
           {subtitle}
-        </p>
+        </h2>
         {cta && (
-          <Button size="lg" className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6">
+          <Button className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6">
             {cta}
           </Button>
         )}

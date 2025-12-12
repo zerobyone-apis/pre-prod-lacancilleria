@@ -18,7 +18,7 @@ export default function HousePage() {
         title={t("house.hero.title")}
         subtitle={t("house.hero.subtitle")}
         cta={t("house.hero.cta")}
-        backgroundImage="/images/house-hero.jpg"
+        backgroundVideo="/public/images/home/hero.webp"
       />
       <HouseIntroSection />
       <HouseSpecsSection />

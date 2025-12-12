@@ -3,41 +3,46 @@
 @tailwind utilities;
 
 /* Design system variables and base styles copied from src/index.css */
+@font-face {
+  font-family: 'Danmark STD Light';
+  src: url('/fonts/Fontspring-DEMO-danmarkurw-lig.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   :root {
-    --background: 40 20% 97%;
-    --foreground: 30 10% 15%;
-
+    --background: 36 20% 95%;              /* #F7F5F1 */
+    --foreground: 210 6% 22%;              /* #343839 */
     --card: 0 0% 100%;
-    --card-foreground: 30 10% 15%;
-
+    --card-foreground: 210 6% 22%;         /* #343839 */
     --popover: 0 0% 100%;
-    --popover-foreground: 30 10% 15%;
-
-    --primary: 30 10% 15%;
-    --primary-foreground: 40 20% 97%;
-
-    --secondary: 40 15% 92%;
-    --secondary-foreground: 30 10% 15%;
-
-    --muted: 40 15% 92%;
-    --muted-foreground: 30 8% 45%;
-
-    --accent: 38 80% 50%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 40 15% 88%;
-    --input: 40 15% 88%;
-    --ring: 38 80% 50%;
-
+    --popover-foreground: 210 6% 22%;      /* #343839 */
+    --primary: 21 24% 50%;                 /* #A67753 */
+    --primary-foreground: 36 20% 95%;      /* #F7F5F1 */
+    --secondary: 32 32% 85%;               /* #E6DCCF */
+    --secondary-foreground: 210 6% 22%;    /* #343839 */
+    --muted: 32 32% 85%;                   /* same as secondary */
+    --muted-foreground: 210 6% 22%;        /* #343839 */
+    --accent: 210 32% 30%;                 /* #2B3E4E */
+    --accent-foreground: 36 20% 95%;       /* #F7F5F1 */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 36 20% 95%;
+    --border: 32 32% 85%;
+    --input: 32 32% 85%;
+    --ring: 21 24% 50%;
     --radius: 0.5rem;
-
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-elegant: 0 4px 20px -4px hsl(30 10% 15% / 0.08);
+    --shadow-elegant: 0 4px 20px -4px hsl(210 6% 22% / 0.08);
   }
 
   .dark {
@@ -143,4 +148,21 @@
   color: hsl(var(--foreground)) !important;
 }
 
+/* .embla__slide {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.6s ease;
+}
+
+.embla__slide:not(.is-selected) {
+  opacity: 0.85;
+  transform: scale(0.97);
+}
+
+/* Evitar animación en slides clónicos (cuando Embla duplica) 
+.embla__slide[aria-hidden="true"] {
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transition: none !important;
+} */
 

@@ -16,7 +16,6 @@ export const EstateAmenitiesSection = () => {
   return (
     <Section>
       <SectionHeader
-        label={t('estate.amenities.label')}
         title={t('estate.amenities.title')}
         align="center"
         className="mb-16 md:mb-24"

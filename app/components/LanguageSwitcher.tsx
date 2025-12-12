@@ -1,30 +1,36 @@
+'use client';
+
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/app/components/ui/button';
+import { ChevronDown } from 'lucide-react';
 import { cn } from '@/app/lib/utils';
 
 interface LanguageSwitcherProps {
-  isScrolled?: boolean;
+  className?: string;
 }
 
-export const LanguageSwitcher = ({ isScrolled = false }: LanguageSwitcherProps) => {
+export const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'es' : 'en';
-    i18n.changeLanguage(newLang);
+    i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
   };
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
+    <button
       onClick={toggleLanguage}
       className={cn(
-        "text-sm font-medium uppercase tracking-wider transition-colors",
-        isScrolled ? "text-foreground hover:text-accent" : "text-white hover:text-white/80"
+        `
+        flex items-center gap-1
+        text-[14px] tracking-wide
+        text-[#6f6a63]
+        transition-colors duration-200
+        hover:text-[#243140]
+        `,
+        className 
       )}
     >
-      {i18n.language === 'en' ? 'ES' : 'EN'}
-    </Button>
+      {i18n.language === 'en' ? 'Esp' : 'Eng'}
+      <ChevronDown className="w-3 h-3 mt-[1px] opacity-70" />
+    </button>
   );
 };

@@ -19,7 +19,6 @@ export const EstateIntroSection = () => {
         }
         right={
           <SectionHeader
-            label={t('estate.intro.label')}
             title={t('estate.intro.title')}
             description={t('estate.intro.description')}
           />
