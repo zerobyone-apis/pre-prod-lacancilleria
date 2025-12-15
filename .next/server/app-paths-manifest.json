@@ -1,1 +1,5 @@
-{}
+{
+  "/estate/page": "app/estate/page.js",
+  "/location/page": "app/location/page.js",
+  "/page": "app/page.js"
+}

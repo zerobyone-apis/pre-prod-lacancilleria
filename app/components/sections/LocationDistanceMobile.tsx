@@ -3,40 +3,54 @@
 import { useState } from 'react';
 import { Trans } from 'react-i18next';
 import { X } from 'lucide-react';
+import { LocationDistancesMobileProps } from '@/app/location/ILocationDistance';
 
-const DISTANCE_KEYS = [
-  'pde-airport',
-  'carrasco',
-  'montoya',
-  'bikini',
-  'labarra',
-] as const;
-
-const DISTANCE_IMAGES: Record<string, string> = {
-  'pde-airport': '/images/location/easy_access/pde_airport.webp',
-  carrasco: '/images/location/easy_access/carrasco_airport.jpg',
-  montoya: '/images/location/easy_access/montoya.webp',
-  bikini: '/images/location/easy_access/bikini_beach.jpg', 
-  labarra: '/images/location/easy_access/labarra.webp',
-};
-
-export const LocationDistancesMobile = () => {
+export const LocationDistancesMobile = ({
+  title,
+  description,
+  items,
+}: LocationDistancesMobileProps) => {
   const [openKey, setOpenKey] = useState<string | null>(null);
 
   return (
     <div className="md:hidden px-6 py-12 space-y-10">
+  
       
-      {/* TÍTULO */}
-      <h2 className="mt-16 text-center font-serif text-mar text-[32px] leading-tight">
-        <Trans i18nKey="location.distances.title" />
-      </h2>
+      {/* // TODO: QUEDA HACER QUE APAREZCA UN SHADOW EN MOBILE Y BORRE LAS LINEAS DE COLOR COMO LO HACE EN DESKTP
+      <div 
+        className="md:block absolute inset-x-0 bottom-0 pointer-events-none z-[0]"
+        style={{
+          height: '260px',
+          background: `
+        linear-gradient(
+          to bottom,
+          rgba(247,245,241,0) 0%,
+          rgba(247,245,241,0.25) 25%,
+          rgba(247,245,241,0.55) 55%,
+          rgba(247,245,241,0.85) 85%,
+          rgba(247,245,241,1) 100%
+        )
+      `,
+        }}
+      /> */}
+      <div>
+        {/* TÍTULO */}
+        <h2 className="mt-16 text-center font-serif text-mar text-[32px] leading-tight">
+          <Trans i18nKey={title} />
+        </h2>
 
-      {DISTANCE_KEYS.map((key) => {
-        const isOpen = openKey === key;
+        {/* Description */}
+        <p className="mb-10 md:text-body text-center font-serif text-mar text-body md:text-[20px] leading-tight">
+          <Trans i18nKey={description ? description : ''} />
+        </p>
+      </div>
+
+      {items.map((item) => {
+        const isOpen = openKey === item.key;
 
         return (
           <div
-            key={key}
+            key={item.key}
             className="relative bg-white rounded-xl shadow-sm border border-mar/10 overflow-hidden"
           >
             {/* IMAGE PREVIEW */}
@@ -44,11 +58,11 @@ export const LocationDistancesMobile = () => {
               className={`w-full overflow-hidden transition-all duration-500 ${
                 isOpen ? 'h-[55vh]' : 'h-[180px]'
               }`}
-              onClick={() => setOpenKey(isOpen ? null : key)}
+              onClick={() => setOpenKey(isOpen ? null : item.key)}
             >
               <img
-                src={DISTANCE_IMAGES[key]}
-                alt=""
+                src={item.image}
+                alt={item.key}
                 className={`
                   w-full h-full object-cover transition-transform duration-700
                   ${isOpen ? 'scale-95' : 'scale-100'}
@@ -69,14 +83,14 @@ export const LocationDistancesMobile = () => {
             {/* TEXT + LINE */}
             <div
               className="px-5 py-6"
-              onClick={() => setOpenKey(isOpen ? null : key)}
+              onClick={() => setOpenKey(isOpen ? null : item.key)}
             >
               <p
                 className={`text-[22px] leading-snug transition-colors ${
                   isOpen ? 'text-piel' : 'text-mar/80'
                 }`}
               >
-                <Trans i18nKey={`location.distances.items.${key}`} />
+                <Trans i18nKey={item.label} />
               </p>
 
               <div className="relative mt-3 h-px w-full bg-mar/10">

@@ -9,7 +9,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HomeCTASection } from './HomeCTASection';
 
-export const DesktopTimeline = ({ timelineItems }: any) => {
+export const DesktopTimeline = ({ timelineItems, backgroundColor }: any) => {
   const { t } = useTranslation();
 
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -126,12 +126,10 @@ export const DesktopTimeline = ({ timelineItems }: any) => {
 
   return (
     <section
-      className="
+      className={`
     relative overflow-hidden text-mar px-4 sm:px-6 md:px-8 lg:px-12 pt-20 sm:pt-28 md:pt-60 pb-12 sm:pb-14 md:pb-12
-    bg-gradient-to-b 
-    from-[#E6DCCF]
-    to-[#F7F5F1]
-    "
+   ${backgroundColor}
+    `}
     >
       {/* PALM SHADOWS — misma versión, refinada para XL */}
       <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[20]">
@@ -242,7 +240,7 @@ export const DesktopTimeline = ({ timelineItems }: any) => {
                       }
                     `}
                   >
-                    <p className="text-[18px] leading-[1.45] sm:text-[20px] sm:leading-[1.45] md:text-h2-md text-mar/90 md:max-w-[420px]">
+                    <p className="text-h2-sm leading-[1.45] sm:text-[20px] sm:leading-[1.45] md:text-h2-md text-mar/90 md:max-w-[420px]">
                       <Trans i18nKey={item.text} />
                     </p>
                   </div>
@@ -250,15 +248,15 @@ export const DesktopTimeline = ({ timelineItems }: any) => {
                   {/* IMAGE */}
                   <div
                     className={`${
-                      item.imagePosition === 'left' ? 'md:order-1' : ''
+                      item.imagePosition === 'left' ? 'md:order-1 mr-20' : ' ml-20'
                     }`}
                   >
                     <div
                       className="
                         timeline-image relative w-[200px] h-[200px]
                         sm:w-[220px] sm:h-[220px]
-                        md:w-[280px] md:h-[280px]
-                        lg:w-[320px] lg:h-[320px]
+                        md:w-[300px] md:h-[300px]
+                        lg:w-[450px] lg:h-[380px]
                         mx-auto rounded-[8px]
                         overflow-hidden
                         shadow-[0_40px_70px_-40px_rgba(0,0,0,0.50)]
@@ -284,7 +282,7 @@ export const DesktopTimeline = ({ timelineItems }: any) => {
         <div
           className="pointer-events-none absolute"
           style={{
-            top: '2000px',
+            bottom: '0px',
             right: '-280px',
             transform: 'rotate(-270deg) scale(1) scaleX(-1)',
             opacity: 0.8,

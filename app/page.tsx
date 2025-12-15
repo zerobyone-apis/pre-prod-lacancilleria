@@ -23,7 +23,7 @@ export default function HomePage() {
       <HomeIntroSection />
       <QuickFactsSection />
       <ImageDeviderSection imageSource='/images/home/deviders/Montoya.webp' />
-      <TimelineSection />
+      <TimelineSection home estate={false} />
       <ImageDeviderSection imageSource='/images/home/deviders/lacancilleria_panoramic.jpg' />
       <NewFigmaContactSection />
     </>

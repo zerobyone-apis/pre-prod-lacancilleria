@@ -11,7 +11,7 @@ import { t } from 'i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const TimelineMobile = ({ items }: any) => {
+export const TimelineMobile = ({ items, backgroundColor, title }: any) => {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -25,9 +25,9 @@ export const TimelineMobile = ({ items }: any) => {
 
         ScrollTrigger.create({
           trigger: block,
-          start: 'top 75%',      // cuando entra al viewport
-          end: 'top 25%',        // cuando está centrado
-          scrub: true,           // animación ligada al scroll
+          start: 'top 75%', // cuando entra al viewport
+          end: 'top 25%', // cuando está centrado
+          scrub: true, // animación ligada al scroll
           onUpdate: (self) => {
             const p = self.progress;
 
@@ -59,18 +59,14 @@ export const TimelineMobile = ({ items }: any) => {
   return (
     <div
       ref={container}
-      className="px-6 pb-32  
-        bg-gradient-to-b 
-        from-[#F7F5F1]
-        via-[#E6DCCF]
-        to-[#F7F5F1]"
+      className={`px-6 pb-32  ${backgroundColor}
+       `}
     >
       <h2 className="text-h1-sm font-serif text-center text-mar mb-16 mt-16">
-        <Trans i18nKey="home.timeline.title" />
+        <Trans i18nKey={title} />
       </h2>
 
       <div className="relative border-l border-piel/40 ml-4">
-
         {items.map((item: any, i: number) => (
           <div
             key={i}
@@ -113,7 +109,7 @@ export const TimelineMobile = ({ items }: any) => {
         ))}
       </div>
 
-      <HomeCTASection textCta={t('home.cta.mobileTitle')}/>
+      <HomeCTASection textCta={t('home.cta.mobileTitle')} />
     </div>
   );
 };

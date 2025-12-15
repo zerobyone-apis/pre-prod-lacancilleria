@@ -212,90 +212,133 @@
     }
   },
   "estate": {
-    "hero": {
-      "title": "La Cancillería Estate",
-      "subtitle": "An exclusive residential sanctuary"
-    },
-    "intro": {
-      "label": "The Community",
-      "title": "A private oasis of luxury and tranquility",
-      "description": "La Cancillería represents the pinnacle of gated community living in Punta del Este. With 24/7 security, world-class amenities, and meticulously maintained grounds, residents enjoy an unparalleled lifestyle of comfort and exclusivity."
-    },
-    "amenities": {
-      "title": "World-Class Amenities",
-      "items": {
-        "clubhouse": {
-          "title": "Exclusive Clubhouse",
-          "description": "Modern social spaces for gatherings and events"
-        },
-        "fitness": {
-          "title": "Fitness Center",
-          "description": "State-of-the-art equipment and personal training"
-        },
-        "tennis": {
-          "title": "Tennis Courts",
-          "description": "Professional clay and hard courts with lighting"
-        },
-        "pool": {
-          "title": "Resort Pool",
-          "description": "Olympic-size heated pool with spa facilities"
-        },
-        "security": {
-          "title": "24/7 Security",
-          "description": "Gated entrance with professional security team"
-        },
-        "concierge": {
-          "title": "Concierge Service",
-          "description": "Dedicated staff for all resident needs"
-        }
-      }
-    },
-    "logistics": {
-      "title": "Estate Services & Access",
-      "description": "Everything designed for your comfort and convenience",
-      "services": {
-        "title": "Professional Services",
+    "cancilleria": {
+      "hero": {
+        "title": "A REFINED RESIDENCE DESIGNED <br /> FOR COMFORT AND PRIVACY",
+        "subtitle": "Refined interiors. Expansive exteriors. Designed for comfort, privacy, and <br /> connection with nature"
+      },
+      "intro": {
+        "label": "MAIN RESIDENCE",
+        "title": "LA CANCILLERÍA",
+        "description": "The main residence of the luxury gated estate features five bedrooms,<br /> spacious living and dining areas, a modern kitchen, and multiple outdoor <br /> spaces designed for entertaining and relaxation."
+      },
+      "features": {
+        "title": "FEATURES",
+        "feat_1": "1 master suite with en-suite bathrooms",
+        "feat_2": "2 Bedrooms sharing 1 Bathroom (Upper Floor)",
+        "feat_3": "2 Bedrooms sharing 1 Bathroom (Ground Floor)",
+        "feat_4": "1 Service Room + 1 Bathroom",
+        "feat_5": "Office space",
+        "feat_6": "Living and dining area",
+        "feat_7": "Fully equipped kitchen"
+      },
+
+      "amenities": {
+        "title": "AMENITIES EXCLUSIVE",
         "items": {
-          "maintenance": {
-            "title": "Property Maintenance",
-            "description": "24/7 on-call maintenance team for all common areas and infrastructure"
-          },
-          "cleaning": {
-            "title": "Cleaning Services",
-            "description": "Optional housekeeping and exterior maintenance services available"
-          },
-          "concierge": {
-            "title": "Resident Concierge",
-            "description": "Restaurant reservations, event planning, and local recommendations"
-          },
-          "security": {
-            "title": "Security Protocols",
-            "description": "Advanced surveillance system and trained security personnel"
-          }
+          "pool": "Heated Outdoor Pool",
+          "pergola": "An outdoor living area <br /> with a pergola",
+          "grill": "An Outdoor dining with <br/> Argentinian grill with a <br/> pergola",
+          "air-accon": "Air conditiioning in all rooms",
+          "master-suite": "Wifi and TVs in living room <br/> And Master Suite"
         }
       },
-      "access": {
-        "title": "Access & Facilities",
+      "services": {
+        "title": "ESTATE SERVICES",
+        "description": "Everything designed for your comfort and convenience",
         "items": {
-          "gate": {
-            "title": "Controlled Access",
-            "description": "Main gate with biometric and digital pass systems"
-          },
-          "parking": {
-            "title": "Guest Parking",
-            "description": "Dedicated visitor parking areas with easy access"
-          },
-          "reception": {
-            "title": "Reception Area",
-            "description": "Professional reception desk for package delivery and guest management"
-          },
-          "delivery": {
-            "title": "Delivery Services",
-            "description": "Secure package handling and courier coordination"
+          "housekeeping": "Housekeeping <br /> And Cleaning",
+          "loundry": "Loundry and Wardrobe",
+          "garden": "Garden Exterior <br /> Maintenance",
+          "pool": "Pool Maintenance <br /> Technician",
+          "property": "Property <br /> Estate Maintenance"
+        },
+
+        "access": {
+          "title": "Access & Facilities",
+          "items": {
+            "gate": {
+              "title": "Controlled Access",
+              "description": "Main gate with biometric and digital pass systems"
+            },
+            "parking": {
+              "title": "Guest Parking",
+              "description": "Dedicated visitor parking areas with easy access"
+            },
+            "reception": {
+              "title": "Reception Area",
+              "description": "Professional reception desk for package delivery and guest management"
+            },
+            "delivery": {
+              "title": "Delivery Services",
+              "description": "Secure package handling and courier coordination"
+            }
           }
         }
       }
     },
+    "griega": {
+      "intro": {
+        "label": "GUEST OR STAFF RESIDENCE",
+        "title": "LA GRIEGA",
+        "description": "Located within the same luxury gated estate, La Griega offers independent <br /> accommodation for guests or staff, ensuring privacy and comfort for all"
+      },
+      "features": {
+        "title": "FEATURES",
+        "griega_feat_1": "1 master suite with en-suite bathrooms",
+        "griega_feat_2": "2 Bedrooms sharing 1 Bathroom (Upper Floor)",
+        "griega_feat_3": "2 Bedrooms sharing 1 Bathroom (Ground Floor)",
+        "griega_feat_4": "1 Service Room + 1 Bathroom",
+        "griega_feat_5": "Office space",
+        "griega_feat_6": "Living and dining area",
+        "griega_feat_7": "Fully equipped kitchen"
+      },
+
+      "amenities": {
+        "title": "AMENITIES EXCLUSIVE",
+        "items": {
+          "pool": "Heated Outdoor Pool",
+          "pergola": "An outdoor living area <br /> with a pergola",
+          "grill": "An Outdoor dining with <br/> Argentinian grill with a <br/> pergola",
+          "air-accon": "Air conditiioning in all rooms",
+          "master-suite": "Wifi and TVs in living room <br/> And Master Suite"
+        }
+      },
+      "services": {
+        "title": "ESTATE SERVICES",
+        "description": "Everything designed for your comfort and convenience",
+        "items": {
+          "housekeeping": "Housekeeping <br /> And Cleaning",
+          "loundry": "Loundry and Wardrobe",
+          "garden": "Garden Exterior <br /> Maintenance",
+          "pool": "Pool Maintenance <br /> Technician",
+          "property": "Property <br /> Estate Maintenance"
+        },
+
+        "access": {
+          "title": "Access & Facilities",
+          "items": {
+            "gate": {
+              "title": "Controlled Access",
+              "description": "Main gate with biometric and digital pass systems"
+            },
+            "parking": {
+              "title": "Guest Parking",
+              "description": "Dedicated visitor parking areas with easy access"
+            },
+            "reception": {
+              "title": "Reception Area",
+              "description": "Professional reception desk for package delivery and guest management"
+            },
+            "delivery": {
+              "title": "Delivery Services",
+              "description": "Secure package handling and courier coordination"
+            }
+          }
+        }
+      }
+    },
+
     "gallery": { "title": "Community Spaces" },
     "contact": {
       "title": "Estate Information",
@@ -317,51 +360,7 @@
   },
   "divider": { "experience": "Lifestyle, Experience and Home Image/Video" },
 
-  "estate": {
-    "hero": {
-      "title": "The Estate",
-      "subtitle": "Exclusive coastal living in La Barra"
-    },
-    "services": {
-      "title": "Professional Services",
-      "housekeeping": "Housekeeping/Cleaning",
-      "laundry": "Laundry/Wardrobe",
-      "garden": "Garden/Exterior Maintenance",
-      "pool": "Pool Maintenance/Technician",
-      "maintenance": "Property/Estate Maintenance"
-    },
-    "amenities": {
-      "label": "Amenities",
-      "title": "Exclusives",
-      "items": {
-        "clubhouse": { "title": "Heated outdoor pool" },
-        "fitness": { "title": "An outdoor living area with a pergola" },
-        "tennis": {
-          "title": "An Outdoor Dining with Argentinian grill with a pergola"
-        },
-        "pool": { "title": "Air conditioning in all rooms" },
-        "security": { "title": "Wifi & TVs in living room & master suite" }
-      }
-    },
-    "gallery": { "title": "Community Spaces" },
-    "explore": { "title": "Explore from Inside" },
-    "staff": {
-      "label": "Upon Request",
-      "title": "Staff Available",
-      "services": {
-        "chef": "Chef",
-        "nanny": "Nanny / Babysitter",
-        "driver": "Driver / Transportation",
-        "yoga": "Yoga Coach / Wellness Instruction",
-        "massage": "Massage Therapist"
-      }
-    },
-    "cta": {
-      "title": "Ready to Experience La Cancillería?",
-      "description": "Contact us to schedule a visit or learn more about this exceptional property"
-    }
-  },
-  "footer": { 
+  "footer": {
     "rights": "All rights reserved",
     "links": {
       "privacy": "Privacy Policy",

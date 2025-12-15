@@ -310,32 +310,6 @@ export const LocationMapSection = () => {
       bearing: -20,
     });
 
-    // const map = new mapboxgl.Map({
-    //   container:  mapContainerRef.current,
-    //   style: 'mapbox://styles/mapbox/standard',
-    //   config: {
-    //     basemap: {
-    //       colorMotorways: "#2b3e4e",
-    //       colorTrunks: "#a67753",
-    //       colorRoads: "#ebd9c2",
-    //       colorPlaceLabels: "#2b3e4e",
-    //       colorModePointOfInterestLabels: "single",
-    //       colorPointOfInterestLabels: "#3490c5",
-    //       showRoadLabels: false,
-    //        showPointOfInterestLabels: false,
-    //       font: "Inter",
-    //       theme: "custom",
-    //       themeData: "",
-    //       colorGreenspace: "#94c190",
-    //       colorWater: "#81caee"
-    //     }
-    //   },
-    //   center: [-54.86015, -34.90692],
-    //   zoom: 13.28,
-    //   bearing: -12.00,
-    //   pitch: 44.51,
-    // });
-
     mapRef.current = map;
 
     // UX: no scroll-zoom by default (so page scroll works)
@@ -483,7 +457,7 @@ export const LocationMapSection = () => {
       // el.style.cursor = 'pointer';
 
       const popup = new mapboxgl.Popup({
-        offset: 18,
+        offset: [0, -20],
         closeButton: false,
         className: 'location-popup',
       }).setHTML(`
@@ -501,18 +475,21 @@ export const LocationMapSection = () => {
         </div>
       `);
 
+
       const marker = new mapboxgl.Marker()
         .setLngLat(poi.coordinates)
         .setPopup(popup)
         .addTo(map);
 
       // Hover opens popup (minimal + elegant)
-      marker
-        .getElement()
-        .addEventListener('mouseenter', () => marker.togglePopup());
-      marker
-        .getElement()
-        .addEventListener('mouseleave', () => marker.togglePopup());
+      marker.getElement().addEventListener("mouseenter", () => {
+        popup.setLngLat(poi.coordinates); // Posición fija EXPLÍCITA
+        popup.addTo(map);                 // Muestra el popup sin toggle
+      });
+      
+      marker.getElement().addEventListener("mouseleave", () => {
+        popup.remove();
+      });
     });
 
     // Fit bounds to show whole region nicely
