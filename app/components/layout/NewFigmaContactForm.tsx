@@ -4,32 +4,50 @@ import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { Send, User, Mail, Phone, MessageSquare } from 'lucide-react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+
+type ContactFormData = {
+  name: string;
+  email: string;
+  phone?: string;
+  message: string;
+};
 
 export const NewFigmaContactForm = () => {
   const { t } = useTranslation();
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>();
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
+    try {
+      setLoading(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 800));
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        body: JSON.stringify(data),
+      });
 
-    toast.success(
-      t('home.contact.form.success', {
-        defaultValue: 'Message sent successfully',
-      })
-    );
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    setIsSubmitting(false);
+      if (!res.ok) throw new Error('Error sending email');
+
+      toast.success(
+        t('home.contact.form.success', {
+          defaultValue: 'Message sent successfully',
+        })
+      );
+
+      reset();
+    } catch (err) {
+      toast.error('Error sending message');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputBase =
@@ -37,20 +55,16 @@ export const NewFigmaContactForm = () => {
 
   return (
     <div className="bg-none rounded-2xl p-6 md:p-10 lg:p-12">
-      <form onSubmit={handleSubmit} className="space-y-10">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
         {/* ---------------------- ROW 1 ---------------------- */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* NAME */}
           <div className="flex items-center gap-4">
             <User className="w-4 h-4 text-[#b8b2aa]" />
             <input
+              {...register('name', { required: true })}
               type="text"
               placeholder={t('home.contact.form.name')}
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-              required
               className={inputBase}
             />
           </div>
@@ -59,13 +73,9 @@ export const NewFigmaContactForm = () => {
           <div className="flex items-center gap-4">
             <Mail className="w-4 h-4 text-[#b8b2aa]" />
             <input
+              {...register('email', { required: true })}
               type="email"
               placeholder={t('home.contact.form.email')}
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-              required
               className={inputBase}
             />
           </div>
@@ -75,14 +85,11 @@ export const NewFigmaContactForm = () => {
         <div className="flex items-center gap-4">
           <Phone className="w-4 h-4 text-[#b8b2aa]" />
           <input
+            {...register('phone')}
             type="tel"
             placeholder={`${t('home.contact.form.phone')} (${t(
               'home.contact.form.optional'
             )})`}
-            value={formData.phone}
-            onChange={(e) =>
-              setFormData({ ...formData, phone: e.target.value })
-            }
             className={inputBase}
           />
         </div>
@@ -91,13 +98,9 @@ export const NewFigmaContactForm = () => {
         <div className="flex items-start gap-4">
           <MessageSquare className="w-4 h-4 text-[#b8b2aa] mt-3" />
           <textarea
-            placeholder={t('home.contact.form.message')}
+            {...register('message', { required: true })}
             rows={4}
-            required
-            value={formData.message}
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
+            placeholder={t('home.contact.form.message')}
             className={`${inputBase} resize-none`}
           />
         </div>
@@ -106,13 +109,13 @@ export const NewFigmaContactForm = () => {
         <div className="flex justify-center pt-4">
           <button
             type="submit"
-            disabled={isSubmitting}
+            disabled={loading}
             className="
               bg-[#243140] text-white px-10 py-3 rounded-md 
               shadow-md hover:bg-[#1c2733] transition flex items-center gap-3
             "
           >
-            {isSubmitting ? (
+            {loading ? (
               <div className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
             ) : (
               <>

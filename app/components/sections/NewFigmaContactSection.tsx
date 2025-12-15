@@ -2,9 +2,9 @@
 
 import { useTranslation } from 'react-i18next';
 import { SectionHeader } from '@/app/components/ui/SectionHeader';
-import { ContactForm } from '@/app/components/layout/ContactForm';
 import Image from 'next/image';
 import { NewFigmaContactForm } from '../layout/NewFigmaContactForm';
+
 
 export const NewFigmaContactSection = () => {
   const { t } = useTranslation();

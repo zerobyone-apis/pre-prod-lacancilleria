@@ -196,13 +196,13 @@
       }
     },
     "distances": {
-      "title": "Easily accessible. Perfectly secluded",
+      "title": "EASILY ACCESSIBLE <br/>PERFECTLY SECLUDED",
       "items": {
-        "pde-airport": "16 miles from Punta del Este Airport",
-        "carrasco": "70 miles from Carrasco Airport",
-        "montoya": "5-minute walk to Playa Montoya",
-        "bikini": "7 minutes to Playa Bikini",
-        "labarra": "3 minutes to La Barra restaurants and nightlife"
+        "pde-airport": "16 miles from <br />Punta del Este Airport",
+        "carrasco": "70 miles from <br />Carrasco Airport",
+        "montoya": "5-minute walk to <br />Playa Montoya",
+        "bikini": "7 minutes to <br />Playa Bikini",
+        "labarra": "3 minutes to La Barra <br />Restaurants and nightlife"
       }
     },
     "cta": {

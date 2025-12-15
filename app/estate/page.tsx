@@ -21,7 +21,7 @@ export default function EstatePage() {
       <HeroSection
         title={t("estate.hero.title")}
         subtitle={t("estate.hero.subtitle")}
-        backgroundVideo="/video/home/hero-final-web_7mb.mp4"
+        backgroundVideo="/video/location/location_refined_hero.mp4"
       />
       <PropertiesSliderSection />
       <EstateServicesSection />
