@@ -21,8 +21,8 @@ export default function EstatePage() {
   return (
     <>
       <HeroSection
-        title={t('estate.hero.title')}
-        subtitle={t('estate.hero.subtitle')}
+        title={t('estate.cancilleria.hero.title')}
+        subtitle={t('estate.cancilleria.hero.subtitle')}
         backgroundVideo="/video/the_estate/hero-estate-final-web.mp4"
       />
       <PropertiesSliderSection propertyFilter="cancilleria"/>
