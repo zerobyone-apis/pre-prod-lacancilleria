@@ -26,23 +26,27 @@ export default function EstatePage() {
         backgroundVideo="/video/the_estate/hero-estate-final-web.mp4"
       />
       <PropertiesSliderSection propertyFilter="cancilleria"/>
-      <EstateServicesMultiComponent />
+      <EstateServicesMultiComponent service={true}  griegaItems={false}
+  />
       <TimelineSection home={false} estate={true} />
       <IntroImageSlider
         images={[
-          '/images/home/slider/suit-guess-edited-ai.jpg',
-          '/images/home/slider/pool.webp',
-          '/images/home/slider/suit-bed.webp',
-          '/images/home/slider/sec-room.webp', // TODO: QUEDA COLOCAR LAS FOTOS QUE VAN.
-          '/images/home/slider/coctails-in-pool.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/suit-guess-edited-ai.jpg',
+          '/images/the_estate/la_cancilleria/galery_slider/coocking.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/guest_bedth.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/living_pergola.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/living_principal.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/living.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/pergola_2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/pergola.webp'
         ]}
         showTextOverlay={false}
-
       />
       <PropertiesSliderSection propertyFilter="griega" />
-      <EstateStaffSection />
-      <EstateExploreSection />
-      <EstateDividerSection />
+      <EstateServicesMultiComponent service={false} griegaItems={true}/>
+      {/* <EstateStaffSection /> */}
+      {/* <EstateExploreSection /> */}
+      <ImageDeviderSection imageSource='/images/the_estate/la_griega/devider/faro_remasted.webp' />
       <NewFigmaContactSection />
     </>
   );

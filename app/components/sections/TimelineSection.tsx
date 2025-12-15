@@ -58,7 +58,7 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
     backgroundColor = 'bg-[#F7F5F1]';
     timelineItems = [
       {
-        text: t('estatecancilleria..amenities.items.pool'),
+        text: t('estate.cancilleria.amenities.items.pool'),
         mobileText: t('estate.cancilleria.amenities.items.pool'),
         image: '/images/the_estate/la_cancilleria/amenities/pool.webp',
         imagePosition: 'right',
@@ -79,13 +79,13 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
       {
         text: t('estate.cancilleria.amenities.items.air-accon'),
         mobileText: t('estate.cancilleria.amenities.items.air-accon'),
-        image: '/images/the_estate/la_cancilleria/amenities/yoga-jarding.webp',
+        image: '/images/the_estate/la_cancilleria/services/no-image.jpg',
         imagePosition: 'left',
       },
       {
         text: t('estate.cancilleria.amenities.items.master-suite'),
         mobileText: t('estate.cancilleria.amenities.items.master-suite'),
-        image: '/images/home/slider/suit-gess-not-edited-ai.webp',
+        image: '/images/the_estate/la_cancilleria/services/no-image.jpg',
         imagePosition: 'right',
       },
     ];

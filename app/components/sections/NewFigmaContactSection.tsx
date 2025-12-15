@@ -58,7 +58,7 @@ export const NewFigmaContactSection = () => {
       </div>
 
       {/* 🔶 CONTENIDO CENTRADO */}
-      <div className="relative z-10 max-w-[900px] mx-auto">
+      <div id="contact" className="relative z-10 max-w-[900px] mx-auto">
         {/* HEADER */}
         <div className="text-center mb-16 mt-8">
           <SectionHeader

@@ -92,7 +92,6 @@
       }
     }
   },
-
   "house": {
     "hero": {
       "title": "An Architectural Masterpiece in Punta del Este",
@@ -252,28 +251,6 @@
           "garden": "Garden Exterior <br /> Maintenance",
           "pool": "Pool Maintenance <br /> Technician",
           "property": "Property <br /> Estate Maintenance"
-        },
-
-        "access": {
-          "title": "Access & Facilities",
-          "items": {
-            "gate": {
-              "title": "Controlled Access",
-              "description": "Main gate with biometric and digital pass systems"
-            },
-            "parking": {
-              "title": "Guest Parking",
-              "description": "Dedicated visitor parking areas with easy access"
-            },
-            "reception": {
-              "title": "Reception Area",
-              "description": "Professional reception desk for package delivery and guest management"
-            },
-            "delivery": {
-              "title": "Delivery Services",
-              "description": "Secure package handling and courier coordination"
-            }
-          }
         }
       }
     },
@@ -294,14 +271,15 @@
         "griega_feat_7": "Fully equipped kitchen"
       },
 
-      "amenities": {
-        "title": "AMENITIES EXCLUSIVE",
+      "staff": {
+        "title": "STAFF AVAILABLE",
+        "description": "Upon Request",
         "items": {
-          "pool": "Heated Outdoor Pool",
-          "pergola": "An outdoor living area <br /> with a pergola",
-          "grill": "An Outdoor dining with <br/> Argentinian grill with a <br/> pergola",
-          "air-accon": "Air conditiioning in all rooms",
-          "master-suite": "Wifi and TVs in living room <br/> And Master Suite"
+          "chef": "Chef",
+          "nanny": "Nanny and Babysitter",
+          "driver": "Driver or Transportation",
+          "yoga": "Yoga Coach <br /> Wellness Instruction",
+          "massage": "Massage Therapist"
         }
       },
       "services": {
@@ -337,28 +315,12 @@
           }
         }
       }
-    },
-
-    "gallery": { "title": "Community Spaces" },
-    "contact": {
-      "title": "Estate Information",
-      "description": "Get in touch with our community management",
-      "email": "Email",
-      "phone": "Phone",
-      "address": "Address",
-      "hours": "Office Hours"
-    },
-    "cta": {
-      "title": "Join an Exclusive Community",
-      "description": "Experience the La Cancillería lifestyle",
-      "button": "Contact Us"
     }
   },
   "cta": {
     "title": "Immerse yourself in a paradise where nature and luxury meet in perfect harmony",
     "button": "Contact"
   },
-  "divider": { "experience": "Lifestyle, Experience and Home Image/Video" },
 
   "footer": {
     "rights": "All rights reserved",

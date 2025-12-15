@@ -24,7 +24,7 @@ export const HomeCTASection = ({textCta}: any) => {
         onClick={() =>
           document
             .getElementById('contact')
-            ?.scrollIntoView({ behavior: 'smooth' })
+            ?.scrollIntoView({ behavior: "smooth", block: "start" })
         }
         size="lg"
         className="

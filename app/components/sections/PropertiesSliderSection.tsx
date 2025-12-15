@@ -36,11 +36,11 @@ export const PropertiesSliderSection = ({
 
   if (propertyFilter == 'griega') {
     LIST_IMAGES = [
-      '/images/home/slider/suit-guess-edited-ai.jpg',
-      '/images/home/slider/pool.webp',
-      '/images/home/slider/suit-bed.webp',
-      '/images/home/slider/sec-room.webp',
-      '/images/home/slider/coctails-in-pool.webp',
+      '/images/the_estate/la_cancilleria/services/no-image.jpg',
+      '/images/the_estate/la_cancilleria/services/no-image.jpg',
+      '/images/the_estate/la_cancilleria/services/no-image.jpg',
+      '/images/the_estate/la_cancilleria/services/no-image.jpg',
+      '/images/the_estate/la_cancilleria/services/no-image.jpg',
     ];
     LIST_CAPTIONS = [
       {
