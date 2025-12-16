@@ -19,18 +19,20 @@ export const ImageDeviderSection = (props: props) => {
           md:h-screen      /* desktop full screen */
         "
     >
-      <div ref={parallaxRef} className="absolute inset-0 w-full h-[120%]">
-        <img
-          src={imageSource}
-          alt="La Barra, Punta del Este, and José Ignacio area"
-          className="
+      <div className="absolute inset-0 w-full h-[120%]">
+        <div ref={parallaxRef} className="w-full h-full">
+          <img
+            src={imageSource}
+            alt="La Barra, Punta del Este, and José Ignacio area"
+            className="
               w-full h-full
               object-contain      /* mobile: nada de zoom */
               md:object-cover     /* desktop: rellena pantalla */
             "
-        />
+          />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/40" />
+        </div>
       </div>
     </section>
   );

@@ -75,6 +75,11 @@ export const useGsapParallax = (speed: number = 0.5) => {
   useEffect(() => {
     if (!elementRef.current) return;
 
+    // Desactivar parallax en mobile para evitar saltos entre secciones
+    if (typeof window !== 'undefined' && window.innerWidth < 900) {
+      return;
+    }
+
     gsap.to(elementRef.current, {
       y: -100 * speed,
       ease: 'none',

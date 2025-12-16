@@ -25,6 +25,7 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
 
   if (home) {
     title = 'home.timeline.title';
+    mobileTitle = 'home.mobile_timeline.title';
     backgroundColor = 'bg-gradient-to-b from-[#E6DCCF] to-[#F7F5F1]';
     timelineItems = [
       {
@@ -69,7 +70,7 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
         text: t('estate.cancilleria.amenities.items.pergola'),
         mobileText: t('estate.cancilleria.amenities.items.pergola'),
         image:
-          '/images/the_estate/la_cancilleria/amenities/outdoor-living-area.webp',
+        '/images/the_estate/la_cancilleria/amenities/outdoor-living-area.webp',
         imagePosition: 'left',
       },
       {
@@ -93,9 +94,19 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
     ];
   }
 
+  const mobileHeaderKey = isMobile ? mobileTitle : title || title;
+
   return isMobile ? (
-    <TimelineMobile items={timelineItems} backgroundColor={backgroundColor} title={mobileTitle} />
+    <TimelineMobile
+      items={timelineItems}
+      backgroundColor={backgroundColor}
+      title={mobileHeaderKey}
+    />
   ) : (
-    <DesktopTimeline timelineItems={timelineItems} backgroundColor={backgroundColor} title={title} />
+    <DesktopTimeline
+      timelineItems={timelineItems}
+      backgroundColor={backgroundColor}
+      title={title}
+    />
   );
 };
