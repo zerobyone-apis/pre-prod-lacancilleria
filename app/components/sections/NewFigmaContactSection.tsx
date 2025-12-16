@@ -14,9 +14,10 @@ export const NewFigmaContactSection = () => {
       id="contact-section"
       className="
         relative w-full overflow-hidden
-        text-mar 
-        px-6 md:px-12 lg:px-24
-        pt-40 pb-40
+        text-mar
+        sm:px-6 md:px-12 lg:px-24
+        pt-0 pb-20
+        md:pt-40 md:pb-40
         bg-[#F7F5F1]
       "
     >

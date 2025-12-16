@@ -6,15 +6,17 @@ export const HomeCTASection = ({textCta}: any) => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative flex flex-col items-center text-center pt-20 md:pt-24 pb-24 md:pb-32 bg-none">
+    <div className="relative flex flex-col items-center text-center pt-20 md:pt-24 pb-0 md:pb-32 bg-none">
       <h2
         className="
-        text-[34px] md:text-[48px]
+        text-h1-sm md:text-h1-md lg:text-h1-lg
         font-serif text-mar/90
         leading-[1.35]
         tracking-[0.015em]
-        max-w-[900px]
+        max-w-[800px]
+        md:max-w-[1200px]
         mb-10
+        md:mb-10
       "
       >
         <Trans i18nKey={textCta} />

@@ -117,8 +117,8 @@ export const PropertiesSliderSection = ({
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden text-mar px-4 sm:px-6 md:px-12 lg:px-24 py-20 sm:py-28 md:pt-48 bg-[#f3e7da]"
-    >
+      className="relative w-full overflow-hidden text-mar px-4 sm:px-6 md:px-12 lg:px-24 py-20 sm:py-28 md:pt-48 bg-[#f7f5f1] md:bg-[#f3e7da]"
+      >
       {/* SHADOWS ABOVE GRADIENT */}
       <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[20]">
         {/* SHADOW LEFT */}
@@ -169,7 +169,7 @@ export const PropertiesSliderSection = ({
 
       {/* GRADIENT BELOW THE SHADOWS */}
       <div
-        className="absolute inset-x-0 top-0 pointer-events-none z-[10]"
+        className="hidden md:block absolute inset-x-0 top-0 pointer-events-none z-[10]"
         style={{
           height: '850px',
           background:

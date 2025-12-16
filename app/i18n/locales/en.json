@@ -92,65 +92,6 @@
       }
     }
   },
-  "house": {
-    "hero": {
-      "title": "An Architectural Masterpiece in Punta del Este",
-      "subtitle": "Where luxury meets the Atlantic horizon",
-      "cta": "Schedule a Visit"
-    },
-    "intro": {
-      "label": "The Residence",
-      "title": "A sanctuary of contemporary elegance",
-      "description": "Nestled in the most exclusive neighborhood of Punta del Este, this architectural gem redefines coastal luxury living. Every detail has been meticulously crafted to create a harmonious blend of sophisticated design and natural beauty.",
-      "specs": {
-        "bedrooms": "5 Bedrooms",
-        "bathrooms": "6 Bathrooms",
-        "area": "750 m²",
-        "lot": "2,000 m² Lot"
-      }
-    },
-    "specs": {
-      "title": "Property Specifications",
-      "description": "Explore the exceptional details of this magnificent residence",
-      "items": {
-        "bedrooms": { "value": "5", "label": "Bedrooms" },
-        "bathrooms": { "value": "6", "label": "Bathrooms" },
-        "area": { "value": "750", "label": "m² Living Space" },
-        "lot": { "value": "2,000", "label": "m² Plot" },
-        "floors": { "value": "3", "label": "Floors" },
-        "parking": { "value": "4", "label": "Garage Spaces" },
-        "pool": { "value": "Infinity", "label": "Pool" },
-        "year": { "value": "2024", "label": "Built" }
-      }
-    },
-    "features": {
-      "title": "Exceptional Features",
-      "items": {
-        "design": {
-          "title": "Contemporary Design",
-          "description": "Clean lines and floor-to-ceiling windows frame breathtaking ocean views"
-        },
-        "materials": {
-          "title": "Premium Materials",
-          "description": "Imported marble, hardwood floors, and state-of-the-art fixtures throughout"
-        },
-        "outdoor": {
-          "title": "Expansive Outdoor Living",
-          "description": "Infinity pool, outdoor kitchen, and terraces designed for entertainment"
-        },
-        "smart": {
-          "title": "Smart Home Technology",
-          "description": "Fully integrated automation for lighting, climate, and security"
-        }
-      }
-    },
-    "gallery": { "title": "Explore the Interior" },
-    "cta": {
-      "title": "Experience Unparalleled Luxury",
-      "description": "Discover your dream home in Punta del Este",
-      "button": "Get in Touch"
-    }
-  },
   "location": {
     "hero": {
       "title": "The Heart of Punta del Este",
@@ -234,6 +175,7 @@
 
       "amenities": {
         "title": "AMENITIES EXCLUSIVE",
+        "mobileTitle": "AMENITIES <br/> EXCLUSIVE",
         "items": {
           "pool": "Heated Outdoor Pool",
           "pergola": "An outdoor living area <br /> with a pergola",
@@ -321,7 +263,6 @@
     "title": "Immerse yourself in a paradise where nature and luxury meet in perfect harmony",
     "button": "Contact"
   },
-
   "footer": {
     "rights": "All rights reserved",
     "links": {

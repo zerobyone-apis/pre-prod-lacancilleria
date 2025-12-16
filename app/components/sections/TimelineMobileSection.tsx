@@ -62,7 +62,7 @@ export const TimelineMobile = ({ items, backgroundColor, title }: any) => {
       className={`px-6 pb-32  ${backgroundColor}
        `}
     >
-      <h2 className="text-h1-sm font-serif text-center text-mar mb-16 mt-16">
+      <h2 className="text-h1-sm font-serif text-center text-mar mb-20 mt-20">
         <Trans i18nKey={title} />
       </h2>
 
@@ -109,7 +109,9 @@ export const TimelineMobile = ({ items, backgroundColor, title }: any) => {
         ))}
       </div>
 
-      <HomeCTASection textCta={t('home.cta.mobileTitle')} />
+      <div className=''>
+        <HomeCTASection textCta={t('home.cta.mobileTitle')} />
+      </div>
     </div>
   );
 };

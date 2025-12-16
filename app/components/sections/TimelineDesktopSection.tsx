@@ -9,7 +9,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HomeCTASection } from './HomeCTASection';
 
-export const DesktopTimeline = ({ timelineItems, backgroundColor }: any) => {
+export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) => {
   const { t } = useTranslation();
 
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -185,7 +185,7 @@ export const DesktopTimeline = ({ timelineItems, backgroundColor }: any) => {
       <div className="relative max-w-6xl mx-auto">
         {/* TITLE */}
         <h2 className="text-h1-sm leading-[38px] sm:text-h1-sm sm:leading-[42px] md:text-h1-md lg:text-h1-lg font-serif text-center mb-16 sm:mb-20 md:mb-28">
-          <Trans i18nKey="home.timeline.title" />
+          <Trans i18nKey={title} />
         </h2>
 
         {/* TIMELINE CONTAINER (REAL) */}

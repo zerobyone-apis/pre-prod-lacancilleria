@@ -21,6 +21,7 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
   let timelineItems: TimelineItem[] = [];
   let backgroundColor: string = '';
   let title: string = '';
+  let mobileTitle: string = '';
 
   if (home) {
     title = 'home.timeline.title';
@@ -55,6 +56,7 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
 
   if (estate) {
     title = 'estate.cancilleria.amenities.title';
+    mobileTitle = 'estate.cancilleria.amenities.mobileTitle';
     backgroundColor = 'bg-[#F7F5F1]';
     timelineItems = [
       {
@@ -92,7 +94,7 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
   }
 
   return isMobile ? (
-    <TimelineMobile items={timelineItems} backgroundColor={backgroundColor} title={title} />
+    <TimelineMobile items={timelineItems} backgroundColor={backgroundColor} title={mobileTitle} />
   ) : (
     <DesktopTimeline timelineItems={timelineItems} backgroundColor={backgroundColor} title={title} />
   );
