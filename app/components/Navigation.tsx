@@ -9,13 +9,29 @@ import { Button } from '@/app/components/ui/button';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-
 export const Navigation = () => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+  // ejemplo dentro del Navbar
+  useEffect(() => {
+    const nav = document.getElementById('main-navbar');
+    if (!nav) return;
+
+    const updateNavHeight = () => {
+      document.documentElement.style.setProperty(
+        '--nav-height',
+        `${nav.offsetHeight}px`
+      );
+    };
+
+    updateNavHeight();
+    window.addEventListener('resize', updateNavHeight);
+
+    return () => window.removeEventListener('resize', updateNavHeight);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +50,7 @@ export const Navigation = () => {
 
   return (
     <nav
+      id="main-navbar"
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
@@ -85,7 +102,9 @@ export const Navigation = () => {
               ))}
             </div>
 
-            <LanguageSwitcher className={isScrolled ? 'text-mar':'text-nieve'} />
+            <LanguageSwitcher
+              className={isScrolled ? 'text-mar' : 'text-nieve'}
+            />
 
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>

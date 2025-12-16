@@ -2,9 +2,9 @@
 
 import { useTranslation } from 'react-i18next';
 import { SectionHeader } from '@/app/components/ui/SectionHeader';
-import { ContactForm } from '@/app/components/layout/ContactForm';
 import Image from 'next/image';
 import { NewFigmaContactForm } from '../layout/NewFigmaContactForm';
+
 
 export const NewFigmaContactSection = () => {
   const { t } = useTranslation();
@@ -14,9 +14,10 @@ export const NewFigmaContactSection = () => {
       id="contact-section"
       className="
         relative w-full overflow-hidden
-        text-mar 
-        px-6 md:px-12 lg:px-24
-        pt-40 pb-40
+        text-mar
+        sm:px-6 md:px-12 lg:px-24
+        pt-0 pb-20
+        md:pt-40 md:pb-40
         bg-[#F7F5F1]
       "
     >
@@ -58,7 +59,7 @@ export const NewFigmaContactSection = () => {
       </div>
 
       {/* 🔶 CONTENIDO CENTRADO */}
-      <div className="relative z-10 max-w-[900px] mx-auto">
+      <div id="contact" className="relative z-10 max-w-[900px] mx-auto">
         {/* HEADER */}
         <div className="text-center mb-16 mt-8">
           <SectionHeader

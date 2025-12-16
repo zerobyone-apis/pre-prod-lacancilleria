@@ -25,9 +25,8 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const pathname = typeof window !== "undefined" ? window.location.pathname : undefined;
-  // Soporte Next SSR/CSR: usar hook en uso client y fallback al render
-  // Si estamos en /wip, sólo renderizar children plano
+  const pathname = usePathname();
+  // Render a minimal shell on /wip to avoid global chrome and hydration issues
   if (pathname === '/wip') {
     return (
       <html lang="en" suppressHydrationWarning>

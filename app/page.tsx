@@ -21,15 +21,11 @@ export default function HomePage() {
         backgroundVideo="/video/home/hero-final-web_7mb.mp4"
       />
       <HomeIntroSection />
-      {/* {<PropertiesSliderSection />} */}
       <QuickFactsSection />
       <ImageDeviderSection imageSource='/images/home/deviders/Montoya.webp' />
-      <TimelineSection />
-      {/* <HomeDividerSection /> */}
-      {/* <HomeCTASection /> */}
+      <TimelineSection home estate={false} />
       <ImageDeviderSection imageSource='/images/home/deviders/lacancilleria_panoramic.jpg' />
       <NewFigmaContactSection />
-      {/* <ContactSection /> */}
     </>
   );
 }

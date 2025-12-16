@@ -21,20 +21,20 @@
 
 @layer base {
   :root {
-    --background: 36 20% 95%;              /* #F7F5F1 */
-    --foreground: 210 6% 22%;              /* #343839 */
+    --background: 36 20% 95%; /* #F7F5F1 */
+    --foreground: 210 6% 22%; /* #343839 */
     --card: 0 0% 100%;
-    --card-foreground: 210 6% 22%;         /* #343839 */
+    --card-foreground: 210 6% 22%; /* #343839 */
     --popover: 0 0% 100%;
-    --popover-foreground: 210 6% 22%;      /* #343839 */
-    --primary: 21 24% 50%;                 /* #A67753 */
-    --primary-foreground: 36 20% 95%;      /* #F7F5F1 */
-    --secondary: 32 32% 85%;               /* #E6DCCF */
-    --secondary-foreground: 210 6% 22%;    /* #343839 */
-    --muted: 32 32% 85%;                   /* same as secondary */
-    --muted-foreground: 210 6% 22%;        /* #343839 */
-    --accent: 210 32% 30%;                 /* #2B3E4E */
-    --accent-foreground: 36 20% 95%;       /* #F7F5F1 */
+    --popover-foreground: 210 6% 22%; /* #343839 */
+    --primary: 21 24% 50%; /* #A67753 */
+    --primary-foreground: 36 20% 95%; /* #F7F5F1 */
+    --secondary: 32 32% 85%; /* #E6DCCF */
+    --secondary-foreground: 210 6% 22%; /* #343839 */
+    --muted: 32 32% 85%; /* same as secondary */
+    --muted-foreground: 210 6% 22%; /* #343839 */
+    --accent: 210 32% 30%; /* #2B3E4E */
+    --accent-foreground: 36 20% 95%; /* #F7F5F1 */
     --destructive: 0 84% 60%;
     --destructive-foreground: 36 20% 95%;
     --border: 32 32% 85%;
@@ -110,7 +110,7 @@
     }
     to {
       opacity: 1;
-      }
+    }
   }
 
   @keyframes slide-up {
@@ -148,21 +148,75 @@
   color: hsl(var(--foreground)) !important;
 }
 
-/* .embla__slide {
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.6s ease;
+/* Marker: minimal, cálido, premium */
+.location-marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #c8b8a6;
+  box-shadow: 0 0 0 8px rgba(200, 184, 166, 0.22);
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
-.embla__slide:not(.is-selected) {
-  opacity: 0.85;
-  transform: scale(0.97);
+.location-marker:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 10px rgba(200, 184, 166, 0.25);
 }
 
-/* Evitar animación en slides clónicos (cuando Embla duplica) 
-.embla__slide[aria-hidden="true"] {
-  transform: none !important;
-  opacity: 1 !important;
-  filter: none !important;
-  transition: none !important;
-} */
+/* Base marker (La Cancillería) un poquito más “anchor” */
+.location-marker--base {
+  width: 14px;
+  height: 14px;
+  background: #243140;
+  box-shadow: 0 0 0 10px rgba(36, 49, 64, 0.18);
+}
 
+/* Popup card */
+.location-popup .mapboxgl-popup-content {
+  padding: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.location-popup .mapboxgl-popup-tip {
+  display: none;
+}
+
+.location-card {
+  width: 240px;
+  background: #ffffff;
+}
+
+.location-card__img {
+  height: 92px;
+  background: #e8e3dc;
+  background-size: cover;
+  background-position: center;
+}
+
+.location-card__body {
+  padding: 12px 12px 13px;
+}
+
+.location-card__title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #243140;
+}
+
+.location-card__desc {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: rgba(36, 49, 64, 0.68);
+}
+
+.location-card__meta {
+  margin-top: 10px;
+  font-size: 11px;
+  color: rgba(195, 154, 126, 1);
+  font-weight: 600;
+}
