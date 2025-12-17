@@ -40,7 +40,7 @@ export const VariantThumbnailCards = ({
       </div>
 
       <div className="space-y-3">
-        {items.map((item) => {
+        {(items || []).map((item) => {
           const isOpen = openKey === item.key;
 
           return (
@@ -139,7 +139,7 @@ export const VariantMinimalList = ({
       </div>
 
       <div className="space-y-0">
-        {items.map((item, index) => {
+        {(items || []).map((item, index) => {
           const isOpen = openKey === item.key;
 
           return (
@@ -214,7 +214,7 @@ export const VariantOverlayCards = ({
       </div>
 
       <div className="space-y-4">
-        {items.map((item, index) => {
+        {(items || []).map((item, index) => {
           const isActive = activeIndex === index;
 
           return (
@@ -320,10 +320,10 @@ export const VariantHorizontalCarousel = ({
             const scrollLeft = target.scrollLeft;
             const cardWidth = 280;
             const newIndex = Math.round(scrollLeft / cardWidth);
-            setActiveIndex(Math.min(newIndex, items.length - 1));
+            setActiveIndex(Math.min(newIndex, (items || []).length - 1));
           }}
         >
-          {items.map((item, index) => (
+          {(items || []).map((item, index) => (
             <div
               key={item.key}
               className="flex-shrink-0 w-[260px] snap-center"
@@ -352,7 +352,7 @@ export const VariantHorizontalCarousel = ({
 
         {/* Indicators */}
         <div className="flex justify-center gap-2 mt-4">
-          {items.map((_, index) => (
+          {(items || []).map((_, index) => (
             <div
               key={index}
               className={`
@@ -395,7 +395,7 @@ export const VariantDesktopStyle = ({
       </div>
 
       <div className="space-y-6">
-        {items.map((item) => {
+        {(items || []).map((item) => {
           const isOpen = openKey === item.key;
 
           return (
