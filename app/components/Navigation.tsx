@@ -103,7 +103,12 @@ export const Navigation = () => {
             </div>
 
             <LanguageSwitcher
-              className={isScrolled ? 'text-mar' : 'text-nieve'}
+              className={cn(
+                'relative px-3 py-1 rounded-full transition-all duration-300 cursor-pointer',
+                isScrolled
+                  ? 'text-mar hover:bg-mar/10 hover:text-mar'
+                  : 'text-nieve hover:bg-white/20 hover:text-white'
+              )}
             />
 
             {/* Mobile Menu */}

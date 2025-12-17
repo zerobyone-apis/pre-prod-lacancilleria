@@ -6,12 +6,6 @@ interface EstateServicesProps {
   griegaItems: boolean;
 }
 
-import staffChef from '@/app/assets/staff-chef.jpg';
-import staffNanny from '@/app/assets/staff-nanny.jpg';
-import staffDriver from '@/app/assets/staff-driver.jpg';
-import staffYoga from '@/app/assets/staff-yoga.jpg';
-import staffMassage from '@/app/assets/staff-massage.jpg';
-
 export default function EstateServicesMultiComponent({
   service,
   griegaItems,
@@ -57,12 +51,12 @@ export default function EstateServicesMultiComponent({
     LIST_ITEMS_IMAGES = [
       {
         key: 'chef',
-        image: '/images/the_estate/la_griega/staff/staff-chef.jpg',
+        image: '/images/the_estate/la_griega/staff/chef.png',
         label: 'estate.griega.staff.items.chef',
       },
       {
         key: 'nanny',
-        image: '/images/the_estate/la_griega/staff/staff-nanny.jpg',
+        image: '/images/the_estate/la_griega/staff/nanny.png',
         label: 'estate.griega.staff.items.nanny',
       },
       {
@@ -85,14 +79,22 @@ export default function EstateServicesMultiComponent({
 
   return (
     <>
-      {/* Mobile */}
-      <div className="block md:hidden">
-        <LocationDistancesMobile
-          title={title}
-          description={description}
-          items={LIST_ITEMS_IMAGES}
-        />
-      </div>
+      {/* Mobile – fondo unificado con degradé cálido tipo Home/Properties */}
+      <section
+        className="relative block md:hidden w-full overflow-hidden py-16"
+        style={{
+          background:
+            'linear-gradient(180deg, #f7f5f1 0%, #f7f5f1 85%, #f3e7da 100%)',
+        }}
+      >
+        <div className="relative z-10">
+          <LocationDistancesMobile
+            title={title}
+            description={description}
+            items={LIST_ITEMS_IMAGES}
+          />
+        </div>
+      </section>
 
       {/* Desktop */}
       <div className="hidden md:block">

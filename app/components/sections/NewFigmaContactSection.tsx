@@ -4,10 +4,18 @@ import { useTranslation } from 'react-i18next';
 import { SectionHeader } from '@/app/components/ui/SectionHeader';
 import Image from 'next/image';
 import { NewFigmaContactForm } from '../layout/NewFigmaContactForm';
+import { useMediaQuery } from '@/app/hooks/useMediaQuery';
 
 
 export const NewFigmaContactSection = () => {
   const { t } = useTranslation();
+
+  const isMobile = useMediaQuery("(max-width: 640px)");
+
+  const description = isMobile 
+  ? t("home.contact.header.mobileSubtitle") 
+  : t("home.contact.header.subtitle");
+
 
   return (
     <section
@@ -24,7 +32,7 @@ export const NewFigmaContactSection = () => {
       {/* ========================================================= */}
       {/* 🔶 SOMBRAS SUPERIORES IGUALES AL HOME INTRO */}
       {/* ========================================================= */}
-      <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[20]">
+      <div className="absolute inset-x-0 top-0 bot-0 pointer-events-none overflow-visible z-[20]">
         {/* Izquierda */}
         <Image
           src="/images/home/shadows/Recursos/Re_3.png"
@@ -49,7 +57,7 @@ export const NewFigmaContactSection = () => {
           height={600}
           className="absolute hidden md:block"
           style={{
-            top: '500px',
+            top: '550px',
             right: '90px',
             transform: 'scale(1.5)',
             objectFit: 'contain',
@@ -61,10 +69,10 @@ export const NewFigmaContactSection = () => {
       {/* 🔶 CONTENIDO CENTRADO */}
       <div id="contact" className="relative z-10 max-w-[900px] mx-auto">
         {/* HEADER */}
-        <div className="text-center mb-16 mt-8">
+        <div className="text-center mb-16 mt-20">
           <SectionHeader
             title={t('home.contact.header.title')}
-            description={t('home.contact.header.subtitle')}
+            description={description}
             align="center"
             to={t('home.contact.header.to')}
           />

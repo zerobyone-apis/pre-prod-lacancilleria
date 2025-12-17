@@ -21,11 +21,17 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
   let timelineItems: TimelineItem[] = [];
   let backgroundColor: string = '';
   let title: string = '';
+  let subTitle: string = '';
+  let mobileSubTitle: string = '';
   let mobileTitle: string = '';
 
   if (home) {
     title = 'home.timeline.title';
+    subTitle = 'home.timeline.subTitle';
+    
     mobileTitle = 'home.mobile_timeline.title';
+    mobileSubTitle = 'home.mobile_timeline.mobileSubTitle';
+
     backgroundColor = 'bg-gradient-to-b from-[#E6DCCF] to-[#F7F5F1]';
     timelineItems = [
       {
@@ -57,7 +63,9 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
 
   if (estate) {
     title = 'estate.cancilleria.amenities.title';
+    subTitle = 'estate.cancilleria.amenities.subTitle';
     mobileTitle = 'estate.cancilleria.amenities.mobileTitle';
+    mobileSubTitle = 'estate.cancilleria.amenities.mobileSubTitle';
     backgroundColor = 'bg-[#F7F5F1]';
     timelineItems = [
       {
@@ -82,13 +90,13 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
       {
         text: t('estate.cancilleria.amenities.items.air-accon'),
         mobileText: t('estate.cancilleria.amenities.items.air-accon'),
-        image: '/images/the_estate/la_cancilleria/services/no-image.jpg',
+        image: '/images/the_estate/la_cancilleria/amenities/air.png',
         imagePosition: 'left',
       },
       {
         text: t('estate.cancilleria.amenities.items.master-suite'),
         mobileText: t('estate.cancilleria.amenities.items.master-suite'),
-        image: '/images/the_estate/la_cancilleria/services/no-image.jpg',
+        image: '/images/the_estate/la_cancilleria/amenities/tv.jpg',
         imagePosition: 'right',
       },
     ];
@@ -96,17 +104,42 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
 
   const mobileHeaderKey = isMobile ? mobileTitle : title || title;
 
+  if (isMobile && estate) {
+    // Mobile Estate: fondo unificado con degradé cálido
+    return (
+      <section className="relative w-full pt-10 overflow-hidden bg-nieve">
+        <div
+          className="absolute inset-x-0 top-0 h-[520px] pointer-events-none z-0"
+          style={{
+            background:
+              'linear-gradient(360deg, rgba(247,245,241,0) 0%, #F7F5F1 80%, #f3e7da 100%)',
+          }}
+        />
+        <div className="relative z-10">
+          <TimelineMobile
+            items={timelineItems}
+            backgroundColor="bg-transparent"
+            title={mobileHeaderKey}
+            subTitle={mobileSubTitle}
+          />
+        </div>
+      </section>
+    );
+  }
+
   return isMobile ? (
     <TimelineMobile
       items={timelineItems}
       backgroundColor={backgroundColor}
       title={mobileHeaderKey}
+      subTitle={mobileSubTitle}
     />
   ) : (
     <DesktopTimeline
       timelineItems={timelineItems}
       backgroundColor={backgroundColor}
       title={title}
+      subTitle={mobileSubTitle}
     />
   );
 };

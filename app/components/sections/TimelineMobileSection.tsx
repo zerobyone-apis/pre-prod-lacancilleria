@@ -11,13 +11,19 @@ import { t } from 'i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const TimelineMobile = ({ items, backgroundColor, title }: any) => {
+export const TimelineMobile = ({
+  items,
+  backgroundColor,
+  title,
+  subTitle,
+}: any) => {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const blocks = gsap.utils.toArray<HTMLElement>('.tl-block');
-      const progressLine = document.querySelector<HTMLElement>('.tl-line-progress');
+      const progressLine =
+        document.querySelector<HTMLElement>('.tl-line-progress');
 
       // Línea vertical que “avanza” con el scroll
       if (progressLine && container.current) {
@@ -95,13 +101,15 @@ export const TimelineMobile = ({ items, backgroundColor, title }: any) => {
   }, []);
 
   return (
-    <div
-      ref={container}
-      className={`px-5 pt-10 pb-24 ${backgroundColor}`}
-    >
-      <h2 className="text-h1-sm font-serif text-center text-mar mb-10">
-        <Trans i18nKey={title} />
-      </h2>
+    <div ref={container} className={`px-5 pt-10 md:pt-20 pb-24 ${backgroundColor}`}>
+      <div>
+        <h2 className="text-h1-sm font-serif text-center text-mar mb-">
+          <Trans i18nKey={title} />
+        </h2>
+        <p className="text-body md:text-body font-serif text-center text-mar mb-10">
+          <Trans i18nKey={subTitle} />
+        </p>
+      </div>
 
       <div className="relative ml-5">
         {/* Línea base con forma de aguja (punta fina en ambos extremos) */}
@@ -123,68 +131,72 @@ export const TimelineMobile = ({ items, backgroundColor, title }: any) => {
         />
 
         <div className="pl-7 space-y-8">
-        {items.map((item: any, i: number) => (
-          <div
-            key={i}
-            className="
+          {items.map((item: any, i: number) => (
+            <div
+              key={i}
+              className="
               tl-block
               relative
               flex flex-col gap-6
               py-10
             "
-          >
-            {/* DOT */}
-            <div className="absolute -left-7 top-24 h-full flex items-start -translate-x-1/2">
-              <div
-                className="
+            >
+              {/* DOT */}
+              <div className="absolute -left-7 top-24 h-full flex items-start -translate-x-1/2">
+                <div
+                  className="
                   tl-dot
                   w-3.5 h-3.5 rounded-full bg-piel
                   border-[5px] border-[#f7f1ea]
                   shadow-[0_10px_25px_-10px_rgba(0,0,0,0.40)]
                 "
-              />
-            </div>
+                />
+              </div>
 
-            {/* CARD */}
-            <div
-              className="
+              {/* CARD */}
+              <div
+                className="
                 rounded-2xl border border-[#e3d5c4]/80 bg-[#f7f3ed]/80
                 shadow-[0_14px_35px_-24px_rgba(0,0,0,0.55)]
                 px-4 py-6
               "
-            >
-              {/* Número + etiqueta */}
-              <div className="flex items-center justify-start gap-3 mb-4">
-                <div className="flex items-center justify-center w-7 h-7 rounded-full border border-[#d0bba3] bg-[#f9f5f0] text-[11px] font-medium tracking-[0.16em] text-mar/70">
-                  {String(i + 1).padStart(2, '0')}
+              >
+                {/* Número + etiqueta */}
+                <div className="flex items-center justify-start gap-3 mb-4">
+                  <div className="flex items-center justify-center w-7 h-7 rounded-full border border-[#d0bba3] bg-[#f9f5f0] text-[11px] font-medium tracking-[0.16em] text-mar/70">
+                    {String(i + 1).padStart(2, '0')}
+                  </div>
                 </div>
-              </div>
 
-              {/* TEXT */}
-              <p className="text-[16px] leading-relaxed font-sans text-mar/85">
-                <Trans i18nKey={item.mobileText} />
-              </p>
+                {/* TEXT */}
+                <p className="text-[16px] leading-relaxed font-sans text-mar/85">
+                  <Trans i18nKey={item.mobileText} />
+                </p>
 
-              {/* IMAGE */}
-              <div
-                className="
+                {/* IMAGE */}
+                <div
+                  className="
                   tl-img relative
                   mt-6
                   w-full
                   h-[220px] sm:h-[250px]
                   rounded-2xl overflow-hidden
                 "
-              >
-                <Image src={item.image} alt="" fill className="object-cover" />
+                >
+                  <Image
+                    src={item.image}
+                    alt=""
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
-
-          </div>
-        ))}
+          ))}
         </div>
       </div>
 
-      <div className=''>
+      <div className="">
         <HomeCTASection textCta={t('home.cta.mobileTitle')} />
       </div>
     </div>

@@ -89,7 +89,7 @@ export const LocationDistancesSection = ({
               {/* TEXTO */}
               <p
                 className={`
-          text-[26px] md:text-[30px] leading-snug transition-colors duration-300
+          text-h2-sm md:text-h2-md transition-colors duration-300
           ${hoveredId === item.key ? 'text-piel' : 'text-mar/70'}
           group-hover:text-piel
         `}

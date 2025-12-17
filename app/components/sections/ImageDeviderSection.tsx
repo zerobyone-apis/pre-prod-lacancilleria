@@ -26,7 +26,8 @@ export const ImageDeviderSection = (props: props) => {
             alt="La Barra, Punta del Este, and José Ignacio area"
             className="
               w-full h-full
-              object-contain      /* mobile: nada de zoom */
+              object-cover
+              object-top    /* mobile: nada de zoom */
               md:object-cover     /* desktop: rellena pantalla */
             "
           />

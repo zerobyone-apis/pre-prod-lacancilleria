@@ -36,11 +36,14 @@ export const PropertiesSliderSection = ({
 
   if (propertyFilter == 'griega') {
     LIST_IMAGES = [
-      '/images/the_estate/la_cancilleria/services/no-image.jpg',
-      '/images/the_estate/la_cancilleria/services/no-image.jpg',
-      '/images/the_estate/la_cancilleria/services/no-image.jpg',
-      '/images/the_estate/la_cancilleria/services/no-image.jpg',
-      '/images/the_estate/la_cancilleria/services/no-image.jpg',
+      '/images/the_estate/la_griega/house/full_view_front.webp',
+      '/images/the_estate/la_griega/house/bank_garden.webp',
+      '/images/the_estate/la_griega/house/far_front_house.webp',
+      '/images/the_estate/la_griega/house/cochera.webp',
+      '/images/the_estate/la_griega/house/cochera_2.webp',
+      '/images/the_estate/la_griega/house/full_view.webp',
+      '/images/the_estate/la_griega/house/pasillo.webp',
+      '/images/the_estate/la_griega/house/patio.webp',
     ];
     LIST_CAPTIONS = [
       {
@@ -117,8 +120,16 @@ export const PropertiesSliderSection = ({
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden text-mar px-4 sm:px-6 md:px-12 lg:px-24 py-20 sm:py-28 md:pt-48 bg-[#f7f5f1] md:bg-[#f3e7da]"
+      className="relative w-full overflow-hidden text-mar px-4 sm:px-6 md:px-12 lg:px-24 py-20 sm:py-28 md:pt-48 bg-[#f3e7da]"
       >
+      {/* MOBILE GRADIENT BACKGROUND – mismo lenguaje visual que HomeIntroSection */}
+      <div
+        className="absolute inset-x-0 top-0 h-[520px] md:hidden pointer-events-none z-[10]"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(247,245,241,0) 0%, #f7f5f1 45%, #f3e7da 100%)',
+        }}
+      />
       {/* SHADOWS ABOVE GRADIENT */}
       <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[20]">
         {/* SHADOW LEFT */}

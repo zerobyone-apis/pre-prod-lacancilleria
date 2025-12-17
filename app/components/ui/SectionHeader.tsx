@@ -27,16 +27,16 @@ export const SectionHeader = ({
         className
       )}
     >
-      <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">
+      <h2 className="text-h1-sm md:text-h1-md lg:text-h1-lg font-serif leading-tight">
         <Trans i18nKey={title} />
       </h2>
       <p className="text-body md:text-body lg:text-body font-serif leading-tight">
         <Trans i18nKey={label} />
       </p>
       {description && (
-        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+        <p className="text-body md:text-body text-muted-foreground leading-tight">
           <Trans i18nKey={description} />
-          <Trans i18nKey={to} />
+          <span className="pt-3 text-[14px] md:text-body text-muted-foreground leading-tight"><Trans i18nKey={to} /></span>
         </p>
       )}
     </div>
