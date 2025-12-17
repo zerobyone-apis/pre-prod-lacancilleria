@@ -22,9 +22,11 @@ interface LocationDistancesProps {
 export const VariantThumbnailCards = ({
   title,
   description,
-  items,
+  items = [],
 }: LocationDistancesProps) => {
   const [openKey, setOpenKey] = useState<string | null>(null);
+
+  if (!items || items.length === 0) return null;
 
   return (
     <div className="md:hidden px-4 py-8">
@@ -121,9 +123,11 @@ export const VariantThumbnailCards = ({
 export const VariantMinimalList = ({
   title,
   description,
-  items,
+  items = [],
 }: LocationDistancesProps) => {
   const [openKey, setOpenKey] = useState<string | null>(null);
+
+  if (!items || items.length === 0) return null;
 
   return (
     <div className="md:hidden px-6 py-8">
@@ -196,9 +200,11 @@ export const VariantMinimalList = ({
 export const VariantOverlayCards = ({
   title,
   description,
-  items,
+  items = [],
 }: LocationDistancesProps) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  if (!items || items.length === 0) return null;
 
   return (
     <div className="md:hidden px-4 py-8">
@@ -293,9 +299,11 @@ export const VariantOverlayCards = ({
 export const VariantHorizontalCarousel = ({
   title,
   description,
-  items,
+  items = [],
 }: LocationDistancesProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  if (!items || items.length === 0) return null;
 
   return (
     <div className="md:hidden py-8">
@@ -377,9 +385,11 @@ export const VariantHorizontalCarousel = ({
 export const VariantDesktopStyle = ({
   title,
   description,
-  items,
+  items = [],
 }: LocationDistancesProps) => {
   const [openKey, setOpenKey] = useState<string | null>(null);
+
+  if (!items || items.length === 0) return null;
 
   return (
     <div className="md:hidden px-4 py-8">
@@ -464,9 +474,11 @@ export const VariantDesktopStyle = ({
 export const LocationDistanceMobileShowcase = ({
   title,
   description,
-  items,
+  items = [],
 }: LocationDistancesProps) => {
   const [activeVariant, setActiveVariant] = useState(0);
+
+  if (!items || items.length === 0) return null;
 
   const variants = [
     { name: 'Thumbnail Cards', component: VariantThumbnailCards },
