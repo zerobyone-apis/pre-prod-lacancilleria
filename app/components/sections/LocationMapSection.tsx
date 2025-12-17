@@ -55,7 +55,7 @@ export const LocationMapSection = () => {
         name: 'Playa Mansa',
         coordinates: [-54.9411, -34.9527],
         description: 'Costa tranquila, ideal para atardeceres y familias.',
-        image: '/image?query=Playa+Mansa+Punta+del+Este+atardecer&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/playa-mansa.jpeg',
         category: 'beach-15',
       },
       {
@@ -64,7 +64,7 @@ export const LocationMapSection = () => {
         coordinates: [-54.9372, -34.9578],
         description:
           'La clásica playa oceánica con la icónica escultura de La Mano.',
-        image: '/image?query=Escultura+La+Mano+Punta+del+Este&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/playa-montoya.jpeg',
         category: 'beach-15',
       },
       {
@@ -72,8 +72,7 @@ export const LocationMapSection = () => {
         name: 'Puerto de Punta del Este',
         coordinates: [-54.9494, -34.9617],
         description: 'Paseo, gastronomía y avistamiento de lobos marinos.',
-        image:
-          '/image?query=Puerto+Punta+del+Este+yachts+lobos+marinos&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/puerto-pde.jpeg',
         category: 'landmark-15',
       },
       {
@@ -82,7 +81,7 @@ export const LocationMapSection = () => {
         coordinates: [-54.9716, -34.9533],
         description:
           'Reserva natural frente a la península con playas y bosques.',
-        image: '/image?query=Isla+Gorriti+playa+bosque&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/isla-gorriti.webp',
         category: 'viewpoint-15',
       },
       {
@@ -91,7 +90,7 @@ export const LocationMapSection = () => {
         coordinates: [-54.8836, -35.0273],
         description:
           'Hogar de la reserva de lobos marinos más grande del hemisferio sur.',
-        image: '/image?query=Isla+de+Lobos+Uruguay+lobos+marinos&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/isla-lobos.jpeg',
         category: 'viewpoint-15',
       },
       {
@@ -99,7 +98,7 @@ export const LocationMapSection = () => {
         name: 'Avenida Gorlero',
         coordinates: [-54.9408, -34.9594],
         description: 'La avenida principal, centro comercial y neurálgico.',
-        image: '/image?query=Avenida+Gorlero+Punta+del+Este+shops&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/gorlero.jpeg',
         category: 'restaurant-15',
       },
       {
@@ -107,7 +106,7 @@ export const LocationMapSection = () => {
         name: 'Calle 20 (Fashion Road)',
         coordinates: [-54.942, -34.961],
         description: 'Boutiques de lujo y marcas internacionales.',
-        image: '/image?query=Calle+20+Punta+del+Este+fashion&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/gorlero.jpeg',
         category: 'restaurant-15',
       },
       {
@@ -115,7 +114,7 @@ export const LocationMapSection = () => {
         name: 'Faro de Punta del Este',
         coordinates: [-54.9516, -34.9688],
         description: 'Vista panorámica histórica desde 1860.',
-        image: '/image?query=Faro+Punta+del+Este+historic&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/faro-pde.webp',
         category: 'landmark-15',
       },
       {
@@ -124,7 +123,7 @@ export const LocationMapSection = () => {
         coordinates: [-54.8465, -34.9142],
         description:
           'Playa ancha de olas fuertes, favorita del surf y la juventud.',
-        image: '/image?query=Playa+Montoya+La+Barra+surf&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/playa-montoya.jpeg',
         category: 'beach-15',
       },
       {
@@ -132,7 +131,7 @@ export const LocationMapSection = () => {
         name: 'Playa Bikini',
         coordinates: [-54.8253, -34.9094],
         description: 'El parador de moda en Manantiales, música y atardeceres.',
-        image: '/image?query=Playa+Bikini+Manantiales+summer&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/playa-bikini.jpg',
         category: 'beach-15',
       },
       {
@@ -140,15 +139,15 @@ export const LocationMapSection = () => {
         name: 'Puente de La Barra',
         coordinates: [-54.8725, -34.9109],
         description: 'El famoso puente ondulante de Leonel Viera.',
-        image: '/image?query=Puente+Ondulante+La+Barra+Leonel+Viera&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/puente-labarra.webp',
         category: 'landmark-15',
       },
       {
         id: 'centro-la-barra',
         name: 'Centro de La Barra',
-        coordinates: [-54.865, -34.9156],
+        coordinates: [-54.860049, -34.914055],
         description: 'Vida nocturna, galerías de arte y estilo bohemio-chic.',
-        image: '/image?query=Centro+La+Barra+Punta+del+Este+night&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/centro-la-barra.jpeg',
         category: 'restaurant-15',
       },
       {
@@ -156,8 +155,7 @@ export const LocationMapSection = () => {
         name: 'Museo del Mar',
         coordinates: [-54.8703, -34.8989],
         description: 'Increíble colección de historia natural y marina.',
-        image:
-          '/image?query=Museo+del+Mar+Punta+del+Este+collection&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/museo-del-mar.jpg',
         category: 'museum-15',
       },
       {
@@ -165,8 +163,7 @@ export const LocationMapSection = () => {
         name: 'Pueblo Manantiales',
         coordinates: [-54.8153, -34.8972],
         description: 'Gastronomía de alto nivel y tiendas de diseño.',
-        image:
-          '/image?query=Pueblo+Manantiales+Punta+del+Este+street&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/pueblo-manantiales.jpeg',
         category: 'landmark-15',
       },
       {
@@ -174,7 +171,7 @@ export const LocationMapSection = () => {
         name: 'Casapueblo',
         coordinates: [-55.0446, -34.9088],
         description: 'La escultura habitable de Carlos Páez Vilaró.',
-        image: '/image?query=Casapueblo+Punta+Ballena+sunset&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/casa_pueblo.jpeg',
         category: 'museum-15',
       },
       {
@@ -182,7 +179,7 @@ export const LocationMapSection = () => {
         name: 'Fundación Pablo Atchugarry (MACA)',
         coordinates: [-54.8207, -34.8661],
         description: 'Museo de Arte Contemporáneo y parque de esculturas.',
-        image: '/image?query=Museo+MACA+Atchugarry+architecture&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/maca.jpeg',
         category: 'landmark-15',
       },
       {
@@ -190,7 +187,7 @@ export const LocationMapSection = () => {
         name: 'Museo Ralli',
         coordinates: [-54.9269, -34.9291],
         description: 'Arte latinoamericano y surrealista en Beverly Hills.',
-        image: '/image?query=Museo+Ralli+Punta+del+Este+exterior&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/museo.jpeg',
         category: 'museum-15',
       },
       {
@@ -198,7 +195,7 @@ export const LocationMapSection = () => {
         name: 'Faro de José Ignacio',
         coordinates: [-54.6297, -34.8461],
         description: 'El símbolo del pueblo pesquero más exclusivo.',
-        image: '/image?query=Faro+Jose+Ignacio+view&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/faro-jose-ignacio.webp',
         category: 'landmark-15',
       },
       {
@@ -206,8 +203,7 @@ export const LocationMapSection = () => {
         name: 'Parador La Huella',
         coordinates: [-54.6328, -34.8463],
         description: 'Restaurante de playa reconocido mundialmente.',
-        image:
-          '/image?query=Parador+La+Huella+Jose+Ignacio+restaurant-15&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/la-huella.avif',
         category: 'restaurant-15',
       },
       {
@@ -215,7 +211,7 @@ export const LocationMapSection = () => {
         name: 'Laguna Garzón',
         coordinates: [-54.55, -34.79],
         description: 'Área protegida para kitesurf y naturaleza.',
-        image: '/image?query=Laguna+Garzon+aerial&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/puente-laguna-garzon.webp',
         category: 'restaurant-15',
       },
       {
@@ -223,8 +219,7 @@ export const LocationMapSection = () => {
         name: 'Puente Laguna Garzón',
         coordinates: [-54.5721, -34.8024],
         description: 'Innovador puente circular arquitectónico.',
-        image:
-          '/image?query=Puente+Laguna+Garzon+Rafael+Vinoly+circular&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/puente-laguna-garzon-1.webp',
         category: 'restaurant-15',
       },
       {
@@ -232,7 +227,7 @@ export const LocationMapSection = () => {
         name: 'Bodega Garzón',
         coordinates: [-54.629, -34.5696],
         description: 'Enoturismo de lujo entre colinas y viñedos.',
-        image: '/image?query=Bodega+Garzon+architecture+vineyards&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/bodega-garzon.jpeg',
         category: 'restaurant-15',
       },
 
@@ -241,7 +236,7 @@ export const LocationMapSection = () => {
         name: 'Pueblo Garzón',
         coordinates: [-54.543, -34.5933],
         description: 'Pueblo rural revitalizado con encanto y aceite de oliva.',
-        image: '/image?query=Pueblo+Garzon+plaza+general&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/pueblo-garzon.jpeg',
         category: 'landmark-15',
       },
     ],
@@ -425,19 +420,18 @@ export const LocationMapSection = () => {
         </div>
       `);
 
-
       const marker = new mapboxgl.Marker()
         .setLngLat(poi.coordinates)
         .setPopup(popup)
         .addTo(map);
 
       // Hover opens popup (minimal + elegant)
-      marker.getElement().addEventListener("mouseenter", () => {
+      marker.getElement().addEventListener('mouseenter', () => {
         popup.setLngLat(poi.coordinates); // Posición fija EXPLÍCITA
-        popup.addTo(map);                 // Muestra el popup sin toggle
+        popup.addTo(map); // Muestra el popup sin toggle
       });
-      
-      marker.getElement().addEventListener("mouseleave", () => {
+
+      marker.getElement().addEventListener('mouseleave', () => {
         popup.remove();
       });
     });
