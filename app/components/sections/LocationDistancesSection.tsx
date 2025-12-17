@@ -48,7 +48,7 @@ export const LocationDistancesSection = ({
     <Section className="relative overflow-hidden bg-[#F7F5F1] pb-32">
       <div>
         {/* TÍTULO */}
-        <h2 className="text-center font-serif text-mar text-[32px] md:text-[48px] lg:text-[54px] leading-tight">
+        <h2 className="text-center font-serif text-mar text-h1-sm md:text-h1-md lg:text-h1-lg leading-tight">
           <Trans i18nKey={title} />
         </h2>
         {/* Description */}

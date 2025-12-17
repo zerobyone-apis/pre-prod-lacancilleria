@@ -14,44 +14,6 @@ type LocationPOI = {
   category: string;
 };
 
-// const ICON_SVG: Record<string, string> = {
-//   beach: `
-//       <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
-//         <circle cx="12" cy="12" r="11" fill="#C49A6C" opacity="0.25"/>
-//         <path d="M4 16c4 0 4-2 8-2s4 2 8 2" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//         <path d="M6 12c3 0 3-2 6-2s3 2 6 2" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//         <circle cx="16" cy="8" r="2" fill="#C49A6C"/>
-//       </svg>
-//     `,
-//   restaurant-15: `
-//       <svg width="36" height="36" viewBox="0 0 24 24">
-//         <circle cx="12" cy="12" r="11" fill="#C49A6C" opacity="0.25"/>
-//         <path d="M6 4v8a2 2 0 0 0 4 0V4" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//         <path d="M14 4h3v6a3 3 0 0 1-3 3" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//       </svg>
-//     `,
-//   museum-15: `
-//       <svg width="36" height="36" viewBox="0 0 24 24">
-//         <circle cx="12" cy="12" r="11" fill="#C49A6C" opacity="0.25"/>
-//         <path d="M5 10L12 6l7 4" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//         <path d="M7 10v6M12 10v6M17 10v6" stroke="#C49A6C" stroke-width="2"/>
-//       </svg>
-//     `,
-//   island: `
-//       <svg width="36" height="36" viewBox="0 0 24 24">
-//         <circle cx="12" cy="12" r="11" fill="#C49A6C" opacity="0.25"/>
-//         <path d="M4 15c4-3 12-3 16 0" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//         <path d="M12 7l2 4h-4l2-4z" fill="#C49A6C"/>
-//       </svg>
-//     `,
-//   landmark-15: `
-//       <svg width="36" height="36" viewBox="0 0 24 24">
-//         <circle cx="12" cy="12" r="11" fill="#C49A6C" opacity="0.25"/>
-//         <path d="M12 3l3 6h-6l3-6zM10 9h4v12h-4z" fill="#C49A6C"/>
-//       </svg>
-//     `,
-// };
-
 const BASE_LOCATION: [number, number] = [-54.84617, -34.909796]; // La Cancillería (Montoya / La Barra)
 
 // ---------------------------------------------
@@ -443,18 +405,6 @@ export const LocationMapSection = () => {
 
       const km = getDistanceKm(BASE_LOCATION, poi.coordinates);
       const time = getTravelTimes(km);
-
-      // const svg = ICON_SVG[poi.category];
-
-      // const el = document.createElement('div');
-      // el.innerHTML = svg;
-      // el.style.width = '36px';
-      // el.style.height = '36px';
-      // el.style.display = 'flex';
-      // el.style.alignItems = 'center';
-      // el.style.justifyContent = 'center';
-      // el.style.transform = 'translate(-50%, -50%)';
-      // el.style.cursor = 'pointer';
 
       const popup = new mapboxgl.Popup({
         offset: [0, -20],

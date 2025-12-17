@@ -130,7 +130,7 @@ export const HomeIntroSection = () => {
           </p>
 
           {/* TITLE */}
-          <h2 className="text-[32px] leading-[38px] sm:text-[36px] sm:leading-[42px] md:text-h1 md:leading-[54px] mb-5 sm:mb-6">
+          <h2 className="text-h1-sm leading-[38px] sm:text-h1-sm sm:leading-[42px] md:text-h1-md md:leading-[54px] lg:text-h1-lg mb-5 sm:mb-6">
             <Trans i18nKey={'home.intro.title'} />
           </h2>
 
@@ -146,7 +146,7 @@ export const HomeIntroSection = () => {
         {/* SECOND BLOCK */}
         <div className="max-w-6xl mx-auto text-center fade-block">
           {/* TITLE */}
-          <h2 className="text-[30px] leading-[36px] sm:text-[34px] sm:leading-[40px] md:text-h1 md:leading-[54px] text-mar/80 mb-5 sm:mb-6">
+          <h2 className="text-h1-sm leading-[36px] sm:text-h1-sm sm:leading-[40px] md:text-h1-md md:leading-[54px] lg:text-h1-lg text-mar/80 mb-5 sm:mb-6">
             <Trans i18nKey={'home.introSecond.title'} />
           </h2>
 

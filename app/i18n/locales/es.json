@@ -7,78 +7,82 @@
   },
   "home": {
     "hero": {
-      "title": "UN REFUGIO PRIVADO<br />FRENTE AL MAR EN PUNTA DEL ESTE",
-      "subtitle": "Donde la elegancia se fusiona con la tranquilidad: una exclusiva residencia privada a pasos del océano"
+      "title": "UN REFUGIO PRIVADO SOBRE LA COSTA <br />EN PUNTA DEL ESTE",
+      "subtitle": "Donde la elegancia se encuentra con la tranquilidad. Una finca exclusiva a metros del mar"
     },
     "intro": {
       "label": "¿Qué es La Cancillería?",
       "title": "ENTRE JARDINES EXUBERANTES <br />Y VISTAS PANORÁMICAS AL MAR",
-      "description": "La Cancillería brinda la privacidad de un complejo cerrado con la calidez y comodidad de un hogar familiar"
+      "description": "La Cancillería ofrece la privacidad de una residencia cerrada y el calor de un verdadero hogar"
     },
     "introSecond": {
-      "title": "UNA RESIDENCIA DE LUJO EN <br />EL CORAZÓN DE LA BARRA",
-      "description": "La residencia principal dispone de varios espacios exteriores diseñados especialmente para el relax y el disfrute, así como amenities de primer nivel para vivir momentos únicos"
+      "title": "UNA FINCA DE LUJO EN EL <br />CORAZÓN DE LA BARRA",
+      "description": "La residencia principal cuenta con varios espacios exteriores diseñados para el disfrute y la relajación, así como comodidades y ambientes destacados"
     },
     "quickFacts": {
-      "label": "Descubrí",
-      "title": "AMENITIES Y SERVICIOS<br />EXCLUSIVOS",
+      "label": "Descubre",
+      "title": "AMENITIES Y <br />ESPACIOS EXCLUSIVOS",
       "items": {
         "pool": {
-          "title": "Piscina Climatizada Exterior",
-          "description": "Disfrutá del agua todo el año"
+          "title": "PISCINA EXTERIOR CLIMATIZADA",
+          "description": "Disfrute de la piscina durante todo el año"
         },
         "garden": {
-          "title": "Parques y Jardines",
-          "description": "Jardines cuidados y árboles añejos rodean la propiedad"
+          "title": "JARDINES y PAISAJE",
+          "description": "Jardines y árboles maduros que rodean toda la propiedad"
         },
         "pergola": {
-          "title": "Espacio Exterior con Pérgola",
-          "description": "Galería techada ideal para almuerzos o cenas al aire libre"
+          "title": "ÁREA DE PÉRGOLA EXTERIOR",
+          "description": "Espacio sombreado ideal para almuerzos al aire libre"
         },
         "staff-house": {
-          "title": "Casa de Huéspedes <br />La Griega",
-          "description": "Dependencias independientes para personal, asegurando un servicio fluido"
+          "title": "CASA DE SERVICIO <br />La Griega",
+          "description": "Sector independiente para el personal, para un servicio impecable"
         },
         "parrillero": {
-          "title": "Parrillero y comedor exterior",
-          "description": "Parrillero tradicional y espacio para recibir invitados al aire libre"
+          "title": "PARRILLERO Y COMEDOR <br /> EXTERIOR",
+          "description": "Parrillero tradicional y comedor abierto para compartir encuentros"
         },
         "services": {
-          "title": "Servicios Opcionales",
-          "description": "Chef, niñera, chofer y más; todo adaptado a tus necesidades"
+          "title": "SERVICIOS OPCIONALES",
+          "description": "Chef, niñera, chofer y más: servicios personalizados para tu estadía"
         },
         "office": {
-          "title": "Oficina y Espacio de Trabajo",
-          "description": "Oficina privada y espacio tranquilo para trabajo remoto"
+          "title": "OFICINA Y ESPACIO <br />DE TRABAJO",
+          "description": "Espacio de oficina silencioso para quienes trabajan a distancia"
         }
       },
-      "cta": { "title": "¿Listo para descubrir?", "button": "Descubrí la Propiedad" }
+      "cta": { "title": "¿Listo para descubrir?", "button": "Conocé la Propiedad" }
     },
     "timeline": {
       "title": "VIVÍ LA EXPERIENCIA <br />PUNTA DEL ESTE",
-      "oceanBreezes": "Despertá con la <br />brisa del mar",
-      "alfrescoLunches": "Almuerzos al aire libre <br />junto a la piscina",
-      "vibrantScene": "Descubrí la energía<br />y el movimiento de Punta del Este,<br />a sólo minutos",
-      "laBarraJoseIgnacio": "Viví lo mejor de La Barra<br />y José Ignacio, a pasos<br />de la residencia",
+      "subTitle": "",
+      "oceanBreezes": "Despertá con la brisa <br /> del mar",
+      "alfrescoLunches": "Almorzá al aire libre junto <br />a la piscina",
+      "vibrantScene": "Descubrí la movida de <br />Punta del Este, a sólo <br /> minutos",
+      "laBarraJoseIgnacio": "Descubrí la vibrante escena <br />de La Barra y José Ignacio <br /> a pocos minutos",
       "exploreLocation": "Ver ubicación"
     },
     "mobile_timeline": {
-      "title": "VIVÍ LA<br />EXPERIENCIA PUNTA DEL ESTE",
+      "title": "VIVÍ LA <br />EXPERIENCIA <br />PUNTA DEL ESTE",
+      "mobileSubTitle": "",
+
       "oceanBreezes": "Despertá con la brisa del mar",
-      "alfrescoLunches": "Almuerzos al aire libre junto a la piscina",
-      "vibrantScene": "Descubrí la energía y el movimiento de Punta del Este,<br />a sólo minutos",
-      "laBarraJoseIgnacio": "Viví la vibrante escena de La Barra y <br />José Ignacio<br />a minutos de distancia",
+      "alfrescoLunches": "Almorzá al aire libre junto a la piscina",
+      "vibrantScene": "Descubrí la movida de <br />Punta del Este a pocos minutos",
+      "laBarraJoseIgnacio": "Descubrí la movida de <br />La Barra y José Ignacio a <br />pocos minutos",
       "exploreLocation": "Ver ubicación"
     },
     "cta": {
-      "title": "SUMERGITE EN UN PARAÍSO <br />DONDE LA NATURALEZA Y EL LUJO<br />SE ENCUENTRAN EN ARMONÍA",
-      "mobileTitle": "SUMERGITE EN UN PARAÍSO <br />DONDE <br />LA NATURALEZA Y EL LUJO SE UNEN EN PLENA ARMONÍA",
-      "button": "CONTACTO"
+      "title": "SUMERGITE EN UN PARAÍSO <br />DONDE LA NATURALEZA Y EL LUJO SE <br />ENCUENTRAN EN ARMONÍA",
+      "mobileTitle": "SUMERGITE EN UN PARAÍSO <br />DONDE <br />LA NATURALEZA Y EL LUJO SE UNEN EN ARMONÍA",
+      "button": "CONTACTAR"
     },
     "contact": {
       "header": {
         "title": "¿LISTO PARA VIVIR <br />LA CANCILLERÍA?",
-        "subtitle": "Para más información escribinos a<br />",
+        "subtitle": "Para más información, envianos un correo a<br />",
+        "mobileSubtitle": "Para más información <br />envianos un correo a<br />",
         "to": "contact@lacancilleriaestateuruguay.com"
       },
       "form": {
@@ -87,190 +91,166 @@
         "phone": "Teléfono",
         "message": "Tu mensaje",
         "submit": "Enviar mensaje",
-        "success": "Mensaje enviado exitosamente",
+        "success": "Mensaje enviado con éxito",
         "optional": "opcional"
       }
     }
   },
   "location": {
     "hero": {
-      "title": "El corazón de Punta del Este",
-      "subtitle": "Donde la exclusividad se une a la comodidad"
+      "title": "EL CORAZÓN DE PUNTA DEL ESTE",
+      "subtitle": "Exclusividad y comodidad en un solo lugar"
     },
     "intro": {
-      "label": "Ubicación Privilegiada",
-      "title": "En el destino más prestigioso de Uruguay",
-      "description": "Ubicada en la codiciada zona de La Barra, esta propiedad ofrece el equilibrio ideal entre privacidad y fácil acceso. Estás a pocos minutos de playas increíbles, gastronomía internacional y actividades culturales; todo en el marco de un entorno tranquilo y seguro."
+      "label": "Ubicación privilegiada",
+      "title": "En el destino más exclusivo de Uruguay",
+      "description": "En el codiciado barrio de La Barra, esta propiedad te ofrece privacidad absoluta y una ubicación estratégica: a minutos de playas únicas, la mejor gastronomía y la cultura de la zona, sin perder la tranquilidad de una comunidad cerrada."
     },
     "map": {
-      "title": "Tu nuevo barrio",
-      "description": "Descubrí los principales puntos de interés cerca de La Cancillería",
-      "tokenRequired": "Se requiere MapBox Token",
-      "tokenDescription": "Por favor ingresá tu token público de MapBox para ver el mapa interactivo. Obtenelo en",
+      "title": "Tu Nuevo Entorno",
+      "description": "Conocé los principales puntos de interés cerca de La Cancillería",
+      "tokenRequired": "Se requiere token de MapBox",
+      "tokenDescription": "Por favor, ingresá tu token público de MapBox para ver el mapa interactivo. Conseguí tu token en",
       "loadMap": "Cargar mapa"
     },
     "gallery": { "title": "Recorré la zona" },
-    "nearby": {
-      "title": "Sitios de interés cercanos",
-      "items": {
-        "beach": {
-          "title": "Playa José Ignacio",
-          "distance": "15 min en auto",
-          "description": "Playas vírgenes de arena blanca y aguas cristalinas"
-        },
-        "marina": {
-          "title": "Marina de Punta del Este",
-          "distance": "20 min en auto",
-          "description": "Marina de primer nivel con yates de lujo y propuestas gastronómicas"
-        },
-        "golf": {
-          "title": "Club de Golf La Barra",
-          "distance": "10 min en auto",
-          "description": "Cancha de golf de campeonato diseñada por arquitectos renombrados"
-        },
-        "restaurants": {
-          "title": "Restaurantes Gourmet",
-          "distance": "5 min en auto",
-          "description": "Oferta gastronómica de chefs internacionales"
-        }
-      }
-    },
+
     "distances": {
-      "title": "FÁCIL ACCESO <br/>EN UN ENTORNO PRIVADO",
+      "title": "FÁCIL ACCESO <br/>PRIVACIDAD GARANTIZADA",
       "items": {
         "pde-airport": "A 16 millas de <br />Aeropuerto de Punta del Este",
         "carrasco": "A 70 millas de <br />Aeropuerto de Carrasco",
-        "montoya": "A 5 min caminando de <br />Playa Montoya",
-        "bikini": "A 7 min de <br />Playa Bikini",
-        "labarra": "A 3 min de restaurantes<br />y vida nocturna de La Barra"
+        "montoya": "A 5 minutos caminando de <br />Playa Montoya",
+        "bikini": "A 7 minutos de <br />Playa Bikini",
+        "labarra": "A 3 minutos de restaurantes <br /> y vida nocturna de La Barra"
       }
     },
     "cta": {
-      "title": "Viví donde todo sucede",
-      "description": "Descubrí la ubicación ideal para tu próxima casa",
-      "button": "Saber más"
+      "title": "Viví donde la vida sucede",
+      "description": "Encontrá el lugar perfecto para tu hogar soñado",
+      "button": "Más información"
     }
   },
   "estate": {
     "cancilleria": {
       "hero": {
-        "title": "UNA RESIDENCIA DE ALTO NIVEL <br />PENSADA PARA EL CONFORT Y LA PRIVACIDAD",
-        "subtitle": "Interiores refinados, amplios exteriores. Un lugar concebido para el descanso, la privacidad y el entorno natural"
+        "title": "UN HOGAR DE CATEGORÍA DISEÑADO <br /> PARA LA PRIVACIDAD Y EL CONFORT",
+        "subtitle": "Interiores elegantes y acogedores. Espacios abiertos para reconectar con la naturaleza"
       },
       "intro": {
-        "label": "RESIDENCIA PRINCIPAL",
+        "label": "CASA PRINCIPAL",
         "title": "LA CANCILLERÍA",
-        "description": "La residencia principal del complejo cuenta con cinco dormitorios,<br/>amplios espacios sociales, cocina moderna y múltiples áreas exteriores diseñadas para compartir y relajarse."
+        "description": "La casa principal cuenta con cinco dormitorios, amplios ambientes para el estar y comedor, cocina moderna y múltiples espacios exteriores pensados para el disfrute y la relajación."
       },
       "features": {
-        "title": "Características",
-        "feat_1": "Suite principal en planta alta con baño privado",
-        "feat_2": "2 dormitorios que comparten baño (planta alta)",
-        "feat_3": "2 dormitorios que comparten baño (planta baja)",
-        "feat_4": "Dormitorio de servicio + baño",
+        "title": "CARACTERÍSTICAS",
+        "feat_1": "1 suite principal con baño privado",
+        "feat_2": "2 dormitorios que comparten 1 baño (planta alta)",
+        "feat_3": "2 dormitorios que comparten 1 baño (planta baja)",
+        "feat_4": "1 habitación de servicio + 1 baño",
         "feat_5": "Espacio de oficina",
-        "feat_6": "Living y comedor integrados",
+        "feat_6": "Ambientes de estar y comedor",
         "feat_7": "Cocina totalmente equipada"
       },
 
       "amenities": {
-        "title": "AMENITIES <br />EXCLUSIVOS",
-        "mobileTitle": "Amenities <br/> exclusivos",
+        "title": "AMENITIES EXCLUSIVOS",
+        "subTitle": "Viví amenities exclusivos pensados para tu confort",
+        "mobileTitle": "AMENITIES EXCLUSIVOS",
+        "mobileSubTitle": "Viví amenities exclusivos pensados para tu confort",
         "items": {
-          "pool": "Piscina climatizada exterior",
-          "pergola": "Espacio exterior con pérgola",
-          "grill": "Parrillero argentino y comedor exterior con pérgola",
+          "pool": "Piscina exterior climatizada",
+          "pergola": "Área exterior de relax <br /> con pérgola",
+          "grill": "Comedor exterior con <br/> parrillero estilo argentino y pérgola",
           "air-accon": "Aire acondicionado en todos los ambientes",
-          "master-suite": "WiFi y TV en el living y la suite principal"
+          "master-suite": "Wifi y TV en el living <br/> y la suite principal"
         }
       },
       "services": {
-        "title": "SERVICIOS DE LA PROPIEDAD",
-        "description": "Todo pensado para tu máximo confort y tranquilidad",
+        "title": "SERVICIOS INCLUIDOS",
+        "description": "Todo está diseñado para tu comodidad y tranquilidad",
         "items": {
-          "housekeeping": "Empleada domestica <br /> y limpieza diaria",
-          "loundry": "Lavandería y vestidor",
-          "garden": "Mantenimiento de jardín exterior",
-          "pool": "Servicio de mantenimiento de piscina",
-          "property": "Conservación general de la propiedad"
+          "housekeeping": "Limpieza y mantenimiento del hogar",
+          "loundry": "Lavandería y cuidado de ropa",
+          "garden": "Jardinería y mantenimiento exterior",
+          "pool": "Cuidado y mantenimiento de la piscina",
+          "property": "Mantenimiento general de la propiedad"
         }
       }
     },
     "griega": {
       "intro": {
-        "label": "CASA DE HUÉSPEDES O STAFF",
+        "label": "CASA DE INVITADOS O PERSONAL",
         "title": "LA GRIEGA",
-        "description": "Ubicada en el mismo complejo, La Griega ofrece alojamiento independiente para huéspedes o personal, garantizando privacidad y comodidad para todos"
+        "description": "Ubicada en la misma finca, La Griega ofrece un espacio independiente para invitados o personal, garantizando privacidad y comodidad para todos"
       },
       "features": {
-        "title": "Características",
-        "griega_feat_1": "Suite principal con baño en suite",
-        "griega_feat_2": "2 dormitorios que comparten un baño (planta alta)",
-        "griega_feat_3": "2 dormitorios que comparten un baño (planta baja)",
-        "griega_feat_4": "Dormitorio de servicio + baño",
-        "griega_feat_5": "Espacio de oficina",
-        "griega_feat_6": "Living y comedor integrados",
-        "griega_feat_7": "Cocina completamente equipada"
+        "title": "CARACTERÍSTICAS",
+        "griega_feat_1": "2 dormitorios con 1 baño compartido",
+        "griega_feat_2": "Cocina totalmente equipada",
+        "griega_feat_3": "Espacio de estar y comedor",
+        "griega_feat_4": "Superficie construida: 99m²",
+        "griega_feat_5": "Aire en living y comedor",
+        "griega_feat_6": "Aire acondicionado en los dormitorios",
+        "griega_feat_7": "Wifi"
       },
 
       "staff": {
-        "title": "Personal disponible",
-        "description": "A solicitud",
+        "title": "STAFF DISPONIBLE",
+        "description": "A pedido",
         "items": {
           "chef": "Chef",
-          "nanny": "Niñera y babysitter",
+          "nanny": "Niñera o babysitter",
           "driver": "Chofer o traslado",
           "yoga": "Instructor de yoga <br /> y bienestar",
-          "massage": "Masajista profesional"
+          "massage": "Masajista"
         }
       },
       "services": {
-        "title": "Servicios de la propiedad",
-        "description": "Todo pensado para tu máximo confort y tranquilidad",
+        "title": "SERVICIOS INCLUIDOS",
+        "description": "Todo está diseñado para tu comodidad y tranquilidad",
         "items": {
-          "housekeeping": "Mucama y limpieza diaria",
-          "loundry": "Lavandería y vestidor",
-          "garden": "Mantenimiento de jardín exterior",
-          "pool": "Servicio de mantenimiento de piscina",
-          "property": "Conservación general de la propiedad"
+          "housekeeping": "Limpieza y mantenimiento del hogar",
+          "loundry": "Lavandería y cuidado de ropa",
+          "garden": "Jardinería y mantenimiento exterior",
+          "pool": "Cuidado y mantenimiento de la piscina",
+          "property": "Mantenimiento general de la propiedad"
         },
 
         "access": {
           "title": "Acceso y facilidades",
           "items": {
             "gate": {
-              "title": "Ingreso controlado",
-              "description": "Acceso principal con sistemas biométricos y pases digitales"
+              "title": "Acceso controlado",
+              "description": "Portón principal con sistema biométrico y digital"
             },
             "parking": {
               "title": "Estacionamiento para invitados",
-              "description": "Áreas exclusivas para visitas, de fácil acceso"
+              "description": "Áreas exclusivas para visitantes con fácil acceso"
             },
             "reception": {
-              "title": "Recepción y paquetería",
-              "description": "Recepción profesional para paquetería y gestión de visitantes"
+              "title": "Recepción",
+              "description": "Recepción profesional para paquetería y gestión de visitas"
             },
             "delivery": {
-              "title": "Servicio de encomiendas",
-              "description": "Recepción segura y coordinación para entregas y correo"
+              "title": "Servicios de entrega",
+              "description": "Recepción segura de paquetes y coordinación de envíos"
             }
           }
         }
       }
     }
   },
-  
   "cta": {
-    "title": "Sumergite en un paraíso donde la naturaleza y el lujo se encuentran en plena armonía",
-    "button": "Contacto"
+    "title": "Sumergite en un paraíso donde la naturaleza y el lujo se unen en armonía",
+    "button": "Contactar"
   },
-
   "footer": {
     "rights": "Todos los derechos reservados",
     "links": {
       "privacy": "Política de privacidad",
-      "terms": "Términos y condiciones",
-      "creative": "Sitio realizado por MAGNO S.T"
+      "terms": "Términos del servicio",
+      "creative": "Sitio web por CreativeLabs"
     }
   }
 }

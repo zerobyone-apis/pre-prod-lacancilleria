@@ -42,7 +42,8 @@ export const LocationDistancesMobile = ({
         className="
           pt-5 flex gap-6 overflow-x-auto scroll-smooth pb-6
           snap-x snap-mandatory
-          touch-pan-y
+          touch-pan-x 
+          [touch-action:pan-x]        /* → Safari necesita esto */
           [-webkit-overflow-scrolling:touch]
         "
       >
