@@ -57,35 +57,48 @@ export const IntroImageSlider = ({
                     className="object-cover"
                   />
 
-                  {/* DESKTOP OVERLAY */}
+                  {/* === LUXURY BOTTOM GRADIENT OVERLAY === */}
                   {showTextOverlay && caption && (
-                    <div
-                      className="
-                        hidden md:block
-                        absolute bottom-10 left-1/2 -translate-x-1/2
-                        text-center text-white drop-shadow-xl
-                        px-6 py-4 rounded-xl
-                        bg-black/30 backdrop-blur-sm
-                      "
-                    >
-                      {caption.title && (
-                        <h3 className="text-[22px] sm:text-[26px] font-serif font-light tracking-wide">
-                          <Trans i18nKey={caption.title} />
-                        </h3>
-                      )}
+                    <>
+                      <div
+                        className="
+                          hidden md:block
+                          absolute bottom-0 inset-x-0 
+                          h-[45%] 
+                          bg-gradient-to-t 
+                          from-black/60 via-black/20 to-transparent
+                          pointer-events-none
+                          z-10
+                        "
+                      />
 
-                      {caption.subtitle && (
-                        <p className="text-sm sm:text-[15px] opacity-90 mt-1">
-                          <Trans i18nKey={caption.subtitle} />
-                        </p>
-                      )}
-                    </div>
+                      {/* TEXT OVER GRADIENT */}
+                      <div
+                        className="
+                          hidden md:block
+                          absolute bottom-10 left-1/2 -translate-x-1/2 
+                          z-20 text-center text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.7)]
+                        "
+                      >
+                        {caption.title && (
+                          <h3 className="text-[22px] sm:text-[26px] font-serif font-light tracking-wide">
+                            <Trans i18nKey={caption.title} />
+                          </h3>
+                        )}
+
+                        {caption.subtitle && (
+                          <p className="text-sm sm:text-[15px] opacity-90 mt-1 mb-5">
+                            <Trans i18nKey={caption.subtitle} />
+                          </p>
+                        )}
+                      </div>
+                    </>
                   )}
                 </div>
 
-                {/* MOBILE CAPTION OUTSIDE THE SLIDE */}
+                {/* MOBILE CAPTION (fuera del slide) */}
                 {showTextOverlay && caption && (
-                  <div className="block md:hidden w-full px-4 py-3 text-center">
+                  <div className="block md:hidden w-full px-4 py-5 text-center">
                     {caption.title && (
                       <h3 className="text-[18px] font-serif text-mar">
                         <Trans i18nKey={caption.title} />
@@ -93,7 +106,7 @@ export const IntroImageSlider = ({
                     )}
 
                     {caption.subtitle && (
-                      <p className="text-[14px] text-mar/80 mt-1">
+                      <p className="text-[14px] text-mar/80 mt-1 ">
                         <Trans i18nKey={caption.subtitle} />
                       </p>
                     )}

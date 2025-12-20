@@ -1,58 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { t } from 'i18next';
+import { Trans } from 'react-i18next';
 
 type LocationPOI = {
   id: string;
-  name: string;
+  //name: string;
   coordinates: [number, number];
-  description: string;
+  // description: string;
   image: string; // placeholder for now
   category: string;
 };
 
-// const ICON_SVG: Record<string, string> = {
-//   beach: `
-//       <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
-//         <circle cx="12" cy="12" r="11" fill="#C49A6C" opacity="0.25"/>
-//         <path d="M4 16c4 0 4-2 8-2s4 2 8 2" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//         <path d="M6 12c3 0 3-2 6-2s3 2 6 2" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//         <circle cx="16" cy="8" r="2" fill="#C49A6C"/>
-//       </svg>
-//     `,
-//   restaurant-15: `
-//       <svg width="36" height="36" viewBox="0 0 24 24">
-//         <circle cx="12" cy="12" r="11" fill="#C49A6C" opacity="0.25"/>
-//         <path d="M6 4v8a2 2 0 0 0 4 0V4" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//         <path d="M14 4h3v6a3 3 0 0 1-3 3" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//       </svg>
-//     `,
-//   museum-15: `
-//       <svg width="36" height="36" viewBox="0 0 24 24">
-//         <circle cx="12" cy="12" r="11" fill="#C49A6C" opacity="0.25"/>
-//         <path d="M5 10L12 6l7 4" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//         <path d="M7 10v6M12 10v6M17 10v6" stroke="#C49A6C" stroke-width="2"/>
-//       </svg>
-//     `,
-//   island: `
-//       <svg width="36" height="36" viewBox="0 0 24 24">
-//         <circle cx="12" cy="12" r="11" fill="#C49A6C" opacity="0.25"/>
-//         <path d="M4 15c4-3 12-3 16 0" stroke="#C49A6C" stroke-width="2" stroke-linecap="round"/>
-//         <path d="M12 7l2 4h-4l2-4z" fill="#C49A6C"/>
-//       </svg>
-//     `,
-//   landmark-15: `
-//       <svg width="36" height="36" viewBox="0 0 24 24">
-//         <circle cx="12" cy="12" r="11" fill="#C49A6C" opacity="0.25"/>
-//         <path d="M12 3l3 6h-6l3-6zM10 9h4v12h-4z" fill="#C49A6C"/>
-//       </svg>
-//     `,
-// };
-
 const BASE_LOCATION: [number, number] = [-54.84617, -34.909796]; // La Cancillería (Montoya / La Barra)
+const baseImage: string =
+  '/images/the_estate/la_cancilleria/galery_slider/la_cancilleria_front_house.webp';
 
 // ---------------------------------------------
 // Distance (Haversine) + simple travel time
@@ -93,193 +66,188 @@ export const LocationMapSection = () => {
         name: 'Playa Mansa',
         coordinates: [-54.9411, -34.9527],
         description: 'Costa tranquila, ideal para atardeceres y familias.',
-        image: '/image?query=Playa+Mansa+Punta+del+Este+atardecer&aspect=4:3',
+        image: '/images/location/ubicaciones_pics/playa-mansa.jpeg',
         category: 'beach-15',
       },
       {
         id: 'playa-brava',
-        name: 'Playa Brava (La Mano)',
+        //name: 'Playa Brava (La Mano)',
         coordinates: [-54.9372, -34.9578],
-        description:
-          'La clásica playa oceánica con la icónica escultura de La Mano.',
-        image: '/image?query=Escultura+La+Mano+Punta+del+Este&aspect=4:3',
+        //description:
+        //  'La clásica playa oceánica con la icónica escultura de La Mano.',
+        image: '/images/location/ubicaciones_pics/dedos.jpeg',
         category: 'beach-15',
       },
       {
         id: 'puerto-pde',
-        name: 'Puerto de Punta del Este',
+        //name: 'Puerto de Punta del Este',
         coordinates: [-54.9494, -34.9617],
-        description: 'Paseo, gastronomía y avistamiento de lobos marinos.',
-        image:
-          '/image?query=Puerto+Punta+del+Este+yachts+lobos+marinos&aspect=4:3',
+        //description: 'Paseo, gastronomía y avistamiento de lobos marinos.',
+        image: '/images/location/ubicaciones_pics/puerto-pde.jpeg',
         category: 'landmark-15',
       },
       {
         id: 'isla-gorriti',
-        name: 'Isla Gorriti',
+        //name: 'Isla Gorriti',
         coordinates: [-54.9716, -34.9533],
-        description:
-          'Reserva natural frente a la península con playas y bosques.',
-        image: '/image?query=Isla+Gorriti+playa+bosque&aspect=4:3',
+        //description:
+        //  'Reserva natural frente a la península con playas y bosques.',
+        image: '/images/location/ubicaciones_pics/isla-gorriti.webp',
         category: 'viewpoint-15',
       },
       {
         id: 'isla-lobos',
-        name: 'Isla de Lobos',
+        //name: 'Isla de Lobos',
         coordinates: [-54.8836, -35.0273],
-        description:
-          'Hogar de la reserva de lobos marinos más grande del hemisferio sur.',
-        image: '/image?query=Isla+de+Lobos+Uruguay+lobos+marinos&aspect=4:3',
+        //description:
+        //  'Hogar de la reserva de lobos marinos más grande del hemisferio sur.',
+        image: '/images/location/ubicaciones_pics/isla-lobos.jpeg',
         category: 'viewpoint-15',
       },
       {
         id: 'av-gorlero',
-        name: 'Avenida Gorlero',
+        //name: 'Avenida Gorlero',
         coordinates: [-54.9408, -34.9594],
-        description: 'La avenida principal, centro comercial y neurálgico.',
-        image: '/image?query=Avenida+Gorlero+Punta+del+Este+shops&aspect=4:3',
+        //description: 'La avenida principal, centro comercial y neurálgico.',
+        image: '/images/location/ubicaciones_pics/gorlero.jpeg',
         category: 'restaurant-15',
       },
       {
         id: 'calle-20',
-        name: 'Calle 20 (Fashion Road)',
+        //name: 'Calle 20 (Fashion Road)',
         coordinates: [-54.942, -34.961],
-        description: 'Boutiques de lujo y marcas internacionales.',
-        image: '/image?query=Calle+20+Punta+del+Este+fashion&aspect=4:3',
+        //description: 'Boutiques de lujo y marcas internacionales.',
+        image: '/images/location/ubicaciones_pics/calle_20_nueva.jpeg',
         category: 'restaurant-15',
       },
       {
         id: 'faro-pde',
-        name: 'Faro de Punta del Este',
+        //name: 'Faro de Punta del Este',
         coordinates: [-54.9516, -34.9688],
-        description: 'Vista panorámica histórica desde 1860.',
-        image: '/image?query=Faro+Punta+del+Este+historic&aspect=4:3',
+        //description: 'Vista panorámica histórica desde 1860.',
+        image: '/images/location/ubicaciones_pics/faro-pde-2.jpg',
         category: 'landmark-15',
       },
       {
         id: 'playa-montoya',
-        name: 'Playa Montoya',
+        //name: 'Playa Montoya',
         coordinates: [-54.8465, -34.9142],
-        description:
-          'Playa ancha de olas fuertes, favorita del surf y la juventud.',
-        image: '/image?query=Playa+Montoya+La+Barra+surf&aspect=4:3',
+        //description:
+        //  'Playa ancha de olas fuertes, favorita del surf y la juventud.',
+        image: '/images/location/ubicaciones_pics/playa-montoya.jpeg',
         category: 'beach-15',
       },
       {
         id: 'playa-bikini',
-        name: 'Playa Bikini',
+        //name: 'Playa Bikini',
         coordinates: [-54.8253, -34.9094],
-        description: 'El parador de moda en Manantiales, música y atardeceres.',
-        image: '/image?query=Playa+Bikini+Manantiales+summer&aspect=4:3',
+        //description: 'El parador de moda en Manantiales, música y atardeceres.',
+        image: '/images/location/ubicaciones_pics/playa-bikini.jpg',
         category: 'beach-15',
       },
       {
         id: 'puente-la-barra',
-        name: 'Puente de La Barra',
+        //name: 'Puente de La Barra',
         coordinates: [-54.8725, -34.9109],
-        description: 'El famoso puente ondulante de Leonel Viera.',
-        image: '/image?query=Puente+Ondulante+La+Barra+Leonel+Viera&aspect=4:3',
+        //description: 'El famoso puente ondulante de Leonel Viera.',
+        image: '/images/location/ubicaciones_pics/pnt-barra-2.webp',
         category: 'landmark-15',
       },
       {
         id: 'centro-la-barra',
-        name: 'Centro de La Barra',
-        coordinates: [-54.865, -34.9156],
-        description: 'Vida nocturna, galerías de arte y estilo bohemio-chic.',
-        image: '/image?query=Centro+La+Barra+Punta+del+Este+night&aspect=4:3',
+        //name: 'Centro de La Barra',
+        coordinates: [-54.860049, -34.914055],
+        //description: 'Vida nocturna, galerías de arte y estilo bohemio-chic.',
+        image: '/images/location/ubicaciones_pics/centro-la-barra.jpeg',
         category: 'restaurant-15',
       },
       {
         id: 'museo-del-mar',
-        name: 'Museo del Mar',
+        //name: 'Museo del Mar',
         coordinates: [-54.8703, -34.8989],
-        description: 'Increíble colección de historia natural y marina.',
-        image:
-          '/image?query=Museo+del+Mar+Punta+del+Este+collection&aspect=4:3',
+        //description: 'Increíble colección de historia natural y marina.',
+        image: '/images/location/ubicaciones_pics/museo-del-mar.jpg',
         category: 'museum-15',
       },
       {
         id: 'pueblo-manantiales',
-        name: 'Pueblo Manantiales',
+        //name: 'Pueblo Manantiales',
         coordinates: [-54.8153, -34.8972],
-        description: 'Gastronomía de alto nivel y tiendas de diseño.',
-        image:
-          '/image?query=Pueblo+Manantiales+Punta+del+Este+street&aspect=4:3',
+        //description: 'Gastronomía de alto nivel y tiendas de diseño.',
+        image: '/images/location/ubicaciones_pics/puebli-manantiales.webp',
         category: 'landmark-15',
       },
       {
         id: 'casapueblo',
-        name: 'Casapueblo',
+        //name: 'Casapueblo',
         coordinates: [-55.0446, -34.9088],
-        description: 'La escultura habitable de Carlos Páez Vilaró.',
-        image: '/image?query=Casapueblo+Punta+Ballena+sunset&aspect=4:3',
+        //description: 'La escultura habitable de Carlos Páez Vilaró.',
+        image: '/images/location/ubicaciones_pics/casa_pueblo.jpeg',
         category: 'museum-15',
       },
       {
         id: 'maca-atchugarry',
-        name: 'Fundación Pablo Atchugarry (MACA)',
+        //name: 'Fundación Pablo Atchugarry (MACA)',
         coordinates: [-54.8207, -34.8661],
-        description: 'Museo de Arte Contemporáneo y parque de esculturas.',
-        image: '/image?query=Museo+MACA+Atchugarry+architecture&aspect=4:3',
+        //description: 'Museo de Arte Contemporáneo y parque de esculturas.',
+        image: '/images/location/ubicaciones_pics/maca.jpeg',
         category: 'landmark-15',
       },
       {
         id: 'ralli',
-        name: 'Museo Ralli',
+        //name: 'Museo Ralli',
         coordinates: [-54.9269, -34.9291],
-        description: 'Arte latinoamericano y surrealista en Beverly Hills.',
-        image: '/image?query=Museo+Ralli+Punta+del+Este+exterior&aspect=4:3',
+        //description: 'Arte latinoamericano y surrealista en Beverly Hills.',
+        image: '/images/location/ubicaciones_pics/museo.jpeg',
         category: 'museum-15',
       },
       {
         id: 'faro-jose-ignacio',
-        name: 'Faro de José Ignacio',
+        //name: 'Faro de José Ignacio',
         coordinates: [-54.6297, -34.8461],
-        description: 'El símbolo del pueblo pesquero más exclusivo.',
-        image: '/image?query=Faro+Jose+Ignacio+view&aspect=4:3',
+        //description: 'El símbolo del pueblo pesquero más exclusivo.',
+        image: '/images/location/ubicaciones_pics/faro-jose-ignacio.webp',
         category: 'landmark-15',
       },
       {
         id: 'parador-la-huella',
-        name: 'Parador La Huella',
+        //name: 'Parador La Huella',
         coordinates: [-54.6328, -34.8463],
-        description: 'Restaurante de playa reconocido mundialmente.',
-        image:
-          '/image?query=Parador+La+Huella+Jose+Ignacio+restaurant-15&aspect=4:3',
+        //description: 'Restaurante de playa reconocido mundialmente.',
+        image: '/images/location/ubicaciones_pics/la-huella.avif',
         category: 'restaurant-15',
       },
       {
         id: 'laguna-garzon',
-        name: 'Laguna Garzón',
+        //name: 'Laguna Garzón',
         coordinates: [-54.55, -34.79],
-        description: 'Área protegida para kitesurf y naturaleza.',
-        image: '/image?query=Laguna+Garzon+aerial&aspect=4:3',
+        //description: 'Área protegida para kitesurf y naturaleza.',
+        image: '/images/location/ubicaciones_pics/puente-laguna-garzon.webp',
         category: 'restaurant-15',
       },
       {
         id: 'laguna-garzon-bridge',
-        name: 'Puente Laguna Garzón',
+        //name: 'Puente Laguna Garzón',
         coordinates: [-54.5721, -34.8024],
-        description: 'Innovador puente circular arquitectónico.',
-        image:
-          '/image?query=Puente+Laguna+Garzon+Rafael+Vinoly+circular&aspect=4:3',
+        //description: 'Innovador puente circular arquitectónico.',
+        image: '/images/location/ubicaciones_pics/puente-laguna-garzon-1.webp',
         category: 'restaurant-15',
       },
       {
         id: 'bodega-garzon',
-        name: 'Bodega Garzón',
+        //name: 'Bodega Garzón',
         coordinates: [-54.629, -34.5696],
-        description: 'Enoturismo de lujo entre colinas y viñedos.',
-        image: '/image?query=Bodega+Garzon+architecture+vineyards&aspect=4:3',
+        //description: 'Enoturismo de lujo entre colinas y viñedos.',
+        image: '/images/location/ubicaciones_pics/bodega-garzon.jpeg',
         category: 'restaurant-15',
       },
 
       {
         id: 'pueblo-garzon',
-        name: 'Pueblo Garzón',
+        //name: 'Pueblo Garzón',
         coordinates: [-54.543, -34.5933],
-        description: 'Pueblo rural revitalizado con encanto y aceite de oliva.',
-        image: '/image?query=Pueblo+Garzon+plaza+general&aspect=4:3',
+        //description: 'Pueblo rural revitalizado con encanto y aceite de oliva.',
+        image: '/images/location/ubicaciones_pics/pueblo-garzon.jpeg',
         category: 'landmark-15',
       },
     ],
@@ -364,23 +332,23 @@ export const LocationMapSection = () => {
       map.setPaintProperty('water', 'fill-color', '#AEE0F7');
       map.setPaintProperty('land', 'background-color', '#F7F5F1');
 
-      map.addSource('pois', {
-        type: 'geojson',
-        data: {
-          type: 'FeatureCollection',
-          features: LOCATIONS.map((poi) => ({
-            type: 'Feature',
-            geometry: {
-              type: 'Point',
-              coordinates: poi.coordinates,
-            },
-            properties: {
-              title: poi.name,
-              icon: poi.category,
-            },
-          })),
-        },
-      });
+      // map.addSource('pois', {
+      //   type: 'geojson',
+      //   data: {
+      //     type: 'FeatureCollection',
+      //     features: LOCATIONS.map((poi) => ({
+      //       type: 'Feature',
+      //       geometry: {
+      //         type: 'Point',
+      //         coordinates: poi.coordinates,
+      //       },
+      //       properties: {
+      //         title: poi.name,
+      //         icon: poi.category,
+      //       },
+      //     })),
+      //   },
+      // });
 
       map.addLayer({
         id: 'poi-layer',
@@ -411,18 +379,38 @@ export const LocationMapSection = () => {
     });
 
     // Add base marker (La Cancillería)
+    // 1. Creamos el contenedor del pin
     const baseEl = document.createElement('div');
     baseEl.className = 'location-marker location-marker--base';
+
+    // 2. Estilo para que sea una mini foto redonda con borde elegante
+    Object.assign(baseEl.style, {
+      width: '50px',
+      height: '50px',
+      borderRadius: '50%',
+      border: '3px solid white',
+      boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
+      backgroundImage: `url('${baseImage}')`, // <-- Aquí tu foto de la casa
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      cursor: 'pointer',
+      zIndex: '10',
+    });
+
     const basePopup = new mapboxgl.Popup({
       offset: 18,
       closeButton: false,
       className: 'location-popup',
     }).setHTML(`
       <div class="location-card">
-        <div class="location-card__img" style="background-image:url('/images/placeholders/location.jpg')"></div>
+        <div class="location-card__img" style="background-image:url('${baseImage}')"></div>
         <div class="location-card__body">
-          <div class="location-card__title">La Cancillería</div>
-          <div class="location-card__desc">Ubicación de referencia.</div>
+          <div class="location-card__title">${t(
+            'location.places.base.title'
+          )}</div>
+          <div class="location-card__desc">${t(
+            'location.places.base.description'
+          )}</div>
           <div class="location-card__meta">0.0 km · 0 min</div>
         </div>
       </div>
@@ -444,18 +432,6 @@ export const LocationMapSection = () => {
       const km = getDistanceKm(BASE_LOCATION, poi.coordinates);
       const time = getTravelTimes(km);
 
-      // const svg = ICON_SVG[poi.category];
-
-      // const el = document.createElement('div');
-      // el.innerHTML = svg;
-      // el.style.width = '36px';
-      // el.style.height = '36px';
-      // el.style.display = 'flex';
-      // el.style.alignItems = 'center';
-      // el.style.justifyContent = 'center';
-      // el.style.transform = 'translate(-50%, -50%)';
-      // el.style.cursor = 'pointer';
-
       const popup = new mapboxgl.Popup({
         offset: [0, -20],
         closeButton: false,
@@ -466,15 +442,22 @@ export const LocationMapSection = () => {
             poi.image
           }')"></div>
           <div class="location-card__body">
-            <div class="location-card__title">${poi.name}</div>
-            <div class="location-card__desc">${poi.description}</div>
-            <div class="location-card__meta">${km.toFixed(1)} km · Auto ${
-        time.car
-      } · A pie ${time.walk}</div>
+            <div class="location-card__title">
+              ${t(`location.places.${poi.id}.title`)}
+            </div>
+            <div class="location-card__desc">
+              ${t(`location.places.${poi.id}.description`)}
+            </div>
+            <div class="location-card__meta">
+              ${t('location.travel.format', {
+                km: km.toFixed(1),
+                car: time.car,
+                walk: time.walk,
+              })}
+            </div>
           </div>
         </div>
       `);
-
 
       const marker = new mapboxgl.Marker()
         .setLngLat(poi.coordinates)
@@ -482,12 +465,12 @@ export const LocationMapSection = () => {
         .addTo(map);
 
       // Hover opens popup (minimal + elegant)
-      marker.getElement().addEventListener("mouseenter", () => {
+      marker.getElement().addEventListener('mouseenter', () => {
         popup.setLngLat(poi.coordinates); // Posición fija EXPLÍCITA
-        popup.addTo(map);                 // Muestra el popup sin toggle
+        popup.addTo(map); // Muestra el popup sin toggle
       });
-      
-      marker.getElement().addEventListener("mouseleave", () => {
+
+      marker.getElement().addEventListener('mouseleave', () => {
         popup.remove();
       });
     });
@@ -542,82 +525,172 @@ export const LocationMapSection = () => {
     };
   }, [LOCATIONS]);
 
-  return (
-    <section className="w-full bg-[#F7F5F1]">
-      {/* MAP FULL WIDTH */}
-      <div className="relative w-full">
-        {/* TOGGLE BUTTON */}
+  const mapSectionRef = useRef<HTMLDivElement>(null);
+  const [isMapVisible, setIsMapVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsMapVisible(entry.intersectionRatio >= 0.6);
+      },
+      {
+        threshold: [0.6],
+      }
+    );
+
+    if (mapSectionRef.current) {
+      observer.observe(mapSectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const INFO_TIMEOUT = 3000; // 5 segundos
+
+  const useAutoCloseInfo = (
+    isOpen: boolean,
+    setIsOpen: (v: boolean) => void,
+    deps: boolean[]
+  ) => {
+    useEffect(() => {
+      if (!isOpen) return;
+
+      const timer = setTimeout(() => {
+        setIsOpen(false);
+      }, INFO_TIMEOUT);
+
+      return () => clearTimeout(timer);
+    }, [isOpen, ...deps]);
+  };
+
+  const DesktopMapInfo = ({
+    isMapVisible,
+    isInfoOpen,
+    setIsInfoOpen,
+  }: {
+    isMapVisible: boolean;
+    isInfoOpen: boolean;
+    setIsInfoOpen: Dispatch<SetStateAction<boolean>>;
+  }) => {
+    const [hoverPanel, setHoverPanel] = useState(false);
+    const [hoverMap, setHoverMap] = useState(false);
+
+    // Auto-close solo si NO estoy en mapa ni panel
+    useAutoCloseInfo(isInfoOpen, setIsInfoOpen, [hoverMap, hoverPanel]);
+
+    return (
+      <div
+        className="hidden md:block fixed top-24 left-6 z-50 pointer-events-none"
+        onMouseEnter={() => setHoverMap(true)}
+        onMouseLeave={() => setHoverMap(false)}
+      >
+        {/* BOTÓN */}
         <button
           onClick={() => setIsInfoOpen((v) => !v)}
-          className="
-              absolute
-              top-8
-              left-6
-              z-30
-              bg-white/90 backdrop-blur-md
-              rounded-full
-              px-10 py-2
-              text-sm
-              font-medium
-              text-mar
-              shadow-lg
-              border border-black/5
-              hover:bg-white
-              transition
-            "
+          className={`
+            pointer-events-auto
+            bg-white/90 backdrop-blur-md
+            rounded-full
+            px-10 py-2
+            text-sm font-medium text-mar
+            shadow-lg border border-black/5
+            transition
+            ${isMapVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+          `}
         >
-          Scroll Info
+          {t('location.map.scrollInfo')}
         </button>
-        <div
-          ref={mapContainerRef}
-          className="
-              w-full
-              h-[100vh] md:h-[120vh]
-              rounded-none
-              pointer-events-auto
-            "
-        />
 
-        {/* INFO CARD */}
-        {/* INFO CARD (TOGGLEABLE) */}
+        {/* PANEL */}
         <div
           className={`
-            absolute
-            top-20
-            left-6
-            z-20
-            w-[360px]
+            absolute top-14 left-0 w-[360px]
             transition-all duration-300 ease-out
             ${
               isInfoOpen
                 ? 'opacity-100 translate-y-0 pointer-events-auto'
-                : 'opacity-0 -translate-y-4 pointer-events-none'
+                : 'opacity-0 -translate-y-3 pointer-events-none'
             }
           `}
+          onMouseEnter={() => setHoverPanel(true)}
+          onMouseLeave={() => setHoverPanel(false)}
         >
-          <div
-            className="
-      bg-white/95 backdrop-blur-md
-      rounded-2xl
-      px-8 py-6
-      shadow-xl
-      border border-black/5
-    "
-          >
+          <div className="bg-white/95 backdrop-blur-md rounded-2xl px-8 py-6 shadow-xl border border-black/5">
             <h2 className="text-mar font-serif text-3xl tracking-tight">
-              Information
+              {t('location.map.scrollTitle')}
             </h2>
 
             <p className="text-mar/70 mt-3 leading-relaxed text-sm">
-              Explora Punta del Este, La Barra, Montoya y José Ignacio.
-              <br />
-              Para mover el mapa: click dentro del mapa.
-              <br />
-              Para zoom: Ctrl / Cmd + scroll.
+              <Trans i18nKey="location.map.scrollDescription" />
             </p>
           </div>
         </div>
       </div>
+    );
+  };
+
+  const MobileMapInfo = ({
+    isInfoOpen,
+    setIsInfoOpen,
+  }: {
+    isInfoOpen: boolean;
+    setIsInfoOpen: Dispatch<SetStateAction<boolean>>;
+  }) => {
+    return (
+      <div className="md:hidden absolute bottom-6 left-3 top-5 z-10">
+        <button
+          onClick={() => setIsInfoOpen((v: boolean) => !v)}
+          className="
+        bg-white/95 backdrop-blur-md
+          rounded-full
+          px-6 py-2
+          text-sm
+          font-medium
+          text-mar
+          shadow-lg
+          border border-black/5
+          "
+        >
+          {t('location.map.scrollInfo')}
+        </button>
+
+        {isInfoOpen && (
+          <div className="mt-3 w-[260px] bg-white rounded-2xl px-5 py-4 shadow-xl">
+            <h2 className="text-mar font-serif text-lg">
+              {t('location.map.scrollTitle')}
+            </h2>
+
+            <p className="text-mar/70 mt-2 text-sm leading-relaxed">
+              <Trans i18nKey="location.map.scrollMobileDescription" />
+            </p>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <section ref={mapSectionRef} className="relative w-full bg-[#F7F5F1]">
+      {/* MAP FULL WIDTH */}
+      <div
+        ref={mapContainerRef}
+        className="
+              w-full
+              h-[70vh]
+              md:h-[100vh]
+              lg:h-[120vh]
+              rounded-none
+              pointer-events-auto
+            "
+      />
+
+      <DesktopMapInfo
+        isMapVisible={isMapVisible}
+        isInfoOpen={isInfoOpen}
+        setIsInfoOpen={setIsInfoOpen}
+      />
+
+      <MobileMapInfo isInfoOpen={isInfoOpen} setIsInfoOpen={setIsInfoOpen} />
     </section>
   );
 };

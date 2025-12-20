@@ -10,9 +10,12 @@ export async function POST(req: Request) {
   try {
     const { name, email, phone, message } = await req.json();
 
+
+    console.log('Emails: ',TO)
+
     await resend.emails.send({
       from: `La Cancillería <${FROM}>`,
-      to: `${TO}`,
+      to: `${TO}`, // esto deberia ser un listado.
       subject: `New contact from La Cancilleria Web - ${name}`,
       html: `
         <div style="font-family: sans-serif; line-height: 1.5;">

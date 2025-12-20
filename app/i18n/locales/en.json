@@ -24,31 +24,31 @@
       "title": "EXCLUSIVE<br />AMENITIES AND FACILITIES",
       "items": {
         "pool": {
-          "title": "Heated Outdoor Pool",
+          "title": "HEATED OUTDOOR POOL",
           "description": "Year-round swimming enjoyment"
         },
         "garden": {
-          "title": "Gardens & Landscape",
+          "title": "GARDENS and LANDSCAPE",
           "description": "Manicured gardens and mature trees surrounding the estate"
         },
         "pergola": {
-          "title": "Outdoor Pergola Area",
+          "title": "OUTDOOR PERGOLA AREA",
           "description": "Shaded pergola lounge perfect for alfresco dining"
         },
         "staff-house": {
-          "title": "Staff House <br />La Griega",
+          "title": "STAFF HOUSE <br />La Griega",
           "description": "Dedicated on-site staff quarters for seamless service"
         },
         "parrillero": {
-          "title": "Outdoor Dining <br /> Parillero",
+          "title": "OUTDOOR DINING <br /> PARRILLERO",
           "description": "Traditional parrillero and outdoor dining for gatherings"
         },
         "services": {
-          "title": "Optional Services",
+          "title": "OPTIONAL SERVICES",
           "description": "On-demand chef, nanny, driver and more tailored to your stay"
         },
         "office": {
-          "title": "Office And Workspace",
+          "title": "OFFICE <br /> WORKSPACE",
           "description": "Quiet office and workspace for working remotely"
         }
       },
@@ -56,6 +56,7 @@
     },
     "timeline": {
       "title": "LIVE THE PUNTA DEL ESTE <br />EXPERIENCE",
+      "subTitle": "",
       "oceanBreezes": "Wake up to <br />ocean breezes",
       "alfrescoLunches": "Enjoy alfresco lunches by <br />the pool",
       "vibrantScene": "Discover the vibrant <br />scene of Punta del Este, <br />which are just a few <br />minutes away",
@@ -63,11 +64,13 @@
       "exploreLocation": "Explore location"
     },
     "mobile_timeline": {
-      "title": "LIVE THE <br />PUNTA DEL ESTE EXPERIENCE",
+      "title": "LIVE THE <br />PUNTA DEL ESTE <br />EXPERIENCE",
+      "mobileSubTitle": "",
+
       "oceanBreezes": "Wake up to ocean breezes",
       "alfrescoLunches": "Enjoy alfresco lunches by the pool",
       "vibrantScene": "Discover the vibrant scene <br />of Punta del Este, <br />which are just a few minutes away",
-      "laBarraJoseIgnacio": "Discover the vibrant scene of La Barra and <br />José Ignacio <br />just minutes away",
+      "laBarraJoseIgnacio": "Discover the vibrant scene of <br />La Barra and José Ignacio <br />just minutes away",
       "exploreLocation": "Explore location"
     },
     "cta": {
@@ -79,6 +82,7 @@
       "header": {
         "title": "READY TO EXPERIENCE <br />LA CANCILLERÍA?",
         "subtitle": "If you want more information send us an email to<br />",
+        "mobileSubtitle": "If you want more information <br />send us an email to<br />",
         "to": "contact@lacancilleriaestateuruguay.com"
       },
       "form": {
@@ -94,7 +98,7 @@
   },
   "location": {
     "hero": {
-      "title": "The Heart of Punta del Este",
+      "title": "THE HEART OF PUNTA DEL ESTE",
       "subtitle": "Where exclusivity meets convenience"
     },
     "intro": {
@@ -103,6 +107,11 @@
       "description": "Located in the sought-after La Barra district, this property offers the perfect balance of privacy and accessibility. Just minutes from pristine beaches, world-class dining, and cultural attractions, while maintaining the tranquility of a gated community."
     },
     "map": {
+      "scrollInfo": "Scroll info",
+      "scrollTitle": "Information",
+      "scrollDescription": "Explore Punta del Este, La Barra, Montoya and José Ignacio.<br />To move the map: click inside the map.<br />To zoom: Ctrl / Cmd + scroll.",
+      "scrollMobileDescription": "Explore Punta del Este, La Barra, Montoya and José Ignacio.<br />To move the map: Touch Inside the Map.<br />To zoom: Use Two Fingers or double tap.",
+
       "title": "Your New Neighborhood",
       "description": "Explore the main points of interest near La Cancillería",
       "tokenRequired": "MapBox Token Required",
@@ -110,47 +119,123 @@
       "loadMap": "Load Map"
     },
     "gallery": { "title": "Explore the Area" },
-    "nearby": {
-      "title": "Nearby Attractions",
-      "items": {
-        "beach": {
-          "title": "José Ignacio Beach",
-          "distance": "15 min drive",
-          "description": "Pristine white sand beaches and crystal-clear waters"
-        },
-        "marina": {
-          "title": "Punta del Este Marina",
-          "distance": "20 min drive",
-          "description": "World-class marina with luxury yachts and waterfront dining"
-        },
-        "golf": {
-          "title": "La Barra Golf Club",
-          "distance": "10 min drive",
-          "description": "Championship golf course designed by renowned architects"
-        },
-        "restaurants": {
-          "title": "Gourmet Restaurants",
-          "distance": "5 min drive",
-          "description": "Fine dining experiences from international celebrity chefs"
-        }
-      }
-    },
+
     "distances": {
       "title": "EASILY ACCESSIBLE <br/>PERFECTLY SECLUDED",
       "items": {
         "pde-airport": "16 miles from <br />Punta del Este Airport",
         "carrasco": "70 miles from <br />Carrasco Airport",
-        "montoya": "5-minute walk to <br />Playa Montoya",
+        "montoya": "5 minutes walk to <br />Playa Montoya",
         "bikini": "7 minutes to <br />Playa Bikini",
         "labarra": "3 minutes to La Barra <br />Restaurants and nightlife"
       }
     },
-    "cta": {
-      "title": "Live Where Life Unfolds",
-      "description": "Discover the perfect location for your dream home",
-      "button": "Learn More"
+
+    "places": {
+      "base": {
+        "title": "La Cancillería",
+        "description": "Reference location."
+      },
+
+      "playa-mansa": {
+        "title": "Playa Mansa",
+        "description": "Calm coastline, ideal for sunsets and families."
+      },
+      "playa-brava": {
+        "title": "Playa Brava (La Mano)",
+        "description": "The iconic ocean beach featuring the famous Hand sculpture."
+      },
+      "puerto-pde": {
+        "title": "Punta del Este Harbor",
+        "description": "Promenade, gastronomy, and sea lion watching."
+      },
+      "isla-gorriti": {
+        "title": "Gorriti Island",
+        "description": "Natural reserve facing the peninsula, with beaches and forests."
+      },
+      "isla-lobos": {
+        "title": "Lobos Island",
+        "description": "Home to the largest sea lion reserve in the Southern Hemisphere."
+      },
+      "av-gorlero": {
+        "title": "Gorlero Avenue",
+        "description": "The main avenue, commercial and social hub."
+      },
+      "calle-20": {
+        "title": "Calle 20 (Fashion Road)",
+        "description": "Luxury boutiques and international brands."
+      },
+      "faro-pde": {
+        "title": "Punta del Este Lighthouse",
+        "description": "Historic panoramic views since 1860."
+      },
+      "playa-montoya": {
+        "title": "Playa Montoya",
+        "description": "Wide beach with strong waves, popular among surfers and youth."
+      },
+      "playa-bikini": {
+        "title": "Playa Bikini",
+        "description": "Trendy beach spot in Manantiales, music and sunsets."
+      },
+      "puente-la-barra": {
+        "title": "La Barra Bridge",
+        "description": "The iconic undulating bridge designed by Leonel Viera."
+      },
+      "centro-la-barra": {
+        "title": "La Barra Center",
+        "description": "Nightlife, art galleries, and bohemian-chic style."
+      },
+      "museo-del-mar": {
+        "title": "Museum of the Sea",
+        "description": "Outstanding collection of marine and natural history."
+      },
+      "pueblo-manantiales": {
+        "title": "Manantiales Village",
+        "description": "High-end gastronomy and designer boutiques."
+      },
+      "casapueblo": {
+        "title": "Casapueblo",
+        "description": "The inhabitable sculpture created by Carlos Páez Vilaró."
+      },
+      "maca-atchugarry": {
+        "title": "Pablo Atchugarry Foundation (MACA)",
+        "description": "Contemporary art museum and sculpture park."
+      },
+      "ralli": {
+        "title": "Ralli Museum",
+        "description": "Latin American and surrealist art in Beverly Hills."
+      },
+      "faro-jose-ignacio": {
+        "title": "José Ignacio Lighthouse",
+        "description": "The symbol of the most exclusive fishing village."
+      },
+      "parador-la-huella": {
+        "title": "La Huella Beach Parador",
+        "description": "World-renowned beachfront restaurant."
+      },
+      "laguna-garzon": {
+        "title": "Laguna Garzón",
+        "description": "Protected area for kitesurfing and nature."
+      },
+      "laguna-garzon-bridge": {
+        "title": "Laguna Garzón Bridge",
+        "description": "Innovative circular architectural bridge."
+      },
+      "bodega-garzon": {
+        "title": "Bodega Garzón",
+        "description": "Luxury wine tourism among rolling hills and vineyards."
+      },
+      "pueblo-garzon": {
+        "title": "Garzón Village",
+        "description": "Revitalized rural village with charm and olive oil tradition."
+      }
+    },
+
+    "travel": {
+      "format": "{{km}} km · Car {{car}} · On foot {{walk}}"
     }
   },
+
   "estate": {
     "cancilleria": {
       "hero": {
@@ -164,18 +249,20 @@
       },
       "features": {
         "title": "FEATURES",
-        "feat_1": "1 master suite with en-suite bathrooms",
+        "feat_1": "1 Master Suite with en-suite Bathrooms",
         "feat_2": "2 Bedrooms sharing 1 Bathroom (Upper Floor)",
         "feat_3": "2 Bedrooms sharing 1 Bathroom (Ground Floor)",
         "feat_4": "1 Service Room + 1 Bathroom",
-        "feat_5": "Office space",
-        "feat_6": "Living and dining area",
+        "feat_5": "Office Space",
+        "feat_6": "Living and Dining Area",
         "feat_7": "Fully equipped kitchen"
       },
 
       "amenities": {
         "title": "AMENITIES EXCLUSIVE",
-        "mobileTitle": "AMENITIES <br/> EXCLUSIVE",
+        "subTitle": "Experience exclusive amenities tailored for refined living",
+        "mobileTitle": "AMENITIES EXCLUSIVE",
+        "mobileSubTitle": "Experience exclusive amenities tailored for refined living",
         "items": {
           "pool": "Heated Outdoor Pool",
           "pergola": "An outdoor living area <br /> with a pergola",
@@ -204,13 +291,13 @@
       },
       "features": {
         "title": "FEATURES",
-        "griega_feat_1": "1 master suite with en-suite bathrooms",
-        "griega_feat_2": "2 Bedrooms sharing 1 Bathroom (Upper Floor)",
-        "griega_feat_3": "2 Bedrooms sharing 1 Bathroom (Ground Floor)",
-        "griega_feat_4": "1 Service Room + 1 Bathroom",
-        "griega_feat_5": "Office space",
-        "griega_feat_6": "Living and dining area",
-        "griega_feat_7": "Fully equipped kitchen"
+        "griega_feat_1": "2 bedrooms with 1 shared bathroom",
+        "griega_feat_2": "Fully equipped kitchen",
+        "griega_feat_3": "Living and dining area",
+        "griega_feat_4": "Built area: 99m²",
+        "griega_feat_5": "Air in living and dining area",
+        "griega_feat_6": "Air conditioning in bedrooms",
+        "griega_feat_7": "Wifi"
       },
 
       "staff": {
@@ -268,7 +355,7 @@
     "links": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "creative": "Website by MAGNO S.T"
+      "creative": "Website by WMedia"
     }
   }
 }

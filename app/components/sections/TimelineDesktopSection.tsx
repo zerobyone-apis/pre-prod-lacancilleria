@@ -16,30 +16,6 @@ export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) 
   const lineRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<HTMLDivElement>(null);
 
-  /*
-  useEffect(() => {
-    const line = lineRef.current;
-    if (!line) return;
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.fromTo(
-      line,
-      { scaleY: 0 },
-      {
-        scaleY: 1,
-        ease: 'none',
-        transformOrigin: 'top center',
-        scrollTrigger: {
-          trigger: timelineRef.current,
-          start: 'top 85%', // empieza ANTES = mucho más fluido
-          end: 'bottom 100%', // acompaña TODO el scroll del timeline
-          scrub: 0.5, // súper suave sin delay
-        },
-      }
-    );
-  }, []);
-*/
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -146,7 +122,7 @@ export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) 
           
             md:top-[220px] md:right-[-100px] md:scale-[0.9]
             lg:top-[100px] lg:right-[100px] lg:scale-[1.6]
-            xl:top-[140px] xl:right-[300px] xl:scale-[1.5]
+            xl:top-[330px] xl:right-[350px] xl:scale-[1.9]
           `}
             style={{ objectFit: 'contain' }}
           />
@@ -165,7 +141,7 @@ export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) 
           
             md:top-[220px] md:right-[-100px] md:scale-[0.9]
             lg:top-[100px] lg:right-[100px] lg:scale-[1.6]
-            xl:top-[140px] xl:right-[300px] xl:scale-[1.5]
+            xl:top-[330px] xl:right-[350px] xl:scale-[1.9]
           `}
             style={{ objectFit: 'contain' }}
           />
@@ -240,7 +216,7 @@ export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) 
                       }
                     `}
                   >
-                    <p className="text-h2-sm leading-[1.45] sm:text-[20px] sm:leading-[1.45] md:text-h2-md text-mar/90 md:max-w-[420px]">
+                    <p className="text-h2-sm font-serif leading-[1.45] sm:text-[20px] sm:leading-[1.45] md:leading-[1.5] md:text-h2-md text-mar/90 md:max-w-[420px]">
                       <Trans i18nKey={item.text} />
                     </p>
                   </div>

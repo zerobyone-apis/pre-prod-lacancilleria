@@ -4,10 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 import { HeroSection } from '@/app/components/sections/HeroSection';
 import { PropertiesSliderSection } from '@/app/components/sections/PropertiesSliderSection';
-import { EstateDividerSection } from '@/app/components/sections/EstateDividerSection';
-import { EstateStaffSection } from '@/app/components/sections/EstateStaffSection';
-
-import { EstateExploreSection } from '@/app/components/sections/EstateExploreSection';
 
 import EstateServicesMultiComponent from '../components/sections/EstateServicesMultiComponent';
 import { TimelineSection } from '../components/sections/TimelineSection';
@@ -31,6 +27,7 @@ export default function EstatePage() {
       <TimelineSection home={false} estate={true} />
       <IntroImageSlider
         images={[
+          '/images/the_estate/la_cancilleria/galery_slider/la_cancilleria_front_house.webp',
           '/images/the_estate/la_cancilleria/galery_slider/suit-guess-edited-ai.jpg',
           '/images/the_estate/la_cancilleria/galery_slider/coocking.webp',
           '/images/the_estate/la_cancilleria/galery_slider/guest_bedth.webp',
@@ -44,8 +41,7 @@ export default function EstatePage() {
       />
       <PropertiesSliderSection propertyFilter="griega" />
       <EstateServicesMultiComponent service={false} griegaItems={true}/>
-      {/* <EstateStaffSection /> */}
-      {/* <EstateExploreSection /> */}
+
       <ImageDeviderSection imageSource='/images/the_estate/la_griega/devider/faro_remasted.webp' />
       <NewFigmaContactSection />
     </>

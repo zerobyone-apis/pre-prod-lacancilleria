@@ -39,7 +39,11 @@ export const NewFigmaContactForm = () => {
       toast.success(
         t('home.contact.form.success', {
           defaultValue: 'Message sent successfully',
-        })
+        }),
+        {
+          position: 'bottom-center',
+          duration: 3500,
+        }
       );
 
       reset();
