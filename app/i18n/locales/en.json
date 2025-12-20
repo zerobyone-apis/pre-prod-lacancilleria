@@ -107,6 +107,11 @@
       "description": "Located in the sought-after La Barra district, this property offers the perfect balance of privacy and accessibility. Just minutes from pristine beaches, world-class dining, and cultural attractions, while maintaining the tranquility of a gated community."
     },
     "map": {
+      "scrollInfo": "Scroll info",
+      "scrollTitle": "Information",
+      "scrollDescription": "Explore Punta del Este, La Barra, Montoya and José Ignacio.<br />To move the map: click inside the map.<br />To zoom: Ctrl / Cmd + scroll.",
+      "scrollMobileDescription": "Explore Punta del Este, La Barra, Montoya and José Ignacio.<br />To move the map: Touch Inside the Map.<br />To zoom: Use Two Fingers or double tap.",
+
       "title": "Your New Neighborhood",
       "description": "Explore the main points of interest near La Cancillería",
       "tokenRequired": "MapBox Token Required",
@@ -125,12 +130,112 @@
         "labarra": "3 minutes to La Barra <br />Restaurants and nightlife"
       }
     },
-    "cta": {
-      "title": "Live Where Life Unfolds",
-      "description": "Discover the perfect location for your dream home",
-      "button": "Learn More"
+
+    "places": {
+      "base": {
+        "title": "La Cancillería",
+        "description": "Reference location."
+      },
+
+      "playa-mansa": {
+        "title": "Playa Mansa",
+        "description": "Calm coastline, ideal for sunsets and families."
+      },
+      "playa-brava": {
+        "title": "Playa Brava (La Mano)",
+        "description": "The iconic ocean beach featuring the famous Hand sculpture."
+      },
+      "puerto-pde": {
+        "title": "Punta del Este Harbor",
+        "description": "Promenade, gastronomy, and sea lion watching."
+      },
+      "isla-gorriti": {
+        "title": "Gorriti Island",
+        "description": "Natural reserve facing the peninsula, with beaches and forests."
+      },
+      "isla-lobos": {
+        "title": "Lobos Island",
+        "description": "Home to the largest sea lion reserve in the Southern Hemisphere."
+      },
+      "av-gorlero": {
+        "title": "Gorlero Avenue",
+        "description": "The main avenue, commercial and social hub."
+      },
+      "calle-20": {
+        "title": "Calle 20 (Fashion Road)",
+        "description": "Luxury boutiques and international brands."
+      },
+      "faro-pde": {
+        "title": "Punta del Este Lighthouse",
+        "description": "Historic panoramic views since 1860."
+      },
+      "playa-montoya": {
+        "title": "Playa Montoya",
+        "description": "Wide beach with strong waves, popular among surfers and youth."
+      },
+      "playa-bikini": {
+        "title": "Playa Bikini",
+        "description": "Trendy beach spot in Manantiales, music and sunsets."
+      },
+      "puente-la-barra": {
+        "title": "La Barra Bridge",
+        "description": "The iconic undulating bridge designed by Leonel Viera."
+      },
+      "centro-la-barra": {
+        "title": "La Barra Center",
+        "description": "Nightlife, art galleries, and bohemian-chic style."
+      },
+      "museo-del-mar": {
+        "title": "Museum of the Sea",
+        "description": "Outstanding collection of marine and natural history."
+      },
+      "pueblo-manantiales": {
+        "title": "Manantiales Village",
+        "description": "High-end gastronomy and designer boutiques."
+      },
+      "casapueblo": {
+        "title": "Casapueblo",
+        "description": "The inhabitable sculpture created by Carlos Páez Vilaró."
+      },
+      "maca-atchugarry": {
+        "title": "Pablo Atchugarry Foundation (MACA)",
+        "description": "Contemporary art museum and sculpture park."
+      },
+      "ralli": {
+        "title": "Ralli Museum",
+        "description": "Latin American and surrealist art in Beverly Hills."
+      },
+      "faro-jose-ignacio": {
+        "title": "José Ignacio Lighthouse",
+        "description": "The symbol of the most exclusive fishing village."
+      },
+      "parador-la-huella": {
+        "title": "La Huella Beach Parador",
+        "description": "World-renowned beachfront restaurant."
+      },
+      "laguna-garzon": {
+        "title": "Laguna Garzón",
+        "description": "Protected area for kitesurfing and nature."
+      },
+      "laguna-garzon-bridge": {
+        "title": "Laguna Garzón Bridge",
+        "description": "Innovative circular architectural bridge."
+      },
+      "bodega-garzon": {
+        "title": "Bodega Garzón",
+        "description": "Luxury wine tourism among rolling hills and vineyards."
+      },
+      "pueblo-garzon": {
+        "title": "Garzón Village",
+        "description": "Revitalized rural village with charm and olive oil tradition."
+      }
+    },
+
+    "travel": {
+      "format": "{{km}} km · Car {{car}} · On foot {{walk}}"
     }
   },
+
   "estate": {
     "cancilleria": {
       "hero": {
@@ -250,7 +355,7 @@
     "links": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "creative": "Website by CreativeLabs"
+      "creative": "Website by WMedia"
     }
   }
 }

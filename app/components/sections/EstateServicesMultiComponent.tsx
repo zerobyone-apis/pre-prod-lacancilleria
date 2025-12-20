@@ -20,12 +20,12 @@ export default function EstateServicesMultiComponent({
     LIST_ITEMS_IMAGES = [
       {
         key: 'housekeeping',
-        image: '/images/the_estate/la_cancilleria/services/no-image.jpg',
+        image: '/images/the_estate/la_cancilleria/services/housekeeping.jpg',
         label: 'estate.cancilleria.services.items.housekeeping',
       },
       {
         key: 'loundry',
-        image: '/images/the_estate/la_cancilleria/services/no-image.jpg',
+        image: '/images/the_estate/la_cancilleria/services/loundry.jpg',
         label: 'estate.cancilleria.services.items.loundry',
       },
       {
@@ -35,12 +35,12 @@ export default function EstateServicesMultiComponent({
       },
       {
         key: 'pool',
-        image: '/images/the_estate/la_cancilleria/services/no-image.jpg',
+        image: '/images/the_estate/la_cancilleria/services/pool-clean1.jpg',
         label: 'estate.cancilleria.services.items.pool',
       },
       {
         key: 'property',
-        image: '/images/the_estate/la_cancilleria/services/no-image.jpg',
+        image: '/images/the_estate/la_cancilleria/services/maintenance.jpg',
         label: 'estate.cancilleria.services.items.property',
       },
     ];
@@ -61,17 +61,17 @@ export default function EstateServicesMultiComponent({
       },
       {
         key: 'driver',
-        image: '/images/the_estate/la_griega/staff/staff-driver.jpg',
+        image: '/images/the_estate/la_griega/staff/driver.jpg',
         label: 'estate.griega.staff.items.driver',
       },
       {
         key: 'yoga',
-        image: '/images/the_estate/la_griega/staff/staff-yoga.jpg',
+        image: '/images/the_estate/la_griega/staff/yoga-coach.jpg',
         label: 'estate.griega.staff.items.yoga',
       },
       {
         key: 'massage',
-        image: '/images/the_estate/la_griega/staff/staff-massage.jpg',
+        image: '/images/the_estate/la_griega/staff/terapist.jpg',
         label: 'estate.griega.staff.items.massage',
       },
     ];

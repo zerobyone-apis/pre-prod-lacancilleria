@@ -2,17 +2,33 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
   const url = request.nextUrl;
-  const { hostname } = request.nextUrl;
+  const { pathname, hostname } = url;
 
-  // Permitir paso en localhost y previews de vercel
-  const isLocalhost = hostname === 'localhost' || hostname === '127.0.0.1';
-  const isVercelPreview = hostname.endsWith('.vercel.app') && hostname.startsWith('pre');
+  // 🔧 Flag de mantenimiento (Vercel / env)
+  const maintenanceMode = process.env.MAINTENANCE_MODE === 'true';
 
-  // Permitir el acceso a la página WIP y a archivos estáticos/API
-  const isWipPage = url.pathname === '/wip';
-  const isStatic = url.pathname.startsWith('/_next') || url.pathname.startsWith('/api') || url.pathname.includes('.');
+  // 🌱 Entornos permitidos
+  const isLocalhost =
+    hostname === 'localhost' || hostname === '127.0.0.1';
 
-  if (!isLocalhost && !isVercelPreview && !isWipPage && !isStatic) {
+  const isVercelPreview =
+    hostname.endsWith('.vercel.app') && hostname.startsWith('pre');
+
+  // 📄 Rutas permitidas siempre
+  const isWipPage = pathname === '/wip';
+  const isStatic =
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/api') ||
+    pathname.includes('.');
+
+  // 🚦 Lógica principal
+  if (
+    maintenanceMode &&
+    !isLocalhost &&
+    !isVercelPreview &&
+    !isWipPage &&
+    !isStatic
+  ) {
     url.pathname = '/wip';
     return NextResponse.rewrite(url);
   }

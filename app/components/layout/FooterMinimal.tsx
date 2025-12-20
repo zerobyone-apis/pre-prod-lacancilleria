@@ -40,7 +40,7 @@ export const FooterMinimal = () => {
           <div className="flex justify-center md:justify-end items-center gap-4">
             <LanguageSwitcher />
 
-            <a
+            {/* <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -66,9 +66,9 @@ export const FooterMinimal = () => {
                 hover:border-primary hover:text-primary
                 transition
               "
-            >
+            > 
               <Facebook className="w-5 h-5" />
-            </a>
+            </a>*/}
           </div>
         </div>
 
@@ -87,7 +87,7 @@ export const FooterMinimal = () => {
               {t('footer.links.terms')}
             </Link>
             <Link
-              href="https://www.creativelabs.dev"
+              href="https://www.wmedia.com"
               target="_blank"
               className="hover:text-primary transition"
             >

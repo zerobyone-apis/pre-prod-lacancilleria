@@ -52,7 +52,10 @@
           "description": "Espacio de oficina silencioso para quienes trabajan a distancia"
         }
       },
-      "cta": { "title": "¿Listo para descubrir?", "button": "Conocé la Propiedad" }
+      "cta": {
+        "title": "¿Listo para descubrir?",
+        "button": "Conocé la Propiedad"
+      }
     },
     "timeline": {
       "title": "VIVÍ LA EXPERIENCIA <br />PUNTA DEL ESTE",
@@ -107,6 +110,12 @@
       "description": "En el codiciado barrio de La Barra, esta propiedad te ofrece privacidad absoluta y una ubicación estratégica: a minutos de playas únicas, la mejor gastronomía y la cultura de la zona, sin perder la tranquilidad de una comunidad cerrada."
     },
     "map": {
+      "scrollInfo": "Info del Mapa",
+      "scrollTitle": "Información",
+      "scrollDescription": "Explora Punta del Este, La Barra, Montoya y José Ignacio.<br/>Para mover el mapa: click dentro del mapa.<br />Para zoom: Ctrl / Cmd + scroll.",
+      "scrollMobileDescription": "Explora Punta del Este, La Barra, Montoya y José Ignacio.<br/>Para mover el mapa: Toque dentro del mapa.<br />Para zoom: Use dos dedos o Toque dos veces el lugar.",
+
+
       "title": "Tu Nuevo Entorno",
       "description": "Conocé los principales puntos de interés cerca de La Cancillería",
       "tokenRequired": "Se requiere token de MapBox",
@@ -125,10 +134,107 @@
         "labarra": "A 3 minutos de restaurantes <br /> y vida nocturna de La Barra"
       }
     },
-    "cta": {
-      "title": "Viví donde la vida sucede",
-      "description": "Encontrá el lugar perfecto para tu hogar soñado",
-      "button": "Más información"
+    "places": {
+      "base": {
+        "title": "La Cancillería",
+        "description": "Ubicación de referencia."
+      },
+
+      "playa-mansa": {
+        "title": "Playa Mansa",
+        "description": "Costa tranquila, ideal para atardeceres y familias."
+      },
+      "playa-brava": {
+        "title": "Playa Brava (La Mano)",
+        "description": "La clásica playa oceánica con la icónica escultura de La Mano."
+      },
+      "puerto-pde": {
+        "title": "Puerto de Punta del Este",
+        "description": "Paseo, gastronomía y avistamiento de lobos marinos."
+      },
+      "isla-gorriti": {
+        "title": "Isla Gorriti",
+        "description": "Reserva natural frente a la península con playas y bosques."
+      },
+      "isla-lobos": {
+        "title": "Isla de Lobos",
+        "description": "Hogar de la reserva de lobos marinos más grande del hemisferio sur."
+      },
+      "av-gorlero": {
+        "title": "Avenida Gorlero",
+        "description": "La avenida principal, centro comercial y neurálgico."
+      },
+      "calle-20": {
+        "title": "Calle 20 (Fashion Road)",
+        "description": "Boutiques de lujo y marcas internacionales."
+      },
+      "faro-pde": {
+        "title": "Faro de Punta del Este",
+        "description": "Vista panorámica histórica desde 1860."
+      },
+      "playa-montoya": {
+        "title": "Playa Montoya",
+        "description": "Playa ancha de olas fuertes, favorita del surf y la juventud."
+      },
+      "playa-bikini": {
+        "title": "Playa Bikini",
+        "description": "El parador de moda en Manantiales, música y atardeceres."
+      },
+      "puente-la-barra": {
+        "title": "Puente de La Barra",
+        "description": "El famoso puente ondulante de Leonel Viera."
+      },
+      "centro-la-barra": {
+        "title": "Centro de La Barra",
+        "description": "Vida nocturna, galerías de arte y estilo bohemio-chic."
+      },
+      "museo-del-mar": {
+        "title": "Museo del Mar",
+        "description": "Increíble colección de historia natural y marina."
+      },
+      "pueblo-manantiales": {
+        "title": "Pueblo Manantiales",
+        "description": "Gastronomía de alto nivel y tiendas de diseño."
+      },
+      "casapueblo": {
+        "title": "Casapueblo",
+        "description": "La escultura habitable de Carlos Páez Vilaró."
+      },
+      "maca-atchugarry": {
+        "title": "Fundación Pablo Atchugarry (MACA)",
+        "description": "Museo de Arte Contemporáneo y parque de esculturas."
+      },
+      "ralli": {
+        "title": "Museo Ralli",
+        "description": "Arte latinoamericano y surrealista en Beverly Hills."
+      },
+      "faro-jose-ignacio": {
+        "title": "Faro de José Ignacio",
+        "description": "El símbolo del pueblo pesquero más exclusivo."
+      },
+      "parador-la-huella": {
+        "title": "Parador La Huella",
+        "description": "Restaurante de playa reconocido mundialmente."
+      },
+      "laguna-garzon": {
+        "title": "Laguna Garzón",
+        "description": "Área protegida para kitesurf y naturaleza."
+      },
+      "laguna-garzon-bridge": {
+        "title": "Puente Laguna Garzón",
+        "description": "Innovador puente circular arquitectónico."
+      },
+      "bodega-garzon": {
+        "title": "Bodega Garzón",
+        "description": "Enoturismo de lujo entre colinas y viñedos."
+      },
+      "pueblo-garzon": {
+        "title": "Pueblo Garzón",
+        "description": "Pueblo rural revitalizado con encanto y aceite de oliva."
+      }
+    },
+    "travel": {
+      "format": "{{km}} km · Auto {{car}} · A pie {{walk}}"
     }
   },
   "estate": {
