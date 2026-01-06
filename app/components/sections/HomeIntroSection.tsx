@@ -159,11 +159,16 @@ export const HomeIntroSection = () => {
           <div className="relative w-full overflow-hidden fade-block shadow-lg">
             <IntroImageSlider
               images={[
-                '/images/home/slider/pool.webp',
-                '/images/home/slider/suit-bed.webp',
-                '/images/home/slider/suit-guess-edited-ai.jpg',
-                '/images/home/slider/sec-room.webp',
-                '/images/home/slider/coctails-in-pool.webp',
+                '/images/home/slider/lc_end_tour.webp',
+                '/images/home/slider/lc_back_external_2.webp',
+                '/images/home/slider/lc_back_external_5.webp',
+                '/images/home/slider/lc_back_external_4.webp',
+                '/images/home/slider/lc_back_external_6.webp',
+                '/images/home/slider/lc_back_external_3.1.webp',
+                '/images/home/slider/lc_back_external_1.1.webp',
+                '/images/home/slider/lc_internal_1.2.webp',
+                '/images/home/slider/lc_internal_2.1.webp',
+                '/images/home/slider/lc_internal_2.2.webp',
               ]}
               showTextOverlay={false}
             />

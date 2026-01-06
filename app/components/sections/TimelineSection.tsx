@@ -37,7 +37,7 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
       {
         text: t('home.timeline.oceanBreezes'),
         mobileText: t('home.mobile_timeline.oceanBreezes'),
-        image: '/images/home/timeline/room.jpg',
+        image: '/images/home/timeline/room_2.webp',
         imagePosition: 'right',
       },
       {

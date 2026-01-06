@@ -6,7 +6,6 @@ import { HeroSection } from "@/app/components/sections/HeroSection";
 import { HomeIntroSection } from "@/app/components/sections/HomeIntroSection";
 import { QuickFactsSection } from "@/app/components/sections/QuickFactsSection";
 import { TimelineSection } from "@/app/components/sections/TimelineSection";
-import { ContactSection } from "@/app/components/sections/ContactSection";
 import { NewFigmaContactSection } from "@/app/components/sections/NewFigmaContactSection";
 import { ImageDeviderSection } from "./components/sections/ImageDeviderSection";
 
@@ -18,7 +17,7 @@ export default function HomePage() {
       <HeroSection
         title={t("home.hero.title")}
         subtitle={t("home.hero.subtitle")}
-        backgroundVideo="/video/home/hero-final-web_7mb.mp4"
+        backgroundVideo="/video/home/hero-home.mp4"
       />
       <HomeIntroSection />
       <QuickFactsSection />
