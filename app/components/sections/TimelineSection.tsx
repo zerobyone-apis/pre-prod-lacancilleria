@@ -71,20 +71,20 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
       {
         text: t('estate.cancilleria.amenities.items.pool'),
         mobileText: t('estate.cancilleria.amenities.items.pool'),
-        image: '/images/the_estate/la_cancilleria/amenities/pool.webp',
+        image: '/images/the_estate/la_cancilleria/amenities/new_pool.webp',
         imagePosition: 'right',
       },
       {
         text: t('estate.cancilleria.amenities.items.pergola'),
         mobileText: t('estate.cancilleria.amenities.items.pergola'),
         image:
-        '/images/the_estate/la_cancilleria/amenities/outdoor-living-area.webp',
+        '/images/the_estate/la_cancilleria/amenities/new_living_outdoor.webp',
         imagePosition: 'left',
       },
       {
         text: t('estate.cancilleria.amenities.items.grill'),
         mobileText: t('estate.cancilleria.amenities.items.grill'),
-        image: '/images/the_estate/la_cancilleria/amenities/grill.webp',
+        image: '/images/the_estate/la_cancilleria/amenities/new_grill.webp',
         imagePosition: 'right',
       },
       {

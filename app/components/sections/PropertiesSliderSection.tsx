@@ -79,10 +79,10 @@ export const PropertiesSliderSection = ({
     // La cancilleria
     LIST_IMAGES = [
       '/images/home/slider/suit-guess-edited-ai.jpg',
-      '/images/home/slider/pool.webp',
-      '/images/home/slider/suit-bed.webp',
-      '/images/home/slider/sec-room.webp', // TODO: QUEDA COLOCAR LAS FOTOS QUE VAN.
-      '/images/home/slider/coctails-in-pool.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.3.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.4.webp', 
+      '/images/the_estate/la_cancilleria/galery_slider/office.webp',
     ];
 
     LIST_CAPTIONS = [

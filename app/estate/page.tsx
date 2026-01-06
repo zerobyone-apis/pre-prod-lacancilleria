@@ -27,15 +27,49 @@ export default function EstatePage() {
       <TimelineSection home={false} estate={true} />
       <IntroImageSlider
         images={[
-          '/images/the_estate/la_cancilleria/galery_slider/la_cancilleria_front_house.webp',
-          '/images/the_estate/la_cancilleria/galery_slider/suit-guess-edited-ai.jpg',
-          '/images/the_estate/la_cancilleria/galery_slider/coocking.webp',
-          '/images/the_estate/la_cancilleria/galery_slider/guest_bedth.webp',
-          '/images/the_estate/la_cancilleria/galery_slider/living_pergola.webp',
-          '/images/the_estate/la_cancilleria/galery_slider/living_principal.webp',
-          '/images/the_estate/la_cancilleria/galery_slider/living.webp',
-          '/images/the_estate/la_cancilleria/galery_slider/pergola_2.webp',
-          '/images/the_estate/la_cancilleria/galery_slider/pergola.webp'
+          '/images/the_estate/la_cancilleria/galery_slider/lc_entrada.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_entrada_2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_entrada_3.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.1.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.3.webp',
+     
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.1.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.3.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.4.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.5.webp',
+
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_3.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.1.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.2.webp',
+
+      
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_1.webp',
+          
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.1.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.3.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.1.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.3.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.1.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.4.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.1.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.3.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.4.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_end_tour.webp',
+         
         ]}
         showTextOverlay={false}
       />
