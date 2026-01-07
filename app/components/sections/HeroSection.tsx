@@ -64,7 +64,8 @@ export const HeroSection = ({
           loop
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover"
+          poster=""
+          className="absolute inset-0 w-full h-full object-cover"          
         >
           <source src={backgroundVideo} type="video/mp4" />
         </video>

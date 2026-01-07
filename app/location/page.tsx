@@ -17,7 +17,7 @@ export default function LocationPage() {
       <HeroSection
         title={t('location.hero.title')}
         subtitle={t('location.hero.subtitle')}
-        backgroundVideo="/video/location/hero-location.mp4"
+        backgroundVideo="/video/location/hero-location.v1.mp4"
       />
       <LocationMapSection />
       <ImageDeviderSection imageSource="/images/location/devider/devider1.webp" />

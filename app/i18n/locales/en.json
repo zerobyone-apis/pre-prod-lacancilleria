@@ -259,15 +259,15 @@
       },
 
       "amenities": {
-        "title": "AMENITIES EXCLUSIVE",
+        "title": "EXCLUSIVE AMENITIES",
         "subTitle": "Experience exclusive amenities tailored for refined living",
-        "mobileTitle": "AMENITIES EXCLUSIVE",
+        "mobileTitle": "EXCLUSIVE AMENITIES",
         "mobileSubTitle": "Experience exclusive amenities tailored for refined living",
         "items": {
           "pool": "Heated Outdoor Pool",
           "pergola": "An outdoor living area <br /> with a pergola",
           "grill": "An Outdoor dining with <br/> Argentinian grill with a <br/> pergola",
-          "air-accon": "Air conditiioning in all rooms",
+          "air-accon": "Air conditioning in all rooms",
           "master-suite": "Wifi and TVs in living room <br/> And Master Suite"
         }
       },
@@ -276,7 +276,7 @@
         "description": "Everything designed for your comfort and convenience",
         "items": {
           "housekeeping": "Housekeeping <br /> And Cleaning",
-          "loundry": "Loundry and Wardrobe",
+          "loundry": "Laundry and Wardrobe",
           "garden": "Garden Exterior <br /> Maintenance",
           "pool": "Pool Maintenance <br /> Technician",
           "property": "Property <br /> Estate Maintenance"
@@ -316,7 +316,7 @@
         "description": "Everything designed for your comfort and convenience",
         "items": {
           "housekeeping": "Housekeeping <br /> And Cleaning",
-          "loundry": "Loundry and Wardrobe",
+          "loundry": "Laundry and Wardrobe",
           "garden": "Garden Exterior <br /> Maintenance",
           "pool": "Pool Maintenance <br /> Technician",
           "property": "Property <br /> Estate Maintenance"

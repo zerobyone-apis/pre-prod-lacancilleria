@@ -19,7 +19,7 @@ export default function EstatePage() {
       <HeroSection
         title={t('estate.cancilleria.hero.title')}
         subtitle={t('estate.cancilleria.hero.subtitle')}
-        backgroundVideo="/video/the_estate/hero-estate.mp4"
+        backgroundVideo="/video/the_estate/hero-estate.v1.mp4"
       />
       <PropertiesSliderSection propertyFilter="cancilleria"/>
       <EstateServicesMultiComponent service={true}  griegaItems={false}
