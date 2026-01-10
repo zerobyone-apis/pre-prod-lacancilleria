@@ -47,9 +47,21 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
         imagePosition: 'left',
       },
       {
-        text: t('home.timeline.vibrantScene'),
-        mobileText: t('home.mobile_timeline.vibrantScene'),
-        image: '/images/home/timeline/punta_pic.webp',
+        text: t('home.timeline.bikini'),
+        mobileText: t('home.mobile_timeline.bikini'),
+        image: '/images/home/timeline/bikini.jpg',
+        imagePosition: 'right',
+      },
+      {
+        text: t('home.timeline.garzon'),
+        mobileText: t('home.mobile_timeline.garzon'),
+        image: '/images/home/timeline/garzon.jpg',
+        imagePosition: 'left',
+      },
+      {
+        text: t('home.timeline.joseIgnacio'),
+        mobileText: t('home.mobile_timeline.joseIgnacio'),
+        image: '/images/home/timeline/joseIgnacio.webp',
         imagePosition: 'right',
       },
       {

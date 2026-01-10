@@ -12,7 +12,7 @@
     },
     "intro": {
       "label": "¿What is La Cancillería?",
-      "title": "NESTLED AMONG LUSH <br />GARDENS AND SWEEPING <br />OCEAN VIEWS",
+      "title": "NESTLED AMONG LUSH <br />GARDENS WITHIN A BREATHTAKING NATURAL SETTING",
       "description": "La Cancillería offers the privacy of a gated residence with the comfort<br /> and warmth of a private home"
     },
     "introSecond": {
@@ -59,7 +59,11 @@
       "subTitle": "",
       "oceanBreezes": "Wake up to <br />ocean breezes",
       "alfrescoLunches": "Enjoy alfresco lunches by <br />the pool",
-      "vibrantScene": "Discover the vibrant <br />scene of Punta del Este, <br />which are just a few <br />minutes away",
+      
+      "bikini": "Enjoy the beach",
+      "garzon": "Spend the afternoon in <br />Bodega Garzón",
+      "joseIgnacio": "Enjoy the sunset in <br />Jose Ignacio",
+      
       "laBarraJoseIgnacio": "Discover the vibrant <br />scene of La Barra and <br />José Ignacio just minutes <br />away",
       "exploreLocation": "Explore location"
     },
@@ -69,6 +73,11 @@
 
       "oceanBreezes": "Wake up to ocean breezes",
       "alfrescoLunches": "Enjoy alfresco lunches by the pool",
+            
+      "bikini": "Enjoy the beach",
+      "garzon": "Spend the afternoon in Bodega Garzón",
+      "joseIgnacio": "Enjoy the sunset in Jose Ignacio",
+
       "vibrantScene": "Discover the vibrant scene <br />of Punta del Este, <br />which are just a few minutes away",
       "laBarraJoseIgnacio": "Discover the vibrant scene of <br />La Barra and José Ignacio <br />just minutes away",
       "exploreLocation": "Explore location"

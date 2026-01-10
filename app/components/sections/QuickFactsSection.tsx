@@ -17,6 +17,8 @@ export const QuickFactsSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
+
+  // todo: llevarme esto para The Estate
   const items = [
     { key: 'garden', image: '/images/home/quick-facts/new/garden.webp' },
     { key: 'pool', image: '/images/home/quick-facts/new/pool_heated.webp' },

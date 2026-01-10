@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslation, Trans } from 'react-i18next';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';
 import { IntroImageSlider } from './IntroImageSlider';
@@ -9,6 +9,7 @@ import { IntroImageSlider } from './IntroImageSlider';
 export const HomeIntroSection = () => {
   const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [expanded, setExpanded] = useState(false);
 
   // Fade-in animation
   useEffect(() => {
@@ -33,7 +34,7 @@ export const HomeIntroSection = () => {
       className="relative w-full overflow-hidden text-mar px-4 sm:px-6 md:px-12 lg:px-24 py-20 sm:py-28 md:pt-48 bg-[#f3e7da]"
     >
       {/* SHADOWS ABOVE GRADIENT */}
-      <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[20]">
+      <div className="absolute inset-x-0 top-0 pointer-events-none overflow-visible z-[10]">
         {/* SHADOW LEFT */}
         <Image
           src="/images/home/shadows/Recursos/Re_3.png"
@@ -62,6 +63,7 @@ export const HomeIntroSection = () => {
             md:top-[220px] md:right-[-100px] md:scale-[0.9]
             lg:top-[100px] lg:right-[200px] lg:scale-[1.6]
             xl:top-[120px] xl:right-[260px] xl:scale-[1.8]
+  
           `}
           style={{ objectFit: 'contain' }}
         />
@@ -69,7 +71,7 @@ export const HomeIntroSection = () => {
 
       {/* FIX SHADOW CUT — Ajustado para borrar el borde de la sombra */}
       <div
-        className="hidden md:block absolute inset-x-0 pointer-events-none z-[25]"
+        className="hidden md:block absolute inset-x-0 pointer-events-none z-[0]"
         style={{
           top: '660px',
           height: '140px',
@@ -82,7 +84,7 @@ export const HomeIntroSection = () => {
 
       {/* GRADIENT BELOW THE SHADOWS */}
       <div
-        className="absolute inset-x-0 top-0 pointer-events-none z-[10]"
+        className="absolute inset-x-0 top-0 pointer-events-none z-[0]"
         style={{
           height: '850px',
           background:
@@ -91,7 +93,7 @@ export const HomeIntroSection = () => {
       />
       {/* FADE DOWN (de sombra → color suave) */}
       <div
-        className="hidden md:block absolute inset-x-0 top-[730px] h-[80px] pointer-events-none z-[30]"
+        className="hidden md:block absolute inset-x-0 top-[730px] h-[80px] pointer-events-none z-[10]"
         style={{
           background: `
       linear-gradient(
@@ -105,7 +107,7 @@ export const HomeIntroSection = () => {
       />
 
       <div
-        className="md:block absolute inset-x-0 bottom-0 pointer-events-none z-[0]"
+        className="md:block absolute inset-x-0 bottom-0 pointer-events-none z-0"
         style={{
           height: '260px',
           background: `
@@ -139,8 +141,60 @@ export const HomeIntroSection = () => {
             <Trans i18nKey={'home.intro.description'} />
           </p>
 
-          {/* DIVIDER */}
-          <div className="w-[1px] h-28 sm:h-32 md:h-36 bg-piel/20 mx-auto mt-12 sm:mt-14 md:mt-16 mb-20 sm:mb-24 md:mb-32"></div>
+          <div className="flex flex-col items-center gap-6 sm:gap-8 mt-12 sm:mt-14 md:mt-16 mb-20 sm:mb-24 md:mb-32 z-35">
+            <div className="w-[1px] h-12 sm:h-14 md:h-16 bg-piel/20" />
+
+            <div
+              className={`relative w-full${
+                expanded ? 'max-w-6xl' : 'max-w-3xl'
+              } transition-all duration-300 ease-out drop-shadow-2xl`}
+            >
+              <div className="absolute top-3 right-3 z-40 flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => setExpanded((prev) => !prev)}
+                  className="px-3 py-1.5 text-xs sm:text-sm rounded-full bg-mar/90 text-[#f7f5f1] 
+                              backdrop-blur shadow-md hover:bg-mar transition"
+                >
+                  {expanded
+                    ? t('home.intro.video.collapse', {
+                        defaultValue: 'Reducir',
+                      })
+                    : t('home.intro.video.expand', {
+                        defaultValue: 'Expandir',
+                      })}
+                </button>
+              </div>
+
+              <div
+                className={[
+                  'overflow-hidden rounded-2xl sm:rounded-3xl bg-black',
+                  'transition-all duration-300',
+                  // Normal: más “cuadrado”
+                  !expanded ? 'aspect-[13/8]' : '',
+                  // Expanded: más “cinema” (rectangular)
+                  expanded ? 'aspect-video md:aspect-[19/9]' : '',
+                ].join(' ')}
+              >
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="h-full w-full object-cover"
+                >
+                  <source
+                    src="/video/the_estate/hero-estate.v1.mp4"
+                    type="video/mp4"
+                  />
+                  {t('home.intro.video.unsupported', {
+                    defaultValue: 'Tu navegador no soporta video HTML5.',
+                  })}
+                </video>
+              </div>
+            </div>
+
+            <div className="w-[1px] h-12 sm:h-14 md:h-16 bg-piel/20" />
+          </div>
         </div>
 
         {/* SECOND BLOCK */}
@@ -159,16 +213,47 @@ export const HomeIntroSection = () => {
           <div className="relative w-full overflow-hidden fade-block shadow-lg">
             <IntroImageSlider
               images={[
-                '/images/home/slider/lc_end_tour.webp',
-                '/images/home/slider/lc_back_external_2.webp',
-                '/images/home/slider/lc_back_external_5.webp',
-                '/images/home/slider/lc_back_external_4.webp',
-                '/images/home/slider/lc_back_external_6.webp',
-                '/images/home/slider/lc_back_external_3.1.webp',
-                '/images/home/slider/lc_back_external_1.1.webp',
-                '/images/home/slider/lc_internal_1.2.webp',
-                '/images/home/slider/lc_internal_2.1.webp',
-                '/images/home/slider/lc_internal_2.2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_entrada.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_entrada_2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_entrada_3.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.1.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.3.webp',
+
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.1.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.3.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.4.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.5.webp',
+
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_3.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.1.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.2.webp',
+
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_1.webp',
+
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.1.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.3.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.1.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.3.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.1.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.4.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.1.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.3.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.4.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_end_tour.webp',
               ]}
               showTextOverlay={false}
             />

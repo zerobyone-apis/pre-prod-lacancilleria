@@ -12,7 +12,7 @@
     },
     "intro": {
       "label": "¿Qué es La Cancillería?",
-      "title": "ENTRE JARDINES EXUBERANTES <br />Y VISTAS PANORÁMICAS AL MAR",
+      "title": "ENTRE JARDINES EXUBERANTES <br />JARDINES EN UN ENTORNO NATURAL IMPRESIONANTE",
       "description": "La Cancillería ofrece la privacidad de una residencia cerrada y el calor de un verdadero hogar"
     },
     "introSecond": {
@@ -62,6 +62,11 @@
       "subTitle": "",
       "oceanBreezes": "Despertá con la brisa <br /> del mar",
       "alfrescoLunches": "Almorzá al aire libre junto <br />a la piscina",
+      
+      "bikini": "Disfrutá la playa",
+      "garzon": "Pasá la tarde en <br />Bodega Garzón",
+      "joseIgnacio": "Disfrutá el atardecer en <br />José Ignacio",
+
       "vibrantScene": "Descubrí la movida de <br />Punta del Este, a sólo <br /> minutos",
       "laBarraJoseIgnacio": "Descubrí la vibrante escena <br />de La Barra y José Ignacio <br /> a pocos minutos",
       "exploreLocation": "Ver ubicación"
@@ -72,6 +77,11 @@
 
       "oceanBreezes": "Despertá con la brisa del mar",
       "alfrescoLunches": "Almorzá al aire libre junto a la piscina",
+
+      "bikini": "Disfrutá la playa",
+      "garzon": "Pasá la tarde en Bodega Garzón",
+      "joseIgnacio": "Disfrutá el atardecer en José Ignacio",
+
       "vibrantScene": "Descubrí la movida de <br />Punta del Este a pocos minutos",
       "laBarraJoseIgnacio": "Descubrí la movida de <br />La Barra y José Ignacio a <br />pocos minutos",
       "exploreLocation": "Ver ubicación"
