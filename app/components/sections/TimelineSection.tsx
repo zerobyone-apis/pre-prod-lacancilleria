@@ -49,13 +49,14 @@ export const TimelineSection = ({ home, estate }: TimeLineProps) => {
       {
         text: t('home.timeline.bikini'),
         mobileText: t('home.mobile_timeline.bikini'),
-        image: '/images/home/timeline/bikini.jpg',
+        //image: '/images/home/timeline/bikini.jpg',
+        image: '/images/home/timeline/montoya.webp',
         imagePosition: 'right',
       },
       {
         text: t('home.timeline.garzon'),
         mobileText: t('home.mobile_timeline.garzon'),
-        image: '/images/home/timeline/garzon.jpg',
+        image: '/images/home/timeline/garzon.webp',
         imagePosition: 'left',
       },
       {

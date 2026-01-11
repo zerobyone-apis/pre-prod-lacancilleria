@@ -183,7 +183,7 @@ export const HomeIntroSection = () => {
                   className="h-full w-full object-cover"
                 >
                   <source
-                    src="/video/the_estate/hero-estate.v1.mp4"
+                    src="/video/home/reel-modified-home-web.mp4"
                     type="video/mp4"
                   />
                   {t('home.intro.video.unsupported', {
@@ -215,6 +215,7 @@ export const HomeIntroSection = () => {
               images={[
                 '/images/the_estate/la_cancilleria/galery_slider/lc_entrada.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_entrada_2.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/AutoEntrando.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_entrada_3.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.1.webp',
@@ -233,7 +234,7 @@ export const HomeIntroSection = () => {
                 '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.1.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.2.webp',
 
-                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_1.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/modified/lc_back_external_1.webp',
 
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.1.webp',
@@ -247,13 +248,26 @@ export const HomeIntroSection = () => {
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.1.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.2.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.4.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.webp',
+
+                '/images/the_estate/la_cancilleria/galery_slider/modified/palmeras_1.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/modified/palmeras_2.webp',
+
+                
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.1.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.2.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.3.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.4.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_end_tour.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/vista_aerea.webp',
+
+                '/images/the_estate/la_cancilleria/galery_slider/modified/Bikini.jpg',
+                '/images/the_estate/la_cancilleria/galery_slider/modified/Cactus.webp',
+                '/images/the_estate/la_cancilleria/galery_slider/modified/Montoya.webp',
+      
+              
               ]}
               showTextOverlay={false}
             />

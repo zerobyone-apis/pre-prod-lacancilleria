@@ -25,7 +25,7 @@ export default function HomePage() {
       <TimelineSection home estate={false} />
       {/* <ImageDeviderSection imageSource="/images/home/deviders/lacancilleria_panoramic.jpg" /> */}
       <ImageDeviderSection
-        imageSource="/images/home/deviders/lacancilleria_panoramic.jpg"
+        imageSource="/images/home/deviders/foto_cenital_1.webp"
         navCtas={[
           { label: 'Location', href: '/location' },
           { label: 'The Estate', href: '/estate' },
