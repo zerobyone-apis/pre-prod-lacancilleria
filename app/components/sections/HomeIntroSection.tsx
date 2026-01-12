@@ -265,7 +265,7 @@ export const HomeIntroSection = () => {
                 '/images/the_estate/la_cancilleria/galery_slider/lc_end_tour.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/vista_aerea.webp',
 
-                '/images/the_estate/la_cancilleria/galery_slider/modified/Bikini.jpg',
+                '/images/the_estate/la_cancilleria/galery_slider/modified/bikini.jpg',
                 '/images/the_estate/la_cancilleria/galery_slider/modified/Cactus.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/modified/Montoya.webp',
               ]}
