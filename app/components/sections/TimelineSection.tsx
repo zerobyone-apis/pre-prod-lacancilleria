@@ -102,7 +102,9 @@ export const TimelineSection = ({
     mobileTitle = 'estate.cancilleria.amenities.mobileTitle';
     mobileSubTitle = 'estate.cancilleria.amenities.mobileSubTitle';
     showCTA = true;
-    backgroundColor = 'bg-[#F7F5F1]';
+    backgroundColor = isMobile
+      ? 'bg-gradient-to-b from-[#F7F5F1] via-[#E6DCCF] to-[#F7F5F1]'
+      : 'bg-[#F7F5F1]';
     timelineItems = [
       {
         text: t('estate.cancilleria.amenities.items.biking'),
@@ -177,7 +179,7 @@ export const TimelineSection = ({
     showCTA = false;
 
     backgroundColor =
-      'bg-[#F7F5F1] bg-gradient-to-b from-[#F7F5F1] via-[#E6DCCF] to-[#F7F5F1]';
+      'bg-gradient-to-b from-[#F7F5F1] via-[#E6DCCF] to-[#F7F5F1]';
     timelineItems = [
       {
         text: t('estate.cancilleria.services.items.housekeeping'),
@@ -222,7 +224,7 @@ export const TimelineSection = ({
     showCTA = false;
 
     backgroundColor =
-      'bg-[#F7F5F1] bg-gradient-to-b from-[#F7F5F1] via-[#E6DCCF] to-[#F7F5F1]';
+      'bg-gradient-to-b from-[#F7F5F1] via-[#E6DCCF] to-[#F7F5F1]';
     timelineItems = [
       {
         text: t('estate.griega.staff.items.chef'),
@@ -259,37 +261,44 @@ export const TimelineSection = ({
 
   const mobileHeaderKey = isMobile ? mobileTitle : title || title;
 
-  if (isMobile && estate) {
-    // Mobile Estate: fondo unificado con degradé cálido
-    return (
-      <section className="relative w-full pt-10 overflow-hidden bg-nieve">
-        <div
-          className="absolute inset-x-0 top-0 h-[520px] pointer-events-none z-0"
-          style={{
-            background:
-              'linear-gradient(360deg, rgba(247,245,241,0) 0%, #F7F5F1 80%, #f3e7da 100%)',
-          }}
-        />
-        <div className="relative z-10">
-          <TimelineMobile
-            items={timelineItems}
-            backgroundColor="bg-transparent"
-            title={mobileHeaderKey}
-            subTitle={mobileSubTitle}
-          />
-        </div>
-      </section>
-    );
-  }
+  // if (isMobile && estate) {
+  //   // Mobile Estate: fondo unificado con degradé cálido
+  //   return (
+  //     <section className="relative w-full pt-10 overflow-hidden bg-nieve">
+  //       <div
+  //         className="absolute inset-x-0 top-0 h-[520px] pointer-events-none z-0"
+  //         style={{
+  //           background:
+  //             'linear-gradient(360deg, rgba(247,245,241,0) 0%, #F7F5F1 80%, #f3e7da 100%)',
+  //         }}
+  //       />
+  //       <div className="relative z-10">
+  //         <TimelineMobile
+  //           items={timelineItems}
+  //           backgroundColor="bg-transparent"
+  //           title={mobileHeaderKey}
+  //           subTitle={mobileSubTitle}
+  //         />
+  //       </div>
+  //     </section>
+  //   );
+  // }
 
+  // TimelineSection (solo el return mobile)
   return isMobile ? (
-    <TimelineMobile
-      items={timelineItems}
-      backgroundColor={backgroundColor}
-      title={mobileHeaderKey}
-      subTitle={mobileSubTitle}
-      showCTA={showCTA}
-    />
+    <section className={`relative w-full overflow-hidden ${backgroundColor}`}>
+      {/* opcional: si querés un fade arriba, hacelo igual para todos */}
+
+      <div className="relative z-10">
+        <TimelineMobile
+          items={timelineItems}
+          backgroundColor={backgroundColor} // TimelineMobile no decide fondo
+          title={mobileHeaderKey}
+          subTitle={mobileSubTitle}
+          showCTA={showCTA}
+        />
+      </div>
+    </section>
   ) : (
     <DesktopTimeline
       timelineItems={timelineItems}

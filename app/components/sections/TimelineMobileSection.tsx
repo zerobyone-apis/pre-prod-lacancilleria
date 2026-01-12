@@ -21,13 +21,15 @@ export const TimelineMobile = ({
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const blocks = gsap.utils.toArray<HTMLElement>('.tl-block');
-      const progressLine =
-        document.querySelector<HTMLElement>('.tl-line-progress');
+    if (!container.current) return;
 
-      // Línea vertical que “avanza” con el scroll
-      if (progressLine && container.current) {
+    const ctx = gsap.context((self) => {
+      const blocks = self.selector?.('.tl-block') as HTMLElement[] | undefined;
+      const progressLine = (
+        self.selector?.('.tl-line-progress') as HTMLElement[] | undefined
+      )?.[0];
+
+      if (progressLine) {
         gsap.fromTo(
           progressLine,
           { scaleY: 0 },
@@ -36,7 +38,7 @@ export const TimelineMobile = ({
             ease: 'none',
             transformOrigin: 'top center',
             scrollTrigger: {
-              trigger: container.current,
+              trigger: container.current!,
               start: 'top 72%',
               end: 'bottom bottom',
               scrub: 0.6,
@@ -45,8 +47,7 @@ export const TimelineMobile = ({
         );
       }
 
-      // Cards: fade-up + slide con leve delay escalonado
-      blocks.forEach((block, index) => {
+      (blocks ?? []).forEach((block, index) => {
         const img = block.querySelector('.tl-img');
         const dot = block.querySelector('.tl-dot');
 
@@ -95,11 +96,12 @@ export const TimelineMobile = ({
         }
       });
 
+      // Refresh al final del layout
       ScrollTrigger.refresh();
     }, container);
 
     return () => ctx.revert();
-  }, []);
+  }, [items.length]);
 
   return (
     <div

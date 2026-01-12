@@ -17,7 +17,7 @@ export default function HomePage() {
       <HeroSection
         title={t('home.hero.title')}
         subtitle={t('home.hero.subtitle')}
-        backgroundVideo="/video/home/hero-home.v1.mp4"
+        backgroundVideo="/video/home/hero-home-v2.mp4"
       />
       <HomeIntroSection />
       {/* { <QuickFactsSection />} */}
