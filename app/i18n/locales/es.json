@@ -256,14 +256,14 @@
       "intro": {
         "label": "CASA PRINCIPAL",
         "title": "LA CANCILLERÍA",
-        "description": "La casa principal cuenta con cinco dormitorios, amplios ambientes para el estar y comedor, cocina moderna y múltiples espacios exteriores pensados para el disfrute y la relajación."
+        "description": "La casa principal cuenta con cinco dormitorios, amplios ambientes para el estar y comedor, cocina espaciosa y múltiples espacios exteriores pensados para el disfrute y la relajación."
       },
       "features": {
         "title": "CARACTERÍSTICAS",
         "feat_1": "1 suite principal con baño privado",
         "feat_2": "2 dormitorios que comparten 1 baño (planta alta)",
         "feat_3": "2 dormitorios que comparten 1 baño (planta baja)",
-        "feat_4": "1 habitación de servicio + 1 baño",
+        "feat_4": "",
         "feat_5": "Espacio de oficina",
         "feat_6": "Ambientes de estar y comedor",
         "feat_7": "Cocina totalmente equipada"

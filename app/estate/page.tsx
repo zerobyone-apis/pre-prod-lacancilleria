@@ -21,20 +21,26 @@ export default function EstatePage() {
         subtitle={t('estate.cancilleria.hero.subtitle')}
         backgroundVideo="/video/the_estate/hero-estate.v1.mp4"
       />
-      <PropertiesSliderSection propertyFilter="cancilleria"/>
-      <EstateServicesMultiComponent service={true}  griegaItems={false}
-  />
+      <PropertiesSliderSection propertyFilter="cancilleria" />
+
+      {/* Primer timeline de services La cancilleria */}
+      <TimelineSection home={false} estate={false} service_lc={true} />
+
+      {/* <EstateServicesMultiComponent service={true}  griegaItems={false} />  */}
+
+      {/* Segunda timeline de Exclusive Amenities La cancilleria */}
       <TimelineSection home={false} estate={true} />
       <IntroImageSlider
         images={[
           '/images/the_estate/la_cancilleria/galery_slider/lc_entrada.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_entrada_2.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/AutoEntrando.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_entrada_3.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.1.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.2.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.3.webp',
-     
+
           '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.1.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.2.webp',
@@ -47,9 +53,8 @@ export default function EstatePage() {
           '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.1.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.2.webp',
 
-      
-          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_1.webp',
-          
+          '/images/the_estate/la_cancilleria/galery_slider/modified/lc_back_external_1.webp',
+
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.1.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.2.webp',
@@ -62,31 +67,37 @@ export default function EstatePage() {
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.1.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.2.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.4.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.webp',
+
+          '/images/the_estate/la_cancilleria/galery_slider/modified/palmeras_1.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/modified/palmeras_2.webp',
+
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.1.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.2.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.3.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.4.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_end_tour.webp',
-         
+          '/images/the_estate/la_cancilleria/galery_slider/vista_aerea.webp',
+
+          '/images/the_estate/la_cancilleria/galery_slider/modified/Bikini.jpg',
+          '/images/the_estate/la_cancilleria/galery_slider/modified/Cactus.webp',
+          '/images/the_estate/la_cancilleria/galery_slider/modified/Montoya.webp',
         ]}
         showTextOverlay={false}
       />
       <PropertiesSliderSection propertyFilter="griega" />
-      <EstateServicesMultiComponent service={false} griegaItems={true}/>
-
-      <ImageDeviderSection imageSource='/images/the_estate/la_griega/devider/faro_remasted.webp' />
+      {/* Primer timeline de Staff available La griega */}
+      <TimelineSection home={false} estate={false} service_lc={false} service_lg={true}  />
+      <ImageDeviderSection imageSource="/images/the_estate/la_griega/devider/faro_ji.jpg" />
       <NewFigmaContactSection />
     </>
   );
 }
 
-
-
 // Todo:
 // Me falta colocar los videos en los HeroSection, y comprimirlos para que pesen Poco 170mb a -> 7mb max
 // Por otro lado revisar otras fotos que deba cambiar en el home y location y ver si puedo añadir algunas de la griega interior.
-
 
 // Trabajo realizado hoy 4hrs. 05/01/2026

@@ -158,10 +158,10 @@ export const HomeIntroSection = () => {
                 >
                   {expanded
                     ? t('home.intro.video.collapse', {
-                        defaultValue: 'Reducir',
+                        defaultValue: 'Expandir',
                       })
                     : t('home.intro.video.expand', {
-                        defaultValue: 'Expandir',
+                        defaultValue: 'Reducir',
                       })}
                 </button>
               </div>
@@ -179,8 +179,11 @@ export const HomeIntroSection = () => {
                 <video
                   controls
                   playsInline
+                  onContextMenu={(e) => e.preventDefault()}
                   preload="metadata"
                   className="h-full w-full object-cover"
+                  controlsList="nodownload" // noplaybackrate noremoteplayback :_esto -> saca estas funciones para que no aparezcan
+                  //disablePictureInPicture
                 >
                   <source
                     src="/video/home/reel-modified-home-web.mp4"
@@ -255,7 +258,6 @@ export const HomeIntroSection = () => {
                 '/images/the_estate/la_cancilleria/galery_slider/modified/palmeras_1.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/modified/palmeras_2.webp',
 
-                
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.1.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.2.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.3.webp',
@@ -266,8 +268,6 @@ export const HomeIntroSection = () => {
                 '/images/the_estate/la_cancilleria/galery_slider/modified/Bikini.jpg',
                 '/images/the_estate/la_cancilleria/galery_slider/modified/Cactus.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/modified/Montoya.webp',
-      
-              
               ]}
               showTextOverlay={false}
             />

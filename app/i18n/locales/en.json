@@ -22,33 +22,35 @@
     "quickFacts": {
       "label": "Discover",
       "title": "EXCLUSIVE<br />AMENITIES AND FACILITIES",
+      "subTitle": "",
+      "mobileSubTitle": "",
       "items": {
         "pool": {
-          "title": "HEATED OUTDOOR POOL",
+          "title": "Heated Outdoor Pool",
           "description": "Year-round swimming enjoyment"
         },
         "garden": {
-          "title": "GARDENS and LANDSCAPE",
+          "title": "Gardens and Landscape",
           "description": "Manicured gardens and mature trees surrounding the estate"
         },
         "pergola": {
-          "title": "OUTDOOR PERGOLA AREA",
+          "title": "Outdoor Pergola Area",
           "description": "Shaded pergola lounge perfect for alfresco dining"
         },
         "staff-house": {
-          "title": "STAFF HOUSE <br />La Griega",
+          "title": "Staff House <br />La Griega",
           "description": "Dedicated on-site staff quarters for seamless service"
         },
         "parrillero": {
-          "title": "OUTDOOR DINING <br /> PARRILLERO",
+          "title": "Outdoor dining <br />Parrillero",
           "description": "Traditional parrillero and outdoor dining for gatherings"
         },
         "services": {
-          "title": "OPTIONAL SERVICES",
+          "title": "Optional Services",
           "description": "On-demand chef, nanny, driver and more tailored to your stay"
         },
         "office": {
-          "title": "OFFICE <br /> WORKSPACE",
+          "title": "Office <br />Workspace",
           "description": "Quiet office and workspace for working remotely"
         }
       },
@@ -254,14 +256,14 @@
       "intro": {
         "label": "MAIN RESIDENCE",
         "title": "LA CANCILLERÍA",
-        "description": "The main residence of the luxury gated estate features five bedrooms,<br /> spacious living and dining areas, a modern kitchen, and multiple outdoor <br /> spaces designed for entertaining and relaxation."
+        "description": "The main residence of the luxury gated estate features five bedrooms,<br /> spacious living and dining areas, a spacious kitchen, and multiple outdoor <br /> spaces designed for entertaining and relaxation."
       },
       "features": {
         "title": "FEATURES",
         "feat_1": "1 Master Suite with en-suite Bathrooms",
         "feat_2": "2 Bedrooms sharing 1 Bathroom (Upper Floor)",
         "feat_3": "2 Bedrooms sharing 1 Bathroom (Ground Floor)",
-        "feat_4": "1 Service Room + 1 Bathroom",
+        "feat_4": "Shared bathroom (Ground Floor)",
         "feat_5": "Office Space",
         "feat_6": "Living and Dining Area",
         "feat_7": "Fully equipped kitchen"
@@ -273,6 +275,7 @@
         "mobileTitle": "EXCLUSIVE AMENITIES",
         "mobileSubTitle": "Experience exclusive amenities tailored for refined living",
         "items": {
+          "biking": "Nature Biking Trails",
           "pool": "Heated Outdoor Pool",
           "pergola": "An outdoor living area <br /> with a pergola",
           "grill": "An Outdoor dining with <br/> Argentinian grill with a <br/> pergola",
@@ -294,9 +297,9 @@
     },
     "griega": {
       "intro": {
-        "label": "GUEST OR STAFF RESIDENCE",
+        "label": "STAFF RESIDENCE",
         "title": "LA GRIEGA",
-        "description": "Located within the same luxury gated estate, La Griega offers independent <br /> accommodation for guests or staff, ensuring privacy and comfort for all"
+        "description": "Located within the same luxury gated estate, La Griega offers independent <br /> accommodation for staff, ensuring privacy and comfort for all"
       },
       "features": {
         "title": "FEATURES",

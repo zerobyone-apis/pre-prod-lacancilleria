@@ -79,10 +79,27 @@ export const PropertiesSliderSection = ({
     // La cancilleria
     LIST_IMAGES = [
       '/images/home/slider/suit-guess-edited-ai.jpg',
-      '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.3.webp',
-      '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.1.webp',
-      '/images/the_estate/la_cancilleria/galery_slider/lc_internal_2.4.webp', 
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/planta_baja_room_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/planta_baja_room_2.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/baño_primera_planta_1.webp',
       '/images/the_estate/la_cancilleria/galery_slider/office.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/planta_baja_room_1.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/planta_baja_room_2.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/baño_primera_planta_2.webp',
+
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_1.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_baño_compartido_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_2.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_2.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_3.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_principal_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_principal_1.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_baño_suit_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_baño_suit_2.webp',
+      
     ];
 
     LIST_CAPTIONS = [

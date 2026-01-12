@@ -20,8 +20,10 @@ export const QuickFactsSection = () => {
 
   // todo: llevarme esto para The Estate
   const items = [
-    { key: 'garden', image: '/images/home/quick-facts/new/garden.webp' },
-    { key: 'pool', image: '/images/home/quick-facts/new/pool_heated.webp' },
+    { key: 'garden', 
+      image: '/images/home/quick-facts/new/garden.webp' },
+    { key: 'pool', 
+      image: '/images/home/quick-facts/new/pool_heated.webp' },
     {
       key: 'pergola',
       image: '/images/home/quick-facts/new/outdor-pergola.webp',

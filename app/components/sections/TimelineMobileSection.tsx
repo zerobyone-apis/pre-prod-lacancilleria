@@ -16,6 +16,7 @@ export const TimelineMobile = ({
   backgroundColor,
   title,
   subTitle,
+  showCTA,
 }: any) => {
   const container = useRef<HTMLDivElement>(null);
 
@@ -101,7 +102,10 @@ export const TimelineMobile = ({
   }, []);
 
   return (
-    <div ref={container} className={`px-5 pt-10 md:pt-20 pb-24 ${backgroundColor}`}>
+    <div
+      ref={container}
+      className={`px-5 pt-10 md:pt-20 pb-24 ${backgroundColor}`}
+    >
       <div>
         <h2 className="text-h1-sm font-serif text-center text-mar mb-">
           <Trans i18nKey={title} />
@@ -196,9 +200,11 @@ export const TimelineMobile = ({
         </div>
       </div>
 
-      <div className="">
-        <HomeCTASection textCta={t('home.cta.mobileTitle')} />
-      </div>
+      {showCTA ? (
+        <div className="">
+          <HomeCTASection textCta={t('home.cta.mobileTitle')} />
+        </div>
+      ) : null}
     </div>
   );
 };
