@@ -186,7 +186,7 @@ export const HomeIntroSection = () => {
                   //disablePictureInPicture
                 >
                   <source
-                    src="/video/home/reel-modified-home-web.mp4"
+                    src="/video/home/lc_oct_web_720p.mp4"
                     type="video/mp4"
                   />
                   {t('home.intro.video.unsupported', {
