@@ -95,9 +95,3 @@ export default function EstatePage() {
     </>
   );
 }
-
-// Todo:
-// Me falta colocar los videos en los HeroSection, y comprimirlos para que pesen Poco 170mb a -> 7mb max
-// Por otro lado revisar otras fotos que deba cambiar en el home y location y ver si puedo añadir algunas de la griega interior.
-
-// Trabajo realizado hoy 4hrs. 05/01/2026

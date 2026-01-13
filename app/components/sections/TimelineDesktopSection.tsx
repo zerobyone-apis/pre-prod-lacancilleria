@@ -3,8 +3,7 @@
 
 import { useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
-import { useGsapStagger } from '@/app/hooks/useGsapAnimation';
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HomeCTASection } from './HomeCTASection';
@@ -17,9 +16,11 @@ export const DesktopTimeline = ({
   backgroundColor,
   title,
   showCTA,
+  fromHome,
 }: any) => {
   const timelineRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
+  console.log('It contact from Home', fromHome)
 
   useLayoutEffect(() => {
     if (!timelineRef.current || !lineRef.current) return;
@@ -308,7 +309,7 @@ export const DesktopTimeline = ({
 
             <div className="">
               {/* CTA BELOW LINE */}
-              <HomeCTASection textCta={t('home.cta.title')} />
+              <HomeCTASection textCta={t('home.cta.title')} fromHome={fromHome} />
             </div>
           </>
         ) : null}

@@ -17,6 +17,7 @@ export const TimelineMobile = ({
   title,
   subTitle,
   showCTA,
+  fromHome
 }: any) => {
   const container = useRef<HTMLDivElement>(null);
 
@@ -204,7 +205,7 @@ export const TimelineMobile = ({
 
       {showCTA ? (
         <div className="">
-          <HomeCTASection textCta={t('home.cta.mobileTitle')} />
+          <HomeCTASection textCta={t('home.cta.mobileTitle')} fromHome={fromHome} />
         </div>
       ) : null}
     </div>

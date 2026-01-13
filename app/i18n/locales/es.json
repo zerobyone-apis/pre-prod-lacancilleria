@@ -87,9 +87,11 @@
       "exploreLocation": "Ver ubicación"
     },
     "cta": {
-      "title": "SUMERGITE EN UN PARAÍSO <br />DONDE LA NATURALEZA Y EL LUJO SE <br />ENCUENTRAN EN ARMONÍA",
+      "title": "SUMERGITE EN UN PARAÍSO <br />DONDE LA NATURALEZA Y EL LUJO <br /> SE ENCUENTRAN EN ARMONÍA",
       "mobileTitle": "SUMERGITE EN UN PARAÍSO <br />DONDE <br />LA NATURALEZA Y EL LUJO SE UNEN EN ARMONÍA",
-      "button": "CONTACTAR"
+      "button": "CONTACTAR",
+      "location": "Ubicación",
+      "estate": "La Propiedad"
     },
     "contact": {
       "header": {

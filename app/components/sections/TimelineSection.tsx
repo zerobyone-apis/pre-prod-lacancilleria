@@ -44,6 +44,7 @@ export const TimelineSection = ({
   let mobileSubTitle: string = '';
   let mobileTitle: string = '';
   let showCTA: boolean = false;
+  let isHome: boolean = false;
 
   if (home) {
     title = 'home.timeline.title';
@@ -53,6 +54,7 @@ export const TimelineSection = ({
     mobileSubTitle = 'home.mobile_timeline.mobileSubTitle';
 
     showCTA = true;
+    isHome = true;
 
     backgroundColor = 'bg-gradient-to-b from-[#E6DCCF] to-[#F7F5F1]';
     timelineItems = [
@@ -142,29 +144,29 @@ export const TimelineSection = ({
         image: '/images/home/quick-facts/new/grill.webp',
         imagePosition: 'right',
       },
-      {
-        text: t('home.quickFacts.items.services.title'),
-        mobileText: t('home.quickFacts.items.services.title'),
-        image: '/images/home/quick-facts/new/chef.png',
-        imagePosition: 'left',
-      },
+      // {
+      //   text: t('home.quickFacts.items.services.title'),
+      //   mobileText: t('home.quickFacts.items.services.title'),
+      //   image: '/images/home/quick-facts/new/chef.png',
+      //   imagePosition: 'left',
+      // },
       {
         text: t('home.quickFacts.items.office.title'),
         mobileText: t('home.quickFacts.items.office.title'),
         image: '/images/home/quick-facts/new/office.webp',
-        imagePosition: 'right',
+        imagePosition: 'left',
       },
       {
         text: t('estate.cancilleria.amenities.items.air-accon'),
         mobileText: t('estate.cancilleria.amenities.items.air-accon'),
         image: '/images/the_estate/la_cancilleria/amenities/air.png',
-        imagePosition: 'left',
+        imagePosition: 'right',
       },
       {
         text: t('estate.cancilleria.amenities.items.master-suite'),
         mobileText: t('estate.cancilleria.amenities.items.master-suite'),
         image: '/images/the_estate/la_cancilleria/amenities/tv.jpg',
-        imagePosition: 'right',
+        imagePosition: 'left',
       },
     ];
   }
@@ -296,6 +298,7 @@ export const TimelineSection = ({
           title={mobileHeaderKey}
           subTitle={mobileSubTitle}
           showCTA={showCTA}
+          fromHome={isHome}
         />
       </div>
     </section>
@@ -306,6 +309,7 @@ export const TimelineSection = ({
       title={title}
       subTitle={mobileSubTitle}
       showCTA={showCTA}
+      fromHome={isHome}
     />
   );
 };

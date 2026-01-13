@@ -87,7 +87,9 @@
     "cta": {
       "title": "IMMERSE YOURSELF IN A PARADISE <br />WHERE NATURE AND LUXURY MEET <br />IN PERFECT HARMONY",
       "mobileTitle": "IMMERSE YOURSELF IN A PARADISE <br />WHERE <br />NATURE AND LUXURY MEET IN PERFECT HARMONY",
-      "button": "CONTACT"
+      "button": "CONTACT",
+      "location": "Location",
+      "estate": "The Estate"
     },
     "contact": {
       "header": {
