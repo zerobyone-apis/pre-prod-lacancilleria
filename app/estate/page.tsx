@@ -61,13 +61,13 @@ export default function EstatePage() {
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.3.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.1.webp',
-          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.2.webp',
+          //'/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.2.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.3.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.1.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.2.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
-          '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
+          //'/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.4.webp',
           '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.webp',
 
@@ -89,7 +89,12 @@ export default function EstatePage() {
       />
       <PropertiesSliderSection propertyFilter="griega" />
       {/* Primer timeline de Staff available La griega */}
-      <TimelineSection home={false} estate={false} service_lc={false} service_lg={true}  />
+      <TimelineSection
+        home={false}
+        estate={false}
+        service_lc={false}
+        service_lg={true}
+      />
       <ImageDeviderSection imageSource="/images/the_estate/la_griega/devider/faro_ji.jpg" />
       <NewFigmaContactSection />
     </>

@@ -65,6 +65,7 @@
       
       "bikini": "Disfrutá la playa",
       "garzon": "Pasá la tarde en <br />Bodega Garzón",
+      "cabalgata": "Cabalgata en la playa",
       "joseIgnacio": "Disfrutá el atardecer en <br />José Ignacio",
 
       "vibrantScene": "Descubrí la movida de <br />Punta del Este, a sólo <br /> minutos",
@@ -80,6 +81,7 @@
 
       "bikini": "Disfrutá la playa",
       "garzon": "Pasá la tarde en Bodega Garzón",
+      "cabalgata": "Cabalgata en la playa",
       "joseIgnacio": "Disfrutá el atardecer en José Ignacio",
 
       "vibrantScene": "Descubrí la movida de <br />Punta del Este a pocos minutos",
@@ -281,7 +283,7 @@
           "pergola": "Área exterior de relax <br /> con pérgola",
           "grill": "Comedor exterior con <br/> parrillero estilo argentino y pérgola",
           "air-accon": "Aire acondicionado en todos los ambientes",
-          "master-suite": "Wifi y TV en el living <br/> y la suite principal"
+          "master-suite": "Wifi en espacios interiores y exteriores"
         }
       },
       "services": {

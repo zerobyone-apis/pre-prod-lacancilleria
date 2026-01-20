@@ -52,8 +52,9 @@ export const HeroSection = ({
   };
 
   return (
-    <div
+    <section
       ref={heroRef}
+      data-music-contrast="dark"
       className="relative h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Fondo + imagen + gradiente */}
@@ -98,6 +99,6 @@ export const HeroSection = ({
       >
         <ArrowDown className="w-6 h-6 md:w-8 md:h-8" />
       </button>
-    </div>
+    </section>
   );
 };

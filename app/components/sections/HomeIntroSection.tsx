@@ -11,6 +11,9 @@ export const HomeIntroSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [expanded, setExpanded] = useState(false);
 
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [showPlayOverlay, setShowPlayOverlay] = useState(true);
+
   // Fade-in animation
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -141,6 +144,7 @@ export const HomeIntroSection = () => {
             <Trans i18nKey={'home.intro.description'} />
           </p>
 
+          {/* Wrapper */}
           <div className="flex flex-col items-center gap-6 sm:gap-8 mt-12 sm:mt-14 md:mt-16 mb-20 sm:mb-24 md:mb-32 z-35">
             <div className="w-[1px] h-12 sm:h-14 md:h-16 bg-piel/20" />
 
@@ -168,22 +172,86 @@ export const HomeIntroSection = () => {
 
               <div
                 className={[
-                  'overflow-hidden rounded-2xl sm:rounded-3xl bg-black',
+                  'relative overflow-hidden rounded-2xl sm:rounded-3xl bg-black',
                   'transition-all duration-300',
-                  // Normal: más “cuadrado”
                   !expanded ? 'aspect-[13/8]' : '',
-                  // Expanded: más “cinema” (rectangular)
                   expanded ? 'aspect-video md:aspect-[19/9]' : '',
                 ].join(' ')}
               >
+                {/* Overlay (sin blur) */}
+                {showPlayOverlay && (
+                  <button
+                    type="button"
+                    onClick={async () => {
+                      const v = videoRef.current;
+                      if (!v) return;
+                      try {
+                        await v.play();
+                        // se oculta porque ya está reproduciendo
+                        setShowPlayOverlay(false);
+                      } catch {
+                        // si bloquea, queda visible para reintentar
+                        setShowPlayOverlay(true);
+                      }
+                    }}
+                    className={[
+                      'absolute inset-0 z-20',
+                      'flex items-center justify-center',
+                      // sin blur, y overlay muy sutil
+                      'bg-black/10',
+                      'transition-opacity duration-200',
+                    ].join(' ')}
+                    aria-label={t('home.intro.video.play', {
+                      defaultValue: 'Play video',
+                    })}
+                  >
+                    <span
+                      className={[
+                        'inline-flex items-center gap-2',
+                        'rounded-full px-4 py-2',
+                        // estética "piel"
+                        'bg-[#f7f5f1]/80 border border-piel/25',
+                        'shadow-[0_10px_25px_rgba(0,0,0,0.12)]',
+                        'text-[12px] sm:text-[13px] tracking-[2px] uppercase',
+                        'text-mar/80',
+                        'hover:bg-[#f7f5f1]/90 hover:border-piel/35 transition',
+                      ].join(' ')}
+                    >
+                      {/* botón circular con accent piel */}
+                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-piel/25">
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          className="text-piel"
+                        >
+                          <path d="M8 5v14l12-7-12-7Z" />
+                        </svg>
+                      </span>
+
+                      {t('home.intro.video.play', {
+                        defaultValue: 'Play video',
+                      })}
+                    </span>
+                  </button>
+                )}
+
                 <video
+                  ref={videoRef}
                   controls
                   playsInline
-                  onContextMenu={(e) => e.preventDefault()}
                   preload="metadata"
+                  onContextMenu={(e) => e.preventDefault()}
                   className="h-full w-full object-cover"
-                  controlsList="nodownload" // noplaybackrate noremoteplayback :_esto -> saca estas funciones para que no aparezcan
-                  //disablePictureInPicture
+                  controlsList="nodownload"
+                  // si reproduce, oculto overlay
+                  onPlay={() => setShowPlayOverlay(false)}
+                  // si pausa, vuelvo a mostrar overlay (esto es lo que pediste)
+                  onPause={() => setShowPlayOverlay(true)}
+                  // si termina, también
+                  onEnded={() => setShowPlayOverlay(true)}
                 >
                   <source
                     src="/video/home/lc_oct_web_720p.mp4"
@@ -245,13 +313,13 @@ export const HomeIntroSection = () => {
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_2.3.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.1.webp',
-                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.2.webp',
+                //'/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.2.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_3.3.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.1.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.2.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
-                '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
+                //'/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.3.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_4.4.webp',
                 '/images/the_estate/la_cancilleria/galery_slider/lc_back_external_5.webp',
 

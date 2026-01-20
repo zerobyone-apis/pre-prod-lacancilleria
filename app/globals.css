@@ -328,3 +328,47 @@
     margin-top: 8px;
   }
 }
+
+.music-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 14px; /* más bajo */
+  background: transparent;
+}
+
+.music-range::-webkit-slider-runnable-track {
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+}
+.music-range[data-theme='dark']::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.music-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 9px;
+  height: 9px;
+  margin-top: -3.5px;
+  border-radius: 999px;
+  background: #a67753; /* piel */
+  box-shadow: 0 0 0 4px rgba(166, 119, 83, 0.14);
+}
+
+.music-range::-moz-range-track {
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+}
+.music-range[data-theme='dark']::-moz-range-track {
+  background: rgba(255, 255, 255, 0.24);
+}
+.music-range::-moz-range-thumb {
+  width: 9px;
+  height: 9px;
+  border: none;
+  border-radius: 999px;
+  background: #a67753;
+  box-shadow: 0 0 0 4px rgba(166, 119, 83, 0.14);
+}

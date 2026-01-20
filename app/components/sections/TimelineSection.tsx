@@ -84,16 +84,22 @@ export const TimelineSection = ({
         imagePosition: 'left',
       },
       {
+        text: t('home.timeline.cabalgata'),
+        mobileText: t('home.mobile_timeline.cabalgata'),
+        image: '/images/home/timeline/cabalgata_2.jpg',
+        imagePosition: 'right',
+      },
+      {
         text: t('home.timeline.joseIgnacio'),
         mobileText: t('home.mobile_timeline.joseIgnacio'),
         image: '/images/home/timeline/joseIgnacio.webp',
-        imagePosition: 'right',
+        imagePosition: 'left',
       },
       {
         text: t('home.timeline.laBarraJoseIgnacio'),
         mobileText: t('home.mobile_timeline.laBarraJoseIgnacio'),
         image: '/images/home/timeline/la_barra.webp',
-        imagePosition: 'left',
+        imagePosition: 'right',
       },
     ];
   }
@@ -288,7 +294,7 @@ export const TimelineSection = ({
 
   // TimelineSection (solo el return mobile)
   return isMobile ? (
-    <section className={`relative w-full overflow-hidden ${backgroundColor}`}>
+    <section data-music-contrast="light" className={`relative w-full overflow-hidden ${backgroundColor}`}>
       {/* opcional: si querés un fade arriba, hacelo igual para todos */}
 
       <div className="relative z-10">

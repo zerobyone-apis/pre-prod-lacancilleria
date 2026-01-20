@@ -137,6 +137,7 @@ export const PropertiesSliderSection = ({
   return (
     <section
       ref={sectionRef}
+      data-music-contrast="light"
       className="relative w-full overflow-hidden text-mar px-4 sm:px-6 md:px-12 lg:px-24 py-20 sm:py-28 md:pt-48 bg-[#f3e7da]"
       >
       {/* MOBILE GRADIENT BACKGROUND – mismo lenguaje visual que HomeIntroSection */}

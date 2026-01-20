@@ -64,6 +64,7 @@
       
       "bikini": "Enjoy the beach",
       "garzon": "Spend the afternoon in <br />Bodega Garzón",
+      "cabalgata": "Horse riding at the beach",
       "joseIgnacio": "Enjoy the sunset in <br />Jose Ignacio",
       
       "laBarraJoseIgnacio": "Discover the vibrant <br />scene of La Barra and <br />José Ignacio just minutes <br />away",
@@ -78,6 +79,7 @@
             
       "bikini": "Enjoy the beach",
       "garzon": "Spend the afternoon in Bodega Garzón",
+      "cabalgata": "Horse riding at the beach",
       "joseIgnacio": "Enjoy the sunset in Jose Ignacio",
 
       "vibrantScene": "Discover the vibrant scene <br />of Punta del Este, <br />which are just a few minutes away",
@@ -282,7 +284,7 @@
           "pergola": "An outdoor living area <br /> with a pergola",
           "grill": "An Outdoor dining with <br/> Argentinian grill with a <br/> pergola",
           "air-accon": "Air conditioning in all rooms",
-          "master-suite": "Wifi and TVs in living room <br/> And Master Suite"
+          "master-suite": "Wifi indoor and outdoor areas"
         }
       },
       "services": {

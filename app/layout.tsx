@@ -16,6 +16,7 @@ import '@/app/i18n/config';
 
 import { PostHogProvider } from '@/app/components/PostHogProvider';
 import { usePathname } from 'next/navigation';
+import { FloatingMusicPlayer } from './components/audio/FloatingMusicPlayer';
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <PageContainer>
                 <Navigation />
                 {children}
+                
+                {/* Player flotante global */}
+                <FloatingMusicPlayer
+                  src="/audio/audio_music.mp3"
+                  defaultVolume={0.5}
+                  tryAutoplay={true}
+                />
                 <FooterMinimal />
                 <FloatingContactButton />
               </PageContainer>
