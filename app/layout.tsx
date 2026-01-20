@@ -59,7 +59,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 
                 {/* Player flotante global */}
                 <FloatingMusicPlayer
-                  src="/audio/audio_music.mp3"
+                  src="/audio/music_ambient.m4a"
                   defaultVolume={0.5}
                   tryAutoplay={true}
                 />
