@@ -79,10 +79,27 @@ export const PropertiesSliderSection = ({
     // La cancilleria
     LIST_IMAGES = [
       '/images/home/slider/suit-guess-edited-ai.jpg',
-      '/images/home/slider/pool.webp',
-      '/images/home/slider/suit-bed.webp',
-      '/images/home/slider/sec-room.webp', // TODO: QUEDA COLOCAR LAS FOTOS QUE VAN.
-      '/images/home/slider/coctails-in-pool.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/planta_baja_room_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/planta_baja_room_2.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/baño_primera_planta_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/office.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/lc_internal_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/lc_internal_4.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/planta_baja_room_1.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/planta_baja_room_2.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/1_floor/baño_primera_planta_2.webp',
+
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_1.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_baño_compartido_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_2.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_2.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_3.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_principal_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_room_principal_1.1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_baño_suit_1.webp',
+      '/images/the_estate/la_cancilleria/galery_slider/slider/2_floor/planta_alta_baño_suit_2.webp',
+      
     ];
 
     LIST_CAPTIONS = [
@@ -120,6 +137,7 @@ export const PropertiesSliderSection = ({
   return (
     <section
       ref={sectionRef}
+      data-music-contrast="light"
       className="relative w-full overflow-hidden text-mar px-4 sm:px-6 md:px-12 lg:px-24 py-20 sm:py-28 md:pt-48 bg-[#f3e7da]"
       >
       {/* MOBILE GRADIENT BACKGROUND – mismo lenguaje visual que HomeIntroSection */}

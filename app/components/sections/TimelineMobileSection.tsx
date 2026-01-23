@@ -16,17 +16,21 @@ export const TimelineMobile = ({
   backgroundColor,
   title,
   subTitle,
+  showCTA,
+  fromHome
 }: any) => {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const blocks = gsap.utils.toArray<HTMLElement>('.tl-block');
-      const progressLine =
-        document.querySelector<HTMLElement>('.tl-line-progress');
+    if (!container.current) return;
 
-      // Línea vertical que “avanza” con el scroll
-      if (progressLine && container.current) {
+    const ctx = gsap.context((self) => {
+      const blocks = self.selector?.('.tl-block') as HTMLElement[] | undefined;
+      const progressLine = (
+        self.selector?.('.tl-line-progress') as HTMLElement[] | undefined
+      )?.[0];
+
+      if (progressLine) {
         gsap.fromTo(
           progressLine,
           { scaleY: 0 },
@@ -35,7 +39,7 @@ export const TimelineMobile = ({
             ease: 'none',
             transformOrigin: 'top center',
             scrollTrigger: {
-              trigger: container.current,
+              trigger: container.current!,
               start: 'top 72%',
               end: 'bottom bottom',
               scrub: 0.6,
@@ -44,8 +48,7 @@ export const TimelineMobile = ({
         );
       }
 
-      // Cards: fade-up + slide con leve delay escalonado
-      blocks.forEach((block, index) => {
+      (blocks ?? []).forEach((block, index) => {
         const img = block.querySelector('.tl-img');
         const dot = block.querySelector('.tl-dot');
 
@@ -94,14 +97,18 @@ export const TimelineMobile = ({
         }
       });
 
+      // Refresh al final del layout
       ScrollTrigger.refresh();
     }, container);
 
     return () => ctx.revert();
-  }, []);
+  }, [items.length]);
 
   return (
-    <div ref={container} className={`px-5 pt-10 md:pt-20 pb-24 ${backgroundColor}`}>
+    <div
+      ref={container}
+      className={`px-5 pt-10 md:pt-20 pb-24 ${backgroundColor}`}
+    >
       <div>
         <h2 className="text-h1-sm font-serif text-center text-mar mb-">
           <Trans i18nKey={title} />
@@ -196,9 +203,11 @@ export const TimelineMobile = ({
         </div>
       </div>
 
-      <div className="">
-        <HomeCTASection textCta={t('home.cta.mobileTitle')} />
-      </div>
+      {showCTA ? (
+        <div className="">
+          <HomeCTASection textCta={t('home.cta.mobileTitle')} fromHome={fromHome} />
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -25,7 +25,7 @@ type LocationPOI = {
 
 const BASE_LOCATION: [number, number] = [-54.84617, -34.909796]; // La Cancillería (Montoya / La Barra)
 const baseImage: string =
-  '/images/the_estate/la_cancilleria/galery_slider/la_cancilleria_front_house.webp';
+  '/images/the_estate/la_cancilleria/galery_slider/lc_entrada_2.webp';
 
 // ---------------------------------------------
 // Distance (Haversine) + simple travel time

@@ -1,103 +1,123 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
-import { useGsapStagger } from '@/app/hooks/useGsapAnimation';
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HomeCTASection } from './HomeCTASection';
+import { t } from 'i18next';
 
-export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) => {
-  const { t } = useTranslation();
+gsap.registerPlugin(ScrollTrigger);
 
+export const DesktopTimeline = ({
+  timelineItems,
+  backgroundColor,
+  title,
+  showCTA,
+  fromHome,
+}: any) => {
   const timelineRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
-  const itemsRef = useRef<HTMLDivElement>(null);
+  console.log('It contact from Home', fromHome)
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  useLayoutEffect(() => {
+    if (!timelineRef.current || !lineRef.current) return;
 
-    const line = lineRef.current;
-    const items = gsap.utils.toArray<HTMLElement>('.timeline-item');
+    const ctx = gsap.context(() => {
+      const line = lineRef.current!;
+      const items = gsap.utils.toArray<HTMLElement>(
+        '.timeline-item',
+        timelineRef.current!
+      );
 
-    if (!timelineRef.current || !line) return;
+      // Línea
+      gsap.fromTo(
+        line,
+        { scaleY: 0 },
+        {
+          scaleY: 1,
+          ease: 'none',
+          transformOrigin: 'top center',
+          scrollTrigger: {
+            trigger: timelineRef.current!,
+            start: 'top 80%',
+            end: 'bottom bottom',
+            scrub: 1,
+            invalidateOnRefresh: true,
+          },
+        }
+      );
 
-    // ─────────────────────────────────────────────
-    // 1) LÍNEA QUE CRECE SINCRONIZADA CON EL SCROLL
-    // ─────────────────────────────────────────────
-    gsap.fromTo(
-      line,
-      { scaleY: 0 },
-      {
-        scaleY: 1,
-        ease: 'none',
-        transformOrigin: 'top center',
-        scrollTrigger: {
-          trigger: timelineRef.current,
-          start: 'top 80%',
-          end: 'bottom bottom',
-          scrub: 1,
-        },
-      }
-    );
+      // Items
+      items.forEach((item) => {
+        gsap.fromTo(
+          item,
+          { opacity: 0, y: 40, scale: 0.96 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.9,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: item,
+              start: 'top 85%',
+              toggleActions: 'play none none reverse',
+              invalidateOnRefresh: true,
+            },
+          }
+        );
 
-    // ─────────────────────────────────────────────
-    // 2) ITEMS APARECEN SUAVES + SINCRONIZADOS
-    // ─────────────────────────────────────────────
-    items.forEach((item, i) => {
-      gsap.from(item, {
-        opacity: 0,
-        y: 40,
-        scale: 0.96,
-        duration: 0.9,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: item,
-          start: 'top 85%',
-          toggleActions: 'play none none reverse',
-        },
+        const image = item.querySelector('.timeline-image');
+        const text = item.querySelector('.timeline-text');
+
+        if (image) {
+          gsap.fromTo(
+            image,
+            { opacity: 0, y: 30, scale: 0.94 },
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 1.1,
+              ease: 'power3.out',
+              scrollTrigger: {
+                trigger: item,
+                start: 'top 85%',
+                toggleActions: 'play none none reverse',
+                invalidateOnRefresh: true,
+              },
+            }
+          );
+        }
+
+        if (text) {
+          gsap.fromTo(
+            text,
+            { opacity: 0, y: 20 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.9,
+              ease: 'power2.out',
+              delay: 0.15,
+              scrollTrigger: {
+                trigger: item,
+                start: 'top 85%',
+                toggleActions: 'play none none reverse',
+                invalidateOnRefresh: true,
+              },
+            }
+          );
+        }
       });
-    });
 
-    // ─────────────────────────────────────────────
-    // 3) IMAGEN + TEXTO SE ANIMAN POR SEPARADO Y ELEVAN LA EXPERIENCIA
-    // ─────────────────────────────────────────────
-    items.forEach((item) => {
-      const image = item.querySelector('.timeline-image');
-      const text = item.querySelector('.timeline-text');
+      ScrollTrigger.refresh();
+    }, timelineRef);
 
-      if (!image || !text) return;
-
-      // Imagen fade + slight scale
-      gsap.from(image, {
-        opacity: 0,
-        y: 30,
-        scale: 0.94,
-        duration: 1.1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: item,
-          start: 'top 85%',
-          toggleActions: 'play none none reverse',
-        },
-      });
-
-      // Texto aparece después → más elegante
-      gsap.from(text, {
-        opacity: 0,
-        y: 20,
-        duration: 0.9,
-        ease: 'power2.out',
-        delay: 0.15,
-        scrollTrigger: {
-          trigger: item,
-          start: 'top 85%',
-          toggleActions: 'play none none reverse',
-        },
-      });
-    });
+    return () => ctx.revert(); // mata animaciones y triggers del scope
   }, []);
 
   return (
@@ -150,10 +170,10 @@ export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) 
 
       {/* SOFT BOTTOM GRADIENT */}
       <div
-        className="absolute inset-x-0 bottom-0 h-64 pointer-events-none"
+        className="absolute inset-x-0 bottom-0 h-48 pointer-events-none"
         style={{
           background:
-            'linear-gradient(180deg, rgba(243,231,218,0) 0%, #f7f5f1 100%)',
+            'linear-gradient(180deg, rgba(247,245,241,0) 0%, rgba(247,245,241,0) 100%)',
         }}
       />
 
@@ -180,7 +200,6 @@ export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) 
 
           {/* ITEMS WRAPPER */}
           <div
-            ref={itemsRef}
             className="space-y-18 sm:space-y-28 md:space-y-44"
           >
             {timelineItems.map((item, index) => (
@@ -224,7 +243,9 @@ export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) 
                   {/* IMAGE */}
                   <div
                     className={`${
-                      item.imagePosition === 'left' ? 'md:order-1 mr-20' : ' ml-20'
+                      item.imagePosition === 'left'
+                        ? 'md:order-1 mr-20'
+                        : ' ml-20'
                     }`}
                   >
                     <div
@@ -254,22 +275,24 @@ export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) 
           </div>
         </div>
 
-        {/* BACKGROUND SHADOW DECORATION */}
-        <div
-          className="pointer-events-none absolute"
-          style={{
-            bottom: '0px',
-            right: '-280px',
-            transform: 'rotate(-270deg) scale(1) scaleX(-1)',
-            opacity: 0.8,
-          }}
-        >
-          <Image
-            src="/images/home/shadows/Recursos/Re_3.png"
-            alt=""
-            width={1200}
-            height={600}
-            className="
+        {showCTA ? (
+          <>
+            {/* BACKGROUND SHADOW DECORATION */}
+            <div
+              className="pointer-events-none absolute"
+              style={{
+                bottom: '0px',
+                right: '-280px',
+                transform: 'rotate(-270deg) scale(1) scaleX(-1)',
+                opacity: 0.8,
+              }}
+            >
+              <Image
+                src="/images/home/shadows/Recursos/Re_3.png"
+                alt=""
+                width={1200}
+                height={600}
+                className="
                       object-contain     
                       scale-[1]
                       translate-x-0
@@ -280,12 +303,16 @@ export const DesktopTimeline = ({ timelineItems, backgroundColor, title }: any) 
                       xl:translate-x-[140px]
                       xl:translate-y-[-110px]
                     "
-            priority
-          />
-        </div>
+                priority
+              />
+            </div>
 
-        {/* CTA BELOW LINE */}
-        <HomeCTASection textCta={t('home.cta.title')} />
+            <div className="">
+              {/* CTA BELOW LINE */}
+              <HomeCTASection textCta={t('home.cta.title')} fromHome={fromHome} />
+            </div>
+          </>
+        ) : null}
       </div>
     </section>
   );

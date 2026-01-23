@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 'use client';
 
 import { useRef, useEffect } from 'react';
@@ -16,23 +17,27 @@ export const QuickFactsSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
+
+  // todo: llevarme esto para The Estate
   const items = [
-    { key: 'garden', image: '/images/home/quick-facts/garden.webp' },
-    { key: 'pool', image: '/images/home/quick-facts/heated-pool.webp' },
+    { key: 'garden', 
+      image: '/images/home/quick-facts/new/garden.webp' },
+    { key: 'pool', 
+      image: '/images/home/quick-facts/new/pool_heated.webp' },
     {
       key: 'pergola',
-      image: '/images/home/quick-facts/outdor-pergola-area.webp',
+      image: '/images/home/quick-facts/new/outdor-pergola.webp',
     },
     {
       key: 'staff-house',
-      image: '/images/home/quick-facts/staff-house-lagriega.webp',
+      image: '/images/home/quick-facts/new/la_griega.webp',
     },
-    { key: 'parrillero', image: '/images/home/quick-facts/parrillero.webp' },
+    { key: 'parrillero', image: '/images/home/quick-facts/new/grill.webp' },
     {
       key: 'services',
-      image: '/images/home/quick-facts/optional-services.webp',
+      image: '/images/home/quick-facts/new/chef.png',
     },
-    { key: 'office', image: '/images/home/quick-facts/office-workspace.webp' },
+    { key: 'office', image: '/images/home/quick-facts/new/office.webp' },
   ];
 
   let activeIndex = -1;

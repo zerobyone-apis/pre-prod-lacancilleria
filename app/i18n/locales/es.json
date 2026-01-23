@@ -12,7 +12,7 @@
     },
     "intro": {
       "label": "¿Qué es La Cancillería?",
-      "title": "ENTRE JARDINES EXUBERANTES <br />Y VISTAS PANORÁMICAS AL MAR",
+      "title": "ENTRE JARDINES EXUBERANTES <br />JARDINES EN UN ENTORNO NATURAL IMPRESIONANTE",
       "description": "La Cancillería ofrece la privacidad de una residencia cerrada y el calor de un verdadero hogar"
     },
     "introSecond": {
@@ -62,6 +62,12 @@
       "subTitle": "",
       "oceanBreezes": "Despertá con la brisa <br /> del mar",
       "alfrescoLunches": "Almorzá al aire libre junto <br />a la piscina",
+      
+      "bikini": "Disfrutá la playa",
+      "garzon": "Pasá la tarde en <br />Bodega Garzón",
+      "cabalgata": "Cabalgata en la playa",
+      "joseIgnacio": "Disfrutá el atardecer en <br />José Ignacio",
+
       "vibrantScene": "Descubrí la movida de <br />Punta del Este, a sólo <br /> minutos",
       "laBarraJoseIgnacio": "Descubrí la vibrante escena <br />de La Barra y José Ignacio <br /> a pocos minutos",
       "exploreLocation": "Ver ubicación"
@@ -72,14 +78,22 @@
 
       "oceanBreezes": "Despertá con la brisa del mar",
       "alfrescoLunches": "Almorzá al aire libre junto a la piscina",
+
+      "bikini": "Disfrutá la playa",
+      "garzon": "Pasá la tarde en Bodega Garzón",
+      "cabalgata": "Cabalgata en la playa",
+      "joseIgnacio": "Disfrutá el atardecer en José Ignacio",
+
       "vibrantScene": "Descubrí la movida de <br />Punta del Este a pocos minutos",
       "laBarraJoseIgnacio": "Descubrí la movida de <br />La Barra y José Ignacio a <br />pocos minutos",
       "exploreLocation": "Ver ubicación"
     },
     "cta": {
-      "title": "SUMERGITE EN UN PARAÍSO <br />DONDE LA NATURALEZA Y EL LUJO SE <br />ENCUENTRAN EN ARMONÍA",
+      "title": "SUMERGITE EN UN PARAÍSO <br />DONDE LA NATURALEZA Y EL LUJO <br /> SE ENCUENTRAN EN ARMONÍA",
       "mobileTitle": "SUMERGITE EN UN PARAÍSO <br />DONDE <br />LA NATURALEZA Y EL LUJO SE UNEN EN ARMONÍA",
-      "button": "CONTACTAR"
+      "button": "CONTACTAR",
+      "location": "UBICACIÓN",
+      "estate": "LA PROPIEDAD"
     },
     "contact": {
       "header": {
@@ -246,14 +260,14 @@
       "intro": {
         "label": "CASA PRINCIPAL",
         "title": "LA CANCILLERÍA",
-        "description": "La casa principal cuenta con cinco dormitorios, amplios ambientes para el estar y comedor, cocina moderna y múltiples espacios exteriores pensados para el disfrute y la relajación."
+        "description": "La casa principal cuenta con cinco dormitorios, amplios ambientes para el estar y comedor, cocina espaciosa y múltiples espacios exteriores pensados para el disfrute y la relajación."
       },
       "features": {
         "title": "CARACTERÍSTICAS",
         "feat_1": "1 suite principal con baño privado",
         "feat_2": "2 dormitorios que comparten 1 baño (planta alta)",
         "feat_3": "2 dormitorios que comparten 1 baño (planta baja)",
-        "feat_4": "1 habitación de servicio + 1 baño",
+        "feat_4": "",
         "feat_5": "Espacio de oficina",
         "feat_6": "Ambientes de estar y comedor",
         "feat_7": "Cocina totalmente equipada"
@@ -269,7 +283,7 @@
           "pergola": "Área exterior de relax <br /> con pérgola",
           "grill": "Comedor exterior con <br/> parrillero estilo argentino y pérgola",
           "air-accon": "Aire acondicionado en todos los ambientes",
-          "master-suite": "Wifi y TV en el living <br/> y la suite principal"
+          "master-suite": "Wifi en espacios interiores y exteriores"
         }
       },
       "services": {
